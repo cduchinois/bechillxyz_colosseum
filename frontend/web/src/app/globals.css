@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* BeChill Theme Colors */
+  --lavender-light: #e8e6fa;
+  --lavender-medium: #d3cff6;
+  --lavender-dark: #bcb7f2;
+  --yellow-accent: #fff568;
+  --purple-light: #7036cd;
+  --purple-medium: #5c26b3;
+  --purple-dark: #36169e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: var(--purple-dark);
+  
+  /* Gradient de BeChill - bleu ciel vers jaune */
+  background: linear-gradient(to bottom, #a5c5f9 0%, #9fabf9 30%, #b5a0f0 50%, #e0c79c 100%);
+  
+  /* Pour assurer que le gradient couvre toute la page */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Réinitialisation CSS pour uniformité */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Style pour les nuages flottants génériques */
+.cloud {
+  position: fixed;
+  background: white;
+  opacity: 0.75;
+  border-radius: 100%;
+  filter: blur(20px);
+  z-index: 0;
+}

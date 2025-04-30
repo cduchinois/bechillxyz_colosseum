@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/DMSerifText-Italic.ttf",
+      "sha1": "9831d1dfa193ea2f3137ed122387efada0ba3144"
+    },
+    {
+      "path": "assets/fonts/DMSerifText-Regular.ttf",
+      "sha1": "9ea45f47df2fdae5a9a69e56801ee9d55f9cc576"
+    },
+    {
+      "path": "assets/fonts/PPMonumentExtended-Bold.ttf",
+      "sha1": "e1004482ff614893def378e973047f0af69c5060"
+    },
+    {
+      "path": "assets/fonts/PPMonumentExtended-Italic.ttf",
+      "sha1": "e564361898f91c6147d67ade85e142e2ec659cd5"
+    }
+  ]
+}

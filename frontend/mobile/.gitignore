@@ -1,0 +1,67 @@
+# 📦 Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# 🧪 Tests
+coverage/
+*.lcov
+jest-*.json
+
+# 💻 IDEs et éditeurs
+.idea/
+.vscode/
+*.iml
+
+# ⚙️ macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+
+# 🏗️ Android
+android/.gradle/
+android/app/build/
+android/build/
+*.keystore
+*.hprof
+*.mapping
+local.properties
+.gradle/
+build/
+
+# 🍏 iOS
+ios/build/
+ios/Pods/
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# ⚠️ Secrets et fichiers d'env
+.env
+.env.*
+.env.local
+
+# 🧼 Fichiers temporaires et swap
+*.sw?
+*.swo
+*.swp
+*.tmp
+*~
+
+# 🔍 Watchman
+.watchmanconfig
+
+# 📜 Logs
+logs/
+*.log

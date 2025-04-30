@@ -52,9 +52,23 @@ coverage/
 turbo/
 *.local
 
-# Expo / React Native (si tu utilises Expo plus tard)
+# React Native - Android/iOS build artifacts
+android/app/build/
+android/build/
+ios/build/
+ios/Pods/
+*.keystore
+*.jks
+
+# Bundles
+*.bundle
+
+# Metro bundler cache
 .expo/
 .expo-shared/
+.expo-cache/
+.react-native/
+.cache/
 
 # macOS system files
 .DS_Store

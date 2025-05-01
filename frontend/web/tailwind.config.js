@@ -21,6 +21,10 @@ module.exports = {
             900: '#36169e', // Texte foncé
           }
         },
+        fontFamily: {
+          serif: ['"DM Serif Text"', 'serif'],
+          monument: ['"PP Monument Extended"', 'sans-serif'],
+        },
       },
     },
     plugins: [],

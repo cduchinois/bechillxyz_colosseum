@@ -47,21 +47,42 @@ const CryptoPortfolio = () => {
   const [activeSection, setActiveSection] = useState('Holdings');
   const [activeSectionValue, setActiveSectionValue] = useState('$1,304.29');
 
-  const AssetIcon = ({ icon, secondIcon = null, size = 'md' }) => {
+// Update your AssetIcon component to include proper TypeScript typing:
+
+  interface AssetIconProps {
+    icon: React.ReactNode;
+    secondIcon?: React.ReactNode | null;
+    size?: 'md' | 'lg';
+  }
+
+// Option 1: Add explicit type to the icon parameter
+const AssetIcon = ({ 
+    icon, 
+    secondIcon = null, 
+    size = 'md' 
+  }: { 
+    icon: React.ReactNode; 
+    secondIcon?: React.ReactNode | null; 
+    size?: 'md' | 'lg'; 
+  }) => {
     const sizeClass = size === 'lg' ? 'w-8 h-8' : 'w-6 h-6';
     return (
       <div className="flex -space-x-1">
-        <div className={`${sizeClass} rounded-full bg-gradient-to-r from-teal-400 to-blue-500 flex items-center justify-center text-white font-bold`}>
+        <div className={`${sizeClass} flex items-center justify-center rounded-full bg-white border border-gray-200`}>
           {icon}
         </div>
         {secondIcon && (
-          <div className={`${sizeClass} rounded-full bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold`}>
+          <div className={`${sizeClass} flex items-center justify-center rounded-full bg-white border border-gray-200`}>
             {secondIcon}
           </div>
         )}
       </div>
     );
   };
+  
+
+  
+
 
   return (
     <div className="flex flex-col h-screen bg-gray-900 text-white">

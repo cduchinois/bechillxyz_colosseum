@@ -6,6 +6,7 @@ import HeroSection from "./sections/HeroSection";
 import { CardCarouselSection } from "./sections/CardCarouselSection";
 import ChatComponent from "@/components/ChatComponent";
 import { Footer } from "./Footer";
+import AnimatedClouds from "./AnimatedClouds"; // Import the new component
 
 interface PrivyUser {
   wallet?: {
@@ -71,7 +72,11 @@ export default function LandingPage() {
 
   return (
     <PrivyGate>
-    <main className="min-h-screen">
+    <main className="min-h-screen relative overflow-hidden">
+      {/* Add the AnimatedClouds component here */}
+      <AnimatedClouds />
+      
+      <div className="relative z-10">
       <HeroSection
         userWallet={typedUser?.wallet?.address || null}
         onLogin={login}
@@ -91,6 +96,7 @@ export default function LandingPage() {
         />
       </section>
       
+      </div>
     </main>
     <Footer />
   </PrivyGate>

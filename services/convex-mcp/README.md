@@ -106,6 +106,30 @@ npm run inspector
 - The server is in active development and APIs may change
 
 ## Example Prompts for Testing
+### Convex MCP Server - Usage Example
+
+#### Available Functions
+
+When asking Claude what functions are available through the Convex MCP server, you'll receive a response like this:
+```
+User Query:
+"What actions can I perform with my Convex MCP server? Can you list all available functions?"
+```
+
+**Claude Response:**
+```
+"Hello! I'd be happy to explain the functions available for your Convex MCP server. Here's the complete list of functions you can use:
+
+1. Note management:
+   * `create_note`: Create a new note with a title and content
+
+2. Conversation management:
+   * `create_conversation`: Create a new chat conversation
+   * `add_message`: Add a message to an existing conversation
+
+3. Solana portfolio analysis:
+   * `analyze_wallet`: Analyze the performance of a Solana wallet"
+   ```
 
 ### Creating a Note
 ```

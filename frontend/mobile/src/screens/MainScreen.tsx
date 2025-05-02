@@ -13,13 +13,11 @@ import {
 } from 'react-native';
 
 import PrivyConnectScreen from './PrivyConnectScreen';
+import AnimatedClouds from '../components/ui/AnimatedClouds';
 
-import ConnectButton from '../../src/components/ConnectButton';
-import AccountInfo from '../../src/components/AccountInfo';
-import {
-  useAuthorization,
-  Account,
-} from '../components/providers/AuthorizationProvider';
+import ConnectButton from '../components/ConnectButton';
+import AccountInfo from '../components/AccountInfo';
+import {useAuthorization} from '../components/providers/AuthorizationProvider';
 import {useConnection} from '../components/providers/ConnectionProvider';
 import {Colors, Fonts} from '../constants/GlobalStyles';
 
@@ -55,52 +53,61 @@ function MainScreen() {
   }
 
   return (
-    <ImageBackground
-      source={background}
-      style={styles.mainContainer}
-      resizeMode="cover">
-      <View style={styles.contentContainer}>
-        {selectedAccount ? (
-          <View style={styles.accountContainer}>
-            <AccountInfo
-              selectedAccount={selectedAccount}
-              balance={balance}
-              fetchAndUpdateBalance={fetchAndUpdateBalance}
-            />
-          </View>
-        ) : (
-          <View style={styles.connectContainer}>
-            <Image source={logo} style={styles.logo} resizeMode="contain" />
+    <View style={styles.container}>
+      {/* Arrière-plan avec image */}
+      <ImageBackground
+        source={background}
+        style={styles.mainContainer}
+        resizeMode="cover">
+        {/* Ajouter les nuages animés en arrière-plan */}
+        <AnimatedClouds />
 
-            <Text style={styles.subTitle}>
-              Chill{'\n'}your personal asset manager powered by Solana
-            </Text>
-
-            <View style={styles.connectButtonContainer}>
-              <ConnectButton title="Connect wallet" />
-            </View>
-
-            <View style={styles.privyButton}>
-              <Button
-                title="Connect with Privy"
-                onPress={() => setShowWebView(true)}
-                color="#000000"
+        <View style={styles.contentContainer}>
+          {selectedAccount ? (
+            <View style={styles.accountContainer}>
+              <AccountInfo
+                selectedAccount={selectedAccount}
+                balance={balance}
+                fetchAndUpdateBalance={fetchAndUpdateBalance}
               />
             </View>
-          </View>
-        )}
-      </View>
+          ) : (
+            <View style={styles.connectContainer}>
+              <Image source={logo} style={styles.logo} resizeMode="contain" />
 
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>
-          Selected cluster: {connection.rpcEndpoint}
-        </Text>
-      </View>
-    </ImageBackground>
+              <Text style={styles.subTitle}>
+                Chill{'\n'}your personal asset manager powered by Solana
+              </Text>
+
+              <View style={styles.connectButtonContainer}>
+                <ConnectButton title="Connect wallet" />
+              </View>
+
+              <View style={styles.privyButton}>
+                <Button
+                  title="Connect with Privy"
+                  onPress={() => setShowWebView(true)}
+                  color="#000000"
+                />
+              </View>
+            </View>
+          )}
+        </View>
+
+        <View style={styles.footer}>
+          <Text style={styles.footerText}>
+            Selected cluster: {connection.rpcEndpoint}
+          </Text>
+        </View>
+      </ImageBackground>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   mainContainer: {
     flex: 1,
     flexDirection: 'column',
@@ -110,6 +117,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
+    zIndex: 10, // S'assurer que le contenu est au-dessus des nuages
   },
   connectContainer: {
     width: '100%',
@@ -150,6 +158,7 @@ const styles = StyleSheet.create({
   footer: {
     padding: 16,
     alignItems: 'center',
+    zIndex: 10, // S'assurer que le footer est au-dessus des nuages
   },
   footerText: {
     fontSize: 12,

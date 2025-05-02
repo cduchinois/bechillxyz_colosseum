@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, Image, StyleSheet} from 'react-native';
 
 /**
  * Barre de navigation complète pour l'app BeChill
@@ -16,13 +16,13 @@ const BottomBar: React.FC<BottomBarProps> = ({
   activeScreen,
   onScreenChange,
 }) => {
-  // Définir les onglets disponibles
+  // Définir les onglets disponibles avec leurs icônes
   const tabs = [
-    {id: 'wallet', label: 'Wallet', icon: '💰'},
-    {id: 'profile', label: 'Profil', icon: '👤'},
-    {id: 'strategy', label: 'Stratégie', icon: '📈'},
-    {id: 'actions', label: 'Actions', icon: '🚀'},
-    {id: 'learn', label: 'Apprendre', icon: '📚'},
+    {id: 'assets', iconPath: require('../../assets/img/assets.png')},
+    {id: 'strategy', iconPath: require('../../assets/img/objectives.png')},
+    {id: 'chillbot', iconPath: require('../../assets/img/chillbot.png')},
+    {id: 'history', iconPath: require('../../assets/img/history.png')},
+    {id: 'profile', iconPath: require('../../assets/img/profile.png')}, // Notez "profil" sans "e"
   ];
 
   return (
@@ -30,16 +30,16 @@ const BottomBar: React.FC<BottomBarProps> = ({
       {tabs.map(tab => (
         <TouchableOpacity
           key={tab.id}
-          style={[styles.tabItem, activeScreen === tab.id && styles.activeTab]}
+          style={styles.tabItem}
           onPress={() => onScreenChange(tab.id)}>
-          <Text style={styles.tabIcon}>{tab.icon}</Text>
-          <Text
+          <Image
+            source={tab.iconPath}
             style={[
-              styles.tabText,
-              activeScreen === tab.id && styles.activeText,
-            ]}>
-            {tab.label}
-          </Text>
+              styles.tabIcon,
+              activeScreen === tab.id ? styles.activeIcon : styles.inactiveIcon,
+            ]}
+            resizeMode="contain"
+          />
         </TouchableOpacity>
       ))}
     </View>
@@ -49,32 +49,26 @@ const BottomBar: React.FC<BottomBarProps> = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    height: 70,
-    backgroundColor: '#f5f5f5',
+    height: 60,
+    backgroundColor: '#fff',
     borderTopWidth: 1,
-    borderTopColor: '#ddd',
-    elevation: 8,
+    borderTopColor: '#eee',
   },
   tabItem: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 8,
-  },
-  activeTab: {
-    backgroundColor: 'rgba(138, 43, 226, 0.1)',
+    paddingVertical: 10,
   },
   tabIcon: {
-    fontSize: 20,
-    marginBottom: 2,
+    width: 24,
+    height: 24,
   },
-  tabText: {
-    fontSize: 12,
-    color: '#666',
+  activeIcon: {
+    tintColor: '#8A2BE2', // Couleur violette pour l'icône active
   },
-  activeText: {
-    color: '#8A2BE2',
-    fontWeight: 'bold',
+  inactiveIcon: {
+    tintColor: '#bbbbbb', // Couleur grise pour les icônes inactives
   },
 });
 

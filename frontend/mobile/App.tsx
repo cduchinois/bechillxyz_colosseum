@@ -7,6 +7,7 @@ import React, {useState, useEffect} from 'react';
 import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
 import {AuthorizationProvider} from './src/components/providers/AuthorizationProvider';
 import AssetsScreen from './src/screens/AssetsScreen';
+import ObjectivesScreen from './src/screens/ObjectivesScreen';
 import MainScreen from './src/screens/MainScreen';
 import InfoScreen from './src/screens/InfoScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
@@ -15,19 +16,6 @@ import BottomBar from './src/components/BottomBar';
 import {useAuthorization} from './src/components/providers/AuthorizationProvider';
 
 // Composants de placeholder pour les nouveaux écrans
-const StrategyScreen = () => (
-  <View style={styles.placeholderScreen}>
-    <Text style={styles.placeholderTitle}>Stratégie d'Investissement</Text>
-    <Text style={styles.placeholderText}>
-      Créez une stratégie personnalisée avec notre IA pour atteindre vos
-      objectifs financiers sur Solana. Définissez des étapes claires et suivez
-      votre progression.
-    </Text>
-    <View style={styles.comingSoonBadge}>
-      <Text style={styles.comingSoonText}>Bientôt disponible</Text>
-    </View>
-  </View>
-);
 
 const ActionsScreen = () => (
   <View style={styles.placeholderScreen}>
@@ -45,7 +33,7 @@ const ActionsScreen = () => (
 
 // Composant de navigation personnalisé qui utilise le context d'autorisation
 const NavigationContent = () => {
-  const [activeScreen, setActiveScreen] = useState('wallet');
+  const [activeScreen, setActiveScreen] = useState('assets');
   const {selectedAccount} = useAuthorization();
   const isConnected = !!selectedAccount;
 
@@ -58,7 +46,7 @@ const NavigationContent = () => {
 
   // Réinitialiser à l'écran wallet quand l'utilisateur se connecte/déconnecte
   useEffect(() => {
-    setActiveScreen('wallet');
+    setActiveScreen('assets');
 
     // Si l'utilisateur se connecte, marquer qu'il a complété la connexion du wallet
     if (isConnected && isFirstTime) {
@@ -112,9 +100,14 @@ const NavigationContent = () => {
           />
         );
       case 'objectives':
-        return <InfoScreen />;
+        return (
+          <ObjectivesScreen
+            activeScreen={activeScreen}
+            setActiveScreen={setActiveScreen}
+          />
+        );
       case 'chillbot':
-        return <StrategyScreen />;
+        return <InfoScreen />;
       case 'history':
         return <ActionsScreen />;
       case 'profile':

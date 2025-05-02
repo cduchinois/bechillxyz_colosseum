@@ -24,7 +24,7 @@ const BottomBar: React.FC<BottomBarProps> = ({
       label: 'Assets',
     },
     {
-      id: 'strategy',
+      id: 'objectives',
       iconPath: require('../../assets/img/objectives.png'),
       label: 'Objectives',
     },

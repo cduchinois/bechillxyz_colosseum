@@ -9,6 +9,7 @@ import {AuthorizationProvider} from './src/components/providers/AuthorizationPro
 import AssetsScreen from './src/screens/AssetsScreen';
 import ObjectivesScreen from './src/screens/ObjectivesScreen';
 import HistoryScreen from './src/screens/HistoryScreen';
+import ProfileScreen from './src/screens/ProfileScreen';
 import MainScreen from './src/screens/MainScreen';
 import InfoScreen from './src/screens/InfoScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
@@ -101,7 +102,12 @@ const NavigationContent = () => {
           />
         );
       case 'profile':
-        return <MainScreen />;
+        return (
+          <ProfileScreen
+            activeScreen={activeScreen}
+            setActiveScreen={setActiveScreen}
+          />
+        );
       default:
         return <MainScreen />;
     }

@@ -10,7 +10,7 @@ import {
   Animated,
   Easing,
 } from 'react-native';
-import {Colors, Fonts} from '../constants/GlobalStyles';
+import {Fonts} from '../constants/GlobalStyles';
 
 // Définir le type pour une page de la story
 interface StoryPage {
@@ -24,7 +24,7 @@ interface StoryPage {
 
 // Props pour l'écran WalletStory
 interface WalletStoryScreenProps {
-  onComplete: () => void;
+  onComplete?: () => void;
 }
 
 const WalletStoryScreen = ({onComplete}: WalletStoryScreenProps) => {
@@ -134,7 +134,16 @@ const WalletStoryScreen = ({onComplete}: WalletStoryScreenProps) => {
         useNativeDriver: false,
       }),
     ]).start();
-  }, [currentIndex]);
+  }, [
+    currentIndex,
+    fadeAnim,
+    scaleAnim,
+    titleSlideAnim,
+    valueSlideAnim,
+    iconScaleAnim,
+    progressAnim,
+    storyPages.length,
+  ]);
 
   // Gérer le clic pour passer à la page suivante
   const goToNextPage = () => {
@@ -146,7 +155,9 @@ const WalletStoryScreen = ({onComplete}: WalletStoryScreenProps) => {
       });
     } else {
       // Si c'est la dernière page, terminer la story
-      onComplete();
+      if (onComplete) {
+        onComplete();
+      }
     }
   };
 

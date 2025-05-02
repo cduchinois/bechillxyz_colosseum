@@ -11,6 +11,7 @@ import {
   View,
   Button,
 } from 'react-native';
+import {PublicKey} from '@solana/web3.js';
 
 import PrivyConnectScreen from './PrivyConnectScreen';
 import AnimatedClouds from '../components/ui/AnimatedClouds';
@@ -28,12 +29,11 @@ const logo = require('../../assets/img/bechill-head1.png');
 function MainScreen() {
   const {connection} = useConnection();
   const {selectedAccount} = useAuthorization();
-  const [balance, setBalance] = useState(null);
+  const [balance, setBalance] = useState<number | null>(null);
   const [showWebView, setShowWebView] = useState(false);
 
   const fetchAndUpdateBalance = useCallback(
-    async account => {
-      console.log('Fetching balance for: ' + account.publicKey);
+    async (account: {publicKey: PublicKey}) => {
       const fetchedBalance = await connection.getBalance(account.publicKey);
       console.log('Balance fetched: ' + fetchedBalance);
       setBalance(fetchedBalance);
@@ -45,7 +45,7 @@ function MainScreen() {
     if (!selectedAccount) {
       return;
     }
-    fetchAndUpdateBalance(selectedAccount);
+    fetchAndUpdateBalance({publicKey: selectedAccount.publicKey});
   }, [fetchAndUpdateBalance, selectedAccount]);
 
   if (showWebView) {

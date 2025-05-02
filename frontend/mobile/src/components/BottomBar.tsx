@@ -7,7 +7,15 @@ import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
  * @param {string} props.activeScreen - L'écran actif
  * @param {Function} props.onScreenChange - Fonction appelée lors d'un changement d'écran
  */
-const BottomBar = ({activeScreen, onScreenChange}) => {
+interface BottomBarProps {
+  activeScreen: string;
+  onScreenChange: (screen: string) => void;
+}
+
+const BottomBar: React.FC<BottomBarProps> = ({
+  activeScreen,
+  onScreenChange,
+}) => {
   // Définir les onglets disponibles
   const tabs = [
     {id: 'wallet', label: 'Wallet', icon: '💰'},

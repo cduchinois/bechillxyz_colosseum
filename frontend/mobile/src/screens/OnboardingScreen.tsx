@@ -11,7 +11,7 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import {Colors, Fonts, GlobalStyles} from '../constants/GlobalStyles';
+import {Colors, Fonts} from '../constants/GlobalStyles';
 import {useAuthorization} from '../components/providers/AuthorizationProvider';
 
 // Types pour nos messages
@@ -24,19 +24,22 @@ interface Message {
 }
 
 // Props pour l'écran d'onboarding
+// Dans OnboardingScreen.tsx
 interface OnboardingScreenProps {
-  onNavigate: (screen: string) => void;
+  onNavigate?: (destination: string) => void; // Accept a string argument for navigation
 }
 
 // Composant pour l'écran d'onboarding
 const OnboardingScreen = ({onNavigate}: OnboardingScreenProps) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState('');
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [userName, setUserName] = useState('');
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [showWalletReview, setShowWalletReview] = useState(false);
   const [initialMessageSent, setInitialMessageSent] = useState(false);
   const scrollViewRef = useRef<ScrollView>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const {selectedAccount} = useAuthorization();
 
   // Effet pour l'initialisation de la conversation
@@ -159,12 +162,12 @@ const OnboardingScreen = ({onNavigate}: OnboardingScreenProps) => {
 
   // Gérer le clic sur "VIEW STORY"
   const handleViewStory = () => {
-    onNavigate('wallet_story');
+    onNavigate?.('wallet_story');
   };
 
   // Gérer le passage direct au wallet
   const skipToConnect = () => {
-    onNavigate('main');
+    onNavigate?.('main');
   };
 
   return (
@@ -196,7 +199,7 @@ const OnboardingScreen = ({onNavigate}: OnboardingScreenProps) => {
           style={styles.messagesContainer}
           contentContainerStyle={[
             styles.messagesContent,
-            {flexGrow: 1, justifyContent: 'flex-end'},
+            styles.messagesContentContainer,
           ]}>
           {messages.map(message => (
             <View
@@ -305,8 +308,10 @@ const styles = StyleSheet.create({
   },
   messagesContent: {
     paddingBottom: 20,
+  },
+  messagesContentContainer: {
     flexGrow: 1,
-    justifyContent: Platform.OS === 'android' ? 'flex-end' : 'flex-start',
+    justifyContent: 'flex-end',
   },
   messageBubble: {
     borderRadius: 20,

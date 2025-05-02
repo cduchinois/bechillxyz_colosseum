@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {View, Text, StyleSheet, AsyncStorage} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import MainScreen from '../screens/MainScreen';
 import OnboardingScreen from '../screens/OnboardingScreen';
 import WalletStoryScreen from '../screens/WalletStoryScreen';

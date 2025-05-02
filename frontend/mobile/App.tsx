@@ -6,6 +6,7 @@ import {clusterApiUrl} from '@solana/web3.js';
 import React, {useState, useEffect} from 'react';
 import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
 import {AuthorizationProvider} from './src/components/providers/AuthorizationProvider';
+import AssetsScreen from './src/screens/AssetsScreen';
 import MainScreen from './src/screens/MainScreen';
 import InfoScreen from './src/screens/InfoScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
@@ -14,19 +15,6 @@ import BottomBar from './src/components/BottomBar';
 import {useAuthorization} from './src/components/providers/AuthorizationProvider';
 
 // Composants de placeholder pour les nouveaux écrans
-const ProfileScreen = () => (
-  <View style={styles.placeholderScreen}>
-    <Text style={styles.placeholderTitle}>Profil d'Investisseur</Text>
-    <Text style={styles.placeholderText}>
-      Votre profil sera déterminé en analysant votre historique de transactions
-      et vos réponses à notre questionnaire sur votre tolérance au risque.
-    </Text>
-    <View style={styles.comingSoonBadge}>
-      <Text style={styles.comingSoonText}>Bientôt disponible</Text>
-    </View>
-  </View>
-);
-
 const StrategyScreen = () => (
   <View style={styles.placeholderScreen}>
     <Text style={styles.placeholderTitle}>Stratégie d'Investissement</Text>
@@ -48,19 +36,6 @@ const ActionsScreen = () => (
       Vos transactions recommandées et DCA planifiés apparaîtront ici. Autorisez
       Privy pour des signatures automatisées et suivez vos habitudes
       d'investissement.
-    </Text>
-    <View style={styles.comingSoonBadge}>
-      <Text style={styles.comingSoonText}>Bientôt disponible</Text>
-    </View>
-  </View>
-);
-
-const LearnScreen = () => (
-  <View style={styles.placeholderScreen}>
-    <Text style={styles.placeholderTitle}>Ressources Éducatives</Text>
-    <Text style={styles.placeholderText}>
-      Accédez à des contenus éducatifs personnalisés, des actualités et des
-      alpha pour améliorer vos compétences d'investissement.
     </Text>
     <View style={styles.comingSoonBadge}>
       <Text style={styles.comingSoonText}>Bientôt disponible</Text>
@@ -94,10 +69,10 @@ const NavigationContent = () => {
         setShowOnboarding(true);
       }
     }
-  }, [isConnected, isFirstTime]);
+  }, [isConnected, isFirstTime, showOnboarding, showWalletStory]);
 
   // Fonction pour naviguer entre les écrans d'onboarding
-  const navigateOnboarding = screen => {
+  const navigateOnboarding = (screen: string) => {
     if (screen === 'wallet_story') {
       setShowOnboarding(false);
       setShowWalletStory(true);
@@ -126,20 +101,24 @@ const NavigationContent = () => {
   }
 
   // Sélection de l'écran actif
+  // Sélection de l'écran actif
   const renderActiveScreen = () => {
     switch (activeScreen) {
-      case 'wallet':
-        return <MainScreen />;
-      case 'info':
+      case 'assets':
+        return (
+          <AssetsScreen
+            activeScreen={activeScreen}
+            setActiveScreen={setActiveScreen}
+          />
+        );
+      case 'objectives':
         return <InfoScreen />;
-      case 'profile':
-        return <ProfileScreen />;
-      case 'strategy':
+      case 'chillbot':
         return <StrategyScreen />;
-      case 'actions':
+      case 'history':
         return <ActionsScreen />;
-      case 'learn':
-        return <LearnScreen />;
+      case 'profile':
+        return <MainScreen />;
       default:
         return <MainScreen />;
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity, Image, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, Image, Text, StyleSheet} from 'react-native';
 
 /**
  * Barre de navigation complète pour l'app BeChill
@@ -16,13 +16,33 @@ const BottomBar: React.FC<BottomBarProps> = ({
   activeScreen,
   onScreenChange,
 }) => {
-  // Définir les onglets disponibles avec leurs icônes
+  // Définir les onglets disponibles avec leurs icônes et leurs labels
   const tabs = [
-    {id: 'assets', iconPath: require('../../assets/img/assets.png')},
-    {id: 'strategy', iconPath: require('../../assets/img/objectives.png')},
-    {id: 'chillbot', iconPath: require('../../assets/img/chillbot.png')},
-    {id: 'history', iconPath: require('../../assets/img/history.png')},
-    {id: 'profile', iconPath: require('../../assets/img/profile.png')}, // Notez "profil" sans "e"
+    {
+      id: 'assets',
+      iconPath: require('../../assets/img/assets.png'),
+      label: 'Assets',
+    },
+    {
+      id: 'strategy',
+      iconPath: require('../../assets/img/objectives.png'),
+      label: 'Objectives',
+    },
+    {
+      id: 'chillbot',
+      iconPath: require('../../assets/img/chillbot.png'),
+      label: 'Chillbot',
+    },
+    {
+      id: 'history',
+      iconPath: require('../../assets/img/history.png'),
+      label: 'History',
+    },
+    {
+      id: 'profile',
+      iconPath: require('../../assets/img/profile.png'),
+      label: 'Profile',
+    },
   ];
 
   return (
@@ -40,6 +60,13 @@ const BottomBar: React.FC<BottomBarProps> = ({
             ]}
             resizeMode="contain"
           />
+          <Text
+            style={[
+              styles.tabText,
+              activeScreen === tab.id ? styles.activeText : styles.inactiveText,
+            ]}>
+            {tab.label}
+          </Text>
         </TouchableOpacity>
       ))}
     </View>
@@ -58,17 +85,28 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical: 5,
   },
   tabIcon: {
     width: 24,
     height: 24,
+    marginBottom: 3,
   },
   activeIcon: {
     tintColor: '#8A2BE2', // Couleur violette pour l'icône active
   },
   inactiveIcon: {
     tintColor: '#bbbbbb', // Couleur grise pour les icônes inactives
+  },
+  tabText: {
+    fontSize: 12,
+  },
+  activeText: {
+    color: '#8A2BE2', // Couleur violette pour le texte actif
+    fontWeight: 'bold',
+  },
+  inactiveText: {
+    color: '#bbbbbb', // Couleur grise pour le texte inactif
   },
 });
 

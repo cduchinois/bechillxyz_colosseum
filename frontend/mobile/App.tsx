@@ -4,32 +4,17 @@ import {
 } from './src/components/providers/ConnectionProvider';
 import {clusterApiUrl} from '@solana/web3.js';
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, View} from 'react-native';
 import {AuthorizationProvider} from './src/components/providers/AuthorizationProvider';
 import AssetsScreen from './src/screens/AssetsScreen';
 import ObjectivesScreen from './src/screens/ObjectivesScreen';
+import HistoryScreen from './src/screens/HistoryScreen';
 import MainScreen from './src/screens/MainScreen';
 import InfoScreen from './src/screens/InfoScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import WalletStoryScreen from './src/screens/WalletStoryScreen';
 import BottomBar from './src/components/BottomBar';
 import {useAuthorization} from './src/components/providers/AuthorizationProvider';
-
-// Composants de placeholder pour les nouveaux écrans
-
-const ActionsScreen = () => (
-  <View style={styles.placeholderScreen}>
-    <Text style={styles.placeholderTitle}>Actions Recommandées</Text>
-    <Text style={styles.placeholderText}>
-      Vos transactions recommandées et DCA planifiés apparaîtront ici. Autorisez
-      Privy pour des signatures automatisées et suivez vos habitudes
-      d'investissement.
-    </Text>
-    <View style={styles.comingSoonBadge}>
-      <Text style={styles.comingSoonText}>Bientôt disponible</Text>
-    </View>
-  </View>
-);
 
 // Composant de navigation personnalisé qui utilise le context d'autorisation
 const NavigationContent = () => {
@@ -109,7 +94,12 @@ const NavigationContent = () => {
       case 'chillbot':
         return <InfoScreen />;
       case 'history':
-        return <ActionsScreen />;
+        return (
+          <HistoryScreen
+            activeScreen={activeScreen}
+            setActiveScreen={setActiveScreen}
+          />
+        );
       case 'profile':
         return <MainScreen />;
       default:

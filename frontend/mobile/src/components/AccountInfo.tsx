@@ -31,7 +31,7 @@ export default function AccountInfo({
         <Text style={styles.walletHeader}>Wallet Account Info</Text>
         <Text style={styles.walletBalance}>
           {selectedAccount.label
-            ? `${selectedAccount.label}: ◎${
+            ? `${selectedAccount.label}: ${
                 balance ? convertLamportsToSOL(balance) : '0'
               } SOL`
             : 'Wallet name not found'}

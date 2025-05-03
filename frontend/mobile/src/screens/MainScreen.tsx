@@ -1,7 +1,3 @@
-// Vérifiez que le fichier MainScreen.js exporte correctement le composant
-// Assurez-vous que la dernière ligne est:
-// export default MainScreen;
-
 import React, {useCallback, useEffect, useState} from 'react';
 import {
   ImageBackground,
@@ -9,7 +5,7 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
+  TouchableOpacity,
 } from 'react-native';
 import {PublicKey} from '@solana/web3.js';
 
@@ -25,12 +21,32 @@ import {Colors, Fonts} from '../constants/GlobalStyles';
 const background = require('../../assets/img/BeChill_landing_bg.png');
 const logo = require('../../assets/img/bechill-head1.png');
 
+// Interface pour les props de MainScreen
+interface MainScreenProps {
+  onStartOnboarding?: () => void;
+  onConnectDirect?: () => void;
+}
+
 // Définition avec function plutôt que const arrow function
-function MainScreen() {
+function MainScreen({onStartOnboarding, onConnectDirect}: MainScreenProps) {
   const {connection} = useConnection();
   const {selectedAccount} = useAuthorization();
   const [balance, setBalance] = useState<number | null>(null);
   const [showWebView, setShowWebView] = useState(false);
+
+  // Logs pour le débogage des props
+  console.log('MainScreen Props:', {
+    hasOnStartOnboarding: !!onStartOnboarding,
+    hasOnConnectDirect: !!onConnectDirect,
+  });
+
+  // Enregistrer l'effet de la connexion
+  useEffect(() => {
+    if (selectedAccount && onConnectDirect) {
+      console.log('Account selected, calling onConnectDirect');
+      onConnectDirect();
+    }
+  }, [selectedAccount, onConnectDirect]);
 
   const fetchAndUpdateBalance = useCallback(
     async (account: {publicKey: PublicKey}) => {
@@ -47,6 +63,17 @@ function MainScreen() {
     }
     fetchAndUpdateBalance({publicKey: selectedAccount.publicKey});
   }, [fetchAndUpdateBalance, selectedAccount]);
+
+  // Fonction de débogage pour le bouton Get Started
+  const handleGetStarted = () => {
+    console.log('Get Started button pressed');
+    if (onStartOnboarding) {
+      console.log('Calling onStartOnboarding function');
+      onStartOnboarding();
+    } else {
+      console.log('onStartOnboarding function is not defined');
+    }
+  };
 
   if (showWebView) {
     return <PrivyConnectScreen onDone={() => setShowWebView(false)} />;
@@ -83,13 +110,12 @@ function MainScreen() {
                 <ConnectButton title="Connect wallet" />
               </View>
 
-              <View style={styles.privyButton}>
-                <Button
-                  title="Connect with Privy"
-                  onPress={() => setShowWebView(true)}
-                  color="#000000"
-                />
-              </View>
+              {/* Bouton Get Started pour l'onboarding */}
+              <TouchableOpacity
+                style={styles.getStartedButton}
+                onPress={handleGetStarted}>
+                <Text style={styles.getStartedButtonText}>Get Started</Text>
+              </TouchableOpacity>
             </View>
           )}
         </View>
@@ -148,6 +174,22 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     overflow: 'hidden',
     width: '70%',
+  },
+  // Style pour le bouton Get Started
+  getStartedButton: {
+    marginTop: 4,
+    width: '70%',
+    backgroundColor: Colors.secondary,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    alignItems: 'center',
+  },
+  getStartedButtonText: {
+    color: Colors.primary,
+    fontSize: 16,
+    fontWeight: 'bold',
+    fontFamily: Fonts.DMSerif,
   },
   privyButton: {
     marginTop: 15,

@@ -24,7 +24,6 @@ interface Message {
 }
 
 // Props pour l'écran d'onboarding
-// Dans OnboardingScreen.tsx
 interface OnboardingScreenProps {
   onNavigate?: (destination: string) => void; // Accept a string argument for navigation
 }
@@ -38,6 +37,7 @@ const OnboardingScreen = ({onNavigate}: OnboardingScreenProps) => {
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [showWalletReview, setShowWalletReview] = useState(false);
   const [initialMessageSent, setInitialMessageSent] = useState(false);
+  const [waitingForWalletAddress, setWaitingForWalletAddress] = useState(false);
   const scrollViewRef = useRef<ScrollView>(null);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const {selectedAccount} = useAuthorization();
@@ -134,9 +134,89 @@ const OnboardingScreen = ({onNavigate}: OnboardingScreenProps) => {
 
       setOnboardingStep(1);
     }
-    // Si c'est la seconde réponse (question sur le wallet)
-    else if (onboardingStep === 1) {
-      // Pour toutes les questions, simplifier la réponse et passer directement à la wallet review
+    // Si c'est la requête de performances et que nous n'avons pas encore demandé l'adresse du wallet
+    else if (
+      onboardingStep === 1 &&
+      isPerformanceRequest(inputText) &&
+      !waitingForWalletAddress
+    ) {
+      // Simuler la saisie du bot
+      const typingId = simulateBotTyping();
+
+      // Supprimer l'animation de saisie et demander l'adresse du wallet
+      setTimeout(() => {
+        setMessages(prev => prev.filter(msg => msg.id !== typingId));
+
+        addMessage({
+          id: Date.now().toString(),
+          text: "I'd be happy to check your wallet's performance from last month. Could you please paste your wallet address so I can look it up?",
+          sender: 'bot',
+          timestamp: new Date(),
+        });
+
+        setWaitingForWalletAddress(true);
+      }, 1500);
+    }
+    // Si nous attendons l'adresse du wallet
+    else if (waitingForWalletAddress) {
+      // Supposer que l'utilisateur a fourni une adresse de wallet
+      // Simuler la saisie du bot
+      const typingId = simulateBotTyping();
+
+      // Valider superficiellement l'adresse
+      const isValidAddress = validateWalletAddress(inputText);
+
+      if (!isValidAddress) {
+        // Si l'adresse semble invalide
+        setTimeout(() => {
+          setMessages(prev => prev.filter(msg => msg.id !== typingId));
+
+          addMessage({
+            id: Date.now().toString(),
+            text: "That doesn't look like a valid wallet address. Please check and try again.",
+            sender: 'bot',
+            timestamp: new Date(),
+          });
+        }, 1500);
+        return;
+      }
+
+      // Supprimer l'animation de saisie et montrer qu'on analyse le wallet
+      setTimeout(() => {
+        setMessages(prev => prev.filter(msg => msg.id !== typingId));
+
+        addMessage({
+          id: Date.now().toString(),
+          text: `Thanks! Analyzing wallet ${inputText.substring(
+            0,
+            6,
+          )}...${inputText.substring(inputText.length - 4)}...`,
+          sender: 'bot',
+          timestamp: new Date(),
+        });
+
+        // Après un court délai, afficher les "résultats"
+        setTimeout(() => {
+          addMessage({
+            id: Date.now().toString(),
+            text: "I've analyzed your wallet's performance from last month. Here's what I found:",
+            sender: 'bot',
+            timestamp: new Date(),
+          });
+
+          // Afficher le composant de wallet review
+          setTimeout(() => {
+            setShowWalletReview(true);
+          }, 800);
+        }, 2000);
+      }, 1500);
+
+      setWaitingForWalletAddress(false);
+      setOnboardingStep(2);
+    }
+    // Si c'est la seconde réponse (question sur le wallet) et ce n'est pas une demande de performances
+    else if (onboardingStep === 1 && !isPerformanceRequest(inputText)) {
+      // Pour toutes les autres questions, simplifier la réponse
       // Simuler la saisie du bot
       const typingId = simulateBotTyping();
 
@@ -144,20 +224,45 @@ const OnboardingScreen = ({onNavigate}: OnboardingScreenProps) => {
       setTimeout(() => {
         setMessages(prev => prev.filter(msg => msg.id !== typingId));
 
-        // Message simplifié
+        // Message générique
         addMessage({
           id: Date.now().toString(),
-          text: "Let's take a look at your wallet performance...",
+          text: "That's a great question! To give you the most accurate information, I'll need to check your wallet. Could you please paste your wallet address?",
           sender: 'bot',
           timestamp: new Date(),
         });
 
-        // Afficher directement le composant de wallet review
-        setTimeout(() => {
-          setShowWalletReview(true);
-        }, 800);
-      }, 1000);
+        setWaitingForWalletAddress(true);
+      }, 1500);
     }
+  };
+
+  // Fonction pour vérifier si la demande concerne les performances
+  const isPerformanceRequest = (text: string): boolean => {
+    const performanceKeywords = [
+      'performance',
+      'perform',
+      'month',
+      'last month',
+      'previous month',
+      'how did',
+      'how was',
+      'how am i doing',
+      'portfolio',
+      'gains',
+      'losses',
+      'profit',
+    ];
+
+    const lowercaseText = text.toLowerCase();
+    return performanceKeywords.some(keyword => lowercaseText.includes(keyword));
+  };
+
+  // Fonction simple pour valider superficiellement une adresse de wallet
+  const validateWalletAddress = (address: string): boolean => {
+    // Vérification très basique - généralement une adresse Solana fait 44 caractères
+    // Vous pouvez améliorer cette validation selon vos besoins
+    return address.length >= 30 && address.length <= 50;
   };
 
   // Gérer le clic sur "VIEW STORY"
@@ -233,6 +338,11 @@ const OnboardingScreen = ({onNavigate}: OnboardingScreenProps) => {
             <View style={styles.walletReviewContainer}>
               <View style={styles.walletReviewCard}>
                 <Text style={styles.walletReviewTitle}>Wallet Review!</Text>
+                <View style={styles.performanceStats}>
+                  <Text style={styles.performanceStat}>+15.7% Growth</Text>
+                  <Text style={styles.performanceStat}>2.3 SOL Earned</Text>
+                  <Text style={styles.performanceStat}>4 New NFTs</Text>
+                </View>
                 <TouchableOpacity
                   style={styles.viewStoryButton}
                   onPress={handleViewStory}>
@@ -399,6 +509,20 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.DMSerif,
     fontSize: 40,
     marginBottom: 15,
+  },
+  performanceStats: {
+    width: '100%',
+    marginBottom: 15,
+  },
+  performanceStat: {
+    color: 'white',
+    fontFamily: Fonts.DMSerif,
+    fontSize: 18,
+    textAlign: 'center',
+    marginVertical: 5,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    borderRadius: 10,
+    paddingVertical: 8,
   },
   viewStoryButton: {
     backgroundColor: '#7b70ff',

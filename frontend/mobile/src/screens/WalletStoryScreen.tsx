@@ -22,9 +22,9 @@ interface StoryPage {
   icon?: string;
 }
 
-// Props pour l'écran WalletStory
+// Props pour l'écran WalletStory - modifié pour accepter un paramètre de destination
 interface WalletStoryScreenProps {
-  onComplete?: () => void;
+  onComplete?: (destination?: string) => void;
 }
 
 const WalletStoryScreen = ({onComplete}: WalletStoryScreenProps) => {
@@ -154,10 +154,17 @@ const WalletStoryScreen = ({onComplete}: WalletStoryScreenProps) => {
         animated: true,
       });
     } else {
-      // Si c'est la dernière page, terminer la story
+      // Si c'est la dernière page, terminer la story et rediriger vers assets
       if (onComplete) {
-        onComplete();
+        onComplete('assets');
       }
+    }
+  };
+
+  // Fonction de fermeture qui redirige vers assets
+  const handleClose = () => {
+    if (onComplete) {
+      onComplete('assets');
     }
   };
 
@@ -291,7 +298,7 @@ const WalletStoryScreen = ({onComplete}: WalletStoryScreenProps) => {
       />
 
       {/* Bouton de fermeture */}
-      <TouchableOpacity style={styles.closeButton} onPress={onComplete}>
+      <TouchableOpacity style={styles.closeButton} onPress={handleClose}>
         <Text style={styles.closeButtonText}>✕</Text>
       </TouchableOpacity>
 
@@ -301,6 +308,16 @@ const WalletStoryScreen = ({onComplete}: WalletStoryScreenProps) => {
           Tap to continue • Swipe for details
         </Text>
       </View>
+
+      {/* Bouton pour passer directement au Dashboard
+      {currentIndex === storyPages.length - 1 && (
+        <TouchableOpacity
+          style={styles.continueButton}
+          onPress={() => onComplete?.('assets')}>
+          <Text style={styles.continueButtonText}>Go to Dashboard</Text>
+        </TouchableOpacity>
+      )}
+        */}
     </SafeAreaView>
   );
 };
@@ -415,6 +432,20 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.6)',
     fontSize: 12,
     fontFamily: Fonts.DMSerif,
+  },
+  continueButton: {
+    position: 'absolute',
+    bottom: 60,
+    alignSelf: 'center',
+    backgroundColor: '#7B4EFF',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 20,
+  },
+  continueButtonText: {
+    color: 'white',
+    fontFamily: Fonts.Monument,
+    fontSize: 14,
   },
 });
 

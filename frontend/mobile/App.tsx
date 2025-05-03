@@ -23,59 +23,95 @@ const NavigationContent = () => {
   const {selectedAccount} = useAuthorization();
   const isConnected = !!selectedAccount;
 
-  // États pour gérer le flux d'onboarding
-  const [isFirstTime, setIsFirstTime] = useState(true);
-  const [showOnboarding, setShowOnboarding] = useState(false); // Modifié pour commencer par le MainScreen
-  const [showWalletStory, setShowWalletStory] = useState(false);
-  const [hasCompletedWalletConnect, setHasCompletedWalletConnect] =
-    useState(false);
+  // États pour gérer le flux de navigation
+  const [currentView, setCurrentView] = useState<
+    'main' | 'onboarding' | 'walletStory' | 'dashboard'
+  >('main');
+  const [skipOnboarding, setSkipOnboarding] = useState(true); // Mettre à true par défaut
 
-  // Réinitialiser à l'écran wallet quand l'utilisateur se connecte/déconnecte
+  // Gérer la connexion du compte
   useEffect(() => {
-    setActiveScreen('assets');
-
-    // Si l'utilisateur se connecte, marquer qu'il a complété la connexion du wallet
-    if (isConnected && isFirstTime) {
-      setHasCompletedWalletConnect(true);
-
-      // Si c'est la première fois, montrer l'écran d'onboarding après la connexion
-      if (!showOnboarding && !showWalletStory) {
-        setShowOnboarding(true);
+    if (isConnected && currentView === 'main') {
+      // Aller directement au dashboard quand skipOnboarding est true (défaut)
+      if (skipOnboarding) {
+        setCurrentView('dashboard');
+      } else {
+        // Option laissée pour l'onboarding si nécessaire dans le futur
+        setCurrentView('onboarding');
       }
     }
-  }, [isConnected, isFirstTime, showOnboarding, showWalletStory]);
+  }, [isConnected, skipOnboarding, currentView]);
+
+  // Fonction pour démarrer l'onboarding
+  const handleStartOnboarding = () => {
+    console.log(
+      'handleStartOnboarding called, setting currentView to onboarding',
+    );
+    setSkipOnboarding(false); // Désactiver le saut d'onboarding si l'utilisateur clique sur Get Started
+    setCurrentView('onboarding');
+  };
+
+  // Fonction pour sauter l'onboarding et aller directement au tableau de bord après connexion
+  const handleDirectConnect = () => {
+    console.log('handleDirectConnect called, setting skipOnboarding to true');
+    setSkipOnboarding(true);
+  };
 
   // Fonction pour naviguer entre les écrans d'onboarding
   const navigateOnboarding = (screen: string) => {
+    console.log('navigateOnboarding called with:', screen);
     if (screen === 'wallet_story') {
-      setShowOnboarding(false);
-      setShowWalletStory(true);
+      setCurrentView('walletStory');
     } else if (screen === 'main') {
-      setShowOnboarding(false);
-      setShowWalletStory(false);
-      setIsFirstTime(false);
+      setCurrentView('dashboard');
+    } else if (screen === 'assets') {
+      // Ajouter ce cas pour la redirection après les stories
+      setCurrentView('dashboard');
+      setActiveScreen('assets');
     }
   };
 
-  // Si l'utilisateur est connecté et que c'est sa première fois (et qu'il a déjà connecté son wallet)
-  if (isConnected && isFirstTime && hasCompletedWalletConnect) {
-    if (showOnboarding) {
-      return <OnboardingScreen onNavigate={navigateOnboarding} />;
+  // Fonction pour gérer la complétion de WalletStoryScreen
+  const handleWalletStoryComplete = (destination?: string) => {
+    console.log(
+      'handleWalletStoryComplete called with destination:',
+      destination,
+    );
+
+    if (destination === 'assets') {
+      // Si l'utilisateur a demandé à aller sur assets, le rediriger correctement
+      setCurrentView('dashboard');
+      setActiveScreen('assets');
+    } else {
+      // Comportement par défaut pour la compatibilité
+      navigateOnboarding('main');
     }
-    if (showWalletStory) {
-      return (
-        <WalletStoryScreen onComplete={() => navigateOnboarding('main')} />
-      );
-    }
+  };
+
+  // Rendu basé sur l'état actuel de navigation
+  if (currentView === 'onboarding') {
+    console.log('Rendering OnboardingScreen');
+    return <OnboardingScreen onNavigate={navigateOnboarding} />;
   }
 
-  // Si non connecté ou si c'est la première interaction
+  if (currentView === 'walletStory') {
+    console.log('Rendering WalletStoryScreen');
+    return <WalletStoryScreen onComplete={handleWalletStoryComplete} />;
+  }
+
   if (!isConnected) {
-    return <MainScreen />;
+    console.log('User not connected, rendering MainScreen');
+    return (
+      <MainScreen
+        onStartOnboarding={handleStartOnboarding}
+        onConnectDirect={handleDirectConnect}
+      />
+    );
   }
 
-  // Sélection de l'écran actif
-  // Sélection de l'écran actif
+  // Sélection de l'écran actif pour le tableau de bord
+  console.log('Rendering dashboard with activeScreen:', activeScreen);
+
   const renderActiveScreen = () => {
     switch (activeScreen) {
       case 'assets':
@@ -109,11 +145,16 @@ const NavigationContent = () => {
           />
         );
       default:
-        return <MainScreen />;
+        return (
+          <AssetsScreen
+            activeScreen={activeScreen}
+            setActiveScreen={setActiveScreen}
+          />
+        );
     }
   };
 
-  // Si connecté, afficher l'écran actif et la barre de navigation
+  // Affichage du tableau de bord avec la barre de navigation
   return (
     <View style={styles.navigationContainer}>
       <View style={styles.screenContainer}>{renderActiveScreen()}</View>
@@ -147,36 +188,5 @@ const styles = StyleSheet.create({
   },
   screenContainer: {
     flex: 1,
-  },
-  placeholderScreen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#fff',
-  },
-  placeholderTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#8A2BE2',
-    marginBottom: 20,
-    textAlign: 'center',
-  },
-  placeholderText: {
-    fontSize: 16,
-    textAlign: 'center',
-    marginBottom: 30,
-    lineHeight: 24,
-    color: '#444',
-  },
-  comingSoonBadge: {
-    backgroundColor: '#FFC107',
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 20,
-  },
-  comingSoonText: {
-    color: '#000',
-    fontWeight: 'bold',
   },
 });

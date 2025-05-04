@@ -2,14 +2,16 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import WalletStoryWeb from "./WalletStoryWeb";
+import TransactionInfo from "./TransactionInfo";
 
-type MessageType = "text" | "wallet-connect" | "wallet-review";
+type MessageType = "text" | "wallet-connect" | "wallet-review" | "wallet-transaction";
 
 type Message = {
   text: string;
   sender: "bot" | "user";
   timestamp?: string;
   type?: MessageType;
+  data?: any;
 };
 
 type ChatProps = {
@@ -39,13 +41,16 @@ export default function ChatComponent({
   const [hasAskedForWallet, setHasAskedForWallet] = useState(false);
   const [hasDetectedWallet, setHasDetectedWallet] = useState(false);
   const [showWalletStory, setShowWalletStory] = useState(false);
+  const [isWaitingForWalletInput, setIsWaitingForWalletInput] = useState(false);
+  const [tempWalletAddress, setTempWalletAddress] = useState<string | null>(null);
+  const [pendingWalletQuery, setPendingWalletQuery] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const hasUserInteracted = useRef(false);
 
-  // MODIFICATION: Désactiver l'auto-scroll initial pour empêcher le focus sur le chat
+  // Disable initial auto-scroll to prevent focusing on the chat
   const [blockAutoScroll, setBlockAutoScroll] = useState(true);
   
-  // Activer l'auto-scroll uniquement après une interaction utilisateur
+  // Enable auto-scroll only after user interaction
   const enableAutoScroll = () => {
     if (blockAutoScroll) {
       setBlockAutoScroll(false);
@@ -53,9 +58,8 @@ export default function ChatComponent({
   };
 
   useEffect(() => {
-    // Délai plus long pour permettre à la page de se charger complètement
     const timer = setTimeout(() => {
-      // Ne pas activer automatiquement l'auto-scroll au chargement
+      // Do not automatically enable auto-scroll on load
       // setBlockAutoScroll(false); 
     }, 5000);
     return () => clearTimeout(timer);
@@ -96,6 +100,14 @@ export default function ChatComponent({
     if (onMessagesUpdate) onMessagesUpdate(messages);
   }, [messages, onMessagesUpdate]);
 
+  // Process pending query when wallet address is provided
+  useEffect(() => {
+    if (tempWalletAddress && pendingWalletQuery) {
+      processWalletQuery(pendingWalletQuery, tempWalletAddress);
+      setPendingWalletQuery(null);
+    }
+  }, [tempWalletAddress, pendingWalletQuery]);
+
   const getCurrentTime = () =>
     new Date().toLocaleTimeString("en-US", {
       hour: "2-digit",
@@ -109,6 +121,7 @@ export default function ChatComponent({
       sender: message.sender || "bot",
       timestamp: getCurrentTime(),
       type: message.type,
+      data: message.data,
     };
     setMessages((prev) => [...prev, newMsg]);
   };
@@ -132,18 +145,118 @@ export default function ChatComponent({
 
   const suggestWalletConnection = () => {
     if (!userWallet && !hasAskedForWallet) {
-      addMessage({ text: "To give you insights, I'd need to connect your wallet. Connect now?", sender: "bot" });
+      addMessage({ 
+        text: "To give you personalized information, I need access to your wallet. You have two options:", 
+        sender: "bot" 
+      });
       setTimeout(() => {
-        addMessage({ text: "CONNECT_WALLET_BUTTON", sender: "bot", type: "wallet-connect" });
+        addMessage({ 
+          text: "1. Connect your wallet directly (recommended for better security)", 
+          sender: "bot" 
+        });
+        setTimeout(() => {
+          addMessage({ text: "CONNECT_WALLET_BUTTON", sender: "bot", type: "wallet-connect" });
+          setTimeout(() => {
+            addMessage({ 
+              text: "2. Or simply provide your wallet address (e.g. start with 'My wallet is...')", 
+              sender: "bot" 
+            });
+          }, 500);
+        }, 500);
       }, 500);
       setHasAskedForWallet(true);
+    }
+  };
+
+  const askForWalletAddress = (query: string) => {
+    addMessage({ 
+      text: "To help you with this request, I need your Solana wallet address. Can you provide it?", 
+      sender: "bot" 
+    });
+    setIsWaitingForWalletInput(true);
+    setPendingWalletQuery(query);
+  };
+
+  const processWalletQuery = async (query: string, walletAddress: string) => {
+    addBotTyping();
+    
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: query, walletAddress })
+      });
+      
+      const result = await response.json();
+      removeBotTyping();
+      
+      // If API indicates a wallet is required
+      if (result.requireWallet) {
+        askForWalletAddress(query);
+        return;
+      }
+      
+      // Add response message
+      addMessage({ 
+        text: result.response, 
+        sender: "bot", 
+        type: result.type,
+        data: result.data
+      });
+      
+      if (result.type === "wallet-transaction") {
+        // In TransactionInfo component, pass isDemo flag
+        const lastMessageIndex = messages.length;
+        setMessages(prevMessages => {
+          const newMessages = [...prevMessages];
+          if (newMessages[lastMessageIndex]) {
+            newMessages[lastMessageIndex].data = {
+              ...newMessages[lastMessageIndex].data,
+              isDemo: result.demo
+            };
+          }
+          return newMessages;
+        });
+      }
+    } catch (error) {
+      console.error("Error processing wallet query:", error);
+      removeBotTyping();
+      
+      // Simulate a response during development/testing
+      if (query.toLowerCase().includes('last transaction') || query.toLowerCase().includes('recent transaction') || query.toLowerCase().includes('transactions')) {
+        const mockData = {
+          transactions: Array.from({ length: 8 }, (_, i) => ({
+            signature: `5xAt3ve1XcFxDGtCMDpLPRgXMvKvp6MWHWrwVK3mHpHjYx9timZsNFNrLdVCvyr1Kft${i}`,
+            timestamp: Math.floor(Date.now() / 1000) - (i * 86400 * 3), // Every 3 days
+            type: i % 2 === 0 ? "Transfer" : "Swap",
+            tokenTransfers: [
+              {
+                amount: (Math.random() * 2).toFixed(2),
+                symbol: i % 3 === 0 ? "SOL" : (i % 3 === 1 ? "USDC" : "JUP")
+              }
+            ]
+          }))
+        };
+        
+        addMessage({ 
+          text: "Here are your transactions from the last 30 days (demo mode in case of API error):", 
+          sender: "bot", 
+          type: "wallet-transaction",
+          data: mockData
+        });
+      } else {
+        addMessage({ 
+          text: "Sorry, an error occurred while analyzing your wallet. Please verify the address and try again.", 
+          sender: "bot" 
+        });
+      }
     }
   };
 
   const handleSendMessage = () => {
     if (!input.trim()) return;
 
-    // Activer l'auto-scroll après interaction utilisateur
+    // Enable auto-scroll after user interaction
     enableAutoScroll();
     hasUserInteracted.current = true;
 
@@ -163,6 +276,25 @@ export default function ChatComponent({
       return;
     }
 
+    if (isWaitingForWalletInput) {
+      // Check if text looks like a Solana address (simplistic)
+      if (userText.length >= 32 && userText.length <= 44) {
+        setTempWalletAddress(userText);
+        setIsWaitingForWalletInput(false);
+        addMessage({ 
+          text: `Thanks! I'll analyze wallet ${userText.slice(0, 6)}...${userText.slice(-4)}.`, 
+          sender: "bot" 
+        });
+        return;
+      } else {
+        addMessage({ 
+          text: "That doesn't look like a valid Solana address. Please provide a complete wallet address.", 
+          sender: "bot" 
+        });
+        return;
+      }
+    }
+
     if (onSendMessage) onSendMessage(userText);
 
     if (hasAskedForWallet && !userWallet) {
@@ -171,11 +303,56 @@ export default function ChatComponent({
         setTimeout(() => onRequestWalletConnect?.(), 1000);
         return;
       } else if (/no|later|not now/i.test(userText)) {
-        addMessage({ text: "No worries! Ask me anything crypto.", sender: "bot" });
+        addMessage({ text: "No problem! Ask me anything about crypto or simply provide your wallet address.", sender: "bot" });
         return;
+      } else if (/my wallet is|my address is|here's my wallet|here is my wallet|here is my address/i.test(userText)) {
+        // Extract potential address - look for a 32-44 character string
+        const addressMatch = userText.match(/[A-Za-z0-9]{32,44}/);
+        if (addressMatch) {
+          const walletAddress = addressMatch[0];
+          setTempWalletAddress(walletAddress);
+          addMessage({ 
+            text: `Thanks! I've registered your wallet address: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}. You can now ask me for information about this wallet.`, 
+            sender: "bot" 
+          });
+          
+          // Add suggestion for checking last transaction
+          setTimeout(() => {
+            addMessage({ 
+              text: "Would you like to see your transactions from the last 30 days? Just type 'Show my transactions'", 
+              sender: "bot" 
+            });
+          }, 1000);
+          return;
+        }
       }
     }
 
+    // Detect wallet-related queries
+    const lowerText = userText.toLowerCase();
+    if (
+      lowerText.includes('last transaction') || 
+      lowerText.includes('recent transaction') ||
+      lowerText.includes('balance') || 
+      lowerText.includes('holdings') ||
+      lowerText.includes('analysis') || 
+      lowerText.includes('performance') ||
+      lowerText.includes('show my transactions')
+    ) {
+      if (userWallet) {
+        // If wallet connected, use this address
+        processWalletQuery(userText, userWallet);
+      } else if (tempWalletAddress) {
+        // If user already provided an address manually
+        processWalletQuery(userText, tempWalletAddress);
+      } else {
+        // Ask for wallet address
+        askForWalletAddress(userText);
+      }
+      return;
+    }
+
+    // Process other messages as before
     setTimeout(() => {
       addBotTyping();
       setTimeout(() => {
@@ -260,10 +437,21 @@ export default function ChatComponent({
     </div>
   );
 
+  const renderWalletTransactionInfo = (data: any) => (
+    <TransactionInfo 
+      data={data} 
+      onClose={() => {
+        enableAutoScroll();
+        // Additional actions after closing if needed
+      }} 
+      isDemo={data.isDemo || false}
+    />
+  );
+
   return (
     <div 
       className={`font-serif ${isFloating ? "fixed bottom-4 right-4 z-20" : ""} ${className}`}
-      // Activer l'auto-scroll au focus sur le composant
+      // Enable auto-scroll on component focus
       onClick={enableAutoScroll}
     >
       {isFloating && (
@@ -285,13 +473,15 @@ export default function ChatComponent({
             <h2 className="font-bold text-purple-900">beChill</h2>
           </div>
 
-          <div className="h-80 overflow-y-auto p-4 space-y-4 bg-white/30 backdrop-blur-sm">
+          <div className="h-150 overflow-y-auto p-4 space-y-4 bg-white/30 backdrop-blur-sm">
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.sender === "bot" ? "justify-start" : "justify-end"}`}>
                 {msg.type === "wallet-review"
                   ? renderWalletReviewWidget()
                   : msg.type === "wallet-connect"
                   ? renderWalletConnectButton()
+                  : msg.type === "wallet-transaction"
+                  ? renderWalletTransactionInfo(msg.data)
                   : (
                     <div className={`max-w-[80%] rounded-2xl px-4 py-3 ${msg.sender === "bot" ? "bg-white" : "bg-yellow-300"} text-gray-800 shadow-sm`}>
                       {msg.text}

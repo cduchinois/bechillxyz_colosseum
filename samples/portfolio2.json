@@ -1,0 +1,23 @@
+{
+  "user": {
+    "name": "Jamie",
+    "investmentGoals": "take big risks",
+    "riskAppetite": "high"
+  },
+  "assets": [
+    { "symbol": "SOL", "name": "Solana", "amount": 100, "usdValue": 1800 },
+    { "symbol": "BONK", "name": "Bonk", "amount": 100000000, "usdValue": 1200 },
+    { "symbol": "JUP", "name": "Jupiter", "amount": 5000, "usdValue": 2000 },
+    { "symbol": "WIF", "name": "dogwifhat", "amount": 3000, "usdValue": 1000 }
+  ],
+  "defi": [
+    { "type": "staking", "protocol": "Jupiter", "asset": "JUP", "amount": 1000, "usdValue": 400 },
+    { "type": "lending", "protocol": "Solend", "asset": "BONK", "amount": 20000000, "usdValue": 240 },
+    { "type": "lp_token", "protocol": "Orca", "pair": "SOL-BONK", "amount": 500, "usdValue": 350 },
+    { "type": "open_order", "protocol": "Orca", "asset": "WIF", "amount": 500, "usdValue": 150 }
+  ],
+  "nfts": [
+    { "collection": "Mad Lads", "name": "Mad Lad #4321", "estimatedValue": 180 },
+    { "collection": "Solana Monkey Business", "name": "SMB #9999", "estimatedValue": 300 }
+  ]
+} 

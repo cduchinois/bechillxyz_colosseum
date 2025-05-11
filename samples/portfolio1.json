@@ -1,0 +1,23 @@
+{
+  "user": {
+    "name": "Alex",
+    "investmentGoals": "grow it steadily",
+    "riskAppetite": "moderate"
+  },
+  "assets": [
+    { "symbol": "SOL", "name": "Solana", "amount": 200, "usdValue": 3600 },
+    { "symbol": "USDC", "name": "USD Coin (Solana)", "amount": 4000, "usdValue": 4000 },
+    { "symbol": "SRM", "name": "Serum", "amount": 1000, "usdValue": 500 },
+    { "symbol": "RAY", "name": "Raydium", "amount": 1500, "usdValue": 900 }
+  ],
+  "defi": [
+    { "type": "staking", "protocol": "Marinade", "asset": "mSOL", "amount": 50, "usdValue": 900 },
+    { "type": "lending", "protocol": "Solend", "asset": "USDC", "amount": 1000, "usdValue": 1000 },
+    { "type": "lp_token", "protocol": "Raydium", "pair": "SOL-USDC", "amount": 200, "usdValue": 700 },
+    { "type": "open_order", "protocol": "Serum", "asset": "SRM", "amount": 100, "usdValue": 50 }
+  ],
+  "nfts": [
+    { "collection": "DeGods", "name": "DeGod #1234", "estimatedValue": 250 },
+    { "collection": "Okay Bears", "name": "Okay Bear #5678", "estimatedValue": 120 }
+  ]
+} 

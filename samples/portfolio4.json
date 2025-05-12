@@ -1,0 +1,525 @@
+{
+  "user": {
+    "name": "Remi",
+    "investmentGoals": "grow it steadily",
+    "riskAppetite": "moderate"
+  },
+  "assets": [
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "amount": 200,
+      "usdValue": 3600
+    },
+    {
+      "symbol": "USDC",
+      "name": "USD Coin (Solana)",
+      "amount": 4000,
+      "usdValue": 4000
+    },
+    {
+      "symbol": "SRM",
+      "name": "Serum",
+      "amount": 1000,
+      "usdValue": 500
+    },
+    {
+      "symbol": "RAY",
+      "name": "Raydium",
+      "amount": 1500,
+      "usdValue": 900
+    }
+  ],
+  "defi": [
+    {
+      "type": "staking",
+      "protocol": "Marinade",
+      "asset": "mSOL",
+      "amount": 50,
+      "usdValue": 900
+    },
+    {
+      "type": "lending",
+      "protocol": "Solend",
+      "asset": "USDC",
+      "amount": 1000,
+      "usdValue": 1000
+    },
+    {
+      "type": "lp_token",
+      "protocol": "Raydium",
+      "pair": "SOL-USDC",
+      "amount": 200,
+      "usdValue": 700
+    },
+    {
+      "type": "open_order",
+      "protocol": "Serum",
+      "asset": "SRM",
+      "amount": 100,
+      "usdValue": 50
+    }
+  ],
+  "nfts": [
+    {
+      "collection": "DeGods",
+      "name": "DeGod #1234",
+      "estimatedValue": 250
+    },
+    {
+      "collection": "Okay Bears",
+      "name": "Okay Bear #5678",
+      "estimatedValue": 120
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-05-12",
+      "symbol": "SRM",
+      "action": "buy",
+      "amount": 29.73,
+      "priceUSD": 16.5092,
+      "valueUSD": 490.82
+    },
+    {
+      "date": "2025-05-12",
+      "symbol": "USDC",
+      "action": "buy",
+      "amount": 52.82,
+      "priceUSD": 14.473,
+      "valueUSD": 764.46
+    },
+    {
+      "date": "2025-05-12",
+      "symbol": "USDC",
+      "action": "stake",
+      "amount": 51.67,
+      "priceUSD": 9.782,
+      "valueUSD": 505.44
+    },
+    {
+      "date": "2025-05-11",
+      "symbol": "SRM",
+      "action": "stake",
+      "amount": 49.97,
+      "priceUSD": 36.3259,
+      "valueUSD": 1815.21
+    },
+    {
+      "date": "2025-05-10",
+      "symbol": "SRM",
+      "action": "lend",
+      "amount": 95.17,
+      "priceUSD": 28.1745,
+      "valueUSD": 2681.37
+    },
+    {
+      "date": "2025-05-10",
+      "symbol": "SRM",
+      "action": "swap",
+      "amount": 35.52,
+      "priceUSD": 32.4563,
+      "valueUSD": 1152.85
+    },
+    {
+      "date": "2025-05-10",
+      "symbol": "USDC",
+      "action": "sell",
+      "amount": 64.82,
+      "priceUSD": 16.812,
+      "valueUSD": 1089.75
+    },
+    {
+      "date": "2025-05-09",
+      "symbol": "RAY",
+      "action": "sell",
+      "amount": 65.81,
+      "priceUSD": 0.8017,
+      "valueUSD": 52.76
+    },
+    {
+      "date": "2025-05-08",
+      "symbol": "RAY",
+      "action": "stake",
+      "amount": 71.38,
+      "priceUSD": 7.8999,
+      "valueUSD": 563.89
+    },
+    {
+      "date": "2025-05-08",
+      "symbol": "RAY",
+      "action": "stake",
+      "amount": 51.25,
+      "priceUSD": 6.4474,
+      "valueUSD": 330.43
+    },
+    {
+      "date": "2025-05-07",
+      "symbol": "RAY",
+      "action": "stake",
+      "amount": 79.7,
+      "priceUSD": 38.8853,
+      "valueUSD": 3099.16
+    },
+    {
+      "date": "2025-05-07",
+      "symbol": "RAY",
+      "action": "stake",
+      "amount": 19.27,
+      "priceUSD": 6.1067,
+      "valueUSD": 117.68
+    },
+    {
+      "date": "2025-05-06",
+      "symbol": "RAY",
+      "action": "stake",
+      "amount": 49.42,
+      "priceUSD": 44.076,
+      "valueUSD": 2178.24
+    },
+    {
+      "date": "2025-05-06",
+      "symbol": "SRM",
+      "action": "sell",
+      "amount": 4.38,
+      "priceUSD": 25.1004,
+      "valueUSD": 109.94
+    },
+    {
+      "date": "2025-05-05",
+      "symbol": "USDC",
+      "action": "sell",
+      "amount": 85.45,
+      "priceUSD": 18.7022,
+      "valueUSD": 1598.1
+    },
+    {
+      "date": "2025-05-05",
+      "symbol": "SOL",
+      "action": "buy",
+      "amount": 32.77,
+      "priceUSD": 10.0897,
+      "valueUSD": 330.64
+    },
+    {
+      "date": "2025-05-04",
+      "symbol": "USDC",
+      "action": "stake",
+      "amount": 82.54,
+      "priceUSD": 37.8709,
+      "valueUSD": 3125.86
+    },
+    {
+      "date": "2025-05-04",
+      "symbol": "SRM",
+      "action": "sell",
+      "amount": 8.94,
+      "priceUSD": 20.5461,
+      "valueUSD": 183.68
+    },
+    {
+      "date": "2025-05-04",
+      "symbol": "RAY",
+      "action": "swap",
+      "amount": 69.37,
+      "priceUSD": 32.1809,
+      "valueUSD": 2232.39
+    },
+    {
+      "date": "2025-05-03",
+      "symbol": "SRM",
+      "action": "sell",
+      "amount": 74.93,
+      "priceUSD": 13.7329,
+      "valueUSD": 1029.01
+    },
+    {
+      "date": "2025-05-02",
+      "symbol": "SOL",
+      "action": "lend",
+      "amount": 66.78,
+      "priceUSD": 20.9661,
+      "valueUSD": 1400.12
+    },
+    {
+      "date": "2025-05-02",
+      "symbol": "USDC",
+      "action": "swap",
+      "amount": 27.84,
+      "priceUSD": 20.6425,
+      "valueUSD": 574.69
+    },
+    {
+      "date": "2025-05-01",
+      "symbol": "USDC",
+      "action": "buy",
+      "amount": 74.01,
+      "priceUSD": 33.4363,
+      "valueUSD": 2474.62
+    },
+    {
+      "date": "2025-05-01",
+      "symbol": "SRM",
+      "action": "stake",
+      "amount": 50.47,
+      "priceUSD": 19.2207,
+      "valueUSD": 970.07
+    },
+    {
+      "date": "2025-04-30",
+      "symbol": "USDC",
+      "action": "swap",
+      "amount": 1.36,
+      "priceUSD": 22.2843,
+      "valueUSD": 30.31
+    },
+    {
+      "date": "2025-04-29",
+      "symbol": "SRM",
+      "action": "swap",
+      "amount": 37.7,
+      "priceUSD": 24.4876,
+      "valueUSD": 923.18
+    },
+    {
+      "date": "2025-04-28",
+      "symbol": "SOL",
+      "action": "buy",
+      "amount": 38.96,
+      "priceUSD": 18.0691,
+      "valueUSD": 703.97
+    },
+    {
+      "date": "2025-04-28",
+      "symbol": "SRM",
+      "action": "sell",
+      "amount": 62.51,
+      "priceUSD": 27.3247,
+      "valueUSD": 1708.07
+    },
+    {
+      "date": "2025-04-27",
+      "symbol": "USDC",
+      "action": "swap",
+      "amount": 89.53,
+      "priceUSD": 6.8315,
+      "valueUSD": 611.62
+    },
+    {
+      "date": "2025-04-26",
+      "symbol": "SRM",
+      "action": "lend",
+      "amount": 26.75,
+      "priceUSD": 9.303,
+      "valueUSD": 248.86
+    },
+    {
+      "date": "2025-04-25",
+      "symbol": "SOL",
+      "action": "buy",
+      "amount": 78.24,
+      "priceUSD": 1.136,
+      "valueUSD": 88.88
+    },
+    {
+      "date": "2025-04-24",
+      "symbol": "SOL",
+      "action": "swap",
+      "amount": 55.54,
+      "priceUSD": 19.33,
+      "valueUSD": 1073.59
+    },
+    {
+      "date": "2025-04-23",
+      "symbol": "USDC",
+      "action": "sell",
+      "amount": 1.89,
+      "priceUSD": 28.6341,
+      "valueUSD": 54.12
+    },
+    {
+      "date": "2025-04-23",
+      "symbol": "USDC",
+      "action": "lend",
+      "amount": 15.13,
+      "priceUSD": 6.1516,
+      "valueUSD": 93.07
+    },
+    {
+      "date": "2025-04-22",
+      "symbol": "RAY",
+      "action": "swap",
+      "amount": 59.08,
+      "priceUSD": 32.1309,
+      "valueUSD": 1898.29
+    },
+    {
+      "date": "2025-04-21",
+      "symbol": "USDC",
+      "action": "swap",
+      "amount": 98.59,
+      "priceUSD": 38.2189,
+      "valueUSD": 3768.0
+    },
+    {
+      "date": "2025-04-20",
+      "symbol": "RAY",
+      "action": "sell",
+      "amount": 60.04,
+      "priceUSD": 11.2839,
+      "valueUSD": 677.49
+    },
+    {
+      "date": "2025-04-20",
+      "symbol": "RAY",
+      "action": "lend",
+      "amount": 91.78,
+      "priceUSD": 40.1485,
+      "valueUSD": 3684.83
+    },
+    {
+      "date": "2025-04-20",
+      "symbol": "USDC",
+      "action": "buy",
+      "amount": 24.17,
+      "priceUSD": 43.8141,
+      "valueUSD": 1058.99
+    },
+    {
+      "date": "2025-04-19",
+      "symbol": "SOL",
+      "action": "lend",
+      "amount": 57.63,
+      "priceUSD": 45.5486,
+      "valueUSD": 2624.97
+    },
+    {
+      "date": "2025-04-19",
+      "symbol": "RAY",
+      "action": "stake",
+      "amount": 29.22,
+      "priceUSD": 3.2633,
+      "valueUSD": 95.35
+    },
+    {
+      "date": "2025-04-18",
+      "symbol": "SOL",
+      "action": "buy",
+      "amount": 14.46,
+      "priceUSD": 48.8238,
+      "valueUSD": 705.99
+    },
+    {
+      "date": "2025-04-18",
+      "symbol": "SRM",
+      "action": "sell",
+      "amount": 60.92,
+      "priceUSD": 12.9151,
+      "valueUSD": 786.79
+    },
+    {
+      "date": "2025-04-18",
+      "symbol": "USDC",
+      "action": "swap",
+      "amount": 41.97,
+      "priceUSD": 30.6218,
+      "valueUSD": 1285.2
+    },
+    {
+      "date": "2025-04-17",
+      "symbol": "RAY",
+      "action": "buy",
+      "amount": 64.32,
+      "priceUSD": 14.802,
+      "valueUSD": 952.06
+    },
+    {
+      "date": "2025-04-17",
+      "symbol": "SRM",
+      "action": "buy",
+      "amount": 56.24,
+      "priceUSD": 22.8982,
+      "valueUSD": 1287.79
+    },
+    {
+      "date": "2025-04-17",
+      "symbol": "SOL",
+      "action": "lend",
+      "amount": 75.24,
+      "priceUSD": 37.9993,
+      "valueUSD": 2859.07
+    },
+    {
+      "date": "2025-04-16",
+      "symbol": "SOL",
+      "action": "stake",
+      "amount": 95.27,
+      "priceUSD": 30.7699,
+      "valueUSD": 2931.45
+    },
+    {
+      "date": "2025-04-16",
+      "symbol": "USDC",
+      "action": "swap",
+      "amount": 63.95,
+      "priceUSD": 14.524,
+      "valueUSD": 928.81
+    },
+    {
+      "date": "2025-04-15",
+      "symbol": "RAY",
+      "action": "buy",
+      "amount": 40.74,
+      "priceUSD": 6.9465,
+      "valueUSD": 283.0
+    },
+    {
+      "date": "2025-04-15",
+      "symbol": "SOL",
+      "action": "swap",
+      "amount": 18.41,
+      "priceUSD": 48.4072,
+      "valueUSD": 891.18
+    },
+    {
+      "date": "2025-04-15",
+      "symbol": "SOL",
+      "action": "lend",
+      "amount": 56.24,
+      "priceUSD": 34.2333,
+      "valueUSD": 1925.28
+    },
+    {
+      "date": "2025-04-14",
+      "symbol": "SRM",
+      "action": "sell",
+      "amount": 45.52,
+      "priceUSD": 23.2708,
+      "valueUSD": 1059.29
+    },
+    {
+      "date": "2025-04-13",
+      "symbol": "SRM",
+      "action": "swap",
+      "amount": 94.64,
+      "priceUSD": 46.1965,
+      "valueUSD": 4372.04
+    },
+    {
+      "date": "2025-04-13",
+      "symbol": "SOL",
+      "action": "lend",
+      "amount": 40.37,
+      "priceUSD": 20.7984,
+      "valueUSD": 839.63
+    },
+    {
+      "date": "2025-04-13",
+      "symbol": "SOL",
+      "action": "stake",
+      "amount": 7.41,
+      "priceUSD": 1.2038,
+      "valueUSD": 8.92
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "estimatedAt": "2025-05-14T10:37:48.708Z",
+  "totalEstimatedUsd": 181.38760233958084,
+  "tokensWithEstimates": 11,
+  "totalTokensAnalyzed": 13,
+  "tokenDetails": [
+    {
+      "address": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
+      "symbol": "DFL",
+      "name": "DeFi Land",
+      "totalVolume": 77796.722425006,
+      "transactions": 26,
+      "swapsIn": 21,
+      "swapsOut": 5,
+      "decimals": 9,
+      "transactionCount": 26,
+      "percentage": "99.5%",
+      "usdValue": 14.78137726075114,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.00019
+    },
+    {
+      "address": "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS",
+      "symbol": "Fffijd6U...",
+      "name": "Unknown Token",
+      "totalVolume": 147.163494482,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.2%",
+      "usdValue": 0.5505520394515093,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.0037410911
+    },
+    {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "symbol": "USDC",
+      "name": "USDC",
+      "totalVolume": 95.69250600000001,
+      "transactions": 46,
+      "swapsIn": 5,
+      "swapsOut": 41,
+      "decimals": 6,
+      "transactionCount": 46,
+      "percentage": "0.1%",
+      "usdValue": 95.68733860467601,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.999946
+    },
+    {
+      "address": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+      "symbol": "DRIFT",
+      "name": "Drift",
+      "totalVolume": 79.245106,
+      "transactions": 13,
+      "swapsIn": 9,
+      "swapsOut": 4,
+      "decimals": 6,
+      "transactionCount": 13,
+      "percentage": "0.1%",
+      "usdValue": 46.797484142346,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.590541
+    },
+    {
+      "address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+      "symbol": "PYTH",
+      "name": "Pyth Network",
+      "totalVolume": 48.278892,
+      "transactions": 4,
+      "swapsIn": 4,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "0.1%",
+      "usdValue": 6.561873885072,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.135916
+    },
+    {
+      "address": "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y",
+      "symbol": "SHDW",
+      "name": "Shadow Token",
+      "totalVolume": 9.30879405,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.0%",
+      "usdValue": 1.2121818523969499,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.130219
+    },
+    {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "ai16z",
+      "name": "ai16z",
+      "totalVolume": 7.600464804,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.0%",
+      "usdValue": 2.017140557587188,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.265397
+    },
+    {
+      "address": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+      "symbol": "MPLX",
+      "name": "Metaplex Token",
+      "totalVolume": 7.559216,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%",
+      "usdValue": 1.5003456324639999,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.198479
+    },
+    {
+      "address": "DPiDqBBmct3V9R7nbnNhc4njKVJ6KfF8xpbvR7TRgi2e",
+      "symbol": "DPiDqBBm...",
+      "name": "Unknown Token",
+      "totalVolume": 3.57861,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "totalVolume": 2.206004,
+      "transactions": 3,
+      "swapsIn": 3,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 3,
+      "percentage": "0.0%",
+      "usdValue": 0.948138313196,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.429799
+    },
+    {
+      "address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "symbol": "TRUMP",
+      "name": "OFFICIAL TRUMP",
+      "totalVolume": 0.104028,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%",
+      "usdValue": 1.1432677199999999,
+      "hasUsdEstimate": true,
+      "priceUsdt": 10.99
+    },
+    {
+      "address": "So11111111111111111111111111111111111111112",
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "totalVolume": 0.069220698,
+      "transactions": 6,
+      "swapsIn": 1,
+      "swapsOut": 5,
+      "decimals": 9,
+      "transactionCount": 6,
+      "percentage": "0.0%",
+      "usdValue": 10.18790233164,
+      "hasUsdEstimate": true,
+      "priceUsdt": 147.18
+    },
+    {
+      "address": "FZN7QZ8ZUUAxMPfxYEYkH3cXUASzH8EqA6B4tyCL8f1j",
+      "symbol": "FZN7QZ8Z...",
+      "name": "Unknown Token",
+      "totalVolume": 0.007182769,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.0%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    }
+  ],
+  "tokenPricesUsdt": {
+    "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh": {
+      "priceUsdt": 0.00019,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS": {
+      "priceUsdt": 0.0037410911,
+      "timestamp": "1970-01-01T05:37:30.510Z"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "priceUsdt": 0.999946,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7": {
+      "priceUsdt": 0.590541,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3": {
+      "priceUsdt": 0.135916,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y": {
+      "priceUsdt": 0.130219,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC": {
+      "priceUsdt": 0.265397,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m": {
+      "priceUsdt": 0.198479,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+      "priceUsdt": 0.429799,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN": {
+      "priceUsdt": 10.99,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "So11111111111111111111111111111111111111112": {
+      "priceUsdt": 147.18,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    }
+  }
+}

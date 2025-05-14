@@ -1,16 +1,16 @@
 {
   "success": true,
   "data": {
-    "total_value": 40799.886721544775,
+    "total_value": 40750.32985299378,
     "native_balance": {
       "amount": 1225843411,
       "balance": 1.225843411,
-      "token_price": 181.29965819841615,
+      "token_price": 179.14310346082166,
       "token_decimals": 9,
       "token_name": "SOL",
       "token_symbol": "SOL",
       "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
-      "value": 222.24499141908058
+      "value": 219.60139300353953
     },
     "tokens": [
       {
@@ -39,23 +39,23 @@
         "token_address": "8wXtPeU6557ETkp9WHFY1n1EcU6NxDvbAggHGsMYiHsB",
         "amount": 500000907457483,
         "balance": 500000.907457483,
-        "token_price": 0.0024866787382855308,
+        "token_price": 0.0024489610046879353,
         "token_decimals": 9,
         "token_name": "GameStop",
         "token_symbol": "GME",
         "token_icon": "https://nftstorage.link/ipfs/bafybeiddrzeyne4n2hi7qkhyhqorc4jbs4565pset7fc3ifwvhvxfdrt7q/gamestop-logo.jpeg",
-        "value": 1243.3416256979942
+        "value": 1224.482724671957
       },
       {
         "token_address": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
         "amount": 1000000000,
         "balance": 1000,
-        "token_price": 1.1240077052971644,
+        "token_price": 1.0959538187270397,
         "token_decimals": 6,
         "token_name": "dogwifhat",
         "token_symbol": "$WIF",
         "token_icon": "https://bafkreibk3covs5ltyqxa272uodhculbr6kea6betidfwy3ajsav2vjzyum.ipfs.nftstorage.link",
-        "value": 1124.0077052971644
+        "value": 1095.9538187270396
       },
       {
         "token_address": "FdDSKVqXFNPNXmVuJtHrWjqWzgfqgEDNkwuTrCVxpog3",
@@ -281,23 +281,23 @@
         "token_address": "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
         "amount": 130,
         "balance": 0.0000013,
-        "token_price": 103705.39916900391,
+        "token_price": 103336.34031165295,
         "token_decimals": 8,
         "token_name": "Wrapped BTC (Wormhole)",
         "token_symbol": "WBTC",
         "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh/logo.png",
-        "value": 0.1348170189197051
+        "value": 0.13433724240514885
       },
       {
         "token_address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
         "amount": 107754,
         "balance": 0.107754,
-        "token_price": 0.9999413771429319,
+        "token_price": 0.9999157494788201,
         "token_decimals": 6,
         "token_name": "USDT",
         "token_symbol": "USDT",
         "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB/logo.svg",
-        "value": 0.10774768315265948
+        "value": 0.10774492166934078
       },
       {
         "token_address": "HJ39rRZ6ys22KdB3USxDgNsL7RKiQmsC3yL8AS3Suuku",
@@ -369,23 +369,23 @@
         "token_address": "Hjw6bEcHtbHGpQr8onG3izfJY5DJiWdt7uk2BfdSpump",
         "amount": 1,
         "balance": 0.000001,
-        "token_price": 0.02595205117316646,
+        "token_price": 0.024707182826526675,
         "token_decimals": 6,
         "token_name": "SwarmNode.ai",
         "token_symbol": "SNAI",
         "token_icon": "https://ipfs.io/ipfs/Qmf978WVwJWAjeJaJY5jGiZ3YEdQgC43Cn4QowytAYos78",
-        "value": 2.595205117316646e-8
+        "value": 2.4707182826526673e-8
       },
       {
         "token_address": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
         "amount": 1,
         "balance": 1e-8,
-        "token_price": 0.7884226901026045,
+        "token_price": 0.7842095871778509,
         "token_decimals": 8,
         "token_name": "SPX6900 (Wormhole)",
         "token_symbol": "SPX",
         "token_icon": "https://assets.coingecko.com/coins/images/31401/standard/sticker_%281%29.jpg?1702371083",
-        "value": 7.884226901026046e-9
+        "value": 7.842095871778509e-9
       },
       {
         "token_address": "EdhTCqUxXRWQcUd5Fonyz9rapHAB6mABAuVkmPrtpump",
@@ -402,11 +402,11 @@
         "token_address": "PzuaVAUH2tfxGZcbBR6kMxeJsBngnsPLFotGJNCtcsd",
         "amount": 1,
         "balance": 1e-8,
-        "token_price": 0.013833093348253226,
+        "token_price": 0.013570095918376423,
         "token_decimals": 8,
         "token_name": "ZynCoin (Wormhole)",
         "token_symbol": "ZYN",
-        "value": 1.3833093348253226e-10
+        "value": 1.3570095918376422e-10
       },
       {
         "token_address": "nGCjvApMgPVCuFVi5yUPWvGnRe8c83GEunsxG7o5o3i",

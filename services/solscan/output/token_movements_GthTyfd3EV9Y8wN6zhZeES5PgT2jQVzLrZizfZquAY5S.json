@@ -1,0 +1,483 @@
+{
+  "totalTransactions": 58,
+  "tokenMovements": {
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "symbol": "USDC",
+      "name": "USDC",
+      "decimals": 6,
+      "totalAmount": 95.69250600000001,
+      "transactions": 46,
+      "swapIn": 5,
+      "swapOut": 41,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 40,
+        "ACTIVITY_TOKEN_SWAP": 1,
+        "ACTIVITY_TOKEN_ADD_LIQ": 5
+      }
+    },
+    "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh": {
+      "symbol": "DFL",
+      "name": "DeFi Land",
+      "decimals": 9,
+      "totalAmount": 77796.722425006,
+      "transactions": 26,
+      "swapIn": 21,
+      "swapOut": 5,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 20,
+        "ACTIVITY_TOKEN_SWAP": 1,
+        "ACTIVITY_TOKEN_ADD_LIQ": 5
+      }
+    },
+    "So11111111111111111111111111111111111111112": {
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "decimals": 9,
+      "totalAmount": 0.069220698,
+      "transactions": 6,
+      "swapIn": 1,
+      "swapOut": 5,
+      "activities": {
+        "ACTIVITY_TOKEN_SWAP": 2,
+        "ACTIVITY_TOKEN_DEPOSIT_VAULT": 4
+      }
+    },
+    "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m": {
+      "symbol": "MPLX",
+      "name": "Metaplex Token",
+      "decimals": 6,
+      "totalAmount": 7.559216,
+      "transactions": 1,
+      "swapIn": 1,
+      "swapOut": 0,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 1
+      }
+    },
+    "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC": {
+      "symbol": "ai16z",
+      "name": "ai16z",
+      "decimals": 9,
+      "totalAmount": 7.600464804,
+      "transactions": 1,
+      "swapIn": 1,
+      "swapOut": 0,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 1
+      }
+    },
+    "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y": {
+      "symbol": "SHDW",
+      "name": "Shadow Token",
+      "decimals": 9,
+      "totalAmount": 9.30879405,
+      "transactions": 1,
+      "swapIn": 1,
+      "swapOut": 0,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 1
+      }
+    },
+    "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN": {
+      "symbol": "TRUMP",
+      "name": "OFFICIAL TRUMP",
+      "decimals": 6,
+      "totalAmount": 0.104028,
+      "transactions": 1,
+      "swapIn": 1,
+      "swapOut": 0,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 1
+      }
+    },
+    "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7": {
+      "symbol": "DRIFT",
+      "name": "Drift",
+      "decimals": 6,
+      "totalAmount": 79.245106,
+      "transactions": 13,
+      "swapIn": 9,
+      "swapOut": 4,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 9,
+        "ACTIVITY_TOKEN_WITHDRAW_VAULT": 4
+      }
+    },
+    "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3": {
+      "symbol": "PYTH",
+      "name": "Pyth Network",
+      "decimals": 6,
+      "totalAmount": 48.278892,
+      "transactions": 4,
+      "swapIn": 4,
+      "swapOut": 0,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 4
+      }
+    },
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "decimals": 6,
+      "totalAmount": 2.206004,
+      "transactions": 3,
+      "swapIn": 3,
+      "swapOut": 0,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 3
+      }
+    },
+    "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS": {
+      "symbol": "Fffijd6U...",
+      "name": "Unknown Token",
+      "decimals": 9,
+      "totalAmount": 147.163494482,
+      "transactions": 1,
+      "swapIn": 0,
+      "swapOut": 1,
+      "activities": {
+        "ACTIVITY_SPL_MINT": 1
+      }
+    },
+    "FZN7QZ8ZUUAxMPfxYEYkH3cXUASzH8EqA6B4tyCL8f1j": {
+      "symbol": "FZN7QZ8Z...",
+      "name": "Unknown Token",
+      "decimals": 9,
+      "totalAmount": 0.007182769,
+      "transactions": 1,
+      "swapIn": 0,
+      "swapOut": 1,
+      "activities": {
+        "ACTIVITY_SPL_MINT": 1
+      }
+    },
+    "DPiDqBBmct3V9R7nbnNhc4njKVJ6KfF8xpbvR7TRgi2e": {
+      "symbol": "DPiDqBBm...",
+      "name": "Unknown Token",
+      "decimals": 6,
+      "totalAmount": 3.57861,
+      "transactions": 1,
+      "swapIn": 0,
+      "swapOut": 1,
+      "activities": {
+        "ACTIVITY_SPL_BURN": 1
+      }
+    }
+  },
+  "byVolume": [
+    {
+      "address": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
+      "symbol": "DFL",
+      "name": "DeFi Land",
+      "totalVolume": 77796.722425006,
+      "transactions": 26,
+      "swapsIn": 21,
+      "swapsOut": 5,
+      "decimals": 9,
+      "transactionCount": 26,
+      "percentage": "99.5%"
+    },
+    {
+      "address": "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS",
+      "symbol": "Fffijd6U...",
+      "name": "Unknown Token",
+      "totalVolume": 147.163494482,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.2%"
+    },
+    {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "symbol": "USDC",
+      "name": "USDC",
+      "totalVolume": 95.69250600000001,
+      "transactions": 46,
+      "swapsIn": 5,
+      "swapsOut": 41,
+      "decimals": 6,
+      "transactionCount": 46,
+      "percentage": "0.1%"
+    },
+    {
+      "address": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+      "symbol": "DRIFT",
+      "name": "Drift",
+      "totalVolume": 79.245106,
+      "transactions": 13,
+      "swapsIn": 9,
+      "swapsOut": 4,
+      "decimals": 6,
+      "transactionCount": 13,
+      "percentage": "0.1%"
+    },
+    {
+      "address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+      "symbol": "PYTH",
+      "name": "Pyth Network",
+      "totalVolume": 48.278892,
+      "transactions": 4,
+      "swapsIn": 4,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "0.1%"
+    },
+    {
+      "address": "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y",
+      "symbol": "SHDW",
+      "name": "Shadow Token",
+      "totalVolume": 9.30879405,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "ai16z",
+      "name": "ai16z",
+      "totalVolume": 7.600464804,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+      "symbol": "MPLX",
+      "name": "Metaplex Token",
+      "totalVolume": 7.559216,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "DPiDqBBmct3V9R7nbnNhc4njKVJ6KfF8xpbvR7TRgi2e",
+      "symbol": "DPiDqBBm...",
+      "name": "Unknown Token",
+      "totalVolume": 3.57861,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "totalVolume": 2.206004,
+      "transactions": 3,
+      "swapsIn": 3,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 3,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "symbol": "TRUMP",
+      "name": "OFFICIAL TRUMP",
+      "totalVolume": 0.104028,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "So11111111111111111111111111111111111111112",
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "totalVolume": 0.069220698,
+      "transactions": 6,
+      "swapsIn": 1,
+      "swapsOut": 5,
+      "decimals": 9,
+      "transactionCount": 6,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "FZN7QZ8ZUUAxMPfxYEYkH3cXUASzH8EqA6B4tyCL8f1j",
+      "symbol": "FZN7QZ8Z...",
+      "name": "Unknown Token",
+      "totalVolume": 0.007182769,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    }
+  ],
+  "byTransactionCount": [
+    {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "symbol": "USDC",
+      "name": "USDC",
+      "totalVolume": 95.69250600000001,
+      "transactions": 46,
+      "swapsIn": 5,
+      "swapsOut": 41,
+      "decimals": 6,
+      "transactionCount": 46,
+      "percentage": "0.1%"
+    },
+    {
+      "address": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
+      "symbol": "DFL",
+      "name": "DeFi Land",
+      "totalVolume": 77796.722425006,
+      "transactions": 26,
+      "swapsIn": 21,
+      "swapsOut": 5,
+      "decimals": 9,
+      "transactionCount": 26,
+      "percentage": "99.5%"
+    },
+    {
+      "address": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+      "symbol": "DRIFT",
+      "name": "Drift",
+      "totalVolume": 79.245106,
+      "transactions": 13,
+      "swapsIn": 9,
+      "swapsOut": 4,
+      "decimals": 6,
+      "transactionCount": 13,
+      "percentage": "0.1%"
+    },
+    {
+      "address": "So11111111111111111111111111111111111111112",
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "totalVolume": 0.069220698,
+      "transactions": 6,
+      "swapsIn": 1,
+      "swapsOut": 5,
+      "decimals": 9,
+      "transactionCount": 6,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+      "symbol": "PYTH",
+      "name": "Pyth Network",
+      "totalVolume": 48.278892,
+      "transactions": 4,
+      "swapsIn": 4,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "0.1%"
+    },
+    {
+      "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "totalVolume": 2.206004,
+      "transactions": 3,
+      "swapsIn": 3,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 3,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS",
+      "symbol": "Fffijd6U...",
+      "name": "Unknown Token",
+      "totalVolume": 147.163494482,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.2%"
+    },
+    {
+      "address": "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y",
+      "symbol": "SHDW",
+      "name": "Shadow Token",
+      "totalVolume": 9.30879405,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "symbol": "ai16z",
+      "name": "ai16z",
+      "totalVolume": 7.600464804,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+      "symbol": "MPLX",
+      "name": "Metaplex Token",
+      "totalVolume": 7.559216,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "DPiDqBBmct3V9R7nbnNhc4njKVJ6KfF8xpbvR7TRgi2e",
+      "symbol": "DPiDqBBm...",
+      "name": "Unknown Token",
+      "totalVolume": 3.57861,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "symbol": "TRUMP",
+      "name": "OFFICIAL TRUMP",
+      "totalVolume": 0.104028,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "FZN7QZ8ZUUAxMPfxYEYkH3cXUASzH8EqA6B4tyCL8f1j",
+      "symbol": "FZN7QZ8Z...",
+      "name": "Unknown Token",
+      "totalVolume": 0.007182769,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "0.0%"
+    }
+  ]
+}

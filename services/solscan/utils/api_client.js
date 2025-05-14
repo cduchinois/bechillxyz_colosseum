@@ -7,21 +7,35 @@ import path from 'path';
  * Client API pour interagir avec l'API Solscan avec gestion des erreurs améliorée
  */
 export class SolscanApiClient {
-  constructor(apiKey = process.env.SOLSCAN_API_KEY) {
+  constructor(options = {}) {
+    const apiKey = options.apiKey || process.env.SOLSCAN_API_KEY;
+    
     if (!apiKey) {
-      throw new Error('La clé API Solscan est manquante. Veuillez la définir dans le fichier .env');
+      throw new Error('La clé API Solscan est manquante. Veuillez la définir dans le fichier .env ou dans les options du constructeur');
     }
     
     this.apiKey = apiKey;
-    this.baseUrl = 'https://pro-api.solscan.io/v2.0';
+    this.baseUrl = options.baseUrl || 'https://pro-api.solscan.io/v2.0';
     this.requestOptions = {
       method: "get",
       headers: { "token": this.apiKey },
     };
+    
+    // Options pour la gestion des erreurs et des retries
+    this.retryOptions = {
+      maxRetries: options.maxRetries || 5,
+      initialDelay: options.initialDelay || 1000,  // 1 seconde de délai initial
+      maxDelay: options.maxDelay || 30000,  // 30 secondes de délai maximum
+      factor: options.factor || 2,  // Facteur exponentiel de backoff
+      statusCodesToRetry: options.statusCodesToRetry || [408, 429, 500, 502, 503, 504]
+    };
+    
+    // Options de débug
+    this.debug = options.debug || false;
   }
 
   /**
-   * Effectue une requête vers l'API Solscan avec gestion des erreurs
+   * Effectue une requête vers l'API Solscan avec gestion avancée des erreurs et exponential backoff
    * @param {string} endpoint - Le endpoint de l'API
    * @param {object} params - Les paramètres de la requête
    * @returns {Promise<object>} - Les données de la réponse
@@ -30,43 +44,105 @@ export class SolscanApiClient {
     try {
       // Construire l'URL avec les paramètres
       const queryParams = new URLSearchParams();
+      if (this.debug) {
+        console.log(`🔍 Paramètres de la requête: ${JSON.stringify(params, null, 2)}`);
+      }
       console.log(`🔍 Paramètres de la requête: ${JSON.stringify(params, null, 2)}`);
       Object.entries(params).forEach(([key, value]) => {
         queryParams.append(key, value);
       });
       
       const url = `${this.baseUrl}${endpoint}${queryParams.toString() ? '?' + queryParams.toString() : ''}`;
-      
+      console.log(`🔗 URL de la requête: ${url}`);
       console.log(`🌐 Requête API: ${endpoint}`);
-      console.log(`🔗 URL: ${url}`);
+      if (this.debug) {
+        console.log(`🔗 URL: ${url}`);
+      }
       
-      // Effectuer la requête avec retry logic
+      // Effectuer la requête avec exponential backoff avancé
       let response;
       let retries = 0;
-      const maxRetries = 3;
+      let delay = this.retryOptions.initialDelay;
       
-      while (retries < maxRetries) {
+      while (retries <= this.retryOptions.maxRetries) {
         try {
           response = await fetch(url, this.requestOptions);
-          break;
-        } catch (error) {
-          retries++;
-          if (retries >= maxRetries) {
-            throw error;
+          
+          // Si la réponse est ok, sortir de la boucle
+          if (response.ok) break;
+          
+          // Si le statut n'est pas dans la liste des codes à réessayer, lancer une erreur immédiatement
+          if (!this.retryOptions.statusCodesToRetry.includes(response.status)) {
+            const errorText = await response.text();
+            throw new Error(`Erreur API (${response.status}): ${errorText}`);
           }
-          console.warn(`⚠️ Tentative ${retries}/${maxRetries} échouée, nouvelle tentative dans ${retries * 2} secondes...`);
-          await new Promise(resolve => setTimeout(resolve, retries * 2000));
+          
+          // Log pour les erreurs 429 (rate limit)
+          if (response.status === 429) {
+            console.warn(`⚠️ Rate limit atteint (429). Temporisation avant nouvelle tentative...`);
+            
+            // Respecter le Retry-After s'il est fourni
+            const retryAfter = response.headers.get('Retry-After');
+            if (retryAfter) {
+              // Retry-After peut être un nombre de secondes ou une date
+              const retryAfterSeconds = isNaN(retryAfter) 
+                ? Math.ceil((new Date(retryAfter).getTime() - Date.now()) / 1000)
+                : parseInt(retryAfter, 10);
+              
+              if (retryAfterSeconds > 0) {
+                console.warn(`⏱️ Attente de ${retryAfterSeconds} secondes selon l'en-tête Retry-After`);
+                await new Promise(resolve => setTimeout(resolve, retryAfterSeconds * 1000));
+                continue;  // Tenter à nouveau la requête sans incrémenter le compteur
+              }
+            }
+          }
+          
+          // Incrémenter le nombre de tentatives
+          retries++;
+          
+          // Si on a dépassé le nombre maximal de tentatives, lancer une erreur
+          if (retries > this.retryOptions.maxRetries) {
+            const errorText = await response.text();
+            throw new Error(`Erreur API après ${retries} tentatives (${response.status}): ${errorText}`);
+          }
+          
+          // Calculer le délai avec jitter pour éviter les rafales synchronisées
+          delay = Math.min(
+            this.retryOptions.maxDelay,
+            delay * this.retryOptions.factor * (1 + 0.2 * Math.random())
+          );
+          
+          console.warn(`⚠️ Tentative ${retries}/${this.retryOptions.maxRetries} échouée (${response.status}), nouvelle tentative dans ${Math.round(delay/1000)} secondes...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          
+        } catch (error) {
+          // Erreur réseau ou autre erreur non liée au statut HTTP
+          retries++;
+          if (retries > this.retryOptions.maxRetries) {
+            throw new Error(`Erreur réseau après ${retries} tentatives: ${error.message}`);
+          }
+          
+          // Calculer le délai avec jitter
+          delay = Math.min(
+            this.retryOptions.maxDelay,
+            delay * this.retryOptions.factor * (1 + 0.2 * Math.random())
+          );
+          
+          console.warn(`⚠️ Erreur réseau, tentative ${retries}/${this.retryOptions.maxRetries}: ${error.message}`);
+          console.warn(`⏱️ Nouvelle tentative dans ${Math.round(delay/1000)} secondes...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
         }
       }
       
-      // Vérifier le statut de la réponse
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Erreur API (${response.status}): ${errorText}`);
+      // À ce stade, soit la réponse est ok, soit on a lancé une erreur
+      const data = await response.json();
+      console.log(`✅ Réponse API reçue: ${JSON.stringify(data, null, 2)}`);
+      if (this.debug) {
+        console.log(`✅ Réponse API reçue: ${JSON.stringify(data, null, 2)}`);
+      } else {
+        console.log(`✅ Réponse API reçue pour ${endpoint}`);
       }
       
-      const data = await response.json();
-      console.log(`✅ Réponse API: ${JSON.stringify(data, null, 2)}`);
       // Vérifier si la réponse contient une erreur
       if (data.error) {
         throw new Error(`Erreur API: ${data.error}`);
@@ -157,19 +233,70 @@ export class SolscanApiClient {
   }
 
   /**
-   * Récupère les transactions d'un compte
+   * Récupère les transactions d'un compte avec support de filtrage avancé
    * @param {string} address - Adresse du portefeuille
-   * @param {number} limit - Nombre maximal de transactions à récupérer (plafonné à 40)
+   * @param {object} options - Options pour la requête
+   * @param {number} options.limit - Nombre maximal de transactions à récupérer (plafonné à 40)
+   * @param {string} options.before - La signature de la dernière transaction du lot précédent (pour pagination basée sur les signatures)
+   * @param {string|Date} options.startDate - Date de début pour le filtrage (format ISO ou objet Date)
+   * @param {string|Date} options.endDate - Date de fin pour le filtrage (format ISO ou objet Date)
+   * @param {string} options.status - Statut des transactions à récupérer ('success', 'fail')
+   * @param {string} options.type - Type de transaction à récupérer
    * @returns {Promise<object>} - Les transactions
    */
-  async getTransactions(address, limit = 40) {
-    // S'assurer que la limite ne dépasse pas 40, quelle que soit la valeur fournie
-    const safeLimit = Math.min(limit, 40);
-    if (limit > 40) {
-      console.log(`⚠️ Limite ajustée de ${limit} à ${safeLimit} pour respecter les contraintes de l'API`);
+  async getTransactions(address, options = {}) {
+    const defaultOptions = {
+      limit: 40 // Limite max de l'API Solscan par page
+    };
+    
+    const params = {
+      address,
+      ...defaultOptions
+    };
+    
+    // S'assurer que la limite ne dépasse pas 40
+    params.limit = Math.min(options.limit || defaultOptions.limit, 40);
+    console.log(`🔍 Limite de transactions: ${params.limit}`);
+    console.log(options);
+    // Ajouter le paramètre before pour la pagination basée sur les signatures si fourni
+    if (options.before) {
+      params.before = options.before;
+      console.log(`🔍 Pagination basée sur les signatures: before=${options.before.substring(0, 15)}...`);
     }
-    console.log(`🔍 Récupération des transactions pour l'adresse ${address} avec une limite de ${safeLimit}`);
-    return this.fetchData('/account/transactions', { address, limit: safeLimit });
+    
+    // Ajouter les filtres de dates si fournis
+    // Note: Ces filtres seront appliqués côté client après la récupération des données
+    // car l'API ne supporte pas directement le filtrage par date
+    
+    const filters = [];
+    
+    if (options.startDate) {
+      const startDate = options.startDate instanceof Date 
+        ? options.startDate 
+        : new Date(options.startDate);
+      filters.push(`startDate: ${startDate.toISOString()}`);
+    }
+    
+    if (options.endDate) {
+      const endDate = options.endDate instanceof Date 
+        ? options.endDate 
+        : new Date(options.endDate);
+      filters.push(`endDate: ${endDate.toISOString()}`);
+    }
+    
+    if (options.status) {
+      filters.push(`status: ${options.status}`);
+    }
+    
+    if (options.type) {
+      filters.push(`type: ${options.type}`);
+    }
+    
+    const filterText = filters.length > 0 ? `, filtres: ${filters.join(', ')}` : '';
+    console.log(`🔍 Récupération des transactions pour ${address} (limite: ${params.limit}${filterText})`);
+    console.log(params);
+    // Récupération des données auprès de l'API
+    return this.fetchData('/account/transactions', params);
   }
 
   /**

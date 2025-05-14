@@ -1,7 +1,0 @@
-{
-  "success": false,
-  "errors": {
-    "code": 1100,
-    "message": "Validation Error: Address [HDCgMMdCb1dtxw90QxKpiuC7UjguS12KExHmbonh5t7iw] is invalid"
-  }
-}

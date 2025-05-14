@@ -58,6 +58,20 @@ async function analyzeWallet(walletAddress, options = {}) {
       process.exit(1);
     }
     
+    // Importer la classe de validation
+    const { Validation } = await import('./utils/validation.js');
+    
+    // Valider l'adresse du portefeuille
+    const validationResult = Validation.validateSolanaAddress(walletAddress);
+    if (!validationResult.isValid) {
+      console.error(`❌ Erreur: ${validationResult.message}`);
+      console.error('Une adresse Solana valide:');
+      console.error('- Est encodée en base58 (caractères alphanumériques sans 0, O, I, l)');
+      console.error('- A une longueur généralement entre 32 et 44 caractères');
+      console.error('Exemple: GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S');
+      process.exit(1);
+    }
+    
     // Options par défaut
     const analysisOptions = {
       pageSize: options.pageSize || 100,

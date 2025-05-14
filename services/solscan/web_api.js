@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import 'dotenv/config';
+import { Validation } from './utils/validation.js';
 
 // Obtenir le chemin du répertoire actuel
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -27,6 +28,9 @@ function checkSolscanApiKey() {
 // Créer une instance d'Express
 const app = express();
 const port = 5051;
+
+// Middleware pour servir les fichiers statiques du dossier 'public'
+app.use(express.static(path.join(__dirname, 'public')));
 
 /**
  * Exécute un script Node.js en tant que processus séparé
@@ -213,7 +217,9 @@ app.get('/', (req, res) => {
       <div class="form-container">
         <form action="/analyse_wallet" method="get" id="walletForm">
           <label for="address">Adresse du portefeuille:</label>
-          <input type="text" id="address" name="address" value="GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S" placeholder="Entrez l'adresse du portefeuille Solana" required>
+          <input type="text" id="address" name="address" value="GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S" placeholder="Entrez l'adresse du portefeuille Solana" required 
+            pattern="^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{32,44}$">
+          <div id="address-error" class="error-message" style="color: #ff5252; margin-bottom: 10px; display: none;"></div>
           
           <div class="options-container">
             <h3>Options:</h3>
@@ -242,11 +248,70 @@ app.get('/', (req, res) => {
       ${visualizationsHtml}
 
       <script>
+        // Fonction pour valider une adresse Solana côté client
+        function isSolanaAddress(address) {
+          if (!address || typeof address !== 'string') {
+            return false;
+          }
+          
+          // Vérifier la longueur de l'adresse
+          if (address.length < 32 || address.length > 44) {
+            return false;
+          }
+          
+          // Vérifier le format base58
+          const base58Regex = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
+          return base58Regex.test(address);
+        }
+        
+        // Fonction pour valider et afficher un message d'erreur
+        function validateAddress(address) {
+          const errorElement = document.getElementById('address-error');
+          
+          if (!address) {
+            errorElement.textContent = "L'adresse ne peut pas être vide";
+            errorElement.style.display = 'block';
+            return false;
+          }
+          
+          if (address.length < 32) {
+            errorElement.textContent = "L'adresse est trop courte (" + address.length + " caractères). Une adresse Solana valide a au moins 32 caractères.";
+            errorElement.style.display = 'block';
+            return false;
+          }
+          
+          if (address.length > 44) {
+            errorElement.textContent = "L'adresse est trop longue (" + address.length + " caractères). Une adresse Solana valide a au plus 44 caractères.";
+            errorElement.style.display = 'block';
+            return false;
+          }
+          
+          const base58Regex = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
+          if (!base58Regex.test(address)) {
+            errorElement.textContent = "L'adresse contient des caractères invalides. Une adresse Solana est encodée en base58.";
+            errorElement.style.display = 'block';
+            return false;
+          }
+          
+          // L'adresse est valide
+          errorElement.style.display = 'none';
+          return true;
+        }
+        
+        // Valider l'adresse à chaque modification du champ
+        document.getElementById('address').addEventListener('input', function() {
+          validateAddress(this.value);
+        });
+        
         document.getElementById('walletForm').addEventListener('submit', function(e) {
           e.preventDefault();
           
           const address = document.getElementById('address').value;
-          if (!address) return;
+          
+          // Valider l'adresse avant de soumettre
+          if (!validateAddress(address)) {
+            return;
+          }
           
           let url = '/analyse_wallet/' + encodeURIComponent(address);
           
@@ -333,6 +398,67 @@ app.get('/analyse_wallet/:address', async (req, res) => {
   }
 
   const walletAddress = req.params.address;
+  
+  // Valider l'adresse du portefeuille Solana
+  const validationResult = Validation.validateSolanaAddress(walletAddress);
+  
+  if (!validationResult.isValid) {
+    return res.status(400).send(`
+      <!DOCTYPE html>
+      <html lang="fr">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Erreur - Adresse invalide</title>
+        <style>
+          :root {
+            color-scheme: dark;
+          }
+          body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #121212;
+            color: #e0e0e0;
+          }
+          h1 {
+            color: #f44336;
+            text-align: center;
+          }
+          .error-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            border-left: 5px solid #f44336;
+          }
+          .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #64b5f6;
+            text-decoration: none;
+          }
+          .back-link:hover {
+            text-decoration: underline;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Erreur - Adresse invalide</h1>
+        <div class="error-container">
+          <h2>L'adresse Solana fournie est invalide</h2>
+          <p>${validationResult.message}</p>
+          <p>Veuillez fournir une adresse Solana valide et réessayer.</p>
+        </div>
+        <a href="/" class="back-link">Retour à l'accueil</a>
+      </body>
+      </html>
+    `);
+  }
   
   if (!walletAddress) {
     return res.status(400).send('Adresse de portefeuille manquante');

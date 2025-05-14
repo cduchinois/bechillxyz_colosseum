@@ -1,0 +1,125 @@
+{
+  "success": true,
+  "data": [
+    {
+      "token_account": "HTHEAghYujMn2r3W7Wmo3r9XoHAhBoUmxnaYWMT1GoWg",
+      "token_address": "95U1zWn1T58wSb5HEXN2BTdFgEsRrqGKaUbFEeLiaWSj",
+      "amount": 4500000000000,
+      "token_decimals": 8,
+      "owner": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm"
+    },
+    {
+      "token_account": "eGrqV8qvtzFJFE2wLQehANqNsCqJJvbBp8V8WsBE2D3",
+      "token_address": "9zpoUp14qXg4ibKN7DP2SKGMmdTumPcXNkuZuy1dbonk",
+      "amount": 141275405019,
+      "token_decimals": 6,
+      "owner": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm"
+    },
+    {
+      "token_account": "CcypKYHyURbp9cELfNqDfdC4n5wsSjsRK11GX26QL1r3",
+      "token_address": "BqpiqXC82nwvEjCvnBKc72saTHZarfEHcV1iozcYpump",
+      "amount": 94239666866,
+      "token_decimals": 6,
+      "owner": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm"
+    },
+    {
+      "token_account": "6dzHoSkgT9N4SGittkmVkYT2LspcUiQuVS8qZwJvazmb",
+      "token_address": "AwA7D3jKpytsXSAJTZYY9NzV4HRKKLAyWJw9YoZwbonk",
+      "amount": 40259216223,
+      "token_decimals": 6,
+      "owner": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm"
+    },
+    {
+      "token_account": "H6tT1i5zXFZJ2x3QrTXC3MYKkpAv12LcrAvqsLfmHRkM",
+      "token_address": "3tXQ9xbXHic4b8Uu6fuxesC4v5ggFvjsjbHqaZuDpump",
+      "amount": 142136,
+      "token_decimals": 6,
+      "owner": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm"
+    },
+    {
+      "token_account": "F3J3d2grhEfyTz73wH8j61Shjtm6dA8zHA81MANJLFwf",
+      "token_address": "So11111111111111111111111111111111111111112",
+      "amount": 104981,
+      "token_decimals": 9,
+      "owner": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm"
+    },
+    {
+      "token_account": "Gf97qMnaC3vkvM2n5ScdcL2yxQNscJPXNLmMnUUjkr8f",
+      "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "amount": 1,
+      "token_decimals": 5,
+      "owner": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm"
+    },
+    {
+      "token_account": "HAZi6RusLrgDnPdNCcS7584H3BkVTWLDu94qNS6dNLij",
+      "token_address": "CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP",
+      "amount": 0,
+      "token_decimals": 6,
+      "owner": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm"
+    },
+    {
+      "token_account": "TauXhQqaSCXypHWzSc6ETo2R74cnBabV7muMjEXhPeU",
+      "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "amount": 0,
+      "token_decimals": 6,
+      "owner": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm"
+    }
+  ],
+  "metadata": {
+    "tokens": {
+      "95U1zWn1T58wSb5HEXN2BTdFgEsRrqGKaUbFEeLiaWSj": {
+        "token_address": "95U1zWn1T58wSb5HEXN2BTdFgEsRrqGKaUbFEeLiaWSj",
+        "token_name": "Wrapped Runes (Wormhole)",
+        "token_symbol": "wRUNES"
+      },
+      "9zpoUp14qXg4ibKN7DP2SKGMmdTumPcXNkuZuy1dbonk": {
+        "token_address": "9zpoUp14qXg4ibKN7DP2SKGMmdTumPcXNkuZuy1dbonk",
+        "token_name": "SOLANA NEW MOVIE MEMECOIN",
+        "token_symbol": "BUTTFUCK",
+        "token_icon": "https://ipfs.io/ipfs/bafkreifwpy34lmbtx2finh57ehd4csmqccwmeo4aztmxwto7tugapcpoda"
+      },
+      "BqpiqXC82nwvEjCvnBKc72saTHZarfEHcV1iozcYpump": {
+        "token_address": "BqpiqXC82nwvEjCvnBKc72saTHZarfEHcV1iozcYpump",
+        "token_name": "An An",
+        "token_symbol": "AnAn",
+        "token_icon": "https://ipfs.io/ipfs/QmUdyZELhTMW4K3MjSAqsxRZzPvHo8aL7XLzyLfDRUr4Ln"
+      },
+      "AwA7D3jKpytsXSAJTZYY9NzV4HRKKLAyWJw9YoZwbonk": {
+        "token_address": "AwA7D3jKpytsXSAJTZYY9NzV4HRKKLAyWJw9YoZwbonk",
+        "token_name": "CONK",
+        "token_symbol": "CONK",
+        "token_icon": "https://ipfs.io/ipfs/bafybeiascbc6q75qnufer3mdgtlu4quenbteaujo7g6iofeixhu7a444ze"
+      },
+      "3tXQ9xbXHic4b8Uu6fuxesC4v5ggFvjsjbHqaZuDpump": {
+        "token_address": "3tXQ9xbXHic4b8Uu6fuxesC4v5ggFvjsjbHqaZuDpump",
+        "token_name": "AkrokaAI",
+        "token_symbol": "AIAKR",
+        "token_icon": "https://ipfs.io/ipfs/QmRjFynLs7SwsEZEkRph9opkDHuZy5yBVY3rK7kuYfGtQm"
+      },
+      "So11111111111111111111111111111111111111112": {
+        "token_address": "So11111111111111111111111111111111111111112",
+        "token_name": "Wrapped SOL",
+        "token_symbol": "WSOL",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+      },
+      "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+        "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "token_name": "Bonk",
+        "token_symbol": "Bonk",
+        "token_icon": "https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I"
+      },
+      "CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP": {
+        "token_address": "CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP",
+        "token_name": "Epics Token",
+        "token_symbol": "EPCT",
+        "token_icon": "https://bafybeibal7k2hz6frznyjbl4qcnzcwlsuzxmquatrsaly6ttmuppgmdvwe.ipfs.dweb.link/EpicsCoin.png"
+      },
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "token_name": "USDC",
+        "token_symbol": "USDC",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png"
+      }
+    }
+  }
+}

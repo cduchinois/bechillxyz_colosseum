@@ -7,6 +7,28 @@ import { existsSync } from 'fs';
  */
 class SolanaDataCollector {
   /**
+   * Valide une adresse Solana
+   * @param {string} address - L'adresse à valider
+   * @returns {boolean} true si l'adresse est valide, false sinon
+   * @static
+   */
+  static validateSolanaAddress(address) {
+    if (!address || typeof address !== 'string') {
+      return false;
+    }
+
+    // Vérifier la longueur de l'adresse
+    if (address.length < 32 || address.length > 44) {
+      return false;
+    }
+
+    // Vérifier le format base58: caractères alphanumériques sans 0 (zéro), O (o majuscule), 
+    // I (i majuscule) et l (L minuscule)
+    const base58Regex = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
+    return base58Regex.test(address);
+  }
+  
+  /**
    * Constructeur
    * @param {string} walletAddress - L'adresse du portefeuille Solana
    * @param {object} options - Options de configuration
@@ -27,6 +49,11 @@ class SolanaDataCollector {
    * @param {boolean} options.debug - Mode debug
    */
   constructor(walletAddress, options = {}) {
+    // Valider l'adresse du portefeuille
+    if (!SolanaDataCollector.validateSolanaAddress(walletAddress)) {
+      throw new Error(`Adresse Solana invalide: ${walletAddress}. Une adresse Solana valide est encodée en base58 et a généralement entre 32 et 44 caractères.`);
+    }
+    
     this.walletAddress = walletAddress;
     
     // Configuration de l'API client avec options avancées

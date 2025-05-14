@@ -64,11 +64,38 @@ if (args.values.help) {
   showHelp();
 }
 
+// Fonction pour valider une adresse Solana
+function isSolanaAddress(address) {
+  if (!address || typeof address !== 'string') {
+    return false;
+  }
+
+  // Vérifier la longueur de l'adresse
+  if (address.length < 32 || address.length > 44) {
+    return false;
+  }
+
+  // Vérifier le format base58: caractères alphanumériques sans 0 (zéro), O (o majuscule), 
+  // I (i majuscule) et l (L minuscule)
+  const base58Regex = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
+  return base58Regex.test(address);
+}
+
 // Récupérer l'adresse du portefeuille (premier argument positif ou variable d'environnement)
 const walletAddress = args.positionals[0] || process.env.ADDRESS_WALLET;
 if (!walletAddress) {
   console.error('❌ Erreur: Aucune adresse de portefeuille fournie.');
   showHelp();
+}
+
+// Valider que l'adresse est un format valide de Solana
+if (!isSolanaAddress(walletAddress)) {
+  console.error(`❌ Erreur: L'adresse fournie (${walletAddress}) n'est pas une adresse Solana valide.`);
+  console.error('Une adresse Solana valide:');
+  console.error('- Est encodée en base58 (caractères alphanumériques sans 0, O, I, l)');
+  console.error('- A une longueur généralement entre 32 et 44 caractères');
+  console.error('Exemple: GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S');
+  process.exit(1);
 }
 
 // Extraire les options

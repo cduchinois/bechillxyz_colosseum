@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test de validation d'adresse Solana</title>
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    h1, h2 {
+      color: #9c88ff;
+      text-align: center;
+    }
+    .form-container {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      border: 1px solid #333;
+      margin-bottom: 30px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background-color: #252525;
+      color: #e0e0e0;
+    }
+    button {
+      background-color: #9c88ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #8070d5;
+    }
+    .error-message {
+      color: #ff5252;
+      margin-bottom: 10px;
+      display: none;
+    }
+    .valid-message {
+      color: #4caf50;
+      margin-bottom: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test de validation d'adresse Solana</h1>
+  <div class="form-container">
+    <form id="walletForm">
+      <label for="address">Adresse du portefeuille:</label>
+      <input type="text" id="address" name="address" 
+        placeholder="Entrez l'adresse du portefeuille Solana" required>
+      <div id="address-error" class="error-message"></div>
+      <div id="address-valid" class="valid-message">L'adresse est valide</div>
+      
+      <button type="submit">Valider l'adresse</button>
+    </form>
+  </div>
+
+  <script>
+    // Fonction pour valider une adresse Solana
+    function isSolanaAddress(address) {
+      if (!address || typeof address !== 'string') {
+        return false;
+      }
+      
+      // Vérifier la longueur de l'adresse
+      if (address.length < 32 || address.length > 44) {
+        return false;
+      }
+      
+      // Vérifier le format base58
+      const base58Regex = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
+      return base58Regex.test(address);
+    }
+    
+    // Fonction pour valider et afficher un message d'erreur
+    function validateAddress(address) {
+      const errorElement = document.getElementById('address-error');
+      const validElement = document.getElementById('address-valid');
+      
+      if (!address) {
+        errorElement.textContent = "L'adresse ne peut pas être vide";
+        errorElement.style.display = 'block';
+        validElement.style.display = 'none';
+        return false;
+      }
+      
+      if (address.length < 32) {
+        errorElement.textContent = `L'adresse est trop courte (${address.length} caractères). Une adresse Solana valide a au moins 32 caractères.`;
+        errorElement.style.display = 'block';
+        validElement.style.display = 'none';
+        return false;
+      }
+      
+      if (address.length > 44) {
+        errorElement.textContent = `L'adresse est trop longue (${address.length} caractères). Une adresse Solana valide a au plus 44 caractères.`;
+        errorElement.style.display = 'block';
+        validElement.style.display = 'none';
+        return false;
+      }
+      
+      const base58Regex = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
+      if (!base58Regex.test(address)) {
+        errorElement.textContent = "L'adresse contient des caractères invalides. Une adresse Solana est encodée en base58.";
+        errorElement.style.display = 'block';
+        validElement.style.display = 'none';
+        return false;
+      }
+      
+      // L'adresse est valide
+      errorElement.style.display = 'none';
+      validElement.style.display = 'block';
+      return true;
+    }
+    
+    // Valider l'adresse à chaque modification du champ
+    document.getElementById('address').addEventListener('input', function() {
+      validateAddress(this.value);
+    });
+    
+    document.getElementById('walletForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const address = document.getElementById('address').value;
+      
+      // Valider l'adresse avant de soumettre
+      if (!validateAddress(address)) {
+        return;
+      }
+      
+      alert(`L'adresse ${address} est valide!`);
+    });
+  </script>
+</body>
+</html>

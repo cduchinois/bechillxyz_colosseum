@@ -84,6 +84,49 @@ function runScript(scriptPath, args = []) {
 
 // Page d'accueil avec formulaire
 app.get('/', (req, res) => {
+  // Lire les visualisations disponibles dans le dossier output/visualizations
+  const visualizationsDir = path.resolve(__dirname, 'output', 'visualizations');
+  let visualizationFiles = [];
+  
+  // Vérifier si le dossier existe
+  if (fs.existsSync(visualizationsDir)) {
+    try {
+      // Lire le contenu du dossier
+      visualizationFiles = fs.readdirSync(visualizationsDir)
+        .filter(file => file.endsWith('.html'))
+        .map(file => {
+          // Extraire l'adresse du portefeuille du nom du fichier
+          // Format attendu: wallet_report_ADRESSE.html
+          const match = file.match(/wallet_report_(.+)\.html/);
+          const address = match ? match[1] : 'inconnu';
+          
+          return {
+            filename: file,
+            address: address,
+            url: `/output/visualizations/${file}`,
+            date: fs.statSync(path.join(visualizationsDir, file)).mtime
+          };
+        })
+        // Trier par date de modification (la plus récente en premier)
+        .sort((a, b) => b.date - a.date);
+    } catch (error) {
+      console.error('Erreur lors de la lecture du dossier des visualisations:', error);
+    }
+  }
+  
+  // Générer le HTML pour les visualisations
+  const visualizationsHtml = visualizationFiles.length > 0
+    ? `<div class="visualizations-container">
+        <h2>Visualisations disponibles</h2>
+        ${visualizationFiles.map(viz => `
+          <a class="visualization-link" href="${viz.url}" target="_blank">
+            📊 Portefeuille: ${viz.address.substring(0, 8)}...${viz.address.substring(viz.address.length - 4)}
+            <span class="date">${viz.date.toLocaleDateString()} ${viz.date.toLocaleTimeString()}</span>
+          </a>
+        `).join('')}
+      </div>`
+    : '';
+  
   res.send(`
     <!DOCTYPE html>
     <html lang="fr">
@@ -104,16 +147,17 @@ app.get('/', (req, res) => {
           background-color: #121212;
           color: #e0e0e0;
         }
-        h1 {
+        h1, h2 {
           color: #9c88ff;
           text-align: center;
         }
-        .form-container {
+        .form-container, .visualizations-container {
           background-color: #1e1e1e;
           padding: 20px;
           border-radius: 8px;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
           border: 1px solid #333;
+          margin-bottom: 30px;
         }
         input[type="text"] {
           width: 100%;
@@ -142,6 +186,25 @@ app.get('/', (req, res) => {
         }
         .checkbox-item {
           margin-bottom: 5px;
+        }
+        .visualization-link {
+          display: block;
+          padding: 15px;
+          margin: 10px 0;
+          background-color: #1a237e;
+          border-left: 3px solid #536dfe;
+          text-decoration: none;
+          color: #e0e0e0;
+          border-radius: 4px;
+          transition: background-color 0.2s;
+        }
+        .visualization-link:hover {
+          background-color: #283593;
+        }
+        .date {
+          font-size: 0.8em;
+          opacity: 0.8;
+          float: right;
         }
       </style>
     </head>
@@ -175,6 +238,8 @@ app.get('/', (req, res) => {
           <button type="submit">Lancer l'analyse</button>
         </form>
       </div>
+
+      ${visualizationsHtml}
 
       <script>
         document.getElementById('walletForm').addEventListener('submit', function(e) {

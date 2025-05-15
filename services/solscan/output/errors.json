@@ -1,0 +1,116 @@
+{
+  "errors": [
+    {
+      "timestamp": "2025-05-14T18:52:40.977Z",
+      "address": "tooShort",
+      "message": "L'adresse est trop courte (8 caractères). Une adresse Solana valide a au moins 32 caractères.",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T18:52:41.032Z",
+      "address": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S1234567890123456789012345",
+      "message": "L'adresse est trop longue (69 caractères). Une adresse Solana valide a au plus 44 caractères.",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T18:52:41.032Z",
+      "address": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZ0zfZquAY5S",
+      "message": "L'adresse contient des caractères invalides. Une adresse Solana est encodée en base58.",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T18:52:41.033Z",
+      "address": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5$",
+      "message": "L'adresse contient des caractères invalides. Une adresse Solana est encodée en base58.",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T18:52:41.033Z",
+      "address": null,
+      "message": "L'adresse ne peut pas être vide",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T18:52:41.034Z",
+      "address": "",
+      "message": "L'adresse ne peut pas être vide",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:00:20.712Z",
+      "address": "tooShort",
+      "message": "L'adresse est trop courte (8 caractères). Une adresse Solana valide a au moins 32 caractères.",
+      "source": "web_api.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:00:20.728Z",
+      "address": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZ0zfZquAY5S",
+      "message": "L'adresse contient des caractères invalides. Une adresse Solana est encodée en base58.",
+      "source": "web_api.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:11:13.173Z",
+      "address": "tooShort",
+      "message": "L'adresse est trop courte (8 caractères). Une adresse Solana valide a au moins 32 caractères.",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:11:13.273Z",
+      "address": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S1234567890123456789012345",
+      "message": "L'adresse est trop longue (69 caractères). Une adresse Solana valide a au plus 44 caractères.",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:11:13.274Z",
+      "address": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZ0zfZquAY5S",
+      "message": "L'adresse contient des caractères invalides. Une adresse Solana est encodée en base58.",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:11:13.274Z",
+      "address": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5$",
+      "message": "L'adresse contient des caractères invalides. Une adresse Solana est encodée en base58.",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:11:13.274Z",
+      "address": null,
+      "message": "L'adresse ne peut pas être vide",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:11:13.275Z",
+      "address": "",
+      "message": "L'adresse ne peut pas être vide",
+      "source": "test_error_handling.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:12:02.166Z",
+      "address": "tooShort",
+      "message": "L'adresse est trop courte (8 caractères). Une adresse Solana valide a au moins 32 caractères.",
+      "source": "analyze_wallet.js",
+      "type": "validation_error"
+    },
+    {
+      "timestamp": "2025-05-14T19:12:27.014Z",
+      "address": "tooShort",
+      "message": "L'adresse est trop courte (8 caractères). Une adresse Solana valide a au moins 32 caractères.",
+      "source": "web_api.js",
+      "type": "validation_error"
+    }
+  ]
+}

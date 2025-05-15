@@ -18,9 +18,20 @@ const port = 5051;
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Endpoint pour l'API
-app.get('/validate-address/:address', (req, res) => {
+app.get('/validate-address/:address', async (req, res) => {
   const address = req.params.address;
+  
+  // Importer ErrorHandler
+  const { ErrorHandler } = await import('./utils/error_handler.js');
+  
+  // Valider l'adresse
   const result = Validation.validateSolanaAddress(address);
+  
+  // Si l'adresse n'est pas valide, l'enregistrer dans le fichier d'erreurs
+  if (!result.isValid) {
+    ErrorHandler.logValidationError(address, result.message, 'address_validation_server.js', false);
+  }
+  
   res.json(result);
 });
 

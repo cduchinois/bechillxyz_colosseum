@@ -1,0 +1,630 @@
+{
+  "walletAddress": "GpbLdg9XvRyGd7yh9dBrzDEjhLpkS68cwt1XT4h2sGhU",
+  "generatedAt": "2025-05-14T15:53:40.914Z",
+  "summary": {
+    "totalTransactions": 6,
+    "uniquePlatforms": 1,
+    "uniqueActivityTypes": 1,
+    "uniqueTokens": 5,
+    "volumeTraded": "1283.12",
+    "topVolumes": [
+      {
+        "symbol": "IRONYMAN",
+        "volume": "1158.23"
+      },
+      {
+        "symbol": "JUP",
+        "volume": "57.00"
+      },
+      {
+        "symbol": "USDT",
+        "volume": "41.68"
+      }
+    ],
+    "transactionPeriod": {
+      "firstTransaction": 1712238602000,
+      "lastTransaction": 1739575474000
+    },
+    "averageGapBetweenActivities": "0.01 heures",
+    "weekdayVsWeekend": {
+      "weekday": 169,
+      "weekend": 31,
+      "weekdayPercentage": 85,
+      "weekendPercentage": 16
+    }
+  },
+  "platforms": {
+    "topPlatforms": [
+      {
+        "platform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+        "count": 6,
+        "percentage": "100.0%"
+      }
+    ],
+    "mainPlatform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+    "allPlatforms": [
+      {
+        "platform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+        "count": 6
+      }
+    ]
+  },
+  "activities": {
+    "mainActivityType": "ACTIVITY_AGG_TOKEN_SWAP",
+    "activityBreakdown": [
+      {
+        "type": "ACTIVITY_AGG_TOKEN_SWAP",
+        "count": 6,
+        "percentage": "100.0%"
+      }
+    ]
+  },
+  "tokens": {
+    "topTokensByVolume": [
+      {
+        "address": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG",
+        "symbol": "IRONYMAN",
+        "name": "I AM IRONYMAN",
+        "totalVolume": 1158.227662,
+        "transactions": 2,
+        "swapsIn": 2,
+        "swapsOut": 0,
+        "decimals": 6,
+        "transactionCount": 2,
+        "percentage": "90.3%"
+      },
+      {
+        "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "symbol": "JUP",
+        "name": "Jupiter",
+        "totalVolume": 57,
+        "transactions": 1,
+        "swapsIn": 0,
+        "swapsOut": 1,
+        "decimals": 6,
+        "transactionCount": 1,
+        "percentage": "4.4%"
+      },
+      {
+        "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "symbol": "USDT",
+        "name": "USDT",
+        "totalVolume": 41.677824,
+        "transactions": 1,
+        "swapsIn": 1,
+        "swapsOut": 0,
+        "decimals": 6,
+        "transactionCount": 1,
+        "percentage": "3.2%"
+      },
+      {
+        "address": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+        "symbol": "ZEUS",
+        "name": "ZEUS",
+        "totalVolume": 25.683402,
+        "transactions": 2,
+        "swapsIn": 0,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 2,
+        "percentage": "2.0%"
+      },
+      {
+        "address": "So11111111111111111111111111111111111111112",
+        "symbol": "WSOL",
+        "name": "Wrapped SOL",
+        "totalVolume": 0.532146906,
+        "transactions": 6,
+        "swapsIn": 3,
+        "swapsOut": 3,
+        "decimals": 9,
+        "transactionCount": 6,
+        "percentage": "0.0%"
+      }
+    ],
+    "topTokensByTransactions": [
+      {
+        "address": "So11111111111111111111111111111111111111112",
+        "symbol": "WSOL",
+        "name": "Wrapped SOL",
+        "totalVolume": 0.532146906,
+        "transactions": 6,
+        "swapsIn": 3,
+        "swapsOut": 3,
+        "decimals": 9,
+        "transactionCount": 6,
+        "percentage": "0.0%"
+      },
+      {
+        "address": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG",
+        "symbol": "IRONYMAN",
+        "name": "I AM IRONYMAN",
+        "totalVolume": 1158.227662,
+        "transactions": 2,
+        "swapsIn": 2,
+        "swapsOut": 0,
+        "decimals": 6,
+        "transactionCount": 2,
+        "percentage": "90.3%"
+      },
+      {
+        "address": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+        "symbol": "ZEUS",
+        "name": "ZEUS",
+        "totalVolume": 25.683402,
+        "transactions": 2,
+        "swapsIn": 0,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 2,
+        "percentage": "2.0%"
+      },
+      {
+        "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "symbol": "JUP",
+        "name": "Jupiter",
+        "totalVolume": 57,
+        "transactions": 1,
+        "swapsIn": 0,
+        "swapsOut": 1,
+        "decimals": 6,
+        "transactionCount": 1,
+        "percentage": "4.4%"
+      },
+      {
+        "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "symbol": "USDT",
+        "name": "USDT",
+        "totalVolume": 41.677824,
+        "transactions": 1,
+        "swapsIn": 1,
+        "swapsOut": 0,
+        "decimals": 6,
+        "transactionCount": 1,
+        "percentage": "3.2%"
+      }
+    ],
+    "mostUsedToken": "WSOL"
+  },
+  "tokenPairs": [
+    {
+      "token1": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+      "token1Symbol": "ZEUS",
+      "token2": "So11111111111111111111111111111111111111112",
+      "token2Symbol": "WSOL",
+      "count": 2,
+      "percentage": "33.3%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG",
+      "token2Symbol": "IRONYMAN",
+      "count": 2,
+      "percentage": "33.3%"
+    },
+    {
+      "token1": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "token1Symbol": "JUP",
+      "token2": "So11111111111111111111111111111111111111112",
+      "token2Symbol": "WSOL",
+      "count": 1,
+      "percentage": "16.7%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "token2Symbol": "USDT",
+      "count": 1,
+      "percentage": "16.7%"
+    }
+  ],
+  "advanced": {
+    "valueRanges": {},
+    "totalValue": 0,
+    "averageTransactionValue": 0,
+    "activityValueByType": {}
+  },
+  "timeAnalysis": {
+    "activityDistribution": {
+      "byYear": {
+        "2024": 100,
+        "2025": 100
+      }
+    },
+    "activityGaps": [
+      {
+        "startTime": "2024-08-04T16:04:43.000Z",
+        "endTime": "2024-09-27T16:28:56.000Z",
+        "gapDays": 54,
+        "tx_before": "5DuNECzvtaPYAKP3vxbNTGEj9gf6v6VFi7dNBbbu986fHUDmzfijCD3aLsTHqmbtVRwukgubNzX7181CFUuneMiT",
+        "tx_after": "42ipwm4VadeysTEUJ7duzvideSXPBQpNQ8gmxGFTDL45ojSH7LYgqiXa5Dcfvq69rQGs5NCN6Kqncjs4R2uJwXRV"
+      },
+      {
+        "startTime": "2024-11-25T18:56:30.000Z",
+        "endTime": "2024-12-30T04:20:05.000Z",
+        "gapDays": 34.4,
+        "tx_before": "5zD7QpX5aroup8bLTE7UsPz3tBHQZKWk1LrqYvMEQ2YfSgiXQj4bwCcfFkUPqLSpsCs4Fet2F4vLGb4xMPd11YS9",
+        "tx_after": "516p8JTTtLpDYusRpECoU9URhDGnBVkyHg4n3T3wEBNsisxxzF9LQ39SgNZd1tz3tNL51SCmwr8SszaWQ12GNB6i"
+      },
+      {
+        "startTime": "2024-09-27T16:28:56.000Z",
+        "endTime": "2024-10-29T13:18:33.000Z",
+        "gapDays": 31.9,
+        "tx_before": "42ipwm4VadeysTEUJ7duzvideSXPBQpNQ8gmxGFTDL45ojSH7LYgqiXa5Dcfvq69rQGs5NCN6Kqncjs4R2uJwXRV",
+        "tx_after": "4yzwFFnnQpN4kY3xFmndCq82tCwGCYiGqr5ZUDdse5ndkgMewbFAK13uDEFAvBwShw5pxDpnxRBwesenJfX77XkA"
+      },
+      {
+        "startTime": "2025-01-25T12:06:34.000Z",
+        "endTime": "2025-02-14T22:24:32.000Z",
+        "gapDays": 20.4,
+        "tx_before": "58S5pUKoEKtdxpMVCr9t9en6LXLpHGpsez2JjQ95qzrHYdcR9e8K1ebRduz6Vp7FYZSZxbppiNqcuHNDhHCNoZrE",
+        "tx_after": "3QApnrZuGVdqTGyS5yStNUXim4ZL6ThTnw1soHQErRupABUfDLDh3UopY6JoEuFLZA1XCHFsN5wf84n6RreZpkhq"
+      },
+      {
+        "startTime": "2024-10-29T13:18:33.000Z",
+        "endTime": "2024-11-17T01:25:08.000Z",
+        "gapDays": 18.5,
+        "tx_before": "4yzwFFnnQpN4kY3xFmndCq82tCwGCYiGqr5ZUDdse5ndkgMewbFAK13uDEFAvBwShw5pxDpnxRBwesenJfX77XkA",
+        "tx_after": "261qLne4pMSQibQfHTNNEqbMBKtAWdENPc2TF2CD7XTLg68MUcmgSZnp6HFYBTPVFiizixo9egaBJk6YErkn6qcW"
+      },
+      {
+        "startTime": "2024-05-30T23:43:45.000Z",
+        "endTime": "2024-06-14T05:13:35.000Z",
+        "gapDays": 14.2,
+        "tx_before": "5QVtoYmSnXdZSYryBYGRRvCb7GGxp4AbAZSre8rGM4rFNjxzVeR8VdSscRZ6mwNjgyzoanUxSbhEBt28ViHyv3HS",
+        "tx_after": "qv5UHouKsaXkjTWTQw6ZXr65nhfVbC218MvAP1XjTvXXvx4DwSBHHZhrP68z5n1XDoQ67HRH8eBPCxaVHbCcnZB"
+      },
+      {
+        "startTime": "2024-07-05T23:39:21.000Z",
+        "endTime": "2024-07-19T01:02:26.000Z",
+        "gapDays": 13.1,
+        "tx_before": "6139PwyBXfcGYLxbv8QBNHrrE5TL8ZSLcTadxoBmj8Ro2kfKGVzQCeDSz5apm8oGfzEAvGLQYybbgh5AzANRkiKP",
+        "tx_after": "2FKX3A95PBmHByZPaCxoFf6zCH8rK9iHwY7SMc14ozqU86Jts2ZWCbryDG9HEgTj28jE3gc6RvjgFSw2tJp7Ks8Q"
+      },
+      {
+        "startTime": "2024-12-30T04:20:05.000Z",
+        "endTime": "2025-01-11T16:13:41.000Z",
+        "gapDays": 12.5,
+        "tx_before": "516p8JTTtLpDYusRpECoU9URhDGnBVkyHg4n3T3wEBNsisxxzF9LQ39SgNZd1tz3tNL51SCmwr8SszaWQ12GNB6i",
+        "tx_after": "3BpXcsQtzVp1MVxsT4DgUQTtdSHbCx2mSkVZCqop7nsPEp7u5XjqK5ZjYn5ZyLPwrxV51NByoHkJDL3VbzaW9kYB"
+      },
+      {
+        "startTime": "2024-07-21T03:48:43.000Z",
+        "endTime": "2024-08-02T00:53:17.000Z",
+        "gapDays": 11.9,
+        "tx_before": "2wPfPY8NuL2bctkwzopu6MumrSpnku57xaGzS2vQ8Dd83sdgZ29QpNizLBHPVHwhNFHmUk3aGombdsdYmnrdv51Q",
+        "tx_after": "3GXRm831gNBdbAkvJYreQzDoKtQDT1oSyMv5f5ix3DRmzbQUxWsw9bx593tZt8SMzzqgUB7PDUzd5V4LmRPwJd1i"
+      },
+      {
+        "startTime": "2024-05-03T13:36:01.000Z",
+        "endTime": "2024-05-15T02:55:05.000Z",
+        "gapDays": 11.6,
+        "tx_before": "433u3n2GA1j9HAdkvA8nGWUjCHKYbePr6qg2BfJoT7tvGtuRHBnVtHM4ypfMBd5HQ2DS1eSvTALXwqnxC7FGqjDt",
+        "tx_after": "3DM4Bo6D7FTw5H7faqfdsoQAg9YRhjWntSKvgfwq7tQ44jXdzuBBn8mKo4qVBEAsQNJZ8QQQTgUEeZTDTPshskT5"
+      },
+      {
+        "startTime": "2024-06-23T13:47:46.000Z",
+        "endTime": "2024-07-01T00:11:43.000Z",
+        "gapDays": 7.4,
+        "tx_before": "2yNQv16CuPR9WmY1TSJBnBgfp2mJQ7NKo2Q8LVKwQpDqzQHBVZvsaUwkgmkQ9C1oRsTbTAtszPWJ9wHzZH7g93Z9",
+        "tx_after": "4ToV3PTThgkX6GSGibBahXmoQya2m7Qzj6J6KMeQJzYqdXr3LpYZfNhc5z91v2xahLm9jUBJSZxiB7Z69bQ1Q59t"
+      },
+      {
+        "startTime": "2024-11-17T01:25:08.000Z",
+        "endTime": "2024-11-24T00:56:59.000Z",
+        "gapDays": 7,
+        "tx_before": "261qLne4pMSQibQfHTNNEqbMBKtAWdENPc2TF2CD7XTLg68MUcmgSZnp6HFYBTPVFiizixo9egaBJk6YErkn6qcW",
+        "tx_after": "BgnaaHtttYbjnex9J2dvrMrSahXxcmD1BY3Uc4DahLHtaxL1zkfeJ323Si4bhNFudCopCfuibJF7ismoRD5jx9g"
+      },
+      {
+        "startTime": "2024-04-22T18:10:29.000Z",
+        "endTime": "2024-04-29T07:21:22.000Z",
+        "gapDays": 6.5,
+        "tx_before": "2pBJrMJmD3XwaLPipo1x9Wf1Gh8fuEYnAszKEmRGmPuMuxsgj5g59VvTyGGxnN9kpAMPSHzuKE6i8hJTmLLtXbSN",
+        "tx_after": "37HxuCAPvsJcjh3NF3ZAJNTeRDvcDPaj7xgPjUU28v9u6Gvgr5LAMvUZCY8xVxANC3544RqncE1ZMRpx5ELSbch8"
+      },
+      {
+        "startTime": "2024-05-24T11:08:29.000Z",
+        "endTime": "2024-05-30T23:43:45.000Z",
+        "gapDays": 6.5,
+        "tx_before": "3pwQ71LcQ393vFCN3FFoRjU2JXwu8V6v2KrRQJgTwJKt8n2TGsinBiQXht8LQpwgWQkNF2EhzJEV9uZpaBChJ1Xs",
+        "tx_after": "5QVtoYmSnXdZSYryBYGRRvCb7GGxp4AbAZSre8rGM4rFNjxzVeR8VdSscRZ6mwNjgyzoanUxSbhEBt28ViHyv3HS"
+      },
+      {
+        "startTime": "2025-01-18T05:48:20.000Z",
+        "endTime": "2025-01-24T11:47:53.000Z",
+        "gapDays": 6.2,
+        "tx_before": "WhKTRrb6mturuns2h59iFUjXJBXoqAFW9Kj9BGkw9aV6p6S49vnx6HUhGpXSFz6BwnrHLXQ76npiX5RGvHGAmbA",
+        "tx_after": "3XLgiJMo1VWkYQ6YysH5hqVJCiasBr7xHKJLmdFKHT8Zx6ZzjHSkYiDFxZnvDkwd3WaB6y4Rht8UfVFn7k2d15uK"
+      },
+      {
+        "startTime": "2025-01-12T12:21:24.000Z",
+        "endTime": "2025-01-18T05:48:20.000Z",
+        "gapDays": 5.7,
+        "tx_before": "CEHMYhQDCXetjALwuduun7aT6Qr3YRB7FbihpQjWguP18GAWEHc7QVCoHqurFUvkGn1JHiMRJf7yuWhgir33MZg",
+        "tx_after": "WhKTRrb6mturuns2h59iFUjXJBXoqAFW9Kj9BGkw9aV6p6S49vnx6HUhGpXSFz6BwnrHLXQ76npiX5RGvHGAmbA"
+      },
+      {
+        "startTime": "2024-05-15T03:33:45.000Z",
+        "endTime": "2024-05-20T15:43:39.000Z",
+        "gapDays": 5.5,
+        "tx_before": "5ktJFV4tY4tKocSTeWnoPuAdcM67vVsMqUQy9usvofcqSzqKQibGVpVXoKp55PGFdo1AjQ758ibo77EML9fiZ7Fr",
+        "tx_after": "2Kzb2xR7DnaXvRLr6SCE6fPaxgpvzVfo9YfDCj6iez1bJoShpWunfuC7TYfrT4vuk1wdQ9jmnXiAQ4utvKr1KShB"
+      },
+      {
+        "startTime": "2024-06-14T05:13:35.000Z",
+        "endTime": "2024-06-18T21:15:00.000Z",
+        "gapDays": 4.7,
+        "tx_before": "qv5UHouKsaXkjTWTQw6ZXr65nhfVbC218MvAP1XjTvXXvx4DwSBHHZhrP68z5n1XDoQ67HRH8eBPCxaVHbCcnZB",
+        "tx_after": "C9ShSVf8W4fMkzc5LUcJJEdCqVc3QhFQ1bLfwNuSCcKApwcmRL57pGr9SqcgCbRQvL7jM9CWQEe8ZxrAgDJMT7D"
+      },
+      {
+        "startTime": "2024-06-18T21:15:00.000Z",
+        "endTime": "2024-06-23T13:47:46.000Z",
+        "gapDays": 4.7,
+        "tx_before": "C9ShSVf8W4fMkzc5LUcJJEdCqVc3QhFQ1bLfwNuSCcKApwcmRL57pGr9SqcgCbRQvL7jM9CWQEe8ZxrAgDJMT7D",
+        "tx_after": "2yNQv16CuPR9WmY1TSJBnBgfp2mJQ7NKo2Q8LVKwQpDqzQHBVZvsaUwkgmkQ9C1oRsTbTAtszPWJ9wHzZH7g93Z9"
+      },
+      {
+        "startTime": "2024-04-11T21:38:39.000Z",
+        "endTime": "2024-04-15T19:57:40.000Z",
+        "gapDays": 3.9,
+        "tx_before": "5FcbADi4GzkjF5p4cMN3Uaz2C8jU95g9vp6QioZ4YEKPPXhWS5QFH5cAw6LoyeqYDaPsUBYpDPrUiAkTmpp6JL2F",
+        "tx_after": "2pqjqe6Jbuuer7braW4pXm9ucKPzae3VxBdexEEH6MscR1PZmkb5YHu8zDdBzyYaYmeMeA5ttEkjhXTsepAm9wj6"
+      },
+      {
+        "startTime": "2024-04-04T17:53:11.000Z",
+        "endTime": "2024-04-08T13:42:20.000Z",
+        "gapDays": 3.8,
+        "tx_before": "4LpmZBARybDjMhpSaiZhMZRahWMBgJq7sXVtc3bk9aCVE4KK3Cgn92AWHWkX11B3QRdd7MjYsxcGefovoXbRtuRG",
+        "tx_after": "3WE6J9cNJAPbvwwdsa5WxwkGTfmpezvYvqRARexTWxCdJ72jgu7Dtgs2ZSxhmkDhjrEHSS14HHSZ4kHizVbe3K1e"
+      },
+      {
+        "startTime": "2024-04-29T07:21:22.000Z",
+        "endTime": "2024-05-03T02:03:08.000Z",
+        "gapDays": 3.8,
+        "tx_before": "37HxuCAPvsJcjh3NF3ZAJNTeRDvcDPaj7xgPjUU28v9u6Gvgr5LAMvUZCY8xVxANC3544RqncE1ZMRpx5ELSbch8",
+        "tx_after": "218dwRq8s6TsmYzq7oTmBsAqV5WT3rLNvQFysN26r7G3XXy8DunXPHphha2WrhnLQMucZoBQ34osn3o8xdF98Jfw"
+      },
+      {
+        "startTime": "2024-05-20T15:43:39.000Z",
+        "endTime": "2024-05-24T11:08:29.000Z",
+        "gapDays": 3.8,
+        "tx_before": "2Kzb2xR7DnaXvRLr6SCE6fPaxgpvzVfo9YfDCj6iez1bJoShpWunfuC7TYfrT4vuk1wdQ9jmnXiAQ4utvKr1KShB",
+        "tx_after": "3pwQ71LcQ393vFCN3FFoRjU2JXwu8V6v2KrRQJgTwJKt8n2TGsinBiQXht8LQpwgWQkNF2EhzJEV9uZpaBChJ1Xs"
+      },
+      {
+        "startTime": "2024-04-15T20:01:40.000Z",
+        "endTime": "2024-04-18T17:41:18.000Z",
+        "gapDays": 2.9,
+        "tx_before": "5jMC9uCaQxkizxe3j9AByrRu2qoXerhWs4k3rmgXDA63j3iwBJSkpw4m55cJ7P36s3botK5ESQYvTfWBoB11sizF",
+        "tx_after": "7yD9vwuzQBcDy9X8Z1sFtfVs5zucFuYSXyjyVPXnoh79BULcLwaKJw2MTsjiskSzxyeSVBUpaDoLzSaZba1umaX"
+      },
+      {
+        "startTime": "2024-04-19T21:59:19.000Z",
+        "endTime": "2024-04-22T18:05:53.000Z",
+        "gapDays": 2.8,
+        "tx_before": "5vk22BZNx9GbixuauQyzzEqkPdaaAvVNySyrwrBmUCBXWFswevwtKiHnoJLfrCXMbm12BsSpBTUNaoUK14CVy622",
+        "tx_after": "3TfWKUuVtViUsRP6d1KfgqVfZXzQG9ec6LdYQd1sfUvrfTgQpt2dR4PJPHfCTKXJyovVw5Y1RvLKdiNrzEkgDxy"
+      },
+      {
+        "startTime": "2024-07-02T22:39:56.000Z",
+        "endTime": "2024-07-05T11:33:15.000Z",
+        "gapDays": 2.5,
+        "tx_before": "gGnm6R4FsizYPkyJXKFPfPqS1pwLCwyrA9tJ1yS4xX52utpeU2ph4mEibNhGK6Hx91J5YSQktpHTG4AKWjGqZM9",
+        "tx_after": "rAmt4xpRWcgMz7eabcqCUB3WvPr2vd8sxbu8uKmYAbHXx6KB2TXsCXrrDYvGwNBesN6QCSaGGDLZYx8hbiTHRLS"
+      },
+      {
+        "startTime": "2024-08-02T03:05:50.000Z",
+        "endTime": "2024-08-04T16:04:43.000Z",
+        "gapDays": 2.5,
+        "tx_before": "2ypCpwkWMit1EeXAabuzkqAng46RKQk7JE5rPHBcNq19qyMeyjQTbUjfqaCHvRxEDyNSBBKPK66Qyg42iHCp4h83",
+        "tx_after": "5DuNECzvtaPYAKP3vxbNTGEj9gf6v6VFi7dNBbbu986fHUDmzfijCD3aLsTHqmbtVRwukgubNzX7181CFUuneMiT"
+      },
+      {
+        "startTime": "2024-07-19T01:06:26.000Z",
+        "endTime": "2024-07-21T03:48:43.000Z",
+        "gapDays": 2.1,
+        "tx_before": "3d4uyzZz2Fcxy1q8tFFp2qVVFvLskRiiWEmBC3sdC3vhAn8iiVbW3YrLT6ACXDcmuEwR1H4rY3AXVZztY5tZgxyZ",
+        "tx_after": "2wPfPY8NuL2bctkwzopu6MumrSpnku57xaGzS2vQ8Dd83sdgZ29QpNizLBHPVHwhNFHmUk3aGombdsdYmnrdv51Q"
+      },
+      {
+        "startTime": "2024-04-10T00:26:05.000Z",
+        "endTime": "2024-04-11T21:37:52.000Z",
+        "gapDays": 1.9,
+        "tx_before": "2ZtnWqZsXSX6F7jbsprFcQxuzn4kEYbzbmKvUzJZe9Enx9hZwKXDSQ3wgSQapWHSEJVzdJMqE5mVAWEPpVjdZX4T",
+        "tx_after": "31XheeF9ES5nJ1CHY2SctcA2fnU8xunM3MgEHptZEeawWGjhks8fN3dfzYYhYATeL4x6S5czGgUd2vLiLn3DMT7c"
+      },
+      {
+        "startTime": "2024-07-01T00:11:43.000Z",
+        "endTime": "2024-07-02T18:06:02.000Z",
+        "gapDays": 1.7,
+        "tx_before": "4ToV3PTThgkX6GSGibBahXmoQya2m7Qzj6J6KMeQJzYqdXr3LpYZfNhc5z91v2xahLm9jUBJSZxiB7Z69bQ1Q59t",
+        "tx_after": "2yp9gTt8pW5vKMvLRdMvyydobp3dbdjtnM3noewEpyJsxCiHUNSR9ocANA2TYRoochNRe91bKtrAVNAy62zzvLYY"
+      },
+      {
+        "startTime": "2024-04-08T19:07:28.000Z",
+        "endTime": "2024-04-09T23:13:49.000Z",
+        "gapDays": 1.2,
+        "tx_before": "3g4k2SZGjDwwGhduJJRZrgiNGfyTxu2pDNGYmqG3NVyAgfLE7U3YCHvpCwmfZa8QdQpvC7o3m3ky6T983R1Qhmvc",
+        "tx_after": "nJmFHpXQBTXpuj5NVQqrPXQihKxKntJmkj35pGgF12ntqb8eTTMGwtnbYhjMgjKQ4rv9hdrzXjruMZ27jSXgMEo"
+      }
+    ],
+    "busyPeriods": [
+      {
+        "startTime": "2025-01-24T11:47:53.000Z",
+        "endTime": "2025-01-25T11:47:53.000Z",
+        "activityCount": 82
+      },
+      {
+        "startTime": "2025-01-24T11:55:21.000Z",
+        "endTime": "2025-01-25T11:55:21.000Z",
+        "activityCount": 81
+      },
+      {
+        "startTime": "2025-01-24T11:55:25.000Z",
+        "endTime": "2025-01-25T11:55:25.000Z",
+        "activityCount": 80
+      },
+      {
+        "startTime": "2025-01-24T11:55:25.000Z",
+        "endTime": "2025-01-25T11:55:25.000Z",
+        "activityCount": 79
+      },
+      {
+        "startTime": "2025-01-24T11:55:25.000Z",
+        "endTime": "2025-01-25T11:55:25.000Z",
+        "activityCount": 78
+      }
+    ],
+    "weekdayVsWeekend": {
+      "weekday": 169,
+      "weekend": 31,
+      "weekdayPercentage": 85,
+      "weekendPercentage": 16
+    },
+    "monthlyAnalysis": [
+      {
+        "month": "2024-04",
+        "count": 25,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 25
+        }
+      },
+      {
+        "month": "2024-05",
+        "count": 38,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 38
+        }
+      },
+      {
+        "month": "2024-06",
+        "count": 3,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 3
+        }
+      },
+      {
+        "month": "2024-07",
+        "count": 14,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 14
+        }
+      },
+      {
+        "month": "2024-08",
+        "count": 4,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 4
+        }
+      },
+      {
+        "month": "2024-09",
+        "count": 1,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 1
+        }
+      },
+      {
+        "month": "2024-10",
+        "count": 1,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 1
+        }
+      },
+      {
+        "month": "2024-11",
+        "count": 13,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 13
+        }
+      },
+      {
+        "month": "2024-12",
+        "count": 1,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 1
+        }
+      },
+      {
+        "month": "2025-01",
+        "count": 94,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 94
+        }
+      },
+      {
+        "month": "2025-02",
+        "count": 6,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 6
+        }
+      }
+    ]
+  },
+  "specialTokens": {
+    "unknownTokensStats": {
+      "count": 0,
+      "transactionCount": 0,
+      "percentage": "0.00%"
+    },
+    "topSpecialTokens": [],
+    "nfts": [],
+    "complexTransactionCount": 0
+  },
+  "usdEstimates": {
+    "totalEstimatedUsd": 150.77317335225752,
+    "tokensWithEstimates": 5,
+    "topTokensByUsdValue": [
+      {
+        "symbol": "WSOL",
+        "address": "So11111111111111111111111111111111111111112",
+        "usdValue": 78.32138162508001,
+        "totalVolume": 0.532146906,
+        "priceUsdt": 147.18
+      },
+      {
+        "symbol": "USDT",
+        "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "usdValue": 41.677824,
+        "totalVolume": 41.677824,
+        "priceUsdt": 1
+      },
+      {
+        "symbol": "JUP",
+        "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "usdValue": 24.498542999999998,
+        "totalVolume": 57,
+        "priceUsdt": 0.429799
+      },
+      {
+        "symbol": "ZEUS",
+        "address": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+        "usdValue": 6.2151264499800005,
+        "totalVolume": 25.683402,
+        "priceUsdt": 0.24199
+      },
+      {
+        "symbol": "IRONYMAN",
+        "address": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG",
+        "usdValue": 0.060298277197492194,
+        "totalVolume": 1158.227662,
+        "priceUsdt": 0.000052060816
+      }
+    ]
+  }
+}

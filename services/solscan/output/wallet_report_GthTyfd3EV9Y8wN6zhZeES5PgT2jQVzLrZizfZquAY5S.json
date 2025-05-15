@@ -1,6 +1,6 @@
 {
   "walletAddress": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S",
-  "generatedAt": "2025-05-14T11:03:29.959Z",
+  "generatedAt": "2025-05-14T19:14:45.339Z",
   "summary": {
     "totalTransactions": 58,
     "uniquePlatforms": 3,
@@ -22,15 +22,15 @@
       }
     ],
     "transactionPeriod": {
-      "firstTransaction": 1744006649000,
+      "firstTransaction": 1731343496000,
       "lastTransaction": 1747166127000
     },
     "averageGapBetweenActivities": "0.01 heures",
     "weekdayVsWeekend": {
-      "weekday": 39,
-      "weekend": 1,
-      "weekdayPercentage": 98,
-      "weekendPercentage": 3
+      "weekday": 178,
+      "weekend": 22,
+      "weekdayPercentage": 89,
+      "weekendPercentage": 11
     }
   },
   "platforms": {
@@ -445,10 +445,25 @@
   "timeAnalysis": {
     "activityDistribution": {
       "byYear": {
-        "2025": 40
+        "2024": 9,
+        "2025": 191
       }
     },
     "activityGaps": [
+      {
+        "startTime": "2024-11-11T21:49:10.000Z",
+        "endTime": "2025-01-18T11:07:02.000Z",
+        "gapDays": 67.6,
+        "tx_before": "33cEyJ7Q97xQofdi6qHhmiWdRqQ3SkifPe1rfwA4aqJuV2Uq6iunaZApKUzL58tjrospsS4Hy5qfaLsXMrymmupp",
+        "tx_after": "tKKn3urXCj9eGcBy8AJM9SZwf2unQ9juGhKwCWn1LwYrUZvtWh7J21FuhmGhcYU4NbiCrqqKrEm6BhtHtiK82QU"
+      },
+      {
+        "startTime": "2025-03-10T14:33:24.000Z",
+        "endTime": "2025-04-07T06:06:08.000Z",
+        "gapDays": 27.6,
+        "tx_before": "36cRDUEb8iHLoGaqFKtPHUs5fwRqDNTHBqviFai8AykkMuqdKxup1gvJFaowPfDnpdWob3YNpxZ7xTyspmFqxf4c",
+        "tx_after": "56ephiE42NtkZ4xYnSRPunYtg3PJ1YgcrZCPTqyb2FgwAYKHs38UFavZzqmmQdEQvsPtqTCMWp9T1VVYwgd7k5vR"
+      },
       {
         "startTime": "2025-04-12T00:16:33.000Z",
         "endTime": "2025-04-22T19:23:36.000Z",
@@ -464,11 +479,46 @@
         "tx_after": "3pCCQnd5HEkhqeuqPndwKTYyqkFpsVXxjriaEa83pJUyqN84GgJo2wHgbEr1zvZttGAwGHP2JX1B2DnjUchy5z3v"
       },
       {
+        "startTime": "2025-02-25T10:06:03.000Z",
+        "endTime": "2025-03-04T05:34:00.000Z",
+        "gapDays": 6.8,
+        "tx_before": "4AMUtbmixZiUEmfUvqBTneGnkkniWu3CGMpdsMECdidgCa44NTiz68kghfSWRUJkQx857BXmGr8szey7yq1HxWV5",
+        "tx_after": "2QKRTQ46wbZc4F3PLBJfHszRtBwLZBGeEx6D9kyLEuyStm64jLMeU2hgjPUYUyv8vt9Mf79CpPQF4bHju55XVGcz"
+      },
+      {
+        "startTime": "2025-02-19T05:00:24.000Z",
+        "endTime": "2025-02-25T10:06:03.000Z",
+        "gapDays": 6.2,
+        "tx_before": "4G1NAjL9tCemSUfgM1VMHxb5nGF6MpUuqiq2baQwMMLuLEhDStFQZtnCHmzQ3SFGrRTn9TVKz8Nt9CYFJPd6MS3e",
+        "tx_after": "4AMUtbmixZiUEmfUvqBTneGnkkniWu3CGMpdsMECdidgCa44NTiz68kghfSWRUJkQx857BXmGr8szey7yq1HxWV5"
+      },
+      {
+        "startTime": "2025-01-23T02:55:51.000Z",
+        "endTime": "2025-01-29T03:09:46.000Z",
+        "gapDays": 6,
+        "tx_before": "4wCMaTHy27Q4KrqGvKY114A9BJgZpGXXSqupLW4XHG9X4Jv3gu2jpg8iNshs1krWaWtJWA3eLRnX6WkA3AJjGk62",
+        "tx_after": "5aQYP8QivmEXgCnR791MQ82KBMu28MXiRZwEY7RZ3NNXt5dU6EP6ZCHbTU2QsKQPC5D8PXJR6CP7xXHMjaTQRYut"
+      },
+      {
+        "startTime": "2025-02-12T07:39:31.000Z",
+        "endTime": "2025-02-17T19:46:20.000Z",
+        "gapDays": 5.5,
+        "tx_before": "62PWvfYyfAkTwSrVnDzPSEbxRWi4jmEdG9MMNQkX9v2yWhxxUfdConNCcnVMaCQKnjVdG7GiG26Q9YZtNVm9M9rs",
+        "tx_after": "4GjDfeDqAC12uYBYjqYHdsSyUfA3nvNxEZAQMcJcEdMdFR6W1mvWJoY861KXzCK3t5fbPHTsj5f96oUd2XwRA9dS"
+      },
+      {
         "startTime": "2025-04-25T01:19:48.000Z",
         "endTime": "2025-04-30T05:06:19.000Z",
         "gapDays": 5.2,
         "tx_before": "2BgMBHozJJwvJoi3J9Rv85VJMK7F9HFwuoJft7wEhEDCNwxg38GXZmKQfNPtoiT6Tpo3Fo7W9o7w7VvVyc6cDVUB",
         "tx_after": "iuyjsE1sXpgG3LXFByYFCFXTkEs8rsMSYiucFXtro5QS4Kx3U658ZCaKyN49CBo2kHF4TzRoFEPni4avEwoE6c3"
+      },
+      {
+        "startTime": "2025-03-05T11:05:41.000Z",
+        "endTime": "2025-03-10T14:33:24.000Z",
+        "gapDays": 5.1,
+        "tx_before": "65x19VhDCfLAWsDrfsPp4oGNvUCobyYEh662Kgg4Gpn2VRfBGjXwVCACpQQKD5LvxwfodFBKJFemNhrCSZXkG984",
+        "tx_after": "36cRDUEb8iHLoGaqFKtPHUs5fwRqDNTHBqviFai8AykkMuqdKxup1gvJFaowPfDnpdWob3YNpxZ7xTyspmFqxf4c"
       },
       {
         "startTime": "2025-05-09T08:43:32.000Z",
@@ -483,22 +533,122 @@
         "gapDays": 2.9,
         "tx_before": "2JTf5ghnb2zeYZ6VjxBgcTHEbQ4bT2uAPjXagvghkQgNYf55JnHWEe4RLFZuxEHae4JnCVUSoPiFcVfzfxyYB7gR",
         "tx_after": "5b4YKXHUGGQMLw4ePzabbtzEg2NGtHsmxhs1qVj8xLoYH3T6Uhwr4QqBJ8dVGRH3YANGuwWYhxtYJjuLRpzborsc"
+      },
+      {
+        "startTime": "2025-01-20T16:29:15.000Z",
+        "endTime": "2025-01-23T02:55:51.000Z",
+        "gapDays": 2.4,
+        "tx_before": "27N5hc4nLfcAoo1QQg7Z2E8TLPsHpggLAuQHVUcmLHTyhyKcfbk99hXxg8PCjA9P6NGJaLC8Ep8jZK5HBwdYAYZH",
+        "tx_after": "4wCMaTHy27Q4KrqGvKY114A9BJgZpGXXSqupLW4XHG9X4Jv3gu2jpg8iNshs1krWaWtJWA3eLRnX6WkA3AJjGk62"
+      },
+      {
+        "startTime": "2025-01-29T14:05:37.000Z",
+        "endTime": "2025-02-01T00:28:15.000Z",
+        "gapDays": 2.4,
+        "tx_before": "prNQk2qthxyqvGmitgedAyq3DyuEifxN76wEPeF9dSNrecfZAmrayYGRd5emRprGT29vopksRikRErV2pwxAVhs",
+        "tx_after": "5UGU6cFAkyWe3GCfHLKQ4myUQtWy6dsdgnQxrDoHCiCNmRHmMtnpjiL5n6XL3g3LVjRnDD2fbjHRGBRyXhp36C6Q"
+      },
+      {
+        "startTime": "2025-02-01T00:28:15.000Z",
+        "endTime": "2025-02-03T09:30:49.000Z",
+        "gapDays": 2.4,
+        "tx_before": "5UGU6cFAkyWe3GCfHLKQ4myUQtWy6dsdgnQxrDoHCiCNmRHmMtnpjiL5n6XL3g3LVjRnDD2fbjHRGBRyXhp36C6Q",
+        "tx_after": "3RE7gaTxFFQtqC79jQhcVzwCWVhtwkVcJV1g8SS99XM844UXdzqGydxQjpZjHJfdBgMSVm2XcSyVL8jWeXCAUMGi"
+      },
+      {
+        "startTime": "2025-01-19T10:52:22.000Z",
+        "endTime": "2025-01-20T16:29:15.000Z",
+        "gapDays": 1.2,
+        "tx_before": "4TW3QxDdS5yhzzzzDxpf8ouJzQpAyzAWNoYsGb4vbeZmmev7qFVisG7DRQbiJ9uSKoaDsFQtTYTPG63YSLupoMUt",
+        "tx_after": "27N5hc4nLfcAoo1QQg7Z2E8TLPsHpggLAuQHVUcmLHTyhyKcfbk99hXxg8PCjA9P6NGJaLC8Ep8jZK5HBwdYAYZH"
+      },
+      {
+        "startTime": "2025-03-04T05:34:00.000Z",
+        "endTime": "2025-03-05T11:05:26.000Z",
+        "gapDays": 1.2,
+        "tx_before": "2QKRTQ46wbZc4F3PLBJfHszRtBwLZBGeEx6D9kyLEuyStm64jLMeU2hgjPUYUyv8vt9Mf79CpPQF4bHju55XVGcz",
+        "tx_after": "31YD9CLFdpWLMvWAc46PF4THnbtum71qxebRpKYCpDUzTVtsAHJrF7Jyc9JgMRz7JHqzKysRUvhnBk8wgPXhD7qm"
+      },
+      {
+        "startTime": "2025-02-08T06:07:36.000Z",
+        "endTime": "2025-02-09T06:52:41.000Z",
+        "gapDays": 1,
+        "tx_before": "suEUZNetjdQC9KxoAmNjch6NRcmCFYmJesTgXkGBvxfnvbTS3nLDhERfSeGovBB1aFzGtCzRz9rmLUHrfHPKmxk",
+        "tx_after": "5RY8WnMkzpjoAdi7iqWCRJEmvtpqAYskKs6BrDhTyG7yVMv3DpRU7AspS4B2rB46FEGbojuYMpNVH5gawwoYiiy3"
       }
     ],
-    "busyPeriods": [],
+    "busyPeriods": [
+      {
+        "startTime": "2025-02-04T00:35:37.000Z",
+        "endTime": "2025-02-05T00:35:37.000Z",
+        "activityCount": 59
+      },
+      {
+        "startTime": "2025-02-04T05:09:10.000Z",
+        "endTime": "2025-02-05T05:09:10.000Z",
+        "activityCount": 58
+      },
+      {
+        "startTime": "2025-02-04T05:13:27.000Z",
+        "endTime": "2025-02-05T05:13:27.000Z",
+        "activityCount": 57
+      },
+      {
+        "startTime": "2025-02-04T05:13:48.000Z",
+        "endTime": "2025-02-05T05:13:48.000Z",
+        "activityCount": 56
+      },
+      {
+        "startTime": "2025-02-04T05:14:42.000Z",
+        "endTime": "2025-02-05T05:14:42.000Z",
+        "activityCount": 55
+      }
+    ],
     "weekdayVsWeekend": {
-      "weekday": 39,
-      "weekend": 1,
-      "weekdayPercentage": 98,
-      "weekendPercentage": 3
+      "weekday": 178,
+      "weekend": 22,
+      "weekdayPercentage": 89,
+      "weekendPercentage": 11
     },
     "monthlyAnalysis": [
       {
-        "month": "2025-04",
-        "count": 35,
+        "month": "2024-11",
+        "count": 9,
         "value": 0,
         "activities": {
-          "TRANSACTION": 35
+          "TRANSACTION": 9
+        }
+      },
+      {
+        "month": "2025-01",
+        "count": 18,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 18
+        }
+      },
+      {
+        "month": "2025-02",
+        "count": 109,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 109
+        }
+      },
+      {
+        "month": "2025-03",
+        "count": 14,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 14
+        }
+      },
+      {
+        "month": "2025-04",
+        "count": 45,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 45
         }
       },
       {

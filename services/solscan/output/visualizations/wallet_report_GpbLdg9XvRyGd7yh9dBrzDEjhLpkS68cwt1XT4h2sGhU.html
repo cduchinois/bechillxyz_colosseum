@@ -1,116 +1,4 @@
-import { readFile, writeFile } from 'fs/promises';
-import { existsSync, mkdirSync } from 'fs';
-import path from 'path';
-
-/**
- * Génère une visualisation HTML des données d'analyse du portefeuille
- * @param {string} walletAddress - Adresse du portefeuille (optionnelle)
- */
-async function generateVisualization(walletAddress) {
-  try {
-    // Vérifier/créer le dossier de visualisations
-    const visualDir = path.join('./output', 'visualizations');
-    if (!existsSync(visualDir)) {
-      mkdirSync(visualDir, { recursive: true });
-    }
-    
-    if (!walletAddress) {
-      console.error('❌ Erreur: Aucune adresse de portefeuille fournie. Utilisez le format: node generate_visualization.js ADDRESS_WALLET');
-      return;
-    }
-    
-    // Récupérer le rapport consolidé spécifique au portefeuille
-    const reportFilename = `./output/wallet_report_${walletAddress}.json`;
-    
-    if (!existsSync(reportFilename)) {
-      console.error(`❌ Erreur: Le fichier ${reportFilename} n'existe pas.`);
-      console.error('Exécutez d\'abord analyze_wallet.js avec cette adresse de portefeuille.');
-      return;
-    }
-    
-    const reportData = JSON.parse(await readFile(reportFilename, 'utf8'));
-    console.log(`✅ Données du rapport chargées: ${reportFilename}`);
-    
-    // Vérifier si les données d'analyse temporelle existent
-    const timeAnalysisFile = `./output/time_analysis_${walletAddress}.json`;
-    
-    if (existsSync(timeAnalysisFile)) {
-      try {
-        const timeAnalysisData = JSON.parse(await readFile(timeAnalysisFile, 'utf8'));
-        reportData.timeAnalysis = timeAnalysisData;
-        
-        // S'assurer que les données temporelles sont correctement formatées pour l'affichage
-        if (!reportData.summary) {
-          reportData.summary = {};
-        }
-        
-        if (!reportData.summary.transactionPeriod) {
-          reportData.summary.transactionPeriod = {};
-        }
-        
-        // Utiliser les données de première et dernière activité du time analysis
-        if (timeAnalysisData.firstActivity) {
-          reportData.summary.transactionPeriod.firstTransaction = 
-            typeof timeAnalysisData.firstActivity === 'string' 
-              ? timeAnalysisData.firstActivity 
-              : new Date(timeAnalysisData.firstActivity).toISOString();
-        }
-        
-        if (timeAnalysisData.lastActivity) {
-          reportData.summary.transactionPeriod.lastTransaction = 
-            typeof timeAnalysisData.lastActivity === 'string' 
-              ? timeAnalysisData.lastActivity 
-              : new Date(timeAnalysisData.lastActivity).toISOString();
-        }
-        
-        console.log(`✅ Données d'analyse temporelle chargées: ${timeAnalysisFile}`);
-      } catch (error) {
-        console.warn(`⚠️ Erreur lors du chargement des données d'analyse temporelle: ${error.message}`);
-      }
-    } else {
-      console.warn(`⚠️ Le fichier ${timeAnalysisFile} n'existe pas. Les graphiques temporels ne seront pas générés.`);
-      console.log(`💡 Exécutez d'abord "node fix_time_analysis.js ${walletAddress}" pour générer l'analyse temporelle.`);
-      reportData.timeAnalysis = null;
-    }
-    
-    // Générer le contenu HTML
-    const htmlContent = generateHtmlContent(reportData);
-    
-    // Déterminer le nom du fichier HTML (avec l'adresse du portefeuille)
-    const htmlFilename = `wallet_report_${walletAddress}.html`;
-    
-    // Écrire le fichier HTML
-    const htmlFilePath = path.join(visualDir, htmlFilename);
-    await writeFile(htmlFilePath, htmlContent);
-    
-    console.log(`✅ Visualisation HTML générée: ${htmlFilePath}`);
-    console.log('📊 Ouvrez ce fichier dans votre navigateur pour voir les graphiques et analyses');
-    
-  } catch (error) {
-    console.error('❌ Erreur lors de la génération de la visualisation:', error);
-  }
-}
-
-/**
- * Génère le contenu HTML de la visualisation
- * @param {Object} data - Les données du rapport consolidé
- * @returns {string} Le contenu HTML
- */
-function generateHtmlContent(data) {
-  // Préparation des données pour les graphiques
-  const platformLabels = data.platforms.topPlatforms.map(p => p.platform).join("','");
-  const platformCounts = data.platforms.topPlatforms.map(p => p.count).join(',');
-  
-  const activityLabels = data.activities.activityBreakdown.map(a => a.type.replace('ACTIVITY_', '')).join("','");
-  const activityCounts = data.activities.activityBreakdown.map(a => a.count).join(',');
-  
-  const tokenLabels = data.tokens.topTokensByVolume.map(t => t.symbol).slice(0, 5).join("','");
-  const tokenVolumes = data.tokens.topTokensByVolume.map(t => parseFloat(t.totalVolume)).slice(0, 5).join(',');
-  
-  const tokenPairsLabels = data.tokenPairs.slice(0, 5).map(p => `${p.token1Symbol} ↔ ${p.token2Symbol}`).join("','");
-  const tokenPairsCounts = data.tokenPairs.slice(0, 5).map(p => p.count).join(',');
-  
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -233,36 +121,36 @@ function generateHtmlContent(data) {
 <body>
     <header>
         <h1>Rapport d'Analyse du Portefeuille Solana</h1>
-        <p>Adresse: ${data.walletAddress}</p>
-        <p>Généré le: ${new Date(data.generatedAt).toLocaleString()}</p>
+        <p>Adresse: GpbLdg9XvRyGd7yh9dBrzDEjhLpkS68cwt1XT4h2sGhU</p>
+        <p>Généré le: 14/05/2025 17:53:40</p>
     </header>
 
     <div class="summary-card">
         <h2>Résumé du Portefeuille</h2>
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-value">${data.summary.totalTransactions}</div>
-                <div class="stat-label">Transactions totales sur la période</div>
+                <div class="stat-value">6</div>
+                <div class="stat-label">Transactions totales</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">${data.summary.uniqueTokens}</div>
+                <div class="stat-value">5</div>
                 <div class="stat-label">Tokens uniques</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">${data.summary.volumeTraded}</div>
+                <div class="stat-value">1283.12</div>
                 <div class="stat-label">Volume total (unités combinées)</div>
             </div>
-            ${data.summary.topVolumes && data.summary.topVolumes.length > 0 ? `
+            
             <div class="stat-card">
-                <div class="stat-value">${data.summary.topVolumes[0].volume} ${data.summary.topVolumes[0].symbol}</div>
+                <div class="stat-value">1158.23 IRONYMAN</div>
                 <div class="stat-label">Volume principal</div>
-            </div>` : ''}
+            </div>
             <div class="stat-card">
-                <div class="stat-value">${data.summary.uniquePlatforms}</div>
+                <div class="stat-value">1</div>
                 <div class="stat-label">Plateformes utilisées</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">${data.platforms?.mainPlatform || 'N/A'}</div>
+                <div class="stat-value">JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4</div>
                 <div class="stat-label">Plateforme principale</div>
             </div>
         </div>
@@ -272,24 +160,24 @@ function generateHtmlContent(data) {
         <h2>Analyse Temporelle</h2>
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-value">${data.summary?.transactionPeriod?.firstTransaction ? new Date(data.summary.transactionPeriod.firstTransaction).toLocaleDateString('fr-FR', {day: 'numeric', month: 'short', year: 'numeric'}) + ', ' + new Date(data.summary.transactionPeriod.firstTransaction).toLocaleTimeString('fr-FR', {hour: '2-digit', minute: '2-digit'}) : 'N/A'}</div>
+                <div class="stat-value">4 avr. 2024, 15:50</div>
                 <div class="stat-label">Première activité</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">${data.summary?.transactionPeriod?.lastTransaction ? new Date(data.summary.transactionPeriod.lastTransaction).toLocaleDateString('fr-FR', {day: 'numeric', month: 'short', year: 'numeric'}) + ', ' + new Date(data.summary.transactionPeriod.lastTransaction).toLocaleTimeString('fr-FR', {hour: '2-digit', minute: '2-digit'}) : 'N/A'}</div>
+                <div class="stat-value">15 févr. 2025, 00:24</div>
                 <div class="stat-label">Dernière activité</div>
             </div>
-            ${data.timeAnalysis?.activityGaps ? `
+            
             <div class="stat-card">
-                <div class="stat-value">${data.timeAnalysis.activityGaps.length > 0 ? data.timeAnalysis.activityGaps[0]?.gapDays || 0 : 0} jours</div>
+                <div class="stat-value">54 jours</div>
                 <div class="stat-label">Période d'inactivité la plus longue</div>
-            </div>` : ''}
+            </div>
             <div class="stat-card">
-                <div class="stat-value">${data.timeAnalysis?.weekdayVsWeekend?.weekdayPercentage || data.summary?.weekdayVsWeekend?.weekdayPercentage || 'N/A'}%</div>
+                <div class="stat-value">85%</div>
                 <div class="stat-label">Activités en semaine</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">${data.timeAnalysis?.weekdayVsWeekend?.weekendPercentage || data.summary?.weekdayVsWeekend?.weekendPercentage || 'N/A'}%</div>
+                <div class="stat-value">16%</div>
                 <div class="stat-label">Activités le weekend</div>
             </div>
         </div>
@@ -319,25 +207,23 @@ function generateHtmlContent(data) {
     
     <div class="summary-card">
         <h2>Principales Paires de Tokens</h2>
-        ${data.tokenPairs && data.tokenPairs.length > 0 ? `
+        
         <ul class="token-pairs-list">
-            ${data.tokenPairs.slice(0, 5).map(pair => 
-                `<li>${pair.token1Symbol} ↔ ${pair.token2Symbol}: ${pair.count} transactions</li>`
-            ).join('')}
+            <li>ZEUS ↔ WSOL: 2 transactions</li><li>WSOL ↔ IRONYMAN: 2 transactions</li><li>JUP ↔ WSOL: 1 transactions</li><li>WSOL ↔ USDT: 1 transactions</li>
         </ul>
-        ` : '<p>Aucune paire de tokens trouvée.</p>'}
+        
     </div>
     
-    ${data.usdEstimates ? `
+    
     <div class="summary-card">
         <h2>Estimation de Valeur USD</h2>
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-value">$${parseFloat(data.usdEstimates.totalEstimatedUsd).toLocaleString(undefined, {maximumFractionDigits: 2})}</div>
+                <div class="stat-value">$150,77</div>
                 <div class="stat-label">Valeur totale estimée</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">${data.usdEstimates.tokensWithEstimates}</div>
+                <div class="stat-value">5</div>
                 <div class="stat-label">Tokens avec estimation prix</div>
             </div>
         </div>
@@ -350,18 +236,42 @@ function generateHtmlContent(data) {
                 <th>Prix USDT</th>
                 <th>Valeur USD Estimée</th>
             </tr>
-            ${data.usdEstimates.topTokensByUsdValue.map(token => `
+            
             <tr>
-                <td>${token.symbol}</td>
-                <td>${parseFloat(token.totalVolume).toLocaleString(undefined, {maximumFractionDigits: 4})} unités</td>
-                <td>$${parseFloat(token.priceUsdt).toFixed(6)}</td>
-                <td>$${parseFloat(token.usdValue).toLocaleString(undefined, {maximumFractionDigits: 2})}</td>
-            </tr>`).join('')}
+                <td>WSOL</td>
+                <td>0,5321 unités</td>
+                <td>$147.180000</td>
+                <td>$78,32</td>
+            </tr>
+            <tr>
+                <td>USDT</td>
+                <td>41,6778 unités</td>
+                <td>$1.000000</td>
+                <td>$41,68</td>
+            </tr>
+            <tr>
+                <td>JUP</td>
+                <td>57 unités</td>
+                <td>$0.429799</td>
+                <td>$24,5</td>
+            </tr>
+            <tr>
+                <td>ZEUS</td>
+                <td>25,6834 unités</td>
+                <td>$0.241990</td>
+                <td>$6,22</td>
+            </tr>
+            <tr>
+                <td>IRONYMAN</td>
+                <td>1 158,2277 unités</td>
+                <td>$0.000052</td>
+                <td>$0,06</td>
+            </tr>
         </table>
     </div>
-    ` : ''}
     
-    ${data.timeAnalysis ? `
+    
+    
     <h2>Analyse Temporelle</h2>
     <div class="grid">
         <div class="chart-container">
@@ -384,7 +294,7 @@ function generateHtmlContent(data) {
             <canvas id="weekendChart"></canvas>
         </div>
     </div>
-    ` : ''}
+    
 
     <div class="summary-card">
         <h2>Détails des Tokens</h2>
@@ -395,13 +305,37 @@ function generateHtmlContent(data) {
                 <th>Transactions</th>
                 <th>% du Volume</th>
             </tr>
-            ${data.tokens.topTokensByVolume.slice(0, 10).map(token => `
+            
             <tr>
-                <td>${token.symbol || token.token}</td>
-                <td>${parseFloat(token.totalVolume).toFixed(3)} ${token.symbol} (unités natives)</td>
-                <td>${token.transactionCount}</td>
-                <td>${token.percentage}</td>
-            </tr>`).join('')}
+                <td>IRONYMAN</td>
+                <td>1158.228 IRONYMAN (unités natives)</td>
+                <td>2</td>
+                <td>90.3%</td>
+            </tr>
+            <tr>
+                <td>JUP</td>
+                <td>57.000 JUP (unités natives)</td>
+                <td>1</td>
+                <td>4.4%</td>
+            </tr>
+            <tr>
+                <td>USDT</td>
+                <td>41.678 USDT (unités natives)</td>
+                <td>1</td>
+                <td>3.2%</td>
+            </tr>
+            <tr>
+                <td>ZEUS</td>
+                <td>25.683 ZEUS (unités natives)</td>
+                <td>2</td>
+                <td>2.0%</td>
+            </tr>
+            <tr>
+                <td>WSOL</td>
+                <td>0.532 WSOL (unités natives)</td>
+                <td>6</td>
+                <td>0.0%</td>
+            </tr>
         </table>
     </div>
     
@@ -410,9 +344,9 @@ function generateHtmlContent(data) {
         new Chart(document.getElementById('platformsChart'), {
             type: 'pie',
             data: {
-                labels: ['${platformLabels}'],
+                labels: ['JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4'],
                 datasets: [{
-                    data: [${platformCounts}],
+                    data: [6],
                     backgroundColor: ['#7c4dff', '#b388ff', '#651fff', '#aa00ff', '#d500f9']
                 }]
             },
@@ -434,9 +368,9 @@ function generateHtmlContent(data) {
         new Chart(document.getElementById('activitiesChart'), {
             type: 'doughnut',
             data: {
-                labels: ['${activityLabels}'],
+                labels: ['AGG_TOKEN_SWAP'],
                 datasets: [{
-                    data: [${activityCounts}],
+                    data: [6],
                     backgroundColor: ['#00b0ff', '#00e5ff', '#1de9b6', '#00e676', '#76ff03', '#ffea00', '#ffc400']
                 }]
             },
@@ -448,7 +382,7 @@ function generateHtmlContent(data) {
                     },
                     title: {
                         display: true,
-                        text: 'Distribution des Types d\'Activités'
+                        text: 'Distribution des Types d'Activités'
                     }
                 }
             }
@@ -458,10 +392,10 @@ function generateHtmlContent(data) {
         new Chart(document.getElementById('tokensChart'), {
             type: 'bar',
             data: {
-                labels: ['${tokenLabels}'],
+                labels: ['IRONYMAN','JUP','USDT','ZEUS','WSOL'],
                 datasets: [{
                     label: 'Volume (unités natives)',
-                    data: [${tokenVolumes}],
+                    data: [1158.227662,57,41.677824,25.683402,0.532146906],
                     backgroundColor: '#bb86fc'
                 }]
             },
@@ -492,10 +426,10 @@ function generateHtmlContent(data) {
         new Chart(document.getElementById('pairsChart'), {
             type: 'bar',
             data: {
-                labels: ['${tokenPairsLabels}'],
+                labels: ['ZEUS ↔ WSOL','WSOL ↔ IRONYMAN','JUP ↔ WSOL','WSOL ↔ USDT'],
                 datasets: [{
                     label: 'Nombre de Transactions',
-                    data: [${tokenPairsCounts}],
+                    data: [2,2,1,1],
                     backgroundColor: '#03dac6'
                 }]
             },
@@ -514,15 +448,15 @@ function generateHtmlContent(data) {
                 }
             }
         });
-        ${data.timeAnalysis ? `
+        
         // Graphique de distribution par heure
         new Chart(document.getElementById('hourlyChart'), {
             type: 'bar',
             data: {
-                labels: Array.from({length: 24}, (_, i) => \`\${i}h\`),
+                labels: Array.from({length: 24}, (_, i) => `${i}h`),
                 datasets: [{
-                    label: 'Nombre d\'activités',
-                    data: ${JSON.stringify(data.timeAnalysis.activityDistribution.byHour)},
+                    label: 'Nombre d'activités',
+                    data: [3,13,8,7,23,8,1,1,0,1,0,0,22,47,5,6,3,9,22,4,4,2,2,9],
                     backgroundColor: '#00e676',
                 }]
             },
@@ -548,8 +482,8 @@ function generateHtmlContent(data) {
             data: {
                 labels: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
                 datasets: [{
-                    label: 'Nombre d\'activités',
-                    data: ${JSON.stringify(data.timeAnalysis.activityDistribution.byDayOfWeek)},
+                    label: 'Nombre d'activités',
+                    data: [16,16,3,9,9,132,15],
                     backgroundColor: '#ffab00',
                 }]
             },
@@ -575,8 +509,8 @@ function generateHtmlContent(data) {
             data: {
                 labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc'],
                 datasets: [{
-                    label: 'Nombre d\'activités',
-                    data: ${JSON.stringify(data.timeAnalysis.activityDistribution.byMonth)},
+                    label: 'Nombre d'activités',
+                    data: [94,6,0,25,38,3,14,4,1,1,13,1],
                     backgroundColor: '#00b0ff',
                 }]
             },
@@ -602,7 +536,7 @@ function generateHtmlContent(data) {
             data: {
                 labels: ['Semaine', 'Weekend'],
                 datasets: [{
-                    data: [${data.timeAnalysis.weekdayVsWeekend.weekday}, ${data.timeAnalysis.weekdayVsWeekend.weekend}],
+                    data: [169, 31],
                     backgroundColor: ['#536dfe', '#ff4081']
                 }]
             },
@@ -619,19 +553,11 @@ function generateHtmlContent(data) {
                 }
             }
         });
-        ` : ''}
+        
     </script>
 
     <footer>
-        <p>Analyse réalisée par Solana DeFi Analyzer • ${new Date().getFullYear()}</p>
+        <p>Analyse réalisée par Solana DeFi Analyzer • 2025</p>
     </footer>
 </body>
-</html>`;
-}
-
-// Récupérer l'adresse du portefeuille depuis les arguments de ligne de commande
-const args = process.argv.slice(2);
-const walletAddress = args[0] || process.env.ADDRESS_WALLET;
-
-// Exécuter la génération de visualisation avec l'adresse du portefeuille si disponible
-generateVisualization(walletAddress);
+</html>

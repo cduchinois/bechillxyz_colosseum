@@ -1,0 +1,189 @@
+{
+  "totalTransactions": 6,
+  "tokenMovements": {
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "decimals": 6,
+      "totalAmount": 57,
+      "transactions": 1,
+      "swapIn": 0,
+      "swapOut": 1,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 1
+      }
+    },
+    "So11111111111111111111111111111111111111112": {
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "decimals": 9,
+      "totalAmount": 0.532146906,
+      "transactions": 6,
+      "swapIn": 3,
+      "swapOut": 3,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 6
+      }
+    },
+    "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+      "symbol": "USDT",
+      "name": "USDT",
+      "decimals": 6,
+      "totalAmount": 41.677824,
+      "transactions": 1,
+      "swapIn": 1,
+      "swapOut": 0,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 1
+      }
+    },
+    "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq": {
+      "symbol": "ZEUS",
+      "name": "ZEUS",
+      "decimals": 6,
+      "totalAmount": 25.683402,
+      "transactions": 2,
+      "swapIn": 0,
+      "swapOut": 2,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 2
+      }
+    },
+    "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG": {
+      "symbol": "IRONYMAN",
+      "name": "I AM IRONYMAN",
+      "decimals": 6,
+      "totalAmount": 1158.227662,
+      "transactions": 2,
+      "swapIn": 2,
+      "swapOut": 0,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 2
+      }
+    }
+  },
+  "byVolume": [
+    {
+      "address": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG",
+      "symbol": "IRONYMAN",
+      "name": "I AM IRONYMAN",
+      "totalVolume": 1158.227662,
+      "transactions": 2,
+      "swapsIn": 2,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "90.3%"
+    },
+    {
+      "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "totalVolume": 57,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "4.4%"
+    },
+    {
+      "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "symbol": "USDT",
+      "name": "USDT",
+      "totalVolume": 41.677824,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "3.2%"
+    },
+    {
+      "address": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+      "symbol": "ZEUS",
+      "name": "ZEUS",
+      "totalVolume": 25.683402,
+      "transactions": 2,
+      "swapsIn": 0,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "2.0%"
+    },
+    {
+      "address": "So11111111111111111111111111111111111111112",
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "totalVolume": 0.532146906,
+      "transactions": 6,
+      "swapsIn": 3,
+      "swapsOut": 3,
+      "decimals": 9,
+      "transactionCount": 6,
+      "percentage": "0.0%"
+    }
+  ],
+  "byTransactionCount": [
+    {
+      "address": "So11111111111111111111111111111111111111112",
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "totalVolume": 0.532146906,
+      "transactions": 6,
+      "swapsIn": 3,
+      "swapsOut": 3,
+      "decimals": 9,
+      "transactionCount": 6,
+      "percentage": "0.0%"
+    },
+    {
+      "address": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG",
+      "symbol": "IRONYMAN",
+      "name": "I AM IRONYMAN",
+      "totalVolume": 1158.227662,
+      "transactions": 2,
+      "swapsIn": 2,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "90.3%"
+    },
+    {
+      "address": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+      "symbol": "ZEUS",
+      "name": "ZEUS",
+      "totalVolume": 25.683402,
+      "transactions": 2,
+      "swapsIn": 0,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "2.0%"
+    },
+    {
+      "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "totalVolume": 57,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "4.4%"
+    },
+    {
+      "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "symbol": "USDT",
+      "name": "USDT",
+      "totalVolume": 41.677824,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "3.2%"
+    }
+  ]
+}

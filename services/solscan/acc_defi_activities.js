@@ -29,6 +29,7 @@ import 'dotenv/config';
 import { writeFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
+import { Validation } from './utils/validation.js';
 
 // Récupérer l'adresse du portefeuille depuis les arguments ou variables d'environnement
 const args = process.argv.slice(2);
@@ -39,6 +40,9 @@ if (!walletAddress) {
   console.error('❌ Erreur: Aucune adresse de portefeuille fournie. Utilisez le format: node acc_defi_activities.js ADDRESS_WALLET');
   process.exit(1);
 }
+
+// Valider l'adresse du portefeuille avec notre système d'erreur
+Validation.validateAndLogAddress(walletAddress, 'acc_defi_activities.js', true);
 
 // Vérifier que la clé API est disponible
 if (!process.env.SOLSCAN_API_KEY) {

@@ -399,8 +399,18 @@ app.get('/analyse_wallet/:address', async (req, res) => {
 
   const walletAddress = req.params.address;
   
-  // Valider l'adresse du portefeuille Solana
+  // Valider l'adresse du portefeuille Solana et enregistrer l'erreur si invalide
+  // Mais ne pas arrêter le processus, juste renvoyer une réponse d'erreur
   const validationResult = Validation.validateSolanaAddress(walletAddress);
+  
+  // Enregistrer dans le fichier d'erreurs si l'adresse est invalide
+  if (!validationResult.isValid) {
+    // Importer ErrorHandler
+    const { ErrorHandler } = await import('./utils/error_handler.js');
+    
+    // Enregistrer l'erreur sans arrêter le processus
+    ErrorHandler.logValidationError(walletAddress, validationResult.message, 'web_api.js', false);
+  }
   
   if (!validationResult.isValid) {
     return res.status(400).send(`

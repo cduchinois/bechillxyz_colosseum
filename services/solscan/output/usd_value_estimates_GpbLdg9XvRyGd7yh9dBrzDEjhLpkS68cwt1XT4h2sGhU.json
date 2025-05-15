@@ -1,0 +1,105 @@
+{
+  "estimatedAt": "2025-05-14T15:53:40.867Z",
+  "totalEstimatedUsd": 150.77317335225752,
+  "tokensWithEstimates": 5,
+  "totalTokensAnalyzed": 5,
+  "tokenDetails": [
+    {
+      "address": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG",
+      "symbol": "IRONYMAN",
+      "name": "I AM IRONYMAN",
+      "totalVolume": 1158.227662,
+      "transactions": 2,
+      "swapsIn": 2,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "90.3%",
+      "usdValue": 0.060298277197492194,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.000052060816
+    },
+    {
+      "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "totalVolume": 57,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "4.4%",
+      "usdValue": 24.498542999999998,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.429799
+    },
+    {
+      "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "symbol": "USDT",
+      "name": "USDT",
+      "totalVolume": 41.677824,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "3.2%",
+      "usdValue": 41.677824,
+      "hasUsdEstimate": true,
+      "priceUsdt": 1
+    },
+    {
+      "address": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+      "symbol": "ZEUS",
+      "name": "ZEUS",
+      "totalVolume": 25.683402,
+      "transactions": 2,
+      "swapsIn": 0,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "2.0%",
+      "usdValue": 6.2151264499800005,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.24199
+    },
+    {
+      "address": "So11111111111111111111111111111111111111112",
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "totalVolume": 0.532146906,
+      "transactions": 6,
+      "swapsIn": 3,
+      "swapsOut": 3,
+      "decimals": 9,
+      "transactionCount": 6,
+      "percentage": "0.0%",
+      "usdValue": 78.32138162508001,
+      "hasUsdEstimate": true,
+      "priceUsdt": 147.18
+    }
+  ],
+  "tokenPricesUsdt": {
+    "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG": {
+      "priceUsdt": 0.000052060816,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+      "priceUsdt": 0.429799,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+      "priceUsdt": 1,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq": {
+      "priceUsdt": 0.24199,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "So11111111111111111111111111111111111111112": {
+      "priceUsdt": 147.18,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    }
+  }
+}

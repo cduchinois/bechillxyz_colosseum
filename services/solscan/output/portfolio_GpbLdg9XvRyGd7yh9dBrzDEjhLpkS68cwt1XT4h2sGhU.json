@@ -1,0 +1,118 @@
+{
+  "success": true,
+  "data": {
+    "total_value": 44.758164703959984,
+    "native_balance": {
+      "amount": 5858031,
+      "balance": 0.005858031,
+      "token_price": 176.5900682164268,
+      "token_decimals": 9,
+      "token_name": "SOL",
+      "token_symbol": "SOL",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+      "value": 1.0344700939039428
+    },
+    "tokens": [
+      {
+        "token_address": "WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk",
+        "amount": 64749370111,
+        "balance": 647493.70111,
+        "token_price": 0.00006603715500477013,
+        "token_decimals": 5,
+        "token_name": "Wen",
+        "token_symbol": "WEN",
+        "token_icon": "https://assets.coingecko.com/coins/images/34856/standard/wen-logo-new.jpg?1741334229",
+        "value": 42.75864190481337
+      },
+      {
+        "token_address": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+        "amount": 1000000,
+        "balance": 1,
+        "token_price": 0.2867810389173763,
+        "token_decimals": 6,
+        "token_name": "ZEUS",
+        "token_symbol": "ZEUS",
+        "token_icon": "https://raw.githubusercontent.com/ZeusNetworkHQ/zeus-metadata/master/logo-v2.png",
+        "value": 0.2867810389173763
+      },
+      {
+        "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "amount": 772555486,
+        "balance": 7725.55486,
+        "token_price": 0.000022771835786461913,
+        "token_decimals": 5,
+        "token_name": "Bonk",
+        "token_symbol": "Bonk",
+        "token_icon": "https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I",
+        "value": 0.17592506663122276
+      },
+      {
+        "token_address": "CLoUDKc4Ane7HeQcPpE3YHnznRxhMimJ4MyaUqyHFzAu",
+        "amount": 1901728201,
+        "balance": 1.901728201,
+        "token_price": 0.0890163266672632,
+        "token_decimals": 9,
+        "token_name": "Cloud",
+        "token_symbol": "CLOUD",
+        "token_icon": "https://arweave.net/N7vCgQdgQ-fab28zEB4m8QRLMwI91_KcXI-Gtr151gg",
+        "value": 0.16928485877256277
+      },
+      {
+        "token_address": "UPTx1d24aBWuRgwxVnFmX4gNraj3QGFzL3QqBgxtWQG",
+        "amount": 13841701119,
+        "balance": 13.841701119,
+        "token_price": 0.010058742788536227,
+        "token_decimals": 9,
+        "token_name": "UPROCK",
+        "token_symbol": "UPT",
+        "token_icon": "https://raw.githubusercontent.com/uprockcom/token/main/logo.png",
+        "value": 0.13923011131181506
+      },
+      {
+        "token_address": "7atgF8KQo4wJrD5ATGX7t1V2zVvykPJbFfNeVf1icFv1",
+        "amount": 96000000,
+        "balance": 960000,
+        "token_price": 1.0342946667482768e-7,
+        "token_decimals": 2,
+        "token_name": "catwifhat",
+        "token_symbol": "$CWIF",
+        "token_icon": "https://bafkreigmg552j5o5qv5ra6hvg4by4qzjjichzsyaljhmyvwe5qkjphgxoi.ipfs.nftstorage.link",
+        "value": 0.09929228800783457
+      },
+      {
+        "token_address": "CyJRzN4iavA2b9tQB2YMCMKYBcT9L5LSijLb5TeyqvLA",
+        "amount": 256448666179,
+        "balance": 256.448666179,
+        "token_price": 0.00024818014253810943,
+        "token_decimals": 9,
+        "token_name": "Solgun",
+        "token_symbol": "SOLGUN",
+        "token_icon": "https://quicknode.quicknode-ipfs.com/ipfs/QmUCnSif4u1qUtkWu5VPST3D8WMCxDq84hXtxYn7BGojfn",
+        "value": 0.06364546652601226
+      },
+      {
+        "token_address": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG",
+        "amount": 573322693,
+        "balance": 573.322693,
+        "token_price": 0.00005073042360381034,
+        "token_decimals": 6,
+        "token_name": "I AM IRONYMAN",
+        "token_symbol": "IRONYMAN",
+        "token_icon": "https://ipfs.io/ipfs/QmZi3VVoMetc7EK4uLLYMq7VQoTFh6gT6UrcvqBjjNnQnE",
+        "value": 0.029084903077567306
+      },
+      {
+        "token_address": "SHARKSYJjqaNyxVfrpnBN9pjgkhwDhatnMyicWPnr1s",
+        "amount": 384170,
+        "balance": 0.38417,
+        "token_price": 0.004708779962731211,
+        "token_decimals": 6,
+        "token_name": "Sharky",
+        "token_symbol": "SHARK",
+        "token_icon": "https://shdw-drive.genesysgo.net/2F9tju1WHwocrTHj2iRoLhhVqbgQJusdUgkYNL84wKf4/$SHARK_logo_round.png",
+        "value": 0.0018089719982824495
+      }
+    ]
+  },
+  "metadata": {}
+}

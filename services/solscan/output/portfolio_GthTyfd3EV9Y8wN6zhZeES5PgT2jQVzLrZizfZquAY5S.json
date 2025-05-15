@@ -1,105 +1,105 @@
 {
   "success": true,
   "data": {
-    "total_value": 57.308221126507945,
+    "total_value": 56.100387280679705,
     "native_balance": {
       "amount": 39721800,
       "balance": 0.0397218,
-      "token_price": 179.49013599517536,
+      "token_price": 176.99987458834624,
       "token_decimals": 9,
       "token_name": "SOL",
       "token_symbol": "SOL",
       "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
-      "value": 7.129671283973157
+      "value": 7.030753618423372
     },
     "tokens": [
       {
         "token_address": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
         "amount": 35838958,
         "balance": 35.838958,
-        "token_price": 0.6732364504278049,
+        "token_price": 0.6650102124958404,
         "token_decimals": 6,
         "token_name": "Drift",
         "token_symbol": "DRIFT",
         "token_icon": "https://metadata.drift.foundation/drift.png",
-        "value": 24.128092870951182
+        "value": 23.833273075209497
       },
       {
         "token_address": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
         "amount": 44242484061438,
         "balance": 44242.484061438,
-        "token_price": 0.00020587570737087883,
+        "token_price": 0.00019856629015502282,
         "token_decimals": 9,
         "token_name": "DeFi Land",
         "token_symbol": "DFL",
         "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh/logo.png",
-        "value": 9.10845270199338
+        "value": 8.78506592732247
       },
       {
         "token_address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
         "amount": 47154259,
         "balance": 47.154259,
-        "token_price": 0.19280550625038698,
+        "token_price": 0.1835900142497186,
         "token_decimals": 6,
         "token_name": "Pyth Network",
         "token_symbol": "PYTH",
         "token_icon": "https://pyth.network/token.svg",
-        "value": 9.091600778356867
+        "value": 8.657051081744923
       },
       {
         "token_address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
         "amount": 7600464804,
         "balance": 7.600464804,
-        "token_price": 0.3492192219592377,
+        "token_price": 0.3536235634414138,
         "token_decimals": 9,
         "token_name": "ai16z",
         "token_symbol": "ai16z",
         "token_icon": "https://ipfs.io/ipfs/QmcNTVAoyJ7zDbPnN9jwiMoB8uCoJBUP9RGmmiGGHv44yX",
-        "value": 2.65422840538145
+        "value": 2.687703447801527
       },
       {
         "token_address": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
         "amount": 7559216,
         "balance": 7.559216,
-        "token_price": 0.19586000000000003,
+        "token_price": 0.19588291166952676,
         "token_decimals": 6,
         "token_name": "Metaplex Token",
         "token_symbol": "MPLX",
         "token_icon": "https://arweave.net/VRKOcXIvCxqp35RZ9I0-bDGk5qNfT46OTho-2oP9iGc",
-        "value": 1.4805480457600002
+        "value": 1.4807212400188734
       },
       {
         "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
         "amount": 104028,
         "balance": 0.104028,
-        "token_price": 13.524087252937306,
+        "token_price": 13.2908656284298,
         "token_decimals": 6,
         "token_name": "OFFICIAL TRUMP",
         "token_symbol": "TRUMP",
         "token_icon": "https://arweave.net/VQrPjACwnQRmxdKBTqNwPiyo65x7LAT773t8Kd7YBzw",
-        "value": 1.4068837487485621
+        "value": 1.3826221695942953
       },
       {
         "token_address": "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y",
         "amount": 9308794050,
         "balance": 9.30879405,
-        "token_price": 0.14006513802157783,
+        "token_price": 0.13886959003232452,
         "token_decimals": 9,
         "token_name": "Shadow Token",
         "token_symbol": "SHDW",
         "token_icon": "https://shdw-drive.genesysgo.net/FDcC9gn12fFkSU2KuQYH4TUjihrZxiTodFRWNF4ns9Kt/250x250_with_padding.png",
-        "value": 1.3038375234276924
+        "value": 1.2927084134188418
       },
       {
         "token_address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
         "amount": 1790274,
         "balance": 1.790274,
-        "token_price": 0.5613139485439933,
+        "token_price": 0.5309177852920289,
         "token_decimals": 6,
         "token_name": "Jupiter",
         "token_symbol": "JUP",
         "token_icon": "https://static.jup.ag/jup/icon.png",
-        "value": 1.004905767915649
+        "value": 0.9504883071459017
       },
       {
         "token_address": "7mEcBafsQVnDFNeosaCtdGAgQFiLg48UYD5PLfmipump",

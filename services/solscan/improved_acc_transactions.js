@@ -20,16 +20,9 @@ if (!walletAddress) {
   process.exit(1);
 }
 
-// Valider l'adresse Solana
-const validationResult = Validation.validateSolanaAddress(walletAddress);
-if (!validationResult.isValid) {
-  console.error(`❌ Erreur: ${validationResult.message}`);
-  console.error('Une adresse Solana valide:');
-  console.error('- Est encodée en base58 (caractères alphanumériques sans 0, O, I, l)');
-  console.error('- A une longueur généralement entre 32 et 44 caractères');
-  console.error('Exemple: GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S');
-  process.exit(1);
-}
+// Valider l'adresse Solana avec la nouvelle méthode qui enregistre les erreurs
+// Si l'adresse est invalide, le processus sera automatiquement arrêté
+Validation.validateAndLogAddress(walletAddress, 'improved_acc_transactions.js', true);
 
 console.log(`🚀 Démarrage de la collecte des transactions pour ${walletAddress}`);
 console.log(`📊 Mode: Pagination basée sur les signatures de transactions (plus fiable)`);

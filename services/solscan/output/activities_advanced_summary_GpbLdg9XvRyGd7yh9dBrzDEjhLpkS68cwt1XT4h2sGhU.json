@@ -1,0 +1,126 @@
+{
+  "summary": {
+    "totalActivities": 6,
+    "uniqueActivityTypes": 1,
+    "uniquePlatforms": 1,
+    "uniqueTokens": 5,
+    "uniqueTokenPairs": 4,
+    "valueDistribution": {
+      "0-1": 0,
+      "1-5": 2,
+      "5-10": 0,
+      "10-50": 4,
+      "50-100": 0,
+      "100+": 0,
+      "unknown": 0
+    },
+    "mostUsedPlatform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+    "mostCommonActivityType": "ACTIVITY_AGG_TOKEN_SWAP"
+  },
+  "activityTypes": {
+    "ACTIVITY_AGG_TOKEN_SWAP": {
+      "count": 6,
+      "totalValue": 114.26613471768,
+      "platforms": {
+        "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": 6
+      },
+      "tokens": {
+        "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": 1,
+        "So11111111111111111111111111111111111111112": 6,
+        "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 1,
+        "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq": 2,
+        "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG": 2
+      }
+    }
+  },
+  "platforms": {
+    "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": {
+      "count": 6,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 6
+      },
+      "tokens": {
+        "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": 1,
+        "So11111111111111111111111111111111111111112": 6,
+        "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 1,
+        "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq": 2,
+        "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG": 2
+      }
+    }
+  },
+  "tokenPairs": {
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN_So11111111111111111111111111111111111111112": {
+      "count": 1,
+      "token1": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "token2": "So11111111111111111111111111111111111111112"
+    },
+    "So11111111111111111111111111111111111111112_Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+      "count": 1,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+    },
+    "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq_So11111111111111111111111111111111111111112": {
+      "count": 2,
+      "token1": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+      "token2": "So11111111111111111111111111111111111111112"
+    },
+    "So11111111111111111111111111111111111111112_7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG": {
+      "count": 2,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG"
+    }
+  },
+  "tokens": {
+    "addresses": [
+      "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "So11111111111111111111111111111111111111112",
+      "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+      "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG"
+    ],
+    "metadata": {
+      "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+        "token_address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "token_name": "Jupiter",
+        "token_symbol": "JUP",
+        "token_icon": "https://static.jup.ag/jup/icon.png"
+      },
+      "So11111111111111111111111111111111111111112": {
+        "token_address": "So11111111111111111111111111111111111111112",
+        "token_name": "Wrapped SOL",
+        "token_symbol": "WSOL",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+      },
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "token_name": "USDC",
+        "token_symbol": "USDC",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png"
+      },
+      "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+        "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "token_name": "Bonk",
+        "token_symbol": "Bonk",
+        "token_icon": "https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I"
+      },
+      "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+        "token_address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "token_name": "USDT",
+        "token_symbol": "USDT",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB/logo.svg"
+      },
+      "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq": {
+        "token_address": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+        "token_name": "ZEUS",
+        "token_symbol": "ZEUS",
+        "token_icon": "https://raw.githubusercontent.com/ZeusNetworkHQ/zeus-metadata/master/logo-v2.png"
+      },
+      "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG": {
+        "token_address": "7XT7XbKqHA1iVXGwdWKe3ksGGukBAVaxb1PSSgmaYuCG",
+        "token_name": "I AM IRONYMAN",
+        "token_symbol": "IRONYMAN",
+        "token_icon": "https://ipfs.io/ipfs/QmZi3VVoMetc7EK4uLLYMq7VQoTFh6gT6UrcvqBjjNnQnE"
+      }
+    }
+  }
+}

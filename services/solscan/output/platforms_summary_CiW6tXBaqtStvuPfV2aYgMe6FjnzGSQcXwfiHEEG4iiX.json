@@ -1,0 +1,237 @@
+{
+  "totalTransactions": 196,
+  "platforms": {
+    "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": 7,
+    "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": 188,
+    "Stake11111111111111111111111111111111111111": 1
+  },
+  "activityTypes": {
+    "ACTIVITY_TOKEN_SWAP": 5,
+    "ACTIVITY_SPL_INIT_MINT": 2,
+    "ACTIVITY_AGG_TOKEN_SWAP": 188,
+    "ACTIVITY_SPL_TOKEN_STAKE": 1
+  },
+  "sources": {
+    "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": 171,
+    "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA": 2,
+    "Stake11111111111111111111111111111111111111": 1,
+    "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc": 2,
+    "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo": 2,
+    "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8": 18
+  },
+  "uniqueTokens": [
+    "So11111111111111111111111111111111111111111",
+    "G8yDf6FxHTBewE5KNjiDBVr8ucgNsKapfd2fKpk2pump",
+    "C3CaTn76eULsjXEKEpuJLwTVT28WXvHu3FJxRbGjpump",
+    "So11111111111111111111111111111111111111112",
+    "2qSA57rsZccMWLtMEHpsj1pH7vSyj3xi14vi9sV7pump",
+    "C5cqtXdyKPRvjjtsQoRboBzppMqyuLZTtNutmNWWpump",
+    "GGxLW6Nn5WQY6ucQyF7MSsuU9C2pmN8VKJVLk2Cvpump",
+    "7nm5cMSrVtX6n5oQBGkNaYYgwv2ZLnZocYmhaY3Ypump",
+    "289a75NnkW8tRrDhPVDNUq4p5xVLVYSTKQsVHKMGpump",
+    "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+    "B6jMzgYQRb5jQMFx83UUWuNDnmziVfCmyzMANyfjpump",
+    "89ABHxuntSkokV4cZf8KXh6h7hvHxTzYwtTbRRXjpump",
+    "4eUWo3dn5wXBLWNkvwq81shegamNQka44iE3r82ipump",
+    "6tD6ZnK96tZzD6HMcpW4RxRg8eYJLPK45XmptwtCpump",
+    "RQinFLSuqkAQ3m7g8EyKTrMXH3yLGHaFsBSmzp3pump",
+    "HRVRveBqS6aSrzuqdbLi9nmkG6oAb3feXcriNfcYpump",
+    "5ZQLJiiycyNge9Qo3AT6EXUc91gxnYTrZBNWhSUrpump",
+    "EQXKevwsLL766Z2DUQTy3EW6bAYBFUdHfXEx3ZT5pump",
+    "9AfeTjTJN91kgJYgN2fzXc9ikM3bprTx3KkPcaLpk9xT",
+    "FU4MPjC4MPcaimA5M5F93DMo93M7QTxojCTPit4mpump",
+    "DbY4VcR4VR45rXiYnHSvZLDQD13Nu2Bqi4ADqVjXpump",
+    "3JZdJNitpzxh4ZvXrzKHoPEdH6P2gxa9NQV5Ab4Ppump",
+    "5epaYK8JPtThVYd1hrrPWm6kgrUhFEVVwb8D5HXQpump",
+    "F1aa2Mcr7z8mE1i5P6a2Y1NMefGD94Vdd7wC3pKGpump",
+    "13GcTMYG9QN3TDWVHNmkgTJXuRsjdFtFav4Yw9Mtpump",
+    "4ayE2juNb2byWHAgFp7YafnNrN3iWhUkXF1fmRR6pump",
+    "92n6jkeRtUDPX5X284SN9EBGRjgMA3nPe1CLqpYFpump",
+    "ExBsfqMdZ6LuFbcvGagArhersdBbQSZ7Mfo2Mv2Rpump",
+    "Bu6MKz7xwfjeo4P1JjVMt5oBZBDLsTcozVMysrv7pump",
+    "FcXrSFXBPLaJSMBKrL9SdkGzB9DzW3Hu4pJhQdTepump",
+    "9n68XfoNovL7p18jtxBVPKBZFE3StH1NrWXP4PVMa8e1",
+    "AaQ82PJfwjm9HamztirKV3d5AE1fSMLibTzFc6KNpump",
+    "6bYmJLEGbMRncAppwi4DCq8vGpMNDHZmeSK1EaDYpump",
+    "2x3RY3WgNPUvxVmc2bBh4rj5HAvpk5ViyVfUSLW9pump",
+    "5JCDjcV2GKXEfJxSQRn3uer7dvLfLsVMs2gnFoKQpump",
+    "FBLV9DtSNEzHesgpnLjM7rSPU13pBkC4pS3g4YCapump",
+    "DCECepMJyDfXvs1HpyoT5XiGfHwknBJvsEfRjwXkpump",
+    "5HSG2o9rMA9GMn7AKqnUQFRCbwZnt5T8qWxSzSmDpump",
+    "JCvNrDDNH3VpHf1cqgH4LYoX7KDv5Asrj5a3CV4Kpump",
+    "HQZT8PiGEXGaYCiReaC41LTs8FzwJe4zm3pQ9D5QVUfZ",
+    "BrVHg7K4zSeKCxidXjnE9ttoLGamUvNi8gLsYF2pump",
+    "ERsiq5F1BfTGiEnvWuhU9118w5gW6uERUnLX6SnVyUWv",
+    "5n5xs12C7cCVx5C61eZgCABnM7NsXrCiL1CRx9TBpump",
+    "GMuDAnrEVJrx6E5sRomFdgL8Q1Fzbnh21d3Hc2fApump",
+    "FDzKV1urn8grByDSMCuCWgTkdyx3UrhBBwGuK9JPrKPR"
+  ],
+  "tokenMetadata": {
+    "So11111111111111111111111111111111111111111": {
+      "token_address": "So11111111111111111111111111111111111111111",
+      "token_name": "SOL",
+      "token_symbol": "SOL",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+    },
+    "G8yDf6FxHTBewE5KNjiDBVr8ucgNsKapfd2fKpk2pump": {
+      "token_address": "G8yDf6FxHTBewE5KNjiDBVr8ucgNsKapfd2fKpk2pump",
+      "token_name": "TheBigBen",
+      "token_symbol": "TheBigBen",
+      "token_icon": "https://ipfs.io/ipfs/QmPK3x1wb28aKzkPEcz5gSqcPA2oPvbyPMZRt8kHyZSJdP"
+    },
+    "undefined": {
+      "token_address": "undefined",
+      "token_icon": ""
+    },
+    "C3CaTn76eULsjXEKEpuJLwTVT28WXvHu3FJxRbGjpump": {
+      "token_address": "C3CaTn76eULsjXEKEpuJLwTVT28WXvHu3FJxRbGjpump",
+      "token_name": "fop",
+      "token_symbol": "fop",
+      "token_icon": "https://ipfs.io/ipfs/QmQonySZQNvi1BxBT9yzA1FLwF47DVtdxzSVJ84jNQUo6e"
+    },
+    "So11111111111111111111111111111111111111112": {
+      "token_address": "So11111111111111111111111111111111111111112",
+      "token_name": "Wrapped SOL",
+      "token_symbol": "WSOL",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+    },
+    "2qSA57rsZccMWLtMEHpsj1pH7vSyj3xi14vi9sV7pump": {
+      "token_address": "2qSA57rsZccMWLtMEHpsj1pH7vSyj3xi14vi9sV7pump",
+      "token_name": "Frog Is Leaf",
+      "token_symbol": "FIL",
+      "token_icon": "https://ipfs.io/ipfs/QmVLeakKcTykFnxT3pSp5SPK2aHRkeSPJycfkgNP2o3TZN"
+    },
+    "C5cqtXdyKPRvjjtsQoRboBzppMqyuLZTtNutmNWWpump": {
+      "token_address": "C5cqtXdyKPRvjjtsQoRboBzppMqyuLZTtNutmNWWpump",
+      "token_name": "Cat Wif Broccoli",
+      "token_symbol": "CWB",
+      "token_icon": "https://ipfs.io/ipfs/QmNvkwVz5itLQb91Ka6yrbAzXuTdTj9Y11FEFVFWYXECd2"
+    },
+    "GGxLW6Nn5WQY6ucQyF7MSsuU9C2pmN8VKJVLk2Cvpump": {
+      "token_address": "GGxLW6Nn5WQY6ucQyF7MSsuU9C2pmN8VKJVLk2Cvpump",
+      "token_name": "Broccoli of Luck",
+      "token_symbol": "BOL",
+      "token_icon": "https://ipfs.io/ipfs/QmQLsXhgbchtWSkzmJiv6MW3UGcDjNZrWriZNroqRrYWqA"
+    },
+    "7nm5cMSrVtX6n5oQBGkNaYYgwv2ZLnZocYmhaY3Ypump": {
+      "token_address": "7nm5cMSrVtX6n5oQBGkNaYYgwv2ZLnZocYmhaY3Ypump",
+      "token_name": "Cauliflower",
+      "token_symbol": "CAULI",
+      "token_icon": "https://ipfs.io/ipfs/QmXDAt7w9x9riGU12sQ6brdpQTGSMVJUGcumji92XGoTLt"
+    },
+    "289a75NnkW8tRrDhPVDNUq4p5xVLVYSTKQsVHKMGpump": {
+      "token_address": "289a75NnkW8tRrDhPVDNUq4p5xVLVYSTKQsVHKMGpump",
+      "token_name": "Square On Mars",
+      "token_symbol": "SOM",
+      "token_icon": "https://ipfs.io/ipfs/QmRVgsbSRNBd5Ka7sdwU9BrP5zTAoYAWRtSChYekpYJYLt"
+    },
+    "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump": {
+      "token_address": "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+      "token_name": "Vine Coin",
+      "token_symbol": "VINE",
+      "token_icon": "https://ipfs.io/ipfs/QmRtFJu3ZospaS4EAk17iNXZGAJp7gMxzvsZckZxbqZa5r"
+    },
+    "B6jMzgYQRb5jQMFx83UUWuNDnmziVfCmyzMANyfjpump": {
+      "token_address": "B6jMzgYQRb5jQMFx83UUWuNDnmziVfCmyzMANyfjpump",
+      "token_name": "Monmon",
+      "token_symbol": "Monmon",
+      "token_icon": "https://ipfs.io/ipfs/QmPAzctYKNK7yZLUp7NDtbfYXZwUPSzwbM7KzenQNgaB8L"
+    },
+    "89ABHxuntSkokV4cZf8KXh6h7hvHxTzYwtTbRRXjpump": {
+      "token_address": "89ABHxuntSkokV4cZf8KXh6h7hvHxTzYwtTbRRXjpump",
+      "token_name": "Lambos, Farts, Gains",
+      "token_symbol": "$LFG",
+      "token_icon": "https://ipfs.io/ipfs/QmSbaMKikqAwxTLcMrk1foi1EJFo1C4rBApx4Ju33gosmT"
+    },
+    "4eUWo3dn5wXBLWNkvwq81shegamNQka44iE3r82ipump": {
+      "token_address": "4eUWo3dn5wXBLWNkvwq81shegamNQka44iE3r82ipump",
+      "token_name": "SYRENE AI",
+      "token_symbol": "SYRENE",
+      "token_icon": "https://ipfs.io/ipfs/QmYepkFHAxF3wAkJfE2qW9ZDyEyMJD1kaBLnEKH7deX3Ck"
+    },
+    "6tD6ZnK96tZzD6HMcpW4RxRg8eYJLPK45XmptwtCpump": {
+      "token_address": "6tD6ZnK96tZzD6HMcpW4RxRg8eYJLPK45XmptwtCpump",
+      "token_name": "First coin launched by a pussy",
+      "token_symbol": "Pussy",
+      "token_icon": "https://ipfs.io/ipfs/QmecZKTM8kro1ZFZbBura6yuZTXGiudqN9GQpbYBXm76VZ"
+    },
+    "RQinFLSuqkAQ3m7g8EyKTrMXH3yLGHaFsBSmzp3pump": {
+      "token_address": "RQinFLSuqkAQ3m7g8EyKTrMXH3yLGHaFsBSmzp3pump",
+      "token_name": "HODL",
+      "token_symbol": "HODL",
+      "token_icon": "https://ipfs.io/ipfs/QmNxP8YnAr3wPczJ9RfwKwsMSkLNdzReNWyWryDUimnopX"
+    },
+    "HRVRveBqS6aSrzuqdbLi9nmkG6oAb3feXcriNfcYpump": {
+      "token_address": "HRVRveBqS6aSrzuqdbLi9nmkG6oAb3feXcriNfcYpump",
+      "token_name": "DOWNIE",
+      "token_symbol": "DOWNIE",
+      "token_icon": "https://ipfs.io/ipfs/QmZiyxkkJCvAyeoBrYVmAPbhXxWzgd16AVZxLK6jtLknwX"
+    },
+    "5ZQLJiiycyNge9Qo3AT6EXUc91gxnYTrZBNWhSUrpump": {
+      "token_address": "5ZQLJiiycyNge9Qo3AT6EXUc91gxnYTrZBNWhSUrpump",
+      "token_name": "Darky ",
+      "token_symbol": "DARKY",
+      "token_icon": "https://ipfs.io/ipfs/QmNXTEstHHkrCUB4L53jW5VcAFqRRyKFAb3fx1o3bbC4ZF"
+    },
+    "EQXKevwsLL766Z2DUQTy3EW6bAYBFUdHfXEx3ZT5pump": {
+      "token_address": "EQXKevwsLL766Z2DUQTy3EW6bAYBFUdHfXEx3ZT5pump",
+      "token_name": "Quesito",
+      "token_symbol": "wawiwi",
+      "token_icon": "https://ipfs.io/ipfs/QmYJ4dCu6ghqwv5R5whYS26cCcVrH1zqJyPTb7B61R4KHh"
+    },
+    "9AfeTjTJN91kgJYgN2fzXc9ikM3bprTx3KkPcaLpk9xT": {
+      "token_address": "9AfeTjTJN91kgJYgN2fzXc9ikM3bprTx3KkPcaLpk9xT",
+      "token_name": "mihi",
+      "token_symbol": "mihi",
+      "token_icon": "https://ipfs.io/ipfs/QmWKnDgboBcSmCJHtGPadtyufs7z5Pw82T5w9nhTfzN9xN"
+    },
+    "FU4MPjC4MPcaimA5M5F93DMo93M7QTxojCTPit4mpump": {
+      "token_address": "FU4MPjC4MPcaimA5M5F93DMo93M7QTxojCTPit4mpump",
+      "token_name": "UNITED STATES FART SERVICE",
+      "token_symbol": "USFS",
+      "token_icon": "https://ipfs.io/ipfs/QmcJ9YmHj5YKskkPQx2PwGhDH6QJfyaqZFDujrJpb5h2WW"
+    },
+    "DbY4VcR4VR45rXiYnHSvZLDQD13Nu2Bqi4ADqVjXpump": {
+      "token_address": "DbY4VcR4VR45rXiYnHSvZLDQD13Nu2Bqi4ADqVjXpump",
+      "token_name": "EarCoin",
+      "token_symbol": "EarCoin",
+      "token_icon": "https://ipfs.io/ipfs/QmRHLjjG3PBbwiV1NssbT21UqDrAJSuJxjWFxGmDajtWoU"
+    },
+    "3JZdJNitpzxh4ZvXrzKHoPEdH6P2gxa9NQV5Ab4Ppump": {
+      "token_address": "3JZdJNitpzxh4ZvXrzKHoPEdH6P2gxa9NQV5Ab4Ppump",
+      "token_name": "ELON VINE",
+      "token_symbol": "ELONVINE",
+      "token_icon": "https://ipfs.io/ipfs/QmXNhoAhMAD81zmMCX2qCfQDSMFBJr7d8ia6NdoFqUHC1P"
+    },
+    "5epaYK8JPtThVYd1hrrPWm6kgrUhFEVVwb8D5HXQpump": {
+      "token_address": "5epaYK8JPtThVYd1hrrPWm6kgrUhFEVVwb8D5HXQpump",
+      "token_name": "Elon Meme",
+      "token_symbol": "ELONMEME",
+      "token_icon": "https://ipfs.io/ipfs/QmUiYZgUaYSFvCKZsCW4Mk2mKf3q6Xv8RDEtRxnNugGqNL"
+    },
+    "F1aa2Mcr7z8mE1i5P6a2Y1NMefGD94Vdd7wC3pKGpump": {
+      "token_address": "F1aa2Mcr7z8mE1i5P6a2Y1NMefGD94Vdd7wC3pKGpump",
+      "token_name": "ELON VINE",
+      "token_symbol": "ELONVINE",
+      "token_icon": "https://ipfs.io/ipfs/QmXNhoAhMAD81zmMCX2qCfQDSMFBJr7d8ia6NdoFqUHC1P"
+    },
+    "13GcTMYG9QN3TDWVHNmkgTJXuRsjdFtFav4Yw9Mtpump": {
+      "token_address": "13GcTMYG9QN3TDWVHNmkgTJXuRsjdFtFav4Yw9Mtpump",
+      "token_name": "Elon Meme",
+      "token_symbol": "ELONMEME",
+      "token_icon": "https://ipfs.io/ipfs/QmUiYZgUaYSFvCKZsCW4Mk2mKf3q6Xv8RDEtRxnNugGqNL"
+    },
+    "4ayE2juNb2byWHAgFp7YafnNrN3iWhUkXF1fmRR6pump": {
+      "token_address": "4ayE2juNb2byWHAgFp7YafnNrN3iWhUkXF1fmRR6pump",
+      "token_name": "Popular Female Fart Technique ",
+      "token_symbol": "PFFT",
+      "token_icon": "https://ipfs.io/ipfs/QmQ6pbiYA6mksH1eh7dc2hFbrPBFLtBMiiJ4X7hGU2JGcm"
+    },
+    "92n6jkeRtUDPX5X284SN9EBGRjgMA3nPe1CLqpYFpump": {
+      "token_address": "92n6jkeRtUDPX5X284SN9EBGRjgMA3nPe1CLqpYFpump",
+      "token_name": "Dog Pissing Rainbow",
+      "token_symbol": "DPR",
+      "token_icon": "https://ipfs.io/ipfs/QmQ81MoGBENryUf9oH6gpcBBaRNLuEmU513X817YM25eCL"
+    }
+  }
+}

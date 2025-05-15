@@ -1,0 +1,7 @@
+{
+  "success": false,
+  "errors": {
+    "code": 1100,
+    "message": "Validation Error: Address [GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY] is invalid"
+  }
+}

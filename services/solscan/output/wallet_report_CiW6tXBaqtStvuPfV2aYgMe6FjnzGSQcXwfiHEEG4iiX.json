@@ -1,0 +1,606 @@
+{
+  "walletAddress": "CiW6tXBaqtStvuPfV2aYgMe6FjnzGSQcXwfiHEEG4iiX",
+  "generatedAt": "2025-05-14T15:34:54.609Z",
+  "summary": {
+    "totalTransactions": 196,
+    "uniquePlatforms": 3,
+    "uniqueActivityTypes": 4,
+    "uniqueTokens": 45,
+    "volumeTraded": "63841083.42",
+    "topVolumes": [
+      {
+        "symbol": "SOL",
+        "volume": "0.43"
+      },
+      {
+        "symbol": "TheBigBen",
+        "volume": "NaN"
+      },
+      {
+        "symbol": "ERsiq5F1...",
+        "volume": "5926883.18"
+      }
+    ],
+    "transactionPeriod": {
+      "firstTransaction": 1737918219000,
+      "lastTransaction": 1744917464000
+    },
+    "averageGapBetweenActivities": "0.00 heures",
+    "weekdayVsWeekend": {
+      "weekday": 105,
+      "weekend": 95,
+      "weekdayPercentage": 53,
+      "weekendPercentage": 48
+    }
+  },
+  "platforms": {
+    "topPlatforms": [
+      {
+        "platform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+        "count": 188,
+        "percentage": "95.9%"
+      },
+      {
+        "platform": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+        "count": 7,
+        "percentage": "3.6%"
+      },
+      {
+        "platform": "Stake11111111111111111111111111111111111111",
+        "count": 1,
+        "percentage": "0.5%"
+      }
+    ],
+    "mainPlatform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+    "allPlatforms": [
+      {
+        "platform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+        "count": 188
+      },
+      {
+        "platform": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+        "count": 7
+      },
+      {
+        "platform": "Stake11111111111111111111111111111111111111",
+        "count": 1
+      }
+    ]
+  },
+  "activities": {
+    "mainActivityType": "ACTIVITY_AGG_TOKEN_SWAP",
+    "activityBreakdown": [
+      {
+        "type": "ACTIVITY_AGG_TOKEN_SWAP",
+        "count": 188,
+        "percentage": "95.9%"
+      },
+      {
+        "type": "ACTIVITY_TOKEN_SWAP",
+        "count": 5,
+        "percentage": "2.6%"
+      },
+      {
+        "type": "ACTIVITY_SPL_INIT_MINT",
+        "count": 2,
+        "percentage": "1.0%"
+      },
+      {
+        "type": "ACTIVITY_SPL_TOKEN_STAKE",
+        "count": 1,
+        "percentage": "0.5%"
+      }
+    ]
+  },
+  "tokens": {
+    "topTokensByVolume": [
+      {
+        "address": "So11111111111111111111111111111111111111111",
+        "symbol": "SOL",
+        "name": "SOL",
+        "totalVolume": 0.426973765,
+        "transactions": 6,
+        "swapsIn": 3,
+        "swapsOut": 3,
+        "decimals": 9,
+        "transactionCount": 6,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "G8yDf6FxHTBewE5KNjiDBVr8ucgNsKapfd2fKpk2pump",
+        "symbol": "TheBigBen",
+        "name": "TheBigBen",
+        "totalVolume": null,
+        "transactions": 2,
+        "swapsIn": 1,
+        "swapsOut": 1,
+        "decimals": 6,
+        "transactionCount": 2,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "ERsiq5F1BfTGiEnvWuhU9118w5gW6uERUnLX6SnVyUWv",
+        "symbol": "ERsiq5F1...",
+        "name": "Unknown Token",
+        "totalVolume": 5926883.17902,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "FBLV9DtSNEzHesgpnLjM7rSPU13pBkC4pS3g4YCapump",
+        "symbol": "FBLV9DtS...",
+        "name": "Unknown Token",
+        "totalVolume": 3828872.96056,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "92n6jkeRtUDPX5X284SN9EBGRjgMA3nPe1CLqpYFpump",
+        "symbol": "DPR",
+        "name": "Dog Pissing Rainbow",
+        "totalVolume": 3547332.099468,
+        "transactions": 8,
+        "swapsIn": 4,
+        "swapsOut": 4,
+        "decimals": 6,
+        "transactionCount": 8,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "JCvNrDDNH3VpHf1cqgH4LYoX7KDv5Asrj5a3CV4Kpump",
+        "symbol": "JCvNrDDN...",
+        "name": "Unknown Token",
+        "totalVolume": 3281632.402312,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "EQXKevwsLL766Z2DUQTy3EW6bAYBFUdHfXEx3ZT5pump",
+        "symbol": "wawiwi",
+        "name": "Quesito",
+        "totalVolume": 2826202.774172,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "2x3RY3WgNPUvxVmc2bBh4rj5HAvpk5ViyVfUSLW9pump",
+        "symbol": "2x3RY3Wg...",
+        "name": "Unknown Token",
+        "totalVolume": 2796698.5681160004,
+        "transactions": 14,
+        "swapsIn": 6,
+        "swapsOut": 8,
+        "decimals": 6,
+        "transactionCount": 14,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "FcXrSFXBPLaJSMBKrL9SdkGzB9DzW3Hu4pJhQdTepump",
+        "symbol": "FcXrSFXB...",
+        "name": "Unknown Token",
+        "totalVolume": 2644657.981464,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "6bYmJLEGbMRncAppwi4DCq8vGpMNDHZmeSK1EaDYpump",
+        "symbol": "6bYmJLEG...",
+        "name": "Unknown Token",
+        "totalVolume": 2442543.37016,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      }
+    ],
+    "topTokensByTransactions": [
+      {
+        "address": "So11111111111111111111111111111111111111112",
+        "symbol": "WSOL",
+        "name": "Wrapped SOL",
+        "totalVolume": 7.764759293999985,
+        "transactions": 188,
+        "swapsIn": 95,
+        "swapsOut": 93,
+        "decimals": 9,
+        "transactionCount": 188,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "2x3RY3WgNPUvxVmc2bBh4rj5HAvpk5ViyVfUSLW9pump",
+        "symbol": "2x3RY3Wg...",
+        "name": "Unknown Token",
+        "totalVolume": 2796698.5681160004,
+        "transactions": 14,
+        "swapsIn": 6,
+        "swapsOut": 8,
+        "decimals": 6,
+        "transactionCount": 14,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "92n6jkeRtUDPX5X284SN9EBGRjgMA3nPe1CLqpYFpump",
+        "symbol": "DPR",
+        "name": "Dog Pissing Rainbow",
+        "totalVolume": 3547332.099468,
+        "transactions": 8,
+        "swapsIn": 4,
+        "swapsOut": 4,
+        "decimals": 6,
+        "transactionCount": 8,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "AaQ82PJfwjm9HamztirKV3d5AE1fSMLibTzFc6KNpump",
+        "symbol": "AaQ82PJf...",
+        "name": "Unknown Token",
+        "totalVolume": 2199780.098932,
+        "transactions": 8,
+        "swapsIn": 4,
+        "swapsOut": 4,
+        "decimals": 6,
+        "transactionCount": 8,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "F1aa2Mcr7z8mE1i5P6a2Y1NMefGD94Vdd7wC3pKGpump",
+        "symbol": "ELONVINE",
+        "name": "ELON VINE",
+        "totalVolume": 2139542.248648,
+        "transactions": 8,
+        "swapsIn": 4,
+        "swapsOut": 4,
+        "decimals": 6,
+        "transactionCount": 8,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "ExBsfqMdZ6LuFbcvGagArhersdBbQSZ7Mfo2Mv2Rpump",
+        "symbol": "ExBsfqMd...",
+        "name": "Unknown Token",
+        "totalVolume": 1892546.363464,
+        "transactions": 8,
+        "swapsIn": 4,
+        "swapsOut": 4,
+        "decimals": 6,
+        "transactionCount": 8,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "6tD6ZnK96tZzD6HMcpW4RxRg8eYJLPK45XmptwtCpump",
+        "symbol": "Pussy",
+        "name": "First coin launched by a pussy",
+        "totalVolume": 1816104.879576,
+        "transactions": 8,
+        "swapsIn": 4,
+        "swapsOut": 4,
+        "decimals": 6,
+        "transactionCount": 8,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "5n5xs12C7cCVx5C61eZgCABnM7NsXrCiL1CRx9TBpump",
+        "symbol": "5n5xs12C...",
+        "name": "Unknown Token",
+        "totalVolume": 7805.970119999999,
+        "transactions": 8,
+        "swapsIn": 4,
+        "swapsOut": 4,
+        "decimals": 6,
+        "transactionCount": 8,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "So11111111111111111111111111111111111111111",
+        "symbol": "SOL",
+        "name": "SOL",
+        "totalVolume": 0.426973765,
+        "transactions": 6,
+        "swapsIn": 3,
+        "swapsOut": 3,
+        "decimals": 9,
+        "transactionCount": 6,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "5JCDjcV2GKXEfJxSQRn3uer7dvLfLsVMs2gnFoKQpump",
+        "symbol": "5JCDjcV2...",
+        "name": "Unknown Token",
+        "totalVolume": 2377719.122372,
+        "transactions": 6,
+        "swapsIn": 2,
+        "swapsOut": 4,
+        "decimals": 6,
+        "transactionCount": 6,
+        "percentage": "NaN%"
+      }
+    ],
+    "mostUsedToken": "WSOL"
+  },
+  "tokenPairs": [
+    {
+      "token1": "6tD6ZnK96tZzD6HMcpW4RxRg8eYJLPK45XmptwtCpump",
+      "token1Symbol": "Pussy",
+      "token2": "So11111111111111111111111111111111111111112",
+      "token2Symbol": "WSOL",
+      "count": 4,
+      "percentage": "2.0%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "6tD6ZnK96tZzD6HMcpW4RxRg8eYJLPK45XmptwtCpump",
+      "token2Symbol": "Pussy",
+      "count": 4,
+      "percentage": "2.0%"
+    },
+    {
+      "token1": "F1aa2Mcr7z8mE1i5P6a2Y1NMefGD94Vdd7wC3pKGpump",
+      "token1Symbol": "ELONVINE",
+      "token2": "So11111111111111111111111111111111111111112",
+      "token2Symbol": "WSOL",
+      "count": 4,
+      "percentage": "2.0%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "F1aa2Mcr7z8mE1i5P6a2Y1NMefGD94Vdd7wC3pKGpump",
+      "token2Symbol": "ELONVINE",
+      "count": 4,
+      "percentage": "2.0%"
+    },
+    {
+      "token1": "92n6jkeRtUDPX5X284SN9EBGRjgMA3nPe1CLqpYFpump",
+      "token1Symbol": "DPR",
+      "token2": "So11111111111111111111111111111111111111112",
+      "token2Symbol": "WSOL",
+      "count": 4,
+      "percentage": "2.0%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "92n6jkeRtUDPX5X284SN9EBGRjgMA3nPe1CLqpYFpump",
+      "token2Symbol": "DPR",
+      "count": 4,
+      "percentage": "2.0%"
+    },
+    {
+      "token1": "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+      "token1Symbol": "VINE",
+      "token2": "So11111111111111111111111111111111111111112",
+      "token2Symbol": "WSOL",
+      "count": 2,
+      "percentage": "1.0%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+      "token2Symbol": "VINE",
+      "count": 2,
+      "percentage": "1.0%"
+    },
+    {
+      "token1": "B6jMzgYQRb5jQMFx83UUWuNDnmziVfCmyzMANyfjpump",
+      "token1Symbol": "Monmon",
+      "token2": "So11111111111111111111111111111111111111112",
+      "token2Symbol": "WSOL",
+      "count": 2,
+      "percentage": "1.0%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "B6jMzgYQRb5jQMFx83UUWuNDnmziVfCmyzMANyfjpump",
+      "token2Symbol": "Monmon",
+      "count": 2,
+      "percentage": "1.0%"
+    }
+  ],
+  "advanced": {
+    "valueRanges": {},
+    "totalValue": 0,
+    "averageTransactionValue": 0,
+    "activityValueByType": {}
+  },
+  "timeAnalysis": {
+    "activityDistribution": {
+      "byYear": {
+        "2025": 200
+      }
+    },
+    "activityGaps": [
+      {
+        "startTime": "2025-03-15T12:17:57.000Z",
+        "endTime": "2025-04-17T19:17:44.000Z",
+        "gapDays": 33.3,
+        "tx_before": "4hrk6JCJVyX6LVEqbAdDE2H1YAEoWLvQa49sEGgSpvbot2kDVFBrUB86mbqM6QKFZzhwprga6diE7fvQEmvwsFre",
+        "tx_after": "2mCFhvbtmGUqEuThRo48mawadhAkHcjswqk6GWzFo1kjL2iya1qMMdMXHA7WF91nsdqWxW4iJbqNs9j5xH4mKF1e"
+      },
+      {
+        "startTime": "2025-02-16T12:13:48.000Z",
+        "endTime": "2025-03-14T19:25:48.000Z",
+        "gapDays": 26.3,
+        "tx_before": "3PiqTZfMM4H6JfMMtZjn3YpkRs2fduEUX2edb8bijDN41vuAfjqgE6ot746RakMuAozjdYF61BBkd6EEzPka4azQ",
+        "tx_after": "3Ztx2ocuAFoqjtCfVoUNhJMNyc1w7RyTJWWBDTiWvpr79fePvkWDPQ2S4S2azoAfU5BzBgSpGTJqeFBzbJA85Ehw"
+      },
+      {
+        "startTime": "2025-02-02T19:02:48.000Z",
+        "endTime": "2025-02-11T20:10:33.000Z",
+        "gapDays": 9,
+        "tx_before": "2B4DE6aTP8e6D5qoGyBAUBXGH8TdoSLfqHKfnwo6yv6uUjnk2oH1Ua88YF6aVMB6GjXFfkrbmFfgr9NJBb9bn3cg",
+        "tx_after": "fpVWsfexGc1ox2M87RPthyxCwZDLaSJ9c71NR2DFqLpezK94ASDncKKWBM9aMtwhdxWM7MtbTr7vhqUGBJ5R6tn"
+      },
+      {
+        "startTime": "2025-02-11T22:09:31.000Z",
+        "endTime": "2025-02-13T17:32:57.000Z",
+        "gapDays": 1.8,
+        "tx_before": "2regVTHBfMEuPQ14L1M2VPZofMnZeQDw7fARPihuiW2LqbaS7dv8WXFEjz7ZLuAA8gCSHStZL2DBRd5bk6uyZFwT",
+        "tx_after": "YxYHGt1ZVRijZPCQrjswiPZhG24YZ7hHsRUho5CcYtV3GUbskAbarAVE6BovLww6M31xnyLFbqC7kdXrPgrBSGS"
+      },
+      {
+        "startTime": "2025-01-29T12:02:50.000Z",
+        "endTime": "2025-01-30T23:33:23.000Z",
+        "gapDays": 1.5,
+        "tx_before": "3fH422FL1TTCK9iege9qqNtf8B93fjySW8SQFBFbLDrsz9qEsEwzk1zjVCwJFuk1ZjcWuWHkEpM4PB5Ty6wMqmhC",
+        "tx_after": "51A9V1yjUgrLXwv1VNc8J6RDafg6ygJPRUB4CBjFiJKyi3M2rrEgGSqYnqR1U7ftokoJRk4BXJhKUwDQTrsCpiMu"
+      },
+      {
+        "startTime": "2025-01-31T12:20:27.000Z",
+        "endTime": "2025-02-01T22:01:46.000Z",
+        "gapDays": 1.4,
+        "tx_before": "4k1kzbJUV8psPNuep4HyNqopwY5LXzu32op75zhnwUuq94c7R6zU1bUyyYkYPGasS5KwGiCyRYnGUx26sAjCLiYV",
+        "tx_after": "5LStAAotckKWxqAKX23LEFwzmz9e13BeqLS7Pew84EwfPRYfXmJLm5LS8dQd12iotxaqgrD6R8qGZXSkFocg7ZN3"
+      },
+      {
+        "startTime": "2025-02-14T12:10:04.000Z",
+        "endTime": "2025-02-15T13:39:48.000Z",
+        "gapDays": 1.1,
+        "tx_before": "3JhkBBkD6ESADj2MKsadR2gQEmr9Yt5x4YpvNxDJwMiPoEjKgFiu4ByfhX5r5AFYp8nvepftawxX4hxmwicvPpoZ",
+        "tx_after": "5NZ5UAkBtZSZAPAoSZBnp5tN3zHKp3srSJenopVLQ4cL5yKQFqTuF9bcbnuUxQR6HEWThawWvCH5VzUSN3Zt8vD"
+      }
+    ],
+    "busyPeriods": [
+      {
+        "startTime": "2025-01-26T19:03:39.000Z",
+        "endTime": "2025-01-27T19:03:39.000Z",
+        "activityCount": 74
+      },
+      {
+        "startTime": "2025-01-26T19:09:52.000Z",
+        "endTime": "2025-01-27T19:09:52.000Z",
+        "activityCount": 73
+      },
+      {
+        "startTime": "2025-01-26T19:11:40.000Z",
+        "endTime": "2025-01-27T19:11:40.000Z",
+        "activityCount": 72
+      },
+      {
+        "startTime": "2025-01-26T19:11:44.000Z",
+        "endTime": "2025-01-27T19:11:44.000Z",
+        "activityCount": 71
+      },
+      {
+        "startTime": "2025-01-26T19:36:24.000Z",
+        "endTime": "2025-01-27T19:36:24.000Z",
+        "activityCount": 70
+      }
+    ],
+    "weekdayVsWeekend": {
+      "weekday": 105,
+      "weekend": 95,
+      "weekdayPercentage": 53,
+      "weekendPercentage": 48
+    },
+    "monthlyAnalysis": [
+      {
+        "month": "2025-01",
+        "count": 87,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 87
+        }
+      },
+      {
+        "month": "2025-02",
+        "count": 61,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 61
+        }
+      },
+      {
+        "month": "2025-03",
+        "count": 50,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 50
+        }
+      },
+      {
+        "month": "2025-04",
+        "count": 2,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 2
+        }
+      }
+    ]
+  },
+  "specialTokens": {
+    "unknownTokensStats": {
+      "count": 0,
+      "transactionCount": 0,
+      "percentage": "0.00%"
+    },
+    "topSpecialTokens": [],
+    "nfts": [],
+    "complexTransactionCount": 0
+  },
+  "usdEstimates": {
+    "totalEstimatedUsd": 114.58832023036148,
+    "tokensWithEstimates": 7,
+    "topTokensByUsdValue": [
+      {
+        "symbol": "SOL",
+        "address": "So11111111111111111111111111111111111111111",
+        "usdValue": 62.841998732700006,
+        "totalVolume": 0.426973765,
+        "priceUsdt": 147.18
+      },
+      {
+        "symbol": "JCvNrDDN...",
+        "address": "JCvNrDDNH3VpHf1cqgH4LYoX7KDv5Asrj5a3CV4Kpump",
+        "usdValue": 16.412780252839774,
+        "totalVolume": 3281632.402312,
+        "priceUsdt": 0.0000050014073
+      },
+      {
+        "symbol": "EarCoin",
+        "address": "DbY4VcR4VR45rXiYnHSvZLDQD13Nu2Bqi4ADqVjXpump",
+        "usdValue": 9.061766180141348,
+        "totalVolume": 1791243.786256,
+        "priceUsdt": 0.000005058924
+      },
+      {
+        "symbol": "2x3RY3Wg...",
+        "address": "2x3RY3WgNPUvxVmc2bBh4rj5HAvpk5ViyVfUSLW9pump",
+        "usdValue": 7.234410920988003,
+        "totalVolume": 2796698.5681160004,
+        "priceUsdt": 0.0000025867682
+      },
+      {
+        "symbol": "DCECepMJ...",
+        "address": "DCECepMJyDfXvs1HpyoT5XiGfHwknBJvsEfRjwXkpump",
+        "usdValue": 6.813254044471779,
+        "totalVolume": 1727975.786332,
+        "priceUsdt": 0.0000039429106
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "data": [
+    {
+      "token_account": "GfPwb6rfu4dYwjBnmJ6TtSeYj7PYnBRKw9FBEh6nLKbh",
+      "token_address": "9AfeTjTJN91kgJYgN2fzXc9ikM3bprTx3KkPcaLpk9xT",
+      "amount": 0,
+      "token_decimals": 6,
+      "owner": "CiW6tXBaqtStvuPfV2aYgMe6FjnzGSQcXwfiHEEG4iiX"
+    },
+    {
+      "token_account": "RHbKzYrYA9q5ZeeFkyqsx33nJg1rbjfjAWG9RgB5Jjo",
+      "token_address": "G8yDf6FxHTBewE5KNjiDBVr8ucgNsKapfd2fKpk2pump",
+      "amount": 0,
+      "token_decimals": 6,
+      "owner": "CiW6tXBaqtStvuPfV2aYgMe6FjnzGSQcXwfiHEEG4iiX"
+    },
+    {
+      "token_account": "CB58bF8JVCJQSyCSJeKaaYEPbuNcV18qP9KEyCHxQi3E",
+      "token_address": "289a75NnkW8tRrDhPVDNUq4p5xVLVYSTKQsVHKMGpump",
+      "amount": 0,
+      "token_decimals": 6,
+      "owner": "CiW6tXBaqtStvuPfV2aYgMe6FjnzGSQcXwfiHEEG4iiX"
+    }
+  ],
+  "metadata": {
+    "tokens": {
+      "9AfeTjTJN91kgJYgN2fzXc9ikM3bprTx3KkPcaLpk9xT": {
+        "token_address": "9AfeTjTJN91kgJYgN2fzXc9ikM3bprTx3KkPcaLpk9xT",
+        "token_name": "mihi",
+        "token_symbol": "mihi",
+        "token_icon": "https://ipfs.io/ipfs/QmWKnDgboBcSmCJHtGPadtyufs7z5Pw82T5w9nhTfzN9xN"
+      },
+      "G8yDf6FxHTBewE5KNjiDBVr8ucgNsKapfd2fKpk2pump": {
+        "token_address": "G8yDf6FxHTBewE5KNjiDBVr8ucgNsKapfd2fKpk2pump",
+        "token_name": "TheBigBen",
+        "token_symbol": "TheBigBen",
+        "token_icon": "https://ipfs.io/ipfs/QmPK3x1wb28aKzkPEcz5gSqcPA2oPvbyPMZRt8kHyZSJdP"
+      },
+      "289a75NnkW8tRrDhPVDNUq4p5xVLVYSTKQsVHKMGpump": {
+        "token_address": "289a75NnkW8tRrDhPVDNUq4p5xVLVYSTKQsVHKMGpump",
+        "token_name": "Square On Mars",
+        "token_symbol": "SOM",
+        "token_icon": "https://ipfs.io/ipfs/QmRVgsbSRNBd5Ka7sdwU9BrP5zTAoYAWRtSChYekpYJYLt"
+      }
+    }
+  }
+}

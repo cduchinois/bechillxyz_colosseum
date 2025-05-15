@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from 'react';
-import LandingPage from '@/components/LandingPage';
+import LandingPage from '@/components/layout/LandingPage';
 
 declare global {
   interface Window {

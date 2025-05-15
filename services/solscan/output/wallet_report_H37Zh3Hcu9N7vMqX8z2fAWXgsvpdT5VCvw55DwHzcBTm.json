@@ -1,0 +1,574 @@
+{
+  "walletAddress": "H37Zh3Hcu9N7vMqX8z2fAWXgsvpdT5VCvw55DwHzcBTm",
+  "generatedAt": "2025-05-14T15:07:30.558Z",
+  "summary": {
+    "totalTransactions": 122,
+    "uniquePlatforms": 6,
+    "uniqueActivityTypes": 8,
+    "uniqueTokens": 27,
+    "volumeTraded": "6175814.07",
+    "topVolumes": [
+      {
+        "symbol": "GMEOW",
+        "volume": "3633930.72"
+      },
+      {
+        "symbol": "CPAW ",
+        "volume": "793007.56"
+      },
+      {
+        "symbol": "AIAKR",
+        "volume": "694146.14"
+      }
+    ],
+    "transactionPeriod": {
+      "firstTransaction": 1747184309000,
+      "lastTransaction": 1747224861000
+    },
+    "averageGapBetweenActivities": "0.00 heures",
+    "weekdayVsWeekend": {
+      "weekday": 200,
+      "weekend": 0,
+      "weekdayPercentage": 100,
+      "weekendPercentage": 0
+    }
+  },
+  "platforms": {
+    "topPlatforms": [
+      {
+        "platform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+        "count": 74,
+        "percentage": "60.7%"
+      },
+      {
+        "platform": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "count": 30,
+        "percentage": "24.6%"
+      },
+      {
+        "platform": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+        "count": 13,
+        "percentage": "10.7%"
+      },
+      {
+        "platform": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
+        "count": 2,
+        "percentage": "1.6%"
+      },
+      {
+        "platform": "SMPLecH534NA9acpos4G6x7uf3LWbCAwZQE9e8ZekMu",
+        "count": 2,
+        "percentage": "1.6%"
+      }
+    ],
+    "mainPlatform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+    "allPlatforms": [
+      {
+        "platform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+        "count": 74
+      },
+      {
+        "platform": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "count": 30
+      },
+      {
+        "platform": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+        "count": 13
+      },
+      {
+        "platform": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
+        "count": 2
+      },
+      {
+        "platform": "SMPLecH534NA9acpos4G6x7uf3LWbCAwZQE9e8ZekMu",
+        "count": 2
+      },
+      {
+        "platform": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+        "count": 1
+      }
+    ]
+  },
+  "activities": {
+    "mainActivityType": "ACTIVITY_AGG_TOKEN_SWAP",
+    "activityBreakdown": [
+      {
+        "type": "ACTIVITY_AGG_TOKEN_SWAP",
+        "count": 58,
+        "percentage": "47.5%"
+      },
+      {
+        "type": "ACTIVITY_SPL_BURN",
+        "count": 30,
+        "percentage": "24.6%"
+      },
+      {
+        "type": "ACTIVITY_TOKEN_SWAP",
+        "count": 14,
+        "percentage": "11.5%"
+      },
+      {
+        "type": "ACTIVITY_TOKEN_WITHDRAW_VAULT",
+        "count": 8,
+        "percentage": "6.6%"
+      },
+      {
+        "type": "ACTIVITY_TOKEN_DEPOSIT_VAULT",
+        "count": 8,
+        "percentage": "6.6%"
+      },
+      {
+        "type": "ACTIVITY_SPL_TOKEN_UNSTAKE",
+        "count": 2,
+        "percentage": "1.6%"
+      },
+      {
+        "type": "ACTIVITY_SPL_INIT_MINT",
+        "count": 1,
+        "percentage": "0.8%"
+      },
+      {
+        "type": "ACTIVITY_SPL_MINT",
+        "count": 1,
+        "percentage": "0.8%"
+      }
+    ]
+  },
+  "tokens": {
+    "topTokensByVolume": [
+      {
+        "address": "Ak2pqubV3dvyFX9Jf9h2C1QZ9vDW2MG2AC6kWLpypump",
+        "symbol": "GMEOW",
+        "name": "GOOD MORNING",
+        "totalVolume": 3633930.7160560004,
+        "transactions": 9,
+        "swapsIn": 6,
+        "swapsOut": 3,
+        "decimals": 6,
+        "transactionCount": 9,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "BwekeLYhCMZ6syNgLEdMLx46BQu2xXH48XniAdwnpump",
+        "symbol": "CPAW ",
+        "name": "Cat Paw",
+        "totalVolume": 793007.5562149999,
+        "transactions": 5,
+        "swapsIn": 4,
+        "swapsOut": 1,
+        "decimals": 6,
+        "transactionCount": 5,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "3tXQ9xbXHic4b8Uu6fuxesC4v5ggFvjsjbHqaZuDpump",
+        "symbol": "AIAKR",
+        "name": "AkrokaAI",
+        "totalVolume": 694146.142136,
+        "transactions": 2,
+        "swapsIn": 1,
+        "swapsOut": 1,
+        "decimals": 6,
+        "transactionCount": 2,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "E7tuVmCywD2UzrDomUQWgmpVWfA4qjFyRb9EDX5wpump",
+        "symbol": "IBRL",
+        "name": "IBRL",
+        "totalVolume": 293517.030064,
+        "transactions": 2,
+        "swapsIn": 2,
+        "swapsOut": 0,
+        "decimals": 6,
+        "transactionCount": 2,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "4TUNzcgp2fPD48fcW4seRjyqyDZMrPj4ZubnXFEsKeYk",
+        "symbol": "PRNT",
+        "name": "PRNT",
+        "totalVolume": 244155.4484796,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 7,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "symbol": "Bonk",
+        "name": "Bonk",
+        "totalVolume": 185018.10082,
+        "transactions": 27,
+        "swapsIn": 2,
+        "swapsOut": 25,
+        "decimals": 5,
+        "transactionCount": 27,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "9zpoUp14qXg4ibKN7DP2SKGMmdTumPcXNkuZuy1dbonk",
+        "symbol": "BUTTFUCK",
+        "name": "SOLANA NEW MOVIE MEMECOIN",
+        "totalVolume": 141275.405019,
+        "transactions": 1,
+        "swapsIn": 1,
+        "swapsOut": 0,
+        "decimals": 6,
+        "transactionCount": 1,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "BqpiqXC82nwvEjCvnBKc72saTHZarfEHcV1iozcYpump",
+        "symbol": "AnAn",
+        "name": "An An",
+        "totalVolume": 94239.666866,
+        "transactions": 1,
+        "swapsIn": 1,
+        "swapsOut": 0,
+        "decimals": 6,
+        "transactionCount": 1,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "AwA7D3jKpytsXSAJTZYY9NzV4HRKKLAyWJw9YoZwbonk",
+        "symbol": "CONK",
+        "name": "CONK",
+        "totalVolume": 40259.216223,
+        "transactions": 1,
+        "swapsIn": 1,
+        "swapsOut": 0,
+        "decimals": 6,
+        "transactionCount": 1,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "v62Jv9pwMTREWV9f6TetZfMafV254vo99p7HSF25BPr",
+        "symbol": "GgsS",
+        "name": "Ggs Solana",
+        "totalVolume": 28120.014726092002,
+        "transactions": 12,
+        "swapsIn": 4,
+        "swapsOut": 8,
+        "decimals": 9,
+        "transactionCount": 12,
+        "percentage": "NaN%"
+      }
+    ],
+    "topTokensByTransactions": [
+      {
+        "address": "So11111111111111111111111111111111111111112",
+        "symbol": "WSOL",
+        "name": "Wrapped SOL",
+        "totalVolume": 1.3992644720000003,
+        "transactions": 45,
+        "swapsIn": 6,
+        "swapsOut": 39,
+        "decimals": 9,
+        "transactionCount": 45,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "symbol": "USDC",
+        "name": "USDC",
+        "totalVolume": 194.01573399999998,
+        "transactions": 34,
+        "swapsIn": 24,
+        "swapsOut": 10,
+        "decimals": 6,
+        "transactionCount": 34,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "symbol": "Bonk",
+        "name": "Bonk",
+        "totalVolume": 185018.10082,
+        "transactions": 27,
+        "swapsIn": 2,
+        "swapsOut": 25,
+        "decimals": 5,
+        "transactionCount": 27,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "So11111111111111111111111111111111111111111",
+        "symbol": "SOL",
+        "name": "SOL",
+        "totalVolume": 2.4055702020000003,
+        "transactions": 13,
+        "swapsIn": 3,
+        "swapsOut": 10,
+        "decimals": 9,
+        "transactionCount": 13,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "v62Jv9pwMTREWV9f6TetZfMafV254vo99p7HSF25BPr",
+        "symbol": "GgsS",
+        "name": "Ggs Solana",
+        "totalVolume": 28120.014726092002,
+        "transactions": 12,
+        "swapsIn": 4,
+        "swapsOut": 8,
+        "decimals": 9,
+        "transactionCount": 12,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "Ak2pqubV3dvyFX9Jf9h2C1QZ9vDW2MG2AC6kWLpypump",
+        "symbol": "GMEOW",
+        "name": "GOOD MORNING",
+        "totalVolume": 3633930.7160560004,
+        "transactions": 9,
+        "swapsIn": 6,
+        "swapsOut": 3,
+        "decimals": 6,
+        "transactionCount": 9,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "BwekeLYhCMZ6syNgLEdMLx46BQu2xXH48XniAdwnpump",
+        "symbol": "CPAW ",
+        "name": "Cat Paw",
+        "totalVolume": 793007.5562149999,
+        "transactions": 5,
+        "swapsIn": 4,
+        "swapsOut": 1,
+        "decimals": 6,
+        "transactionCount": 5,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "4TUNzcgp2fPD48fcW4seRjyqyDZMrPj4ZubnXFEsKeYk",
+        "symbol": "PRNT",
+        "name": "PRNT",
+        "totalVolume": 244155.4484796,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 7,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "8tSeXYSXzFvaDX1nbWrEFFaFuPHuWqpzksKYxQPvpump",
+        "symbol": "VIBE",
+        "name": "Vibe Cat",
+        "totalVolume": 1836.935688,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      },
+      {
+        "address": "wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o",
+        "symbol": "eliza",
+        "name": "ai16zeliza",
+        "totalVolume": 1823.132144,
+        "transactions": 4,
+        "swapsIn": 2,
+        "swapsOut": 2,
+        "decimals": 6,
+        "transactionCount": 4,
+        "percentage": "NaN%"
+      }
+    ],
+    "mostUsedToken": "WSOL"
+  },
+  "tokenPairs": [
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2Symbol": "USDC",
+      "count": 11,
+      "percentage": "9.0%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "token2Symbol": "Bonk",
+      "count": 2,
+      "percentage": "1.6%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "E7tuVmCywD2UzrDomUQWgmpVWfA4qjFyRb9EDX5wpump",
+      "token2Symbol": "IBRL",
+      "count": 2,
+      "percentage": "1.6%"
+    },
+    {
+      "token1": "So11111111111111111111111111111111111111112",
+      "token1Symbol": "WSOL",
+      "token2": "BwekeLYhCMZ6syNgLEdMLx46BQu2xXH48XniAdwnpump",
+      "token2Symbol": "CPAW ",
+      "count": 2,
+      "percentage": "1.6%"
+    },
+    {
+      "token1": "4TUNzcgp2fPD48fcW4seRjyqyDZMrPj4ZubnXFEsKeYk",
+      "token1Symbol": "PRNT",
+      "token2": "BwekeLYhCMZ6syNgLEdMLx46BQu2xXH48XniAdwnpump",
+      "token2Symbol": "CPAW ",
+      "count": 2,
+      "percentage": "1.6%"
+    },
+    {
+      "token1": "v62Jv9pwMTREWV9f6TetZfMafV254vo99p7HSF25BPr",
+      "token1Symbol": "GgsS",
+      "token2": "4TUNzcgp2fPD48fcW4seRjyqyDZMrPj4ZubnXFEsKeYk",
+      "token2Symbol": "PRNT",
+      "count": 2,
+      "percentage": "1.6%"
+    },
+    {
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token1Symbol": "USDC",
+      "token2": "BDbhJUMgQBQ1bJTKhSS9NsxZdfaiBG6Hgp8qNKpc3YSX",
+      "token2Symbol": "TUCKER",
+      "count": 2,
+      "percentage": "1.6%"
+    },
+    {
+      "token1": "9PR7nCP9DpcUotnDPVLUBUZKu5WAYkwrCUx9wDnSpump",
+      "token1Symbol": "Ban",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2Symbol": "USDC",
+      "count": 2,
+      "percentage": "1.6%"
+    },
+    {
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token1Symbol": "USDC",
+      "token2": "9PR7nCP9DpcUotnDPVLUBUZKu5WAYkwrCUx9wDnSpump",
+      "token2Symbol": "Ban",
+      "count": 2,
+      "percentage": "1.6%"
+    },
+    {
+      "token1": "FLqmVrv6cp7icjobpRMQJMEyjF3kF84QmC4HXpySpump",
+      "token1Symbol": "BUCK",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2Symbol": "USDC",
+      "count": 2,
+      "percentage": "1.6%"
+    }
+  ],
+  "advanced": {
+    "valueRanges": {},
+    "totalValue": 0,
+    "averageTransactionValue": 0,
+    "activityValueByType": {}
+  },
+  "timeAnalysis": {
+    "activityDistribution": {
+      "byYear": {
+        "2025": 200
+      }
+    },
+    "activityGaps": [],
+    "busyPeriods": [
+      {
+        "startTime": "2025-05-14T00:58:29.000Z",
+        "endTime": "2025-05-15T00:58:29.000Z",
+        "activityCount": 200
+      },
+      {
+        "startTime": "2025-05-14T00:58:29.000Z",
+        "endTime": "2025-05-15T00:58:29.000Z",
+        "activityCount": 199
+      },
+      {
+        "startTime": "2025-05-14T00:58:30.000Z",
+        "endTime": "2025-05-15T00:58:30.000Z",
+        "activityCount": 198
+      },
+      {
+        "startTime": "2025-05-14T00:58:32.000Z",
+        "endTime": "2025-05-15T00:58:32.000Z",
+        "activityCount": 197
+      },
+      {
+        "startTime": "2025-05-14T00:58:34.000Z",
+        "endTime": "2025-05-15T00:58:34.000Z",
+        "activityCount": 196
+      }
+    ],
+    "weekdayVsWeekend": {
+      "weekday": 200,
+      "weekend": 0,
+      "weekdayPercentage": 100,
+      "weekendPercentage": 0
+    },
+    "monthlyAnalysis": [
+      {
+        "month": "2025-05",
+        "count": 200,
+        "value": 0,
+        "activities": {
+          "TRANSACTION": 200
+        }
+      }
+    ]
+  },
+  "specialTokens": {
+    "unknownTokensStats": {
+      "count": 0,
+      "transactionCount": 0,
+      "percentage": "0.00%"
+    },
+    "topSpecialTokens": [],
+    "nfts": [],
+    "complexTransactionCount": 0
+  },
+  "usdEstimates": {
+    "totalEstimatedUsd": 384.98339609569257,
+    "tokensWithEstimates": 17,
+    "topTokensByUsdValue": [
+      {
+        "symbol": "USDC",
+        "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "usdValue": 194.00525715036397,
+        "totalVolume": 194.01573399999998,
+        "priceUsdt": 0.999946
+      },
+      {
+        "symbol": "EPCT",
+        "address": "CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP",
+        "usdValue": 104.0880299184,
+        "totalVolume": 6622.88,
+        "priceUsdt": 0.01571643
+      },
+      {
+        "symbol": "CPAW ",
+        "address": "BwekeLYhCMZ6syNgLEdMLx46BQu2xXH48XniAdwnpump",
+        "usdValue": 46.99867448138865,
+        "totalVolume": 793007.5562149999,
+        "priceUsdt": 0.000059266364
+      },
+      {
+        "symbol": "PRNT",
+        "address": "4TUNzcgp2fPD48fcW4seRjyqyDZMrPj4ZubnXFEsKeYk",
+        "usdValue": 12.61062891397134,
+        "totalVolume": 244155.4484796,
+        "priceUsdt": 0.00005165
+      },
+      {
+        "symbol": "IBRL",
+        "address": "E7tuVmCywD2UzrDomUQWgmpVWfA4qjFyRb9EDX5wpump",
+        "usdValue": 8.781305139484681,
+        "totalVolume": 293517.030064,
+        "priceUsdt": 0.000029917532
+      }
+    ]
+  }
+}

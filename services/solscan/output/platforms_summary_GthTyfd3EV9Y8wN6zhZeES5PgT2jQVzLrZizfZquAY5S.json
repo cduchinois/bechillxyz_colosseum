@@ -1,0 +1,118 @@
+{
+  "totalTransactions": 58,
+  "platforms": {
+    "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": 50,
+    "DF1ow4tspfHX9JwWJsAb9epbkA8hmpSEAtxXy1V27QBH": 2,
+    "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8": 6
+  },
+  "activityTypes": {
+    "ACTIVITY_AGG_TOKEN_SWAP": 40,
+    "ACTIVITY_TOKEN_WITHDRAW_VAULT": 4,
+    "ACTIVITY_TOKEN_DEPOSIT_VAULT": 4,
+    "ACTIVITY_SPL_MINT": 2,
+    "ACTIVITY_SPL_BURN": 1,
+    "ACTIVITY_TOKEN_SWAP": 2,
+    "ACTIVITY_TOKEN_ADD_LIQ": 5
+  },
+  "sources": {},
+  "uniqueTokens": [],
+  "tokenMetadata": {
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token_name": "USDC",
+      "token_symbol": "USDC",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png"
+    },
+    "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh": {
+      "token_address": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
+      "token_name": "DeFi Land",
+      "token_symbol": "DFL",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh/logo.png"
+    },
+    "So11111111111111111111111111111111111111112": {
+      "token_address": "So11111111111111111111111111111111111111112",
+      "token_name": "Wrapped SOL",
+      "token_symbol": "WSOL",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+    },
+    "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m": {
+      "token_address": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+      "token_name": "Metaplex Token",
+      "token_symbol": "MPLX",
+      "token_icon": "https://arweave.net/VRKOcXIvCxqp35RZ9I0-bDGk5qNfT46OTho-2oP9iGc"
+    },
+    "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC": {
+      "token_address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "token_name": "ai16z",
+      "token_symbol": "ai16z",
+      "token_icon": "https://ipfs.io/ipfs/QmcNTVAoyJ7zDbPnN9jwiMoB8uCoJBUP9RGmmiGGHv44yX"
+    },
+    "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm": {
+      "token_address": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "token_name": "dogwifhat",
+      "token_symbol": "$WIF",
+      "token_icon": "https://bafkreibk3covs5ltyqxa272uodhculbr6kea6betidfwy3ajsav2vjzyum.ipfs.nftstorage.link"
+    },
+    "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y": {
+      "token_address": "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y",
+      "token_name": "Shadow Token",
+      "token_symbol": "SHDW",
+      "token_icon": "https://shdw-drive.genesysgo.net/FDcC9gn12fFkSU2KuQYH4TUjihrZxiTodFRWNF4ns9Kt/250x250_with_padding.png"
+    },
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+      "token_address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "token_name": "Jupiter",
+      "token_symbol": "JUP",
+      "token_icon": "https://static.jup.ag/jup/icon.png"
+    },
+    "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3": {
+      "token_address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+      "token_name": "Pyth Network",
+      "token_symbol": "PYTH",
+      "token_icon": "https://pyth.network/token.svg"
+    },
+    "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN": {
+      "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "token_name": "OFFICIAL TRUMP",
+      "token_symbol": "TRUMP",
+      "token_icon": "https://arweave.net/VQrPjACwnQRmxdKBTqNwPiyo65x7LAT773t8Kd7YBzw"
+    },
+    "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7": {
+      "token_address": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+      "token_name": "Drift",
+      "token_symbol": "DRIFT",
+      "token_icon": "https://metadata.drift.foundation/drift.png"
+    },
+    "undefined": {
+      "token_address": "undefined",
+      "token_icon": ""
+    },
+    "jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v": {
+      "token_address": "jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v",
+      "token_name": "Jupiter Staked SOL",
+      "token_symbol": "JupSOL",
+      "token_icon": "https://static.jup.ag/jupSOL/icon.png"
+    },
+    "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": {
+      "token_address": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+      "token_name": "Jupiter Perps LP",
+      "token_symbol": "JLP",
+      "token_icon": "https://static.jup.ag/jlp/icon.png"
+    },
+    "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS": {
+      "token_address": "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS",
+      "token_name": "",
+      "token_symbol": ""
+    },
+    "FZN7QZ8ZUUAxMPfxYEYkH3cXUASzH8EqA6B4tyCL8f1j": {
+      "token_address": "FZN7QZ8ZUUAxMPfxYEYkH3cXUASzH8EqA6B4tyCL8f1j",
+      "token_name": "",
+      "token_symbol": ""
+    },
+    "DPiDqBBmct3V9R7nbnNhc4njKVJ6KfF8xpbvR7TRgi2e": {
+      "token_address": "DPiDqBBmct3V9R7nbnNhc4njKVJ6KfF8xpbvR7TRgi2e",
+      "token_name": "",
+      "token_symbol": ""
+    }
+  }
+}

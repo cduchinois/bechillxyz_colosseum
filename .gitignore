@@ -4,53 +4,49 @@
 .LSOverride
 ._*
 
-# macOS folder metadata
-Icon?
+# Windows system files
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# VSCode and IDEs
+# IDEs and editors
 .vscode/
 .idea/
 *.sublime-workspace
 *.sublime-project
+*.sublime-*
 
-# Node.js dependencies
+# Node.js dependencies and logs
 node_modules/
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Logs
-logs/
-*.log
-
-# Next.js / React
+# Next.js / React / Web build artifacts
 .next/
+.next-*/
 out/
 build/
 dist/
 
-# Env files
-.env
-.env.local
-.env.*.local
-
-# Env files (global)
-**/.env
-**/.env.*
-
-
-# TypeScript cache
+# TypeScript
 *.tsbuildinfo
+next-env.d.ts
 
-# Misc
+# Coverage and cache
 coverage/
 .cache/
 turbo/
-*.local
+
+# Env files (global and local)
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.*
 
 # React Native - Android/iOS build artifacts
 android/app/build/
@@ -60,29 +56,30 @@ ios/Pods/
 *.keystore
 *.jks
 
-# Bundles
+# Bundles and caches
 *.bundle
-
-# Metro bundler cache
 .expo/
 .expo-shared/
 .expo-cache/
 .react-native/
-.cache/
 
-# macOS system files
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
+# Custom rules
+# Ignore all files ending with -old (e.g. file-old.ts)
+*-old*
 
-# IDEs
-.vscode/
-.idea/
-*.sublime-*
+# Build artifacts
+*.pack
 
+#ruby bundle
+/frontend/mobile/vendor/
+/frontend/mobile/vendor/bundle
+**/vendor/
+
+<<<<<<< HEAD
 # misc
 *.log
 .cache/
 turbo/
 .vscode/settings.json
+=======
+>>>>>>> web

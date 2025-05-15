@@ -57,7 +57,7 @@ function AppNavigator() {
       }}>
       {isConnected ? (
         // L'utilisateur est connecté, montrer l'écran info
-        <Stack.Screen name="Info" component={InfoScreen} />
+        <Stack.Screen name="assets" component={InfoScreen} />
       ) : // L'utilisateur n'est pas connecté
       isFirstTime ? (
         // C'est sa première fois, montrer l'onboarding

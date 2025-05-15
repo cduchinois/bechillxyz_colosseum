@@ -1,0 +1,247 @@
+{
+  "activity_types": {
+    "unique": [
+      "ACTIVITY_AGG_TOKEN_SWAP",
+      "ACTIVITY_TOKEN_SWAP",
+      "ACTIVITY_SPL_BURN",
+      "ACTIVITY_SPL_INIT_MINT",
+      "ACTIVITY_SPL_MINT",
+      "ACTIVITY_TOKEN_WITHDRAW_VAULT",
+      "ACTIVITY_TOKEN_DEPOSIT_VAULT",
+      "ACTIVITY_SPL_TOKEN_UNSTAKE"
+    ],
+    "counts": {
+      "ACTIVITY_AGG_TOKEN_SWAP": 58,
+      "ACTIVITY_TOKEN_SWAP": 14,
+      "ACTIVITY_SPL_BURN": 30,
+      "ACTIVITY_SPL_INIT_MINT": 1,
+      "ACTIVITY_SPL_MINT": 1,
+      "ACTIVITY_TOKEN_WITHDRAW_VAULT": 8,
+      "ACTIVITY_TOKEN_DEPOSIT_VAULT": 8,
+      "ACTIVITY_SPL_TOKEN_UNSTAKE": 2
+    }
+  },
+  "platforms": {
+    "unique": [
+      "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+      "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
+      "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+      "SMPLecH534NA9acpos4G6x7uf3LWbCAwZQE9e8ZekMu"
+    ],
+    "counts": {
+      "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": 74,
+      "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj": 2,
+      "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA": 30,
+      "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": 13,
+      "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8": 1,
+      "SMPLecH534NA9acpos4G6x7uf3LWbCAwZQE9e8ZekMu": 2
+    }
+  },
+  "activity_by_platform": {
+    "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": {
+      "ACTIVITY_AGG_TOKEN_SWAP": 58,
+      "ACTIVITY_TOKEN_WITHDRAW_VAULT": 8,
+      "ACTIVITY_TOKEN_DEPOSIT_VAULT": 8
+    },
+    "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj": {
+      "ACTIVITY_TOKEN_SWAP": 2
+    },
+    "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA": {
+      "ACTIVITY_SPL_BURN": 30
+    },
+    "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": {
+      "ACTIVITY_SPL_INIT_MINT": 1,
+      "ACTIVITY_SPL_MINT": 1,
+      "ACTIVITY_TOKEN_SWAP": 11
+    },
+    "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8": {
+      "ACTIVITY_TOKEN_SWAP": 1
+    },
+    "SMPLecH534NA9acpos4G6x7uf3LWbCAwZQE9e8ZekMu": {
+      "ACTIVITY_SPL_TOKEN_UNSTAKE": 2
+    }
+  },
+  "total_transactions": 122,
+  "tokens_metadata": {
+    "So11111111111111111111111111111111111111112": {
+      "token_address": "So11111111111111111111111111111111111111112",
+      "token_name": "Wrapped SOL",
+      "token_symbol": "WSOL",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token_name": "USDC",
+      "token_symbol": "USDC",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png"
+    },
+    "9zpoUp14qXg4ibKN7DP2SKGMmdTumPcXNkuZuy1dbonk": {
+      "token_address": "9zpoUp14qXg4ibKN7DP2SKGMmdTumPcXNkuZuy1dbonk",
+      "token_name": "SOLANA NEW MOVIE MEMECOIN",
+      "token_symbol": "BUTTFUCK",
+      "token_icon": "https://ipfs.io/ipfs/bafkreifwpy34lmbtx2finh57ehd4csmqccwmeo4aztmxwto7tugapcpoda"
+    },
+    "AwA7D3jKpytsXSAJTZYY9NzV4HRKKLAyWJw9YoZwbonk": {
+      "token_address": "AwA7D3jKpytsXSAJTZYY9NzV4HRKKLAyWJw9YoZwbonk",
+      "token_name": "CONK",
+      "token_symbol": "CONK",
+      "token_icon": "https://ipfs.io/ipfs/bafybeiascbc6q75qnufer3mdgtlu4quenbteaujo7g6iofeixhu7a444ze"
+    },
+    "CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP": {
+      "token_address": "CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP",
+      "token_name": "Epics Token",
+      "token_symbol": "EPCT",
+      "token_icon": "https://bafybeibal7k2hz6frznyjbl4qcnzcwlsuzxmquatrsaly6ttmuppgmdvwe.ipfs.dweb.link/EpicsCoin.png"
+    },
+    "BeGY8KqKxboEwRbJd1q9H2K829jS4Rc5dEyNMYXCbV5p": {
+      "token_address": "BeGY8KqKxboEwRbJd1q9H2K829jS4Rc5dEyNMYXCbV5p",
+      "token_name": "Non-Playable Coin (Wormhole)",
+      "token_symbol": "NPC",
+      "token_icon": "https://pbs.twimg.com/profile_images/1684543482281488384/31_6-1BE_400x400.jpg"
+    },
+    "EQKUVMidDY3YhFPRaa4GX5Lv6Gpvgpqmyr6FWrSHpump": {
+      "token_address": "EQKUVMidDY3YhFPRaa4GX5Lv6Gpvgpqmyr6FWrSHpump",
+      "token_name": "GOOD MORNING",
+      "token_symbol": "GMEOW",
+      "token_icon": "https://ipfs.io/ipfs/QmSvBQj8q3cN4zahDxEmsJqYiAANwqRY8R3nq3ut6ot7qA"
+    },
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "token_name": "Bonk",
+      "token_symbol": "Bonk",
+      "token_icon": "https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I"
+    },
+    "undefined": {
+      "token_address": "undefined",
+      "token_icon": ""
+    },
+    "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm": {
+      "token_address": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "token_name": "dogwifhat",
+      "token_symbol": "$WIF",
+      "token_icon": "https://bafkreibk3covs5ltyqxa272uodhculbr6kea6betidfwy3ajsav2vjzyum.ipfs.nftstorage.link"
+    },
+    "So11111111111111111111111111111111111111111": {
+      "token_address": "So11111111111111111111111111111111111111111",
+      "token_name": "SOL",
+      "token_symbol": "SOL",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+    },
+    "8cNmp9T2CMQRNZhNRoeSvr57LDf1kbZ42SvgsSWfpump": {
+      "token_address": "8cNmp9T2CMQRNZhNRoeSvr57LDf1kbZ42SvgsSWfpump",
+      "token_name": "JailbreakMe",
+      "token_symbol": "JAIL",
+      "token_icon": "https://ipfs.io/ipfs/QmRAJrX7cLt8acLSvpGRp9vxfnZRHbzAmQZphygj4K9wUd"
+    },
+    "3tXQ9xbXHic4b8Uu6fuxesC4v5ggFvjsjbHqaZuDpump": {
+      "token_address": "3tXQ9xbXHic4b8Uu6fuxesC4v5ggFvjsjbHqaZuDpump",
+      "token_name": "AkrokaAI",
+      "token_symbol": "AIAKR",
+      "token_icon": "https://ipfs.io/ipfs/QmRjFynLs7SwsEZEkRph9opkDHuZy5yBVY3rK7kuYfGtQm"
+    },
+    "BqpiqXC82nwvEjCvnBKc72saTHZarfEHcV1iozcYpump": {
+      "token_address": "BqpiqXC82nwvEjCvnBKc72saTHZarfEHcV1iozcYpump",
+      "token_name": "An An",
+      "token_symbol": "AnAn",
+      "token_icon": "https://ipfs.io/ipfs/QmUdyZELhTMW4K3MjSAqsxRZzPvHo8aL7XLzyLfDRUr4Ln"
+    },
+    "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": {
+      "token_address": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+      "token_name": "Jupiter Perps LP",
+      "token_symbol": "JLP",
+      "token_icon": "https://static.jup.ag/jlp/icon.png"
+    },
+    "HRzN8zrPp6HT8nmHoRrDpGbhVnFbbya5cMzaVGWVpump": {
+      "token_address": "HRzN8zrPp6HT8nmHoRrDpGbhVnFbbya5cMzaVGWVpump",
+      "token_name": "Baby Bitcoin",
+      "token_symbol": "BEBE",
+      "token_icon": "https://cf-ipfs.com/ipfs/QmdvY1WBA1R1Yw3Bmai3weYEk1e756ASiuYBorq311riWQ"
+    },
+    "Ak2pqubV3dvyFX9Jf9h2C1QZ9vDW2MG2AC6kWLpypump": {
+      "token_address": "Ak2pqubV3dvyFX9Jf9h2C1QZ9vDW2MG2AC6kWLpypump",
+      "token_name": "GOOD MORNING",
+      "token_symbol": "GMEOW",
+      "token_icon": "https://ipfs.io/ipfs/QmdE1Vznt7m7ToYb8Kv1y2bn1H2mQwukDEqXVPDGBNMJdL"
+    },
+    "DMhygbWS3MNRu5rfXWWKLoUqGMeUJW8txyKPs8KdMcsp": {
+      "token_address": "DMhygbWS3MNRu5rfXWWKLoUqGMeUJW8txyKPs8KdMcsp",
+      "token_name": "Moon",
+      "token_symbol": "MOON",
+      "token_icon": "https://gateway.irys.xyz/5bB0kPWp_8IjAFgZdsDXuDrqQuO8wjieZt7sheKP3ZI"
+    },
+    "9Djwrd8BcDUqAHEvcrx9zkjg9ZsW83EhnipTLYmuDixv": {
+      "token_address": "9Djwrd8BcDUqAHEvcrx9zkjg9ZsW83EhnipTLYmuDixv",
+      "token_name": "My First Million",
+      "token_symbol": "MFM",
+      "token_icon": "https://ipfs.io/ipfs/QmSA66zrTLyVfS6GohhZAmK8PQxBNisFWU5r6Y7GzkRQKc"
+    },
+    "BDbhJUMgQBQ1bJTKhSS9NsxZdfaiBG6Hgp8qNKpc3YSX": {
+      "token_address": "BDbhJUMgQBQ1bJTKhSS9NsxZdfaiBG6Hgp8qNKpc3YSX",
+      "token_name": "Pnut's Dog",
+      "token_symbol": "TUCKER",
+      "token_icon": "https://gateway.pinata.cloud/ipfs/QmQAVz5UxdD9BqLsWEo3z6nTX6DgJ2oKxn84UKEmiy5xAb/image.png"
+    },
+    "BwekeLYhCMZ6syNgLEdMLx46BQu2xXH48XniAdwnpump": {
+      "token_address": "BwekeLYhCMZ6syNgLEdMLx46BQu2xXH48XniAdwnpump",
+      "token_name": "Cat Paw",
+      "token_symbol": "CPAW ",
+      "token_icon": "https://ipfs.io/ipfs/QmYdcsQYmsGhZEtnA9XGhFFEk3T9iVJyzY3WSjrYciXQyq"
+    },
+    "E7tuVmCywD2UzrDomUQWgmpVWfA4qjFyRb9EDX5wpump": {
+      "token_address": "E7tuVmCywD2UzrDomUQWgmpVWfA4qjFyRb9EDX5wpump",
+      "token_name": "IBRL",
+      "token_symbol": "IBRL",
+      "token_icon": "https://ipfs.io/ipfs/QmcNUzgRQePfibr5VydwaGUrRfSimRceW2viha8kstaY6t"
+    },
+    "4TUNzcgp2fPD48fcW4seRjyqyDZMrPj4ZubnXFEsKeYk": {
+      "token_address": "4TUNzcgp2fPD48fcW4seRjyqyDZMrPj4ZubnXFEsKeYk",
+      "token_name": "PRNT",
+      "token_symbol": "PRNT",
+      "token_icon": "https://shdw-drive.genesysgo.net/EYH4kEfffWwRnF63G6Sx68sHdhkue4trzuSeUji9UJSe/prnt.jpg"
+    },
+    "CFCidcK2cKmDfpVDJzVqKMRA485JRnvcQ1kfPiKwK33g": {
+      "token_address": "CFCidcK2cKmDfpVDJzVqKMRA485JRnvcQ1kfPiKwK33g",
+      "token_name": "RANDY",
+      "token_symbol": "RANDY",
+      "token_icon": "https://bafkreihbjhlrrja6xn4ipqfm7w7jeuea7jzyshtacvhuqnm4deoc7jvfaq.ipfs.nftstorage.link"
+    },
+    "v62Jv9pwMTREWV9f6TetZfMafV254vo99p7HSF25BPr": {
+      "token_address": "v62Jv9pwMTREWV9f6TetZfMafV254vo99p7HSF25BPr",
+      "token_name": "Ggs Solana",
+      "token_symbol": "GgsS",
+      "token_icon": "https://cdn.dexscreener.com/cms/images/vtSjpy2aTAsBYqx9"
+    },
+    "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3": {
+      "token_address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+      "token_name": "Pyth Network",
+      "token_symbol": "PYTH",
+      "token_icon": "https://pyth.network/token.svg"
+    },
+    "9PR7nCP9DpcUotnDPVLUBUZKu5WAYkwrCUx9wDnSpump": {
+      "token_address": "9PR7nCP9DpcUotnDPVLUBUZKu5WAYkwrCUx9wDnSpump",
+      "token_name": "Comedian",
+      "token_symbol": "Ban",
+      "token_icon": "https://ipfs.io/ipfs/QmfKEGFPjMhtMdc6Nud7yvbPS8tiXfbFu2jGMvSUTejF9V"
+    },
+    "FLqmVrv6cp7icjobpRMQJMEyjF3kF84QmC4HXpySpump": {
+      "token_address": "FLqmVrv6cp7icjobpRMQJMEyjF3kF84QmC4HXpySpump",
+      "token_name": "GME MASCOT",
+      "token_symbol": "BUCK",
+      "token_icon": "https://ipfs.io/ipfs/QmXL6KzEQH7uc2AUuyv9VdypPi9X38fb1E8AADLjZvkjAG"
+    },
+    "wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o": {
+      "token_address": "wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o",
+      "token_name": "ai16zeliza",
+      "token_symbol": "eliza",
+      "token_icon": "https://ipfs.io/ipfs/Qmc2pDAETLKBPKY6jLXXR8PPMekmTX6VnPUEAXuihQpBGE"
+    },
+    "8tSeXYSXzFvaDX1nbWrEFFaFuPHuWqpzksKYxQPvpump": {
+      "token_address": "8tSeXYSXzFvaDX1nbWrEFFaFuPHuWqpzksKYxQPvpump",
+      "token_name": "Vibe Cat",
+      "token_symbol": "VIBE",
+      "token_icon": "https://ipfs.io/ipfs/QmbejUh9jPBiHKx9ErfuodxNfxmdg5sCejPnGoJGWJBWyu"
+    }
+  }
+}

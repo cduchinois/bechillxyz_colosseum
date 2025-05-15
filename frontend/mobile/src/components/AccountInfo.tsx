@@ -21,11 +21,27 @@ function convertLamportsToSOL(lamports: number) {
   );
 }
 
+/*
+function convertLamportsToUSD(lamports: number, solPrice: number = 150) {
+  const sol = lamports / LAMPORTS_PER_SOL;
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 2,
+  }).format(sol * solPrice);
+}
+  */
+
+function truncateAddress(address: string): string {
+  return `${address.slice(0, 4)}...${address.slice(-4)}`;
+}
+
 export default function AccountInfo({
-  balance,
   selectedAccount,
+  balance,
 }: AccountInfoProps) {
   return (
+<<<<<<< HEAD
     <View style={styles.container}>
       <View style={styles.textContainer}>
         <Text style={styles.walletHeader}>Wallet Account Info</Text>
@@ -35,65 +51,52 @@ export default function AccountInfo({
                 balance ? convertLamportsToSOL(balance) : '0'
               } SOL`
             : 'Wallet name not found'}
+=======
+    <View style={styles.card}>
+      <View style={styles.leftColumn}>
+        <Text style={styles.title}>Connected Wallet</Text>
+        <Text style={styles.address}>
+          {truncateAddress(selectedAccount.address)}
         </Text>
-        <Text style={styles.walletAddressLabel}>Wallet Address:</Text>
-        <Text style={styles.walletAddress}>{selectedAccount.address}</Text>
-        <View style={styles.buttonGroup}>
-          <DisconnectButton title={'Disconnect'} />
-
-          {/* <RequestAirdropButton
-            selectedAccount={selectedAccount}
-            onAirdropComplete={async (account: Account) =>
-              await fetchAndUpdateBalance(account)
-            }
-          /> */}
-        </View>
+        <Text style={styles.balance}>
+          Total balance:{' '}
+          {balance !== null ? convertLamportsToSOL(balance) : '$0.00'}
+>>>>>>> web
+        </Text>
       </View>
+
+      <DisconnectButton title={'DISCONNECT'} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 16,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-  },
-  textContainer: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-  },
-  buttonGroup: {
+  card: {
     flexDirection: 'row',
-    columnGap: 10,
-    marginTop: 20,
-  },
-  walletHeader: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    marginBottom: 10,
-    color: '#333',
-  },
-  walletBalance: {
-    fontSize: 22,
-    fontWeight: '600',
-    marginBottom: 15,
-    color: '#8A2BE2',
-  },
-  walletAddressLabel: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    marginBottom: 5,
-    color: '#333',
-  },
-  walletAddress: {
-    fontSize: 12,
-    color: '#666',
-    textAlign: 'center',
-    paddingHorizontal: 10,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#540CCC',
+    padding: 16,
+    borderRadius: 16,
     width: '100%',
+  },
+  leftColumn: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: 'white',
+    marginBottom: 6,
+  },
+  address: {
+    fontSize: 14,
+    color: '#D1C4E9',
+    marginBottom: 4,
+  },
+  balance: {
+    fontSize: 14,
+    color: '#B39DDB',
   },
 });

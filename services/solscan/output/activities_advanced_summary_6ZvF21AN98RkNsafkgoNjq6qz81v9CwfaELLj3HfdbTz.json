@@ -1,0 +1,684 @@
+{
+  "summary": {
+    "totalActivities": 100,
+    "uniqueActivityTypes": 7,
+    "uniquePlatforms": 8,
+    "uniqueTokens": 27,
+    "uniqueTokenPairs": 39,
+    "valueDistribution": {
+      "0-1": 9,
+      "1-5": 7,
+      "5-10": 11,
+      "10-50": 13,
+      "50-100": 13,
+      "100+": 47,
+      "unknown": 0
+    },
+    "mostUsedPlatform": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+    "mostCommonActivityType": "ACTIVITY_AGG_TOKEN_SWAP"
+  },
+  "activityTypes": {
+    "ACTIVITY_AGG_TOKEN_SWAP": {
+      "count": 58,
+      "totalValue": 97550.93699886848,
+      "platforms": {
+        "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf": 2,
+        "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": 56
+      },
+      "tokens": {
+        "So11111111111111111111111111111111111111112": 22,
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 38,
+        "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA": 6,
+        "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": 14,
+        "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 4,
+        "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A": 4,
+        "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo": 5,
+        "HPgsCBk6gkTw5FFPYc9WeeBU8EU2Ye1AYmeTYq5apump": 3,
+        "FmMzuNwEiK1Gua2mMoTpQDF9k3mHW3QVVfq3RjxV4QQY": 1,
+        "LSTxxxnJzKDFSLr4dUkPcmCf5VyryEqzPLz5j4bpxFp": 2,
+        "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn": 3,
+        "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": 5,
+        "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C": 1,
+        "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN": 2,
+        "4tARAT4ssRYhrENCTxxZrmjL741eE2G23Q1zLPDW2ipf": 2,
+        "SonicxvLud67EceaEzCLRnMTBqzYUUYNr93DBkBdDES": 2,
+        "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs": 1,
+        "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump": 1
+      }
+    },
+    "ACTIVITY_TOKEN_REMOVE_LIQ": {
+      "count": 4,
+      "totalValue": 598.5468888360481,
+      "platforms": {
+        "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc": 2,
+        "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB": 2
+      },
+      "tokens": {
+        "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA": 2,
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 3,
+        "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 2
+      }
+    },
+    "ACTIVITY_TOKEN_WITHDRAW_VAULT": {
+      "count": 8,
+      "totalValue": 660.6715001107376,
+      "platforms": {
+        "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc": 1,
+        "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": 3,
+        "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB": 4
+      },
+      "tokens": {
+        "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA": 1,
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 3,
+        "FmMzuNwEiK1Gua2mMoTpQDF9k3mHW3QVVfq3RjxV4QQY": 1,
+        "LSTxxxnJzKDFSLr4dUkPcmCf5VyryEqzPLz5j4bpxFp": 2,
+        "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 2
+      }
+    },
+    "ACTIVITY_TOKEN_SWAP": {
+      "count": 15,
+      "totalValue": 2514.8030011340898,
+      "platforms": {
+        "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": 2,
+        "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf": 1,
+        "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8": 4,
+        "routeUGWgWzqBWFcrCfv8tritsqukccJPu3q5GPP3xS": 4,
+        "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": 4
+      },
+      "tokens": {
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 5,
+        "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo": 1,
+        "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": 1,
+        "So11111111111111111111111111111111111111112": 9,
+        "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C": 2,
+        "AanGGVkCUy297vw1zHKnDxCMA5HFoxH98JjhGXaqpump": 2,
+        "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM": 2,
+        "So11111111111111111111111111111111111111111": 4,
+        "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump": 4
+      }
+    },
+    "ACTIVITY_TOKEN_DEPOSIT_VAULT": {
+      "count": 8,
+      "totalValue": 2792.86270826088,
+      "platforms": {
+        "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": 5,
+        "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc": 3
+      },
+      "tokens": {
+        "So11111111111111111111111111111111111111112": 7,
+        "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": 2,
+        "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": 1,
+        "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn": 1
+      }
+    },
+    "ACTIVITY_SPL_MINT": {
+      "count": 6,
+      "totalValue": -6,
+      "platforms": {
+        "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": 3,
+        "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc": 1,
+        "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD": 1,
+        "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": 1
+      },
+      "tokens": {
+        "4SW3eT6jKNcyVU9JVsKuVaRmFmvARaKT9b7j25RcGSg7": 1,
+        "4CuuyBmdbYFUfXh2EHdJ7o2ZT246MR6xVU9vQD1yvDbx": 1,
+        "J5o36oSuGS4nQ7cfZiAuvmaN2bggcoMoqp7BB7zATtwE": 1,
+        "G6LBmbbApvCrTGjMsPsxW43AGmzvcXa7P8x9yvHbek1f": 1,
+        "YVSaKfvkYT4SnGdUpXpGJ6EdnSTo1wsJue9xAi92DE6": 1,
+        "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump": 1
+      }
+    },
+    "ACTIVITY_SPL_INIT_MINT": {
+      "count": 1,
+      "totalValue": -1,
+      "platforms": {
+        "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": 1
+      },
+      "tokens": {
+        "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump": 1
+      }
+    }
+  },
+  "platforms": {
+    "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf": {
+      "count": 3,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 2,
+        "ACTIVITY_TOKEN_SWAP": 1
+      },
+      "tokens": {
+        "So11111111111111111111111111111111111111112": 3,
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 3
+      }
+    },
+    "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": {
+      "count": 69,
+      "activities": {
+        "ACTIVITY_AGG_TOKEN_SWAP": 56,
+        "ACTIVITY_TOKEN_SWAP": 2,
+        "ACTIVITY_TOKEN_WITHDRAW_VAULT": 3,
+        "ACTIVITY_TOKEN_DEPOSIT_VAULT": 5,
+        "ACTIVITY_SPL_MINT": 3
+      },
+      "tokens": {
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 38,
+        "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA": 6,
+        "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": 15,
+        "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 4,
+        "So11111111111111111111111111111111111111112": 25,
+        "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A": 4,
+        "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo": 6,
+        "HPgsCBk6gkTw5FFPYc9WeeBU8EU2Ye1AYmeTYq5apump": 3,
+        "FmMzuNwEiK1Gua2mMoTpQDF9k3mHW3QVVfq3RjxV4QQY": 2,
+        "LSTxxxnJzKDFSLr4dUkPcmCf5VyryEqzPLz5j4bpxFp": 4,
+        "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn": 3,
+        "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": 5,
+        "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C": 1,
+        "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN": 2,
+        "4tARAT4ssRYhrENCTxxZrmjL741eE2G23Q1zLPDW2ipf": 2,
+        "SonicxvLud67EceaEzCLRnMTBqzYUUYNr93DBkBdDES": 2,
+        "4SW3eT6jKNcyVU9JVsKuVaRmFmvARaKT9b7j25RcGSg7": 1,
+        "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs": 1,
+        "4CuuyBmdbYFUfXh2EHdJ7o2ZT246MR6xVU9vQD1yvDbx": 1,
+        "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump": 1,
+        "YVSaKfvkYT4SnGdUpXpGJ6EdnSTo1wsJue9xAi92DE6": 1
+      }
+    },
+    "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc": {
+      "count": 7,
+      "activities": {
+        "ACTIVITY_TOKEN_REMOVE_LIQ": 2,
+        "ACTIVITY_TOKEN_WITHDRAW_VAULT": 1,
+        "ACTIVITY_TOKEN_DEPOSIT_VAULT": 3,
+        "ACTIVITY_SPL_MINT": 1
+      },
+      "tokens": {
+        "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA": 3,
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 2,
+        "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": 2,
+        "So11111111111111111111111111111111111111112": 2,
+        "J5o36oSuGS4nQ7cfZiAuvmaN2bggcoMoqp7BB7zATtwE": 1,
+        "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": 1,
+        "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn": 1
+      }
+    },
+    "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8": {
+      "count": 4,
+      "activities": {
+        "ACTIVITY_TOKEN_SWAP": 4
+      },
+      "tokens": {
+        "So11111111111111111111111111111111111111112": 4,
+        "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C": 2,
+        "AanGGVkCUy297vw1zHKnDxCMA5HFoxH98JjhGXaqpump": 2
+      }
+    },
+    "routeUGWgWzqBWFcrCfv8tritsqukccJPu3q5GPP3xS": {
+      "count": 4,
+      "activities": {
+        "ACTIVITY_TOKEN_SWAP": 4
+      },
+      "tokens": {
+        "So11111111111111111111111111111111111111112": 4,
+        "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM": 2,
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 2
+      }
+    },
+    "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB": {
+      "count": 6,
+      "activities": {
+        "ACTIVITY_TOKEN_WITHDRAW_VAULT": 4,
+        "ACTIVITY_TOKEN_REMOVE_LIQ": 2
+      },
+      "tokens": {
+        "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 4,
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 4
+      }
+    },
+    "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD": {
+      "count": 1,
+      "activities": {
+        "ACTIVITY_SPL_MINT": 1
+      },
+      "tokens": {
+        "G6LBmbbApvCrTGjMsPsxW43AGmzvcXa7P8x9yvHbek1f": 1
+      }
+    },
+    "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": {
+      "count": 6,
+      "activities": {
+        "ACTIVITY_TOKEN_SWAP": 4,
+        "ACTIVITY_SPL_MINT": 1,
+        "ACTIVITY_SPL_INIT_MINT": 1
+      },
+      "tokens": {
+        "So11111111111111111111111111111111111111111": 4,
+        "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump": 6
+      }
+    }
+  },
+  "tokenPairs": {
+    "So11111111111111111111111111111111111111112_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "count": 6,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA": {
+      "count": 5,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA"
+    },
+    "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "count": 3,
+      "token1": "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4_Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+      "count": 1,
+      "token1": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+      "token2": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_So11111111111111111111111111111111111111112": {
+      "count": 8,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "So11111111111111111111111111111111111111112"
+    },
+    "So11111111111111111111111111111111111111112_he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A": {
+      "count": 3,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A"
+    },
+    "So11111111111111111111111111111111111111112_27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": {
+      "count": 1,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo": {
+      "count": 2,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo"
+    },
+    "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "count": 3,
+      "token1": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4_2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo": {
+      "count": 1,
+      "token1": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+      "token2": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_HPgsCBk6gkTw5FFPYc9WeeBU8EU2Ye1AYmeTYq5apump": {
+      "count": 3,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "HPgsCBk6gkTw5FFPYc9WeeBU8EU2Ye1AYmeTYq5apump"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_FmMzuNwEiK1Gua2mMoTpQDF9k3mHW3QVVfq3RjxV4QQY": {
+      "count": 1,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "FmMzuNwEiK1Gua2mMoTpQDF9k3mHW3QVVfq3RjxV4QQY"
+    },
+    "So11111111111111111111111111111111111111112_LSTxxxnJzKDFSLr4dUkPcmCf5VyryEqzPLz5j4bpxFp": {
+      "count": 2,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "LSTxxxnJzKDFSLr4dUkPcmCf5VyryEqzPLz5j4bpxFp"
+    },
+    "So11111111111111111111111111111111111111112_J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn": {
+      "count": 2,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn"
+    },
+    "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo_27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": {
+      "count": 3,
+      "token1": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+      "token2": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4"
+    },
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "count": 1,
+      "token1": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "count": 1,
+      "token1": "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    "So11111111111111111111111111111111111111112_BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C": {
+      "count": 2,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C"
+    },
+    "So11111111111111111111111111111111111111112_AanGGVkCUy297vw1zHKnDxCMA5HFoxH98JjhGXaqpump": {
+      "count": 2,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "AanGGVkCUy297vw1zHKnDxCMA5HFoxH98JjhGXaqpump"
+    },
+    "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "count": 1,
+      "token1": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN": {
+      "count": 1,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN"
+    },
+    "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB_27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": {
+      "count": 2,
+      "token1": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "token2": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4"
+    },
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN_So11111111111111111111111111111111111111112": {
+      "count": 4,
+      "token1": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "token2": "So11111111111111111111111111111111111111112"
+    },
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN_27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": {
+      "count": 1,
+      "token1": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "token2": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4"
+    },
+    "4tARAT4ssRYhrENCTxxZrmjL741eE2G23Q1zLPDW2ipf_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "count": 1,
+      "token1": "4tARAT4ssRYhrENCTxxZrmjL741eE2G23Q1zLPDW2ipf",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_4tARAT4ssRYhrENCTxxZrmjL741eE2G23Q1zLPDW2ipf": {
+      "count": 1,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "4tARAT4ssRYhrENCTxxZrmjL741eE2G23Q1zLPDW2ipf"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_SonicxvLud67EceaEzCLRnMTBqzYUUYNr93DBkBdDES": {
+      "count": 1,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "SonicxvLud67EceaEzCLRnMTBqzYUUYNr93DBkBdDES"
+    },
+    "SonicxvLud67EceaEzCLRnMTBqzYUUYNr93DBkBdDES_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "count": 1,
+      "token1": "SonicxvLud67EceaEzCLRnMTBqzYUUYNr93DBkBdDES",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    "So11111111111111111111111111111111111111112_5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM": {
+      "count": 2,
+      "token1": "So11111111111111111111111111111111111111112",
+      "token2": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+      "count": 2,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs": {
+      "count": 1,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+      "count": 1,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN"
+    },
+    "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "count": 1,
+      "token1": "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump",
+      "token2": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4_J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn": {
+      "count": 2,
+      "token1": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+      "token2": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": {
+      "count": 2,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4"
+    },
+    "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB_So11111111111111111111111111111111111111112": {
+      "count": 1,
+      "token1": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "token2": "So11111111111111111111111111111111111111112"
+    },
+    "So11111111111111111111111111111111111111111_Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump": {
+      "count": 3,
+      "token1": "So11111111111111111111111111111111111111111",
+      "token2": "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump"
+    },
+    "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump_So11111111111111111111111111111111111111111": {
+      "count": 1,
+      "token1": "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump",
+      "token2": "So11111111111111111111111111111111111111111"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v_he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A": {
+      "count": 1,
+      "token1": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "token2": "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A"
+    }
+  },
+  "tokens": {
+    "addresses": [
+      "So11111111111111111111111111111111111111112",
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA",
+      "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+      "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A",
+      "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+      "HPgsCBk6gkTw5FFPYc9WeeBU8EU2Ye1AYmeTYq5apump",
+      "FmMzuNwEiK1Gua2mMoTpQDF9k3mHW3QVVfq3RjxV4QQY",
+      "LSTxxxnJzKDFSLr4dUkPcmCf5VyryEqzPLz5j4bpxFp",
+      "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+      "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C",
+      "AanGGVkCUy297vw1zHKnDxCMA5HFoxH98JjhGXaqpump",
+      "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "4tARAT4ssRYhrENCTxxZrmjL741eE2G23Q1zLPDW2ipf",
+      "SonicxvLud67EceaEzCLRnMTBqzYUUYNr93DBkBdDES",
+      "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+      "4SW3eT6jKNcyVU9JVsKuVaRmFmvARaKT9b7j25RcGSg7",
+      "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+      "4CuuyBmdbYFUfXh2EHdJ7o2ZT246MR6xVU9vQD1yvDbx",
+      "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump",
+      "J5o36oSuGS4nQ7cfZiAuvmaN2bggcoMoqp7BB7zATtwE",
+      "G6LBmbbApvCrTGjMsPsxW43AGmzvcXa7P8x9yvHbek1f",
+      "YVSaKfvkYT4SnGdUpXpGJ6EdnSTo1wsJue9xAi92DE6",
+      "So11111111111111111111111111111111111111111",
+      "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump"
+    ],
+    "metadata": {
+      "So11111111111111111111111111111111111111112": {
+        "token_address": "So11111111111111111111111111111111111111112",
+        "token_name": "Wrapped SOL",
+        "token_symbol": "WSOL",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+      },
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "token_name": "USDC",
+        "token_symbol": "USDC",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png"
+      },
+      "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA": {
+        "token_address": "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA",
+        "token_name": "USDS",
+        "token_symbol": "USDS",
+        "token_icon": "https://ipfs.io/ipfs/QmTW9HWfb2wsQqEVJiixkQ73Nsfp2Rx4ESaDSiQ7ThwnFM"
+      },
+      "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+        "token_address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "token_name": "USDT",
+        "token_symbol": "USDT",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB/logo.svg"
+      },
+      "null": {
+        "token_address": null
+      },
+      "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": {
+        "token_address": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+        "token_name": "Jupiter Perps LP",
+        "token_symbol": "JLP",
+        "token_icon": "https://static.jup.ag/jlp/icon.png"
+      },
+      "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A": {
+        "token_address": "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A",
+        "token_name": "Helius Staked SOL",
+        "token_symbol": "hSOL",
+        "token_icon": "https://raw.githubusercontent.com/igneous-labs/lst-offchain-metadata/master/hSOL/hSOL.png"
+      },
+      "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm": {
+        "token_address": "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm",
+        "token_name": "Infinity",
+        "token_symbol": "INF",
+        "token_icon": "https://bafkreiflz2xxkfn33qjch2wj55bvbn33q3s4mmb6bye5pt3mpgy4t2wg4e.ipfs.nftstorage.link/"
+      },
+      "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo": {
+        "token_address": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+        "token_name": "PayPal USD",
+        "token_symbol": "PYUSD",
+        "token_icon": "https://424565.fs1.hubspotusercontent-na1.net/hubfs/424565/PYUSDLOGO.png"
+      },
+      "HPgsCBk6gkTw5FFPYc9WeeBU8EU2Ye1AYmeTYq5apump": {
+        "token_address": "HPgsCBk6gkTw5FFPYc9WeeBU8EU2Ye1AYmeTYq5apump",
+        "token_name": "ALINA AI",
+        "token_symbol": "ALINAintel",
+        "token_icon": "https://ipfs.io/ipfs/QmdpGuLTVpEu7gnMYVQRcog1EjbqYTtzC9eyxNSzTMYPLd"
+      },
+      "FmMzuNwEiK1Gua2mMoTpQDF9k3mHW3QVVfq3RjxV4QQY": {
+        "token_address": "FmMzuNwEiK1Gua2mMoTpQDF9k3mHW3QVVfq3RjxV4QQY",
+        "token_name": "Agent Catoff",
+        "token_symbol": "AICAT",
+        "token_icon": "https://ipfs.io/ipfs/QmY743em2KC49n1bYkzqwqeuXtQLxuxbXNQRyuvUpJXF2s"
+      },
+      "undefined": {
+        "token_address": "undefined",
+        "token_icon": ""
+      },
+      "LSTxxxnJzKDFSLr4dUkPcmCf5VyryEqzPLz5j4bpxFp": {
+        "token_address": "LSTxxxnJzKDFSLr4dUkPcmCf5VyryEqzPLz5j4bpxFp",
+        "token_name": "Liquid Staking Token",
+        "token_symbol": "LST",
+        "token_icon": "https://storage.googleapis.com/static-marginfi/lst.png"
+      },
+      "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn": {
+        "token_address": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+        "token_name": "Jito Staked SOL",
+        "token_symbol": "JitoSOL",
+        "token_icon": "https://storage.googleapis.com/token-metadata/JitoSOL-256.png"
+      },
+      "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+        "token_address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "token_name": "Jupiter",
+        "token_symbol": "JUP",
+        "token_icon": "https://static.jup.ag/jup/icon.png"
+      },
+      "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C": {
+        "token_address": "BeVQ2QYf6g72hjJvEWYsDjYUSFTdHQnsCY21seVh3D8C",
+        "token_name": "Tasko Coin",
+        "token_symbol": "Tasko",
+        "token_icon": "https://ipfs.io/ipfs/QmZu8LpXcA5MQQmDfxYBPUyrDnwK5jCjifULgqih2aubLj"
+      },
+      "AanGGVkCUy297vw1zHKnDxCMA5HFoxH98JjhGXaqpump": {
+        "token_address": "AanGGVkCUy297vw1zHKnDxCMA5HFoxH98JjhGXaqpump",
+        "token_name": "SAFEMOON",
+        "token_symbol": "SAFEMOON",
+        "token_icon": "https://ipfs.io/ipfs/QmRX4GigoJKBoPR7wD3bB96DBJYpqcXkWd6uGTV8YXUsa2"
+      },
+      "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN": {
+        "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+        "token_name": "OFFICIAL TRUMP",
+        "token_symbol": "TRUMP",
+        "token_icon": "https://arweave.net/VQrPjACwnQRmxdKBTqNwPiyo65x7LAT773t8Kd7YBzw"
+      },
+      "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P": {
+        "token_address": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+        "token_name": "Melania Meme",
+        "token_symbol": "MELANIA",
+        "token_icon": "https://gateway.pinata.cloud/ipfs/bafkreiduq5c43xdbcbhzx3plcdtz2jwkjpzlm2hwkoxhjgmnmqbl6otyfu"
+      },
+      "CboMcTUYUcy9E6B3yGdFn6aEsGUnYV6yWeoeukw6pump": {
+        "token_address": "CboMcTUYUcy9E6B3yGdFn6aEsGUnYV6yWeoeukw6pump",
+        "token_name": "Butthole Coin",
+        "token_symbol": "Butthole",
+        "token_icon": "https://ipfs.io/ipfs/Qme1teMr1bYqEFJaaJXyYpzDG73Npw6fkLuH7fgT8xgFoQ"
+      },
+      "4tARAT4ssRYhrENCTxxZrmjL741eE2G23Q1zLPDW2ipf": {
+        "token_address": "4tARAT4ssRYhrENCTxxZrmjL741eE2G23Q1zLPDW2ipf",
+        "token_name": "adraLRT SOL (Solayer)",
+        "token_symbol": "lrtsSOL",
+        "token_icon": "https://ipfs.io/ipfs/QmWGrew8pqdHpzw2pXaFgsbicZWcGyRXiGDTy6huDdC1gu"
+      },
+      "SonicxvLud67EceaEzCLRnMTBqzYUUYNr93DBkBdDES": {
+        "token_address": "SonicxvLud67EceaEzCLRnMTBqzYUUYNr93DBkBdDES",
+        "token_name": "Sonic SVM",
+        "token_symbol": "SONIC",
+        "token_icon": "https://arweave.net/599UDQd5YAUfesAJCTNZ-4ELWLHX5pbid-ahpoJ-w1A"
+      },
+      "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM": {
+        "token_address": "5voS9evDjxF589WuEub5i4ti7FWQmZCsAsyD5ucbuRqM",
+        "token_name": "Eliza",
+        "token_symbol": "ELIZA",
+        "token_icon": "https://ipfs.io/ipfs/QmXRKBceEnjWV1EvDRNLAzMTBCvfzmFajopWevczU7bYY1"
+      },
+      "4SW3eT6jKNcyVU9JVsKuVaRmFmvARaKT9b7j25RcGSg7": {
+        "token_address": "4SW3eT6jKNcyVU9JVsKuVaRmFmvARaKT9b7j25RcGSg7",
+        "token_name": "",
+        "token_symbol": ""
+      },
+      "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs": {
+        "token_address": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+        "token_name": "Wrapped Ether (Wormhole)",
+        "token_symbol": "WETH",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs/logo.png"
+      },
+      "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr": {
+        "token_address": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+        "token_name": "POPCAT",
+        "token_symbol": "POPCAT",
+        "token_icon": "https://arweave.net/A1etRNMKxhlNGTf-gNBtJ75QJJ4NJtbKh_UXQTlLXzI"
+      },
+      "4CuuyBmdbYFUfXh2EHdJ7o2ZT246MR6xVU9vQD1yvDbx": {
+        "token_address": "4CuuyBmdbYFUfXh2EHdJ7o2ZT246MR6xVU9vQD1yvDbx",
+        "token_name": "",
+        "token_symbol": ""
+      },
+      "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump": {
+        "token_address": "CzLSujWBLFsSjncfkh59rUFqvafWcY5tzedWJSuypump",
+        "token_name": "Goatseus Maximus",
+        "token_symbol": "GOAT",
+        "token_icon": "https://ipfs.io/ipfs/QmapAq9WtNrtyaDtjZPAHHNYmpSZAQU6HywwvfSWq4dQVV"
+      },
+      "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So": {
+        "token_address": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+        "token_name": "Marinade staked SOL (mSOL)",
+        "token_symbol": "mSOL",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So/logo.png"
+      },
+      "J5o36oSuGS4nQ7cfZiAuvmaN2bggcoMoqp7BB7zATtwE": {
+        "token_address": "J5o36oSuGS4nQ7cfZiAuvmaN2bggcoMoqp7BB7zATtwE",
+        "token_name": "Kamino JLP-JSOL (Meteora)",
+        "token_symbol": "kJLP-JSOL",
+        "token_icon": "https://api.kamino.finance/ktokens/J5o36oSuGS4nQ7cfZiAuvmaN2bggcoMoqp7BB7zATtwE/metadata/image.svg"
+      },
+      "G6LBmbbApvCrTGjMsPsxW43AGmzvcXa7P8x9yvHbek1f": {
+        "token_address": "G6LBmbbApvCrTGjMsPsxW43AGmzvcXa7P8x9yvHbek1f",
+        "token_name": "",
+        "token_symbol": ""
+      },
+      "YVSaKfvkYT4SnGdUpXpGJ6EdnSTo1wsJue9xAi92DE6": {
+        "token_address": "YVSaKfvkYT4SnGdUpXpGJ6EdnSTo1wsJue9xAi92DE6"
+      },
+      "So11111111111111111111111111111111111111111": {
+        "token_address": "So11111111111111111111111111111111111111111",
+        "token_name": "SOL",
+        "token_symbol": "SOL",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+      },
+      "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump": {
+        "token_address": "Difv7zGYHDYpjJFqu1nYTpeSNST1zs8hMUTsnquMpump",
+        "token_name": "Possi Token",
+        "token_symbol": "POSSI",
+        "token_icon": "https://ipfs.io/ipfs/QmPTF8p9Frm1TXNjmP6u5psZS1V4Y6Ry4jvcUt4JtdrAqN"
+      }
+    }
+  }
+}

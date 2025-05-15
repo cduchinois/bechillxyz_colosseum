@@ -9,19 +9,28 @@ import {AuthorizationProvider} from './src/components/providers/AuthorizationPro
 import AssetsScreen from './src/screens/AssetsScreen';
 import ObjectivesScreen from './src/screens/ObjectivesScreen';
 import HistoryScreen from './src/screens/HistoryScreen';
+<<<<<<< HEAD
 import ProfileScreen from './src/screens/ProfileScreen';
+=======
+import SettingsScreen from './src/screens/SettingsScreen';
+>>>>>>> web
 import MainScreen from './src/screens/MainScreen';
-import InfoScreen from './src/screens/InfoScreen';
+// import InfoScreen from './src/screens/InfoScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import WalletStoryScreen from './src/screens/WalletStoryScreen';
 import BottomBar from './src/components/BottomBar';
 import {useAuthorization} from './src/components/providers/AuthorizationProvider';
+<<<<<<< HEAD
+=======
+import ChillSpaceScreen from './src/screens/ChillSpaceScreen';
+>>>>>>> web
 
 // Composant de navigation personnalisé qui utilise le context d'autorisation
 const NavigationContent = () => {
   const [activeScreen, setActiveScreen] = useState('assets');
   const {selectedAccount} = useAuthorization();
   const isConnected = !!selectedAccount;
+  const hideBottomBarScreens = ['settings', 'onboarding'];
 
   // États pour gérer le flux de navigation
   const [currentView, setCurrentView] = useState<
@@ -63,10 +72,18 @@ const NavigationContent = () => {
     if (screen === 'wallet_story') {
       setCurrentView('walletStory');
     } else if (screen === 'main') {
+<<<<<<< HEAD
       setCurrentView('dashboard');
     } else if (screen === 'assets') {
       // Ajouter ce cas pour la redirection après les stories
       setCurrentView('dashboard');
+=======
+      setCurrentView('dashboard'); // ← le dashboard "wrappe" les screens comme assets/settings/etc
+      setActiveScreen('settings');
+    } else if (screen === 'assets') {
+      // Ajouter ce cas pour la redirection après les stories
+
+>>>>>>> web
       setActiveScreen('assets');
     }
   };
@@ -114,6 +131,12 @@ const NavigationContent = () => {
 
   const renderActiveScreen = () => {
     switch (activeScreen) {
+<<<<<<< HEAD
+=======
+      case 'onboarding':
+        return <OnboardingScreen onNavigate={navigateOnboarding} />;
+
+>>>>>>> web
       case 'assets':
         return (
           <AssetsScreen
@@ -128,8 +151,13 @@ const NavigationContent = () => {
             setActiveScreen={setActiveScreen}
           />
         );
+<<<<<<< HEAD
       case 'chillbot':
         return <InfoScreen />;
+=======
+      case 'chillspace':
+        return <ChillSpaceScreen />;
+>>>>>>> web
       case 'history':
         return (
           <HistoryScreen
@@ -137,9 +165,15 @@ const NavigationContent = () => {
             setActiveScreen={setActiveScreen}
           />
         );
+<<<<<<< HEAD
       case 'profile':
         return (
           <ProfileScreen
+=======
+      case 'settings':
+        return (
+          <SettingsScreen
+>>>>>>> web
             activeScreen={activeScreen}
             setActiveScreen={setActiveScreen}
           />
@@ -158,7 +192,12 @@ const NavigationContent = () => {
   return (
     <View style={styles.navigationContainer}>
       <View style={styles.screenContainer}>{renderActiveScreen()}</View>
-      <BottomBar activeScreen={activeScreen} onScreenChange={setActiveScreen} />
+      {!hideBottomBarScreens.includes(activeScreen) && (
+        <BottomBar
+          activeScreen={activeScreen}
+          onScreenChange={setActiveScreen}
+        />
+      )}
     </View>
   );
 };

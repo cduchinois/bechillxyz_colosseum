@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "data": {
+    "total_value": 57.308221126507945,
+    "native_balance": {
+      "amount": 39721800,
+      "balance": 0.0397218,
+      "token_price": 179.49013599517536,
+      "token_decimals": 9,
+      "token_name": "SOL",
+      "token_symbol": "SOL",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+      "value": 7.129671283973157
+    },
+    "tokens": [
+      {
+        "token_address": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+        "amount": 35838958,
+        "balance": 35.838958,
+        "token_price": 0.6732364504278049,
+        "token_decimals": 6,
+        "token_name": "Drift",
+        "token_symbol": "DRIFT",
+        "token_icon": "https://metadata.drift.foundation/drift.png",
+        "value": 24.128092870951182
+      },
+      {
+        "token_address": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
+        "amount": 44242484061438,
+        "balance": 44242.484061438,
+        "token_price": 0.00020587570737087883,
+        "token_decimals": 9,
+        "token_name": "DeFi Land",
+        "token_symbol": "DFL",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh/logo.png",
+        "value": 9.10845270199338
+      },
+      {
+        "token_address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+        "amount": 47154259,
+        "balance": 47.154259,
+        "token_price": 0.19280550625038698,
+        "token_decimals": 6,
+        "token_name": "Pyth Network",
+        "token_symbol": "PYTH",
+        "token_icon": "https://pyth.network/token.svg",
+        "value": 9.091600778356867
+      },
+      {
+        "token_address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+        "amount": 7600464804,
+        "balance": 7.600464804,
+        "token_price": 0.3492192219592377,
+        "token_decimals": 9,
+        "token_name": "ai16z",
+        "token_symbol": "ai16z",
+        "token_icon": "https://ipfs.io/ipfs/QmcNTVAoyJ7zDbPnN9jwiMoB8uCoJBUP9RGmmiGGHv44yX",
+        "value": 2.65422840538145
+      },
+      {
+        "token_address": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+        "amount": 7559216,
+        "balance": 7.559216,
+        "token_price": 0.19586000000000003,
+        "token_decimals": 6,
+        "token_name": "Metaplex Token",
+        "token_symbol": "MPLX",
+        "token_icon": "https://arweave.net/VRKOcXIvCxqp35RZ9I0-bDGk5qNfT46OTho-2oP9iGc",
+        "value": 1.4805480457600002
+      },
+      {
+        "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+        "amount": 104028,
+        "balance": 0.104028,
+        "token_price": 13.524087252937306,
+        "token_decimals": 6,
+        "token_name": "OFFICIAL TRUMP",
+        "token_symbol": "TRUMP",
+        "token_icon": "https://arweave.net/VQrPjACwnQRmxdKBTqNwPiyo65x7LAT773t8Kd7YBzw",
+        "value": 1.4068837487485621
+      },
+      {
+        "token_address": "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y",
+        "amount": 9308794050,
+        "balance": 9.30879405,
+        "token_price": 0.14006513802157783,
+        "token_decimals": 9,
+        "token_name": "Shadow Token",
+        "token_symbol": "SHDW",
+        "token_icon": "https://shdw-drive.genesysgo.net/FDcC9gn12fFkSU2KuQYH4TUjihrZxiTodFRWNF4ns9Kt/250x250_with_padding.png",
+        "value": 1.3038375234276924
+      },
+      {
+        "token_address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "amount": 1790274,
+        "balance": 1.790274,
+        "token_price": 0.5613139485439933,
+        "token_decimals": 6,
+        "token_name": "Jupiter",
+        "token_symbol": "JUP",
+        "token_icon": "https://static.jup.ag/jup/icon.png",
+        "value": 1.004905767915649
+      },
+      {
+        "token_address": "7mEcBafsQVnDFNeosaCtdGAgQFiLg48UYD5PLfmipump",
+        "amount": 61952669297,
+        "balance": 61952.669297,
+        "token_decimals": 6,
+        "token_name": "AssoLibreYahourtsRustiqAuvergne",
+        "token_symbol": "ALYRA",
+        "token_icon": "https://cf-ipfs.com/ipfs/QmTTBuw4hNbfTxBiXzTSywgLiRg7WSC2AtFFUFYwxpRNz7",
+        "value": 0
+      }
+    ]
+  },
+  "metadata": {}
+}

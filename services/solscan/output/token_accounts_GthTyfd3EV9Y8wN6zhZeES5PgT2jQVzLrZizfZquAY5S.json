@@ -1,0 +1,151 @@
+{
+  "success": true,
+  "data": [
+    {
+      "token_account": "3Lf5kSVGvk3o2yPK1ShLpdviJ6GpujV63JofDuasEeoc",
+      "token_address": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
+      "amount": 44242484061438,
+      "token_decimals": 9,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "LyWunxWqxLQMVGE91YKjfuMdHc5tmn39Q5phpqZM9Cp",
+      "token_address": "7mEcBafsQVnDFNeosaCtdGAgQFiLg48UYD5PLfmipump",
+      "amount": 61952669297,
+      "token_decimals": 6,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "4LnYLoKdfPAvXiktrDCqFsxHhREqRdXsL8aj6s2MoQFA",
+      "token_address": "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y",
+      "amount": 9308794050,
+      "token_decimals": 9,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "2AfTFgGn8SthW9J6xYJR5ej6QLjcyfV6qFCXfCM3oGJf",
+      "token_address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "amount": 7600464804,
+      "token_decimals": 9,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "GEnM5x39TvhyA88aGFhdraGQ5GccG1TkcnJt6mGHPgLe",
+      "token_address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+      "amount": 47154259,
+      "token_decimals": 6,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "DZ74U5FgfETcV3HvWfHKHh2hNhXH2LyvXH4AJgDuGg3k",
+      "token_address": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+      "amount": 35838958,
+      "token_decimals": 6,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "HzL6o538vJUHBkrXWwS2rZL5tZAWBvSVZjgVWqCcUXvT",
+      "token_address": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+      "amount": 7559216,
+      "token_decimals": 6,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "ED8UKrVhjhm8eohQB2pdLNewDMqi436JAPPh24doEXf5",
+      "token_address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "amount": 1790274,
+      "token_decimals": 6,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "JDx6QHu4d68nMDMyX4BEPbEgSu11Tvt4SqE8rfNvSo76",
+      "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "amount": 104028,
+      "token_decimals": 6,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "5EAhYDZYZhMChA5EoQ39L7C39XvDHxyrFDzCE4VyucGG",
+      "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "amount": 0,
+      "token_decimals": 6,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    },
+    {
+      "token_account": "8GoGSc46ymxTxhfoLRE23zApipfEQkF1HUqZdrZTxZqY",
+      "token_address": "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS",
+      "amount": 0,
+      "token_decimals": 9,
+      "owner": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S"
+    }
+  ],
+  "metadata": {
+    "tokens": {
+      "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh": {
+        "token_address": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
+        "token_name": "DeFi Land",
+        "token_symbol": "DFL",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh/logo.png"
+      },
+      "7mEcBafsQVnDFNeosaCtdGAgQFiLg48UYD5PLfmipump": {
+        "token_address": "7mEcBafsQVnDFNeosaCtdGAgQFiLg48UYD5PLfmipump",
+        "token_name": "AssoLibreYahourtsRustiqAuvergne",
+        "token_symbol": "ALYRA",
+        "token_icon": "https://cf-ipfs.com/ipfs/QmTTBuw4hNbfTxBiXzTSywgLiRg7WSC2AtFFUFYwxpRNz7"
+      },
+      "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y": {
+        "token_address": "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y",
+        "token_name": "Shadow Token",
+        "token_symbol": "SHDW",
+        "token_icon": "https://shdw-drive.genesysgo.net/FDcC9gn12fFkSU2KuQYH4TUjihrZxiTodFRWNF4ns9Kt/250x250_with_padding.png"
+      },
+      "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC": {
+        "token_address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+        "token_name": "ai16z",
+        "token_symbol": "ai16z",
+        "token_icon": "https://ipfs.io/ipfs/QmcNTVAoyJ7zDbPnN9jwiMoB8uCoJBUP9RGmmiGGHv44yX"
+      },
+      "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3": {
+        "token_address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+        "token_name": "Pyth Network",
+        "token_symbol": "PYTH",
+        "token_icon": "https://pyth.network/token.svg"
+      },
+      "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7": {
+        "token_address": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+        "token_name": "Drift",
+        "token_symbol": "DRIFT",
+        "token_icon": "https://metadata.drift.foundation/drift.png"
+      },
+      "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m": {
+        "token_address": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+        "token_name": "Metaplex Token",
+        "token_symbol": "MPLX",
+        "token_icon": "https://arweave.net/VRKOcXIvCxqp35RZ9I0-bDGk5qNfT46OTho-2oP9iGc"
+      },
+      "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+        "token_address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "token_name": "Jupiter",
+        "token_symbol": "JUP",
+        "token_icon": "https://static.jup.ag/jup/icon.png"
+      },
+      "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN": {
+        "token_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+        "token_name": "OFFICIAL TRUMP",
+        "token_symbol": "TRUMP",
+        "token_icon": "https://arweave.net/VQrPjACwnQRmxdKBTqNwPiyo65x7LAT773t8Kd7YBzw"
+      },
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "token_name": "USDC",
+        "token_symbol": "USDC",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png"
+      },
+      "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS": {
+        "token_address": "Fffijd6UVJdQeLVXhenS8YcsnMUdWJqpbBeH42LFkXgS",
+        "token_name": "",
+        "token_symbol": ""
+      }
+    }
+  }
+}

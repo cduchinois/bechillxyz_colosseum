@@ -1,0 +1,528 @@
+{
+  "success": true,
+  "data": [
+    {
+      "token_account": "78C5yn8zySD9i7BpvvmBi1xGPM8JQBZW3XuFmvDgR3qB",
+      "token_address": "8wXtPeU6557ETkp9WHFY1n1EcU6NxDvbAggHGsMYiHsB",
+      "amount": 500000907457483,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "BnaGULWnnAVFNhBzp5FEYQBcb1V3ruBC5FqWEEYse8Uq",
+      "token_address": "FdDSKVqXFNPNXmVuJtHrWjqWzgfqgEDNkwuTrCVxpog3",
+      "amount": 50133250000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "4Rg2SCSAC4mri3neQSUCjUBSaGBpxEUFjKyX8WYPkLGJ",
+      "token_address": "9759dmFRoXEjAjToe7WmgKq6DeJL1Wj9RnSp4ZTHhJ2z",
+      "amount": 6134480000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "DprXU6Q6jLkhyvGZeNLGFzpMeFw9A71mAfkPQCJUFWWu",
+      "token_address": "CHfSidPhzUEmu2ac8MHazDh9EEXYHezNxCHZ6YMtMMFZ",
+      "amount": 5538690000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "FquyiSGuXHFYpeTRVpHDGKeRAM3tXtbSxJn5v7G5dUTP",
+      "token_address": "GX9r6KnLYun7qKNDMDWTnrRWPa9gN1eeZb9WjkYV12yT",
+      "amount": 3579650000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "CFVz35M68DXnLG5geShGwHKD6oypHhQpWJHRwCrAA5ts",
+      "token_address": "9498Jiz4LAZkYSayp7qzL3utwG8rDpGsrmxMVQQM3jTu",
+      "amount": 2876554460000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "TNgpZExiDf4ddb8LHt4NYFyADgYgAKT1rob4CcfAUpL",
+      "token_address": "BMTNoLVm6RE6CgcUgxWLzJLkdhe2MUK775AZYavtAmPX",
+      "amount": 2270670000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "9SyofavFWNZPtwiQ6ioi8UnMEri3kT745BSTabhtrxkq",
+      "token_address": "7nZbZGnY6WkWDyKtYNMXPN6NbnLno61AxsFscFyj54Th",
+      "amount": 1586530000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "AfkJ6HukGn5tyUsVTHRtmYgLrgpTNaFcewc38UYmagA1",
+      "token_address": "5GN7yhv7M42ZXXRHiyvGTagqhaFEhaDRGGXHzTJ8YWN4",
+      "amount": 1005280000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "Dh7XCfHEMKAWptm4Ak1DPhpG4JFxsiNUwkpWEaiw7bK8",
+      "token_address": "7YLRQLdiLAADgLh6z2ZA7vqesUert5fX4sY1fRwghcgB",
+      "amount": 898560000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "92Mbazao8oQix4v5ZWQdGTmWgqbhJN7Nz2HjBxDAeTmm",
+      "token_address": "ASLzpD6KtxwqemULrVbeahguwqKGahhyXcbYRHuKXCDd",
+      "amount": 800000000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "4HVCnmjCXLNwfeqowVUP9HGKeQT7MDPScEwk9vbRNuvk",
+      "token_address": "APf3Gt2sAqXBkNiU6KBD6GLkWb93TKHVSyj3uZR1c9DV",
+      "amount": 790660000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "CSW8A5hueFtMc3bUXzX87Xvteuxdk2p3P69RsgrF59ZT",
+      "token_address": "8KNJvFAJDhTDirpT9wAUiCyZdRSZML85FEtfpVA9pump",
+      "amount": 538362671960,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "3rEGj6DdXcUatjos1ZW3T5sBwGSJC2qQAE7Y2nf1rM7R",
+      "token_address": "DjuVt3crJgS9QfWhN4THZ9APz4ZgJYDJunUib7vGmqHn",
+      "amount": 537890000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "23LMshYUP3PiW2UTb1hj7KcV1hrX5KvPxC5b3TGe4au8",
+      "token_address": "6hqB2ooPNdopjMbYLJcLCqjviUmEC7xiD11vnriCCcrX",
+      "amount": 357530000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "9vuBdrdaX61DYNWDxJ9aVsZoeDFvTyzGM87vn1xT8umk",
+      "token_address": "HJ39rRZ6ys22KdB3USxDgNsL7RKiQmsC3yL8AS3Suuku",
+      "amount": 69000000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "BTwoPYNadqxTqShmhisGzt7cLFyNj7Kk2xBv2AqL4Qnu",
+      "token_address": "C2YnH2AKTKF4MXM5sWr1U5NfMBPh1vwrCCSAQHkXQgSy",
+      "amount": 55250000000,
+      "token_decimals": 9,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "221oDkKSufQpTVRwgkEwUbEBnKXtCBqVA41m39gPj3Gz",
+      "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "amount": 34089704276,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "CGEWSsnCWN2u3wLhMGqdMd2ds3rHd3VJkJa93Xtq96QH",
+      "token_address": "Ekcd1SnUB9anjAXqrecNHVawTBLiXvWXUxvGQ71Rz2Sb",
+      "amount": 5099000000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "E6FqL7dYLqod1E5WsYvJ1Edxzo2PMNPtDnMFr7osZ9cm",
+      "token_address": "AB3edFFEYXFTCJL5eUDANEiqJwKvSa9MvnXu1PwKqMDX",
+      "amount": 5088000000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "B6Vxi4LHzTr3BDS4P4yDCDxjKTG1ih55bKmkWSF9MGJV",
+      "token_address": "7G96AG6bjBvb992XCfPZo9MoPkpTspC61JGRC25YWgK5",
+      "amount": 4019713000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "5kSk8QHLUjhCBW3XjLPyDqJ1h6J1cDu2wWqkeq7jVN6n",
+      "token_address": "CaJ3NgEgQ3jUiEK5Ze271UaS5p5CMmBZLLU1j1o1bPuG",
+      "amount": 3588000000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "DABPkgbWED1RVmGSbGUqtkcYTQ68jawspSaRJdYSmMua",
+      "token_address": "F8jmSBmNe8PP1a9xqXDe1X5NYQTS3B1zE27huRBCpump",
+      "amount": 3000000000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "5SrZ12c5U23kNjZ7qyAWYd6QemSfHUvGj3EHvLKaCWa1",
+      "token_address": "5B1hQeqkC9gtfUv8F2JLDn4d8Wuem17vqEAVrgUP3bMB",
+      "amount": 2025000000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "H6CudCuw59VUXXLuk8hegJvs7t8EYDMNq2n7upEoVZxL",
+      "token_address": "F8JDY6JRsD4ARXW5XGVyYSq4QViCkfouoe3FYqnPN2my",
+      "amount": 1999000000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "5z4rvS3L1Btvr1ERCDW924MmherzBtWEAP2UvvMV39TC",
+      "token_address": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "amount": 1000000000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "7ncXfoP86ak1N1BxhV4RUr6YWuCQX4xVi2mQWmpR4gKo",
+      "token_address": "FkgnRFqZAXxVnt5z6fxzMN5jPGSbCrPDxrxKrVESCr9B",
+      "amount": 888000000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "4jXwxisowUEiVLQfCpkdRUpsyZgpeUechZj9z7K48LMX",
+      "token_address": "7v6TPNHDvg3vyoJ9JEHCwVR36dRYLXnnUZn7ygv2U7X7",
+      "amount": 568000000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "9CcCRjchLeti3Lf2F9hnNwSR3W5y3ycHnmbSPFwnWU7X",
+      "token_address": "97XU8nv8t9672uaJECKDvoSuypzYA9a76HLpGVTADvNB",
+      "amount": 148858889,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "EeWzLDbPY2MFJNYVBpDpAxaoL46YrUeosePRC6PRr1zk",
+      "token_address": "BoMbSn3KcWsUe1dgz5ddJrRaM6v44fpeARNA9t7Dpump",
+      "amount": 3140000,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "3LxjvqUHddrwhDqp3v74EBbXdCAjYM8CwSPgN2GD47Mp",
+      "token_address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "amount": 107754,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "6oKuwd8BgBtfoaAwuDpVtkdfa1fBNM9EtBQW3wUNHc2",
+      "token_address": "SPBVsi8ocpVXVgdTQWgJm7Vhm4bYh4Xt47WsCo214nt",
+      "amount": 1079,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "CAt9SucGd4UzRTXLHBLs4Unbv7jA4B5DmwLb7u6GRU75",
+      "token_address": "8wGyaD4e7kd5ac5gyZjYWcZWmpCX6M6nqhxTFowcmgyW",
+      "amount": 374,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "ctEQJ9GD4zPZuqXVmMWxRGC7Vvuot3DMtL7qzEYUEuP",
+      "token_address": "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
+      "amount": 130,
+      "token_decimals": 8,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "7QHwoKtn2855QPabCJpmxswDVCDVPQWQfv6yLZz4zVjn",
+      "token_address": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
+      "amount": 1,
+      "token_decimals": 8,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "2cnuj8nWdjmwn7MzZhB2yzaHwL3dHUyzsHiXiS2qoQMB",
+      "token_address": "nGCjvApMgPVCuFVi5yUPWvGnRe8c83GEunsxG7o5o3i",
+      "amount": 1,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "14BCYXdXmqavJVzqVEsCUMzScV39igGwSk9cSCP6hrGm",
+      "token_address": "PzuaVAUH2tfxGZcbBR6kMxeJsBngnsPLFotGJNCtcsd",
+      "amount": 1,
+      "token_decimals": 8,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "8D1fV5JHbr2yXfgAa4ok57xayzgxbxKCVZYQGXcasvHj",
+      "token_address": "Hjw6bEcHtbHGpQr8onG3izfJY5DJiWdt7uk2BfdSpump",
+      "amount": 1,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "BB312FPDYZVVh2hzbq7bBqBeqhvYUkpRonaQ2FW2DtGc",
+      "token_address": "EdhTCqUxXRWQcUd5Fonyz9rapHAB6mABAuVkmPrtpump",
+      "amount": 1,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    },
+    {
+      "token_account": "EU9Z2v6o7RNCycDVNJ8xCF7SyBntEeAzLmLEeWAR2ZLH",
+      "token_address": "BP8RUdhLKBL2vgVXc3n7oTSZKWaQVbD8S6QcPaMVBAPo",
+      "amount": 0,
+      "token_decimals": 6,
+      "owner": "HDCgMMdCb1dtxw9QxKpiuC7UjguS12KExHmbonh5t7iw"
+    }
+  ],
+  "metadata": {
+    "tokens": {
+      "8wXtPeU6557ETkp9WHFY1n1EcU6NxDvbAggHGsMYiHsB": {
+        "token_address": "8wXtPeU6557ETkp9WHFY1n1EcU6NxDvbAggHGsMYiHsB",
+        "token_name": "GameStop",
+        "token_symbol": "GME",
+        "token_icon": "https://nftstorage.link/ipfs/bafybeiddrzeyne4n2hi7qkhyhqorc4jbs4565pset7fc3ifwvhvxfdrt7q/gamestop-logo.jpeg"
+      },
+      "FdDSKVqXFNPNXmVuJtHrWjqWzgfqgEDNkwuTrCVxpog3": {
+        "token_address": "FdDSKVqXFNPNXmVuJtHrWjqWzgfqgEDNkwuTrCVxpog3",
+        "token_name": "SAFEMOON",
+        "token_symbol": "SAFEMOON",
+        "token_icon": "https://gateway.irys.xyz/2YARTzs4LaL4FBUDJgZReVCCf6C4W8qmvZ5dgk92WqWE"
+      },
+      "9759dmFRoXEjAjToe7WmgKq6DeJL1Wj9RnSp4ZTHhJ2z": {
+        "token_address": "9759dmFRoXEjAjToe7WmgKq6DeJL1Wj9RnSp4ZTHhJ2z",
+        "token_name": "GANG",
+        "token_symbol": "GANG",
+        "token_icon": "https://gateway.irys.xyz/6nHvoDk9YWftmpnJa3dEW1F46nExrSesRMXCB37D5MY3"
+      },
+      "CHfSidPhzUEmu2ac8MHazDh9EEXYHezNxCHZ6YMtMMFZ": {
+        "token_address": "CHfSidPhzUEmu2ac8MHazDh9EEXYHezNxCHZ6YMtMMFZ",
+        "token_name": "Sorkincoin",
+        "token_symbol": "Sorkincoin",
+        "token_icon": "https://gateway.irys.xyz/HYVNTfpH9nH7iYdE7WabJPwXvy73EECTejQrE9cvujY3"
+      },
+      "GX9r6KnLYun7qKNDMDWTnrRWPa9gN1eeZb9WjkYV12yT": {
+        "token_address": "GX9r6KnLYun7qKNDMDWTnrRWPa9gN1eeZb9WjkYV12yT",
+        "token_name": "GYAT",
+        "token_symbol": "GYAT",
+        "token_icon": "https://gateway.irys.xyz/9GhR8zZwbLtFhDnWNcXG2VDDavNv2L7FDXoEQLHVc6qk"
+      },
+      "9498Jiz4LAZkYSayp7qzL3utwG8rDpGsrmxMVQQM3jTu": {
+        "token_address": "9498Jiz4LAZkYSayp7qzL3utwG8rDpGsrmxMVQQM3jTu",
+        "token_name": "SPX6900 (Wormhole)ㅤ",
+        "token_symbol": "SPXㅤ",
+        "token_icon": "https://gateway.irys.xyz/ZV_MUSqFOVCaXIzehwOcrFZvRYd2ZGHAsE_RJ6NYR1c"
+      },
+      "BMTNoLVm6RE6CgcUgxWLzJLkdhe2MUK775AZYavtAmPX": {
+        "token_address": "BMTNoLVm6RE6CgcUgxWLzJLkdhe2MUK775AZYavtAmPX",
+        "token_name": "BANGCHAIN",
+        "token_symbol": "BANGCHAIN",
+        "token_icon": "https://gateway.irys.xyz/2e13viPSe9515S81iwgRqKQ1HLFTaHEjacFEAuQNWoxf"
+      },
+      "7nZbZGnY6WkWDyKtYNMXPN6NbnLno61AxsFscFyj54Th": {
+        "token_address": "7nZbZGnY6WkWDyKtYNMXPN6NbnLno61AxsFscFyj54Th",
+        "token_name": "FAFO",
+        "token_symbol": "FAFO",
+        "token_icon": "https://gateway.irys.xyz/HTFrKNkVWqHyppDygr6Qja2hffboFKzPyHxoHtEVjKm4"
+      },
+      "5GN7yhv7M42ZXXRHiyvGTagqhaFEhaDRGGXHzTJ8YWN4": {
+        "token_address": "5GN7yhv7M42ZXXRHiyvGTagqhaFEhaDRGGXHzTJ8YWN4",
+        "token_name": "Musk lt",
+        "token_symbol": "Musk It",
+        "token_icon": "https://gateway.irys.xyz/tkW7hETgqcjtpQen2B5JpJFqVTRJQeXM95sPeoYco52"
+      },
+      "7YLRQLdiLAADgLh6z2ZA7vqesUert5fX4sY1fRwghcgB": {
+        "token_address": "7YLRQLdiLAADgLh6z2ZA7vqesUert5fX4sY1fRwghcgB",
+        "token_name": "Ana",
+        "token_symbol": "Ana",
+        "token_icon": "https://gateway.irys.xyz/8xcdgY6WK9ffzaEmmUDhYq2ezaX2KLvFe3nAZm8pNBhs"
+      },
+      "ASLzpD6KtxwqemULrVbeahguwqKGahhyXcbYRHuKXCDd": {
+        "token_address": "ASLzpD6KtxwqemULrVbeahguwqKGahhyXcbYRHuKXCDd",
+        "token_name": "BARRON",
+        "token_symbol": "BARRON",
+        "token_icon": "https://gateway.irys.xyz/BGdA4UoTXKUy5smJHq92bndABehr2nMvbNLgaXJr9u8J"
+      },
+      "APf3Gt2sAqXBkNiU6KBD6GLkWb93TKHVSyj3uZR1c9DV": {
+        "token_address": "APf3Gt2sAqXBkNiU6KBD6GLkWb93TKHVSyj3uZR1c9DV",
+        "token_name": "SHY",
+        "token_symbol": "SHY",
+        "token_icon": "https://gateway.irys.xyz/8pBncu8bYHDxjj2JwHHKPctxyhFa2JKemxnnjt9EJsru"
+      },
+      "8KNJvFAJDhTDirpT9wAUiCyZdRSZML85FEtfpVA9pump": {
+        "token_address": "8KNJvFAJDhTDirpT9wAUiCyZdRSZML85FEtfpVA9pump",
+        "token_name": "Pinguㅤ",
+        "token_symbol": "Pingu ",
+        "token_icon": "https://ipfs.io/ipfs/bafkreignk3mn6t3cvgdgiuzqjotqdwwboc66ylkkmhsbhpfhtiae4zkdb4"
+      },
+      "DjuVt3crJgS9QfWhN4THZ9APz4ZgJYDJunUib7vGmqHn": {
+        "token_address": "DjuVt3crJgS9QfWhN4THZ9APz4ZgJYDJunUib7vGmqHn",
+        "token_name": "LUX",
+        "token_symbol": "LUX",
+        "token_icon": "https://gateway.irys.xyz/73xs9zmr5Gao8DiVdqsqM1HYw1UxByuBGLuU7gvVzZwd"
+      },
+      "6hqB2ooPNdopjMbYLJcLCqjviUmEC7xiD11vnriCCcrX": {
+        "token_address": "6hqB2ooPNdopjMbYLJcLCqjviUmEC7xiD11vnriCCcrX",
+        "token_name": "jellyjelly",
+        "token_symbol": "jellyjelly",
+        "token_icon": "https://gateway.irys.xyz/AFzcBQyKPM4894eki2b8e6vw3PvCmGNuxtYK94xzaRtX"
+      },
+      "HJ39rRZ6ys22KdB3USxDgNsL7RKiQmsC3yL8AS3Suuku": {
+        "token_address": "HJ39rRZ6ys22KdB3USxDgNsL7RKiQmsC3yL8AS3Suuku",
+        "token_name": "What’s Updog?",
+        "token_symbol": "UPDOG",
+        "token_icon": "https://bafkreiauudlie5qbawgpcspplldfhza6xrruq6aayjdpkm6nriucpbzxmi.ipfs.nftstorage.link"
+      },
+      "C2YnH2AKTKF4MXM5sWr1U5NfMBPh1vwrCCSAQHkXQgSy": {
+        "token_address": "C2YnH2AKTKF4MXM5sWr1U5NfMBPh1vwrCCSAQHkXQgSy",
+        "token_name": "DeepSeekAI",
+        "token_symbol": "DeepSeekAI",
+        "token_icon": "https://gateway.irys.xyz/6cHoMWXiwgTUBjDdh4qPEbSAaXKNGNCLbM1vFw71XuFw"
+      },
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "token_name": "USDC",
+        "token_symbol": "USDC",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png"
+      },
+      "Ekcd1SnUB9anjAXqrecNHVawTBLiXvWXUxvGQ71Rz2Sb": {
+        "token_address": "Ekcd1SnUB9anjAXqrecNHVawTBLiXvWXUxvGQ71Rz2Sb",
+        "token_name": "Official Cuba Coin",
+        "token_symbol": "CUBA",
+        "token_icon": "https://ipfs.io/ipfs/QmQBa7T1dKoZ7dJy5gjmp7FVgVJkbb5cM6Vhh1zzVmbgfy"
+      },
+      "AB3edFFEYXFTCJL5eUDANEiqJwKvSa9MvnXu1PwKqMDX": {
+        "token_address": "AB3edFFEYXFTCJL5eUDANEiqJwKvSa9MvnXu1PwKqMDX",
+        "token_name": "Official Barron Meme",
+        "token_symbol": "BARRON",
+        "token_icon": "https://ipfs.io/ipfs/QmcufMnTwyAbFAjFhafDMp8f46ZQG3nEy3ic3XxP8xpNb1"
+      },
+      "7G96AG6bjBvb992XCfPZo9MoPkpTspC61JGRC25YWgK5": {
+        "token_address": "7G96AG6bjBvb992XCfPZo9MoPkpTspC61JGRC25YWgK5",
+        "token_name": "Artificial Isle Clams",
+        "token_symbol": "clams",
+        "token_icon": "https://ipfs.io/ipfs/QmRZUz1FLDVcZY14ehFq6kd5RT2UozSvxJ8CALTMempAy1"
+      },
+      "CaJ3NgEgQ3jUiEK5Ze271UaS5p5CMmBZLLU1j1o1bPuG": {
+        "token_address": "CaJ3NgEgQ3jUiEK5Ze271UaS5p5CMmBZLLU1j1o1bPuG",
+        "token_name": "Justice for Zachxbt",
+        "token_symbol": "ZACHXBT",
+        "token_icon": "https://ipfs.io/ipfs/Qmf4M1HDnp69aArNnLAn14Xy8N4b7nSdv6Xn9auYW7dRcq"
+      },
+      "F8jmSBmNe8PP1a9xqXDe1X5NYQTS3B1zE27huRBCpump": {
+        "token_address": "F8jmSBmNe8PP1a9xqXDe1X5NYQTS3B1zE27huRBCpump",
+        "token_name": "GOAT AI",
+        "token_symbol": "GOAT",
+        "token_icon": "https://ipfs.io/ipfs/QmNXXYvhf161UrR5iQgHgqMNgtK4PmKxEQ4iCbmyAwvawy"
+      },
+      "5B1hQeqkC9gtfUv8F2JLDn4d8Wuem17vqEAVrgUP3bMB": {
+        "token_address": "5B1hQeqkC9gtfUv8F2JLDn4d8Wuem17vqEAVrgUP3bMB",
+        "token_name": "Danko Coin",
+        "token_symbol": "DANKO",
+        "token_icon": "https://ipfs.io/ipfs/Qmeem8KcF2N7z6GcXdoH9CFMyv1zDsREJ7kYzghwBby9rQ"
+      },
+      "F8JDY6JRsD4ARXW5XGVyYSq4QViCkfouoe3FYqnPN2my": {
+        "token_address": "F8JDY6JRsD4ARXW5XGVyYSq4QViCkfouoe3FYqnPN2my",
+        "token_name": "Fart Of The United States",
+        "token_symbol": "FOTUS",
+        "token_icon": "https://ipfs.io/ipfs/QmbFv4b6RZS3iev9aY4XfbGGdvRtPUKJsbYCDTJm446UCU"
+      },
+      "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm": {
+        "token_address": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+        "token_name": "dogwifhat",
+        "token_symbol": "$WIF",
+        "token_icon": "https://bafkreibk3covs5ltyqxa272uodhculbr6kea6betidfwy3ajsav2vjzyum.ipfs.nftstorage.link"
+      },
+      "FkgnRFqZAXxVnt5z6fxzMN5jPGSbCrPDxrxKrVESCr9B": {
+        "token_address": "FkgnRFqZAXxVnt5z6fxzMN5jPGSbCrPDxrxKrVESCr9B",
+        "token_name": "NEDKELLY.CASH ",
+        "token_symbol": "NEDKELLY",
+        "token_icon": "https://ipfs.io/ipfs/QmWHtR48sG6rGvjX1sskJNrt96tqDou6w8SNCRfNcPxuJ2"
+      },
+      "7v6TPNHDvg3vyoJ9JEHCwVR36dRYLXnnUZn7ygv2U7X7": {
+        "token_address": "7v6TPNHDvg3vyoJ9JEHCwVR36dRYLXnnUZn7ygv2U7X7",
+        "token_name": "Musk It",
+        "token_symbol": "MUSKIT",
+        "token_icon": "https://ipfs.io/ipfs/QmQSb2Tp84XescoDSbt8xLseApiLjuJVoGJCkbvx8ujpGu"
+      },
+      "97XU8nv8t9672uaJECKDvoSuypzYA9a76HLpGVTADvNB": {
+        "token_address": "97XU8nv8t9672uaJECKDvoSuypzYA9a76HLpGVTADvNB",
+        "token_name": "SPL Token",
+        "token_symbol": "SPL Token",
+        "token_icon": null
+      },
+      "BoMbSn3KcWsUe1dgz5ddJrRaM6v44fpeARNA9t7Dpump": {
+        "token_address": "BoMbSn3KcWsUe1dgz5ddJrRaM6v44fpeARNA9t7Dpump",
+        "token_name": "XPi",
+        "token_symbol": "XPi",
+        "token_icon": "https://ipfs.io/ipfs/QmUoaCh5EcC39ccWQiY8w1b4UizPnkm1vmkrPcYMTKz1Ee"
+      },
+      "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+        "token_address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "token_name": "USDT",
+        "token_symbol": "USDT",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB/logo.svg"
+      },
+      "SPBVsi8ocpVXVgdTQWgJm7Vhm4bYh4Xt47WsCo214nt": {
+        "token_address": "SPBVsi8ocpVXVgdTQWgJm7Vhm4bYh4Xt47WsCo214nt",
+        "token_name": "SРХ6900 (Wоrmhоlе)",
+        "token_symbol": "SРХ",
+        "token_icon": "https://gateway.irys.xyz/63vaENQsLAxya5cvJ2Dq1tvJijiqd7sQZ8ciykoqhjCg"
+      },
+      "8wGyaD4e7kd5ac5gyZjYWcZWmpCX6M6nqhxTFowcmgyW": {
+        "token_address": "8wGyaD4e7kd5ac5gyZjYWcZWmpCX6M6nqhxTFowcmgyW",
+        "token_name": "dоgwifhоt",
+        "token_symbol": "$WlF",
+        "token_icon": "https://ipfs.io/ipfs/QmUQnwKHPcRk53aaf3C8bG1gJtvLhXij5Y5b1WSefF5akk"
+      },
+      "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh": {
+        "token_address": "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
+        "token_name": "Wrapped BTC (Wormhole)",
+        "token_symbol": "WBTC",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh/logo.png"
+      },
+      "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr": {
+        "token_address": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
+        "token_name": "SPX6900 (Wormhole)",
+        "token_symbol": "SPX",
+        "token_icon": "https://assets.coingecko.com/coins/images/31401/standard/sticker_%281%29.jpg?1702371083"
+      },
+      "nGCjvApMgPVCuFVi5yUPWvGnRe8c83GEunsxG7o5o3i": {
+        "token_address": "nGCjvApMgPVCuFVi5yUPWvGnRe8c83GEunsxG7o5o3i",
+        "token_name": "Marathon Digital Holdings Inc",
+        "token_symbol": "MARA",
+        "token_icon": "https://cf-ipfs.com/ipfs/QmSt11vDt2yamKFtHprHT2tGSrFvFCbdz6thmNKzw6Z3qA"
+      },
+      "PzuaVAUH2tfxGZcbBR6kMxeJsBngnsPLFotGJNCtcsd": {
+        "token_address": "PzuaVAUH2tfxGZcbBR6kMxeJsBngnsPLFotGJNCtcsd",
+        "token_name": "ZynCoin (Wormhole)",
+        "token_symbol": "ZYN"
+      },
+      "Hjw6bEcHtbHGpQr8onG3izfJY5DJiWdt7uk2BfdSpump": {
+        "token_address": "Hjw6bEcHtbHGpQr8onG3izfJY5DJiWdt7uk2BfdSpump",
+        "token_name": "SwarmNode.ai",
+        "token_symbol": "SNAI",
+        "token_icon": "https://ipfs.io/ipfs/Qmf978WVwJWAjeJaJY5jGiZ3YEdQgC43Cn4QowytAYos78"
+      },
+      "EdhTCqUxXRWQcUd5Fonyz9rapHAB6mABAuVkmPrtpump": {
+        "token_address": "EdhTCqUxXRWQcUd5Fonyz9rapHAB6mABAuVkmPrtpump",
+        "token_name": "UNITY",
+        "token_symbol": "UNITY",
+        "token_icon": "https://ipfs.io/ipfs/QmUug8yqYqfmxNT5sfzB6sa7oUnwnt1pRfad4zjmHNVUnX"
+      },
+      "BP8RUdhLKBL2vgVXc3n7oTSZKWaQVbD8S6QcPaMVBAPo": {
+        "token_address": "BP8RUdhLKBL2vgVXc3n7oTSZKWaQVbD8S6QcPaMVBAPo",
+        "token_name": "FAFO",
+        "token_symbol": "FAFO",
+        "token_icon": "https://ipfs.io/ipfs/QmfGZ5kJoVz1CyQbsJrivcYwXGH5e1xeTazwLW5QyWib71"
+      }
+    }
+  }
+}

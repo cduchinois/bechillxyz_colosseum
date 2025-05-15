@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'Analyse du Portefeuille Solana</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Configuration globale des graphiques pour un thème sombre
+        Chart.defaults.color = '#e0e0e0';
+        Chart.defaults.scale.grid.color = 'rgba(255, 255, 255, 0.1)';
+        Chart.defaults.scale.grid.borderColor = 'rgba(255, 255, 255, 0.2)';
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #121212;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .summary-card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #333;
+        }
+        .chart-container {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border: 1px solid #333;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+        h1, h2, h3 {
+            color: #b388ff;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .stat-card {
+            background-color: #252525;
+            border-left: 4px solid #b388ff;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #b388ff;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #bdbdbd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #252525;
+            color: #b388ff;
+        }
+        tr:nth-child(even) {
+            background-color: #2c2c2c;
+        }
+        tr:hover {
+            background-color: #333;
+        }
+        .token-pairs-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .token-pairs-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+            font-size: 1.1rem;
+        }
+        .token-pairs-list li:last-child {
+            border-bottom: none;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #9e9e9e;
+            background-color: #1e1e1e;
+            padding: 1rem;
+            border-radius: 8px;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rapport d'Analyse du Portefeuille Solana</h1>
+        <p>Adresse: GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S</p>
+        <p>Généré le: 14/05/2025 13:03:29</p>
+    </header>
+
+    <div class="summary-card">
+        <h2>Résumé du Portefeuille</h2>
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">58</div>
+                <div class="stat-label">Transactions totales</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">13</div>
+                <div class="stat-label">Tokens uniques</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">78197.54</div>
+                <div class="stat-label">Volume total (unités combinées)</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-value">77796.72 DFL</div>
+                <div class="stat-label">Volume principal</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Plateformes utilisées</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4</div>
+                <div class="stat-label">Plateforme principale</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="summary-card">
+        <h2>Analyse Temporelle</h2>
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">7 avr. 2025, 08:17</div>
+                <div class="stat-label">Première activité</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">13 mai 2025, 21:55</div>
+                <div class="stat-label">Dernière activité</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-value">10.8 jours</div>
+                <div class="stat-label">Période d'inactivité la plus longue</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">98%</div>
+                <div class="stat-label">Activités en semaine</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">3%</div>
+                <div class="stat-label">Activités le weekend</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="chart-container">
+            <h2>Répartition par Plateforme</h2>
+            <canvas id="platformsChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Types d'Activités</h2>
+            <canvas id="activitiesChart"></canvas>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="chart-container">
+            <h2>Top 5 Tokens par Volume</h2>
+            <canvas id="tokensChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Top 5 Paires de Tokens</h2>
+            <canvas id="pairsChart"></canvas>
+        </div>
+    </div>
+    
+    <div class="summary-card">
+        <h2>Principales Paires de Tokens</h2>
+        
+        <ul class="token-pairs-list">
+            <li>USDC ↔ DFL: 20 transactions</li><li>USDC ↔ DRIFT: 9 transactions</li><li>DFL ↔ USDC: 5 transactions</li><li>USDC ↔ PYTH: 4 transactions</li><li>USDC ↔ JUP: 3 transactions</li>
+        </ul>
+        
+    </div>
+    
+    
+    <div class="summary-card">
+        <h2>Estimation de Valeur USD</h2>
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">$181,39</div>
+                <div class="stat-label">Valeur totale estimée</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">11</div>
+                <div class="stat-label">Tokens avec estimation prix</div>
+            </div>
+        </div>
+        
+        <h3>Top Tokens par Valeur USD</h3>
+        <table>
+            <tr>
+                <th>Token</th>
+                <th>Volume Natif</th>
+                <th>Prix USDT</th>
+                <th>Valeur USD Estimée</th>
+            </tr>
+            
+            <tr>
+                <td>USDC</td>
+                <td>95,6925 unités</td>
+                <td>$0.999946</td>
+                <td>$95,69</td>
+            </tr>
+            <tr>
+                <td>DRIFT</td>
+                <td>79,2451 unités</td>
+                <td>$0.590541</td>
+                <td>$46,8</td>
+            </tr>
+            <tr>
+                <td>DFL</td>
+                <td>77 796,7224 unités</td>
+                <td>$0.000190</td>
+                <td>$14,78</td>
+            </tr>
+            <tr>
+                <td>WSOL</td>
+                <td>0,0692 unités</td>
+                <td>$147.180000</td>
+                <td>$10,19</td>
+            </tr>
+            <tr>
+                <td>PYTH</td>
+                <td>48,2789 unités</td>
+                <td>$0.135916</td>
+                <td>$6,56</td>
+            </tr>
+        </table>
+    </div>
+    
+    
+    
+    <h2>Analyse Temporelle</h2>
+    <div class="grid">
+        <div class="chart-container">
+            <h2>Distribution par Heure de la Journée</h2>
+            <canvas id="hourlyChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Distribution par Jour de la Semaine</h2>
+            <canvas id="weekdayChart"></canvas>
+        </div>
+    </div>
+    
+    <div class="grid">
+        <div class="chart-container">
+            <h2>Distribution par Mois</h2>
+            <canvas id="monthlyChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Activités Semaine vs Weekend</h2>
+            <canvas id="weekendChart"></canvas>
+        </div>
+    </div>
+    
+
+    <div class="summary-card">
+        <h2>Détails des Tokens</h2>
+        <table>
+            <tr>
+                <th>Token</th>
+                <th>Volume Total</th>
+                <th>Transactions</th>
+                <th>% du Volume</th>
+            </tr>
+            
+            <tr>
+                <td>DFL</td>
+                <td>77796.722 DFL (unités natives)</td>
+                <td>26</td>
+                <td>99.5%</td>
+            </tr>
+            <tr>
+                <td>Fffijd6U...</td>
+                <td>147.163 Fffijd6U... (unités natives)</td>
+                <td>1</td>
+                <td>0.2%</td>
+            </tr>
+            <tr>
+                <td>USDC</td>
+                <td>95.693 USDC (unités natives)</td>
+                <td>46</td>
+                <td>0.1%</td>
+            </tr>
+            <tr>
+                <td>DRIFT</td>
+                <td>79.245 DRIFT (unités natives)</td>
+                <td>13</td>
+                <td>0.1%</td>
+            </tr>
+            <tr>
+                <td>PYTH</td>
+                <td>48.279 PYTH (unités natives)</td>
+                <td>4</td>
+                <td>0.1%</td>
+            </tr>
+            <tr>
+                <td>SHDW</td>
+                <td>9.309 SHDW (unités natives)</td>
+                <td>1</td>
+                <td>0.0%</td>
+            </tr>
+            <tr>
+                <td>ai16z</td>
+                <td>7.600 ai16z (unités natives)</td>
+                <td>1</td>
+                <td>0.0%</td>
+            </tr>
+            <tr>
+                <td>MPLX</td>
+                <td>7.559 MPLX (unités natives)</td>
+                <td>1</td>
+                <td>0.0%</td>
+            </tr>
+            <tr>
+                <td>DPiDqBBm...</td>
+                <td>3.579 DPiDqBBm... (unités natives)</td>
+                <td>1</td>
+                <td>0.0%</td>
+            </tr>
+            <tr>
+                <td>JUP</td>
+                <td>2.206 JUP (unités natives)</td>
+                <td>3</td>
+                <td>0.0%</td>
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+        // Graphique des plateformes
+        new Chart(document.getElementById('platformsChart'), {
+            type: 'pie',
+            data: {
+                labels: ['JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4','675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8','DF1ow4tspfHX9JwWJsAb9epbkA8hmpSEAtxXy1V27QBH'],
+                datasets: [{
+                    data: [50,6,2],
+                    backgroundColor: ['#7c4dff', '#b388ff', '#651fff', '#aa00ff', '#d500f9']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Distribution des Plateformes'
+                    }
+                }
+            }
+        });
+        
+        // Graphique des types d'activités
+        new Chart(document.getElementById('activitiesChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['AGG_TOKEN_SWAP','TOKEN_ADD_LIQ','TOKEN_WITHDRAW_VAULT','TOKEN_DEPOSIT_VAULT','SPL_MINT','TOKEN_SWAP','SPL_BURN'],
+                datasets: [{
+                    data: [40,5,4,4,2,2,1],
+                    backgroundColor: ['#00b0ff', '#00e5ff', '#1de9b6', '#00e676', '#76ff03', '#ffea00', '#ffc400']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Distribution des Types d'Activités'
+                    }
+                }
+            }
+        });
+        
+        // Graphique des tokens par volume
+        new Chart(document.getElementById('tokensChart'), {
+            type: 'bar',
+            data: {
+                labels: ['DFL','Fffijd6U...','USDC','DRIFT','PYTH'],
+                datasets: [{
+                    label: 'Volume (unités natives)',
+                    data: [77796.722425006,147.163494482,95.69250600000001,79.245106,48.278892],
+                    backgroundColor: '#bb86fc'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Volume par Token (en unités natives, non-convertis)'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.raw + ' unités';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Graphique des paires de tokens
+        new Chart(document.getElementById('pairsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['USDC ↔ DFL','USDC ↔ DRIFT','DFL ↔ USDC','USDC ↔ PYTH','USDC ↔ JUP'],
+                datasets: [{
+                    label: 'Nombre de Transactions',
+                    data: [20,9,5,4,3],
+                    backgroundColor: '#03dac6'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Nombre de Transactions par Paire'
+                    }
+                }
+            }
+        });
+        
+        // Graphique de distribution par heure
+        new Chart(document.getElementById('hourlyChart'), {
+            type: 'bar',
+            data: {
+                labels: Array.from({length: 24}, (_, i) => `${i}h`),
+                datasets: [{
+                    label: 'Nombre d'activités',
+                    data: [0,3,4,1,0,0,0,5,1,0,5,0,0,4,5,0,0,0,0,0,0,12,0,0],
+                    backgroundColor: '#00e676',
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribution des activités par heure de la journée'
+                    }
+                }
+            }
+        });
+        
+        // Graphique de distribution par jour de la semaine
+        new Chart(document.getElementById('weekdayChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+                datasets: [{
+                    label: 'Nombre d'activités',
+                    data: [0,3,13,9,5,9,1],
+                    backgroundColor: '#ffab00',
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribution des activités par jour de la semaine'
+                    }
+                }
+            }
+        });
+        
+        // Graphique de distribution par mois
+        new Chart(document.getElementById('monthlyChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc'],
+                datasets: [{
+                    label: 'Nombre d'activités',
+                    data: [0,0,0,35,5,0,0,0,0,0,0,0],
+                    backgroundColor: '#00b0ff',
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribution des activités par mois'
+                    }
+                }
+            }
+        });
+        
+        // Graphique des activités semaine vs weekend
+        new Chart(document.getElementById('weekendChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Semaine', 'Weekend'],
+                datasets: [{
+                    data: [39, 1],
+                    backgroundColor: ['#536dfe', '#ff4081']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Répartition des activités Semaine/Weekend'
+                    }
+                }
+            }
+        });
+        
+    </script>
+
+    <footer>
+        <p>Analyse réalisée par Solana DeFi Analyzer • 2025</p>
+    </footer>
+</body>
+</html>

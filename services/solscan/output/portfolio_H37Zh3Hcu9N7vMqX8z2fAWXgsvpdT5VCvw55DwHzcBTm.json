@@ -1,0 +1,94 @@
+{
+  "success": true,
+  "data": {
+    "total_value": 8.318402534738876,
+    "native_balance": {
+      "amount": 39892466,
+      "balance": 0.039892466,
+      "token_price": 175.89414779828414,
+      "token_decimals": 9,
+      "token_name": "SOL",
+      "token_symbol": "SOL",
+      "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+      "value": 7.016851310642025
+    },
+    "tokens": [
+      {
+        "token_address": "9zpoUp14qXg4ibKN7DP2SKGMmdTumPcXNkuZuy1dbonk",
+        "amount": 141275405019,
+        "balance": 141275.405019,
+        "token_price": 0.0000050494232826873095,
+        "token_decimals": 6,
+        "token_name": "SOLANA NEW MOVIE MEMECOIN",
+        "token_symbol": "BUTTFUCK",
+        "token_icon": "https://ipfs.io/ipfs/bafkreifwpy34lmbtx2finh57ehd4csmqccwmeo4aztmxwto7tugapcpoda",
+        "value": 0.7133593193740182
+      },
+      {
+        "token_address": "BqpiqXC82nwvEjCvnBKc72saTHZarfEHcV1iozcYpump",
+        "amount": 94239666866,
+        "balance": 94239.666866,
+        "token_price": 0.0000036877633569743637,
+        "token_decimals": 6,
+        "token_name": "An An",
+        "token_symbol": "AnAn",
+        "token_icon": "https://ipfs.io/ipfs/QmUdyZELhTMW4K3MjSAqsxRZzPvHo8aL7XLzyLfDRUr4Ln",
+        "value": 0.3475335902419059
+      },
+      {
+        "token_address": "AwA7D3jKpytsXSAJTZYY9NzV4HRKKLAyWJw9YoZwbonk",
+        "amount": 40259216223,
+        "balance": 40259.216223,
+        "token_price": 0.000005519031808966693,
+        "token_decimals": 6,
+        "token_name": "CONK",
+        "token_symbol": "CONK",
+        "token_icon": "https://ipfs.io/ipfs/bafybeiascbc6q75qnufer3mdgtlu4quenbteaujo7g6iofeixhu7a444ze",
+        "value": 0.22219189493880492
+      },
+      {
+        "token_address": "So11111111111111111111111111111111111111112",
+        "amount": 104981,
+        "balance": 0.000104981,
+        "token_price": 175.89414779828414,
+        "token_decimals": 9,
+        "token_name": "Wrapped SOL",
+        "token_symbol": "WSOL",
+        "token_icon": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+        "value": 0.018465543530011667
+      },
+      {
+        "token_address": "3tXQ9xbXHic4b8Uu6fuxesC4v5ggFvjsjbHqaZuDpump",
+        "amount": 142136,
+        "balance": 0.142136,
+        "token_price": 0.000006161592388303618,
+        "token_decimals": 6,
+        "token_name": "AkrokaAI",
+        "token_symbol": "AIAKR",
+        "token_icon": "https://ipfs.io/ipfs/QmRjFynLs7SwsEZEkRph9opkDHuZy5yBVY3rK7kuYfGtQm",
+        "value": 8.757840957039231e-7
+      },
+      {
+        "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "amount": 1,
+        "balance": 0.00001,
+        "token_price": 0.00002280156678375984,
+        "token_decimals": 5,
+        "token_name": "Bonk",
+        "token_symbol": "Bonk",
+        "token_icon": "https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I",
+        "value": 2.280156678375984e-10
+      },
+      {
+        "token_address": "95U1zWn1T58wSb5HEXN2BTdFgEsRrqGKaUbFEeLiaWSj",
+        "amount": 4500000000000,
+        "balance": 45000,
+        "token_decimals": 8,
+        "token_name": "Wrapped Runes (Wormhole)",
+        "token_symbol": "wRUNES",
+        "value": 0
+      }
+    ]
+  },
+  "metadata": {}
+}

@@ -1,12 +1,9 @@
+import React, {useState} from 'react';
+import {Pressable, StyleSheet, Text, Platform, Alert} from 'react-native';
 import {transact} from '@solana-mobile/mobile-wallet-adapter-protocol-web3js';
-import React, {ComponentProps, useState} from 'react';
-import {Button, StyleSheet, View, Platform, Alert} from 'react-native';
-
 import {useAuthorization} from './providers/AuthorizationProvider';
 
-type Props = Readonly<ComponentProps<typeof Button>>;
-
-export default function DisconnectButton(props: Props) {
+export default function DisconnectButton({title = 'DISCONNECT'}) {
   const {deauthorizeSession} = useAuthorization();
   const [isDisconnecting, setIsDisconnecting] = useState(false);
 
@@ -18,14 +15,10 @@ export default function DisconnectButton(props: Props) {
     try {
       setIsDisconnecting(true);
 
-      // Sur les appareils physiques, effectuez une déconnexion manuelle
       if (Platform.OS === 'android' && !__DEV__) {
-        // Forcer la déconnexion en réinitialisant l'état d'autorisation
-        // sans appeler transact qui peut échouer sur les appareils physiques
         await deauthorizeSession(null);
         console.log('Manually disconnected (bypassing wallet protocol)');
       } else {
-        // Sur les émulateurs ou en développement, utiliser transact normalement
         await transact(async wallet => {
           await deauthorizeSession(wallet);
         });
@@ -33,8 +26,6 @@ export default function DisconnectButton(props: Props) {
       }
     } catch (error) {
       console.error('Error disconnecting wallet:', error);
-
-      // Forcer la déconnexion même si l'erreur se produit
       if (Platform.OS === 'android') {
         try {
           await deauthorizeSession(null);
@@ -54,21 +45,32 @@ export default function DisconnectButton(props: Props) {
   };
 
   return (
-    <View style={styles.buttonContainer}>
-      <Button
-        {...props}
-        color="#FF6666"
-        disabled={isDisconnecting}
-        onPress={handleDisconnect}
-      />
-    </View>
+    <Pressable
+      onPress={handleDisconnect}
+      disabled={isDisconnecting}
+      style={({pressed}) => [
+        styles.button,
+        pressed && {opacity: 0.8},
+        isDisconnecting && {opacity: 0.5},
+      ]}>
+      <Text style={styles.buttonText}>{title}</Text>
+    </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  buttonContainer: {
+  button: {
+    backgroundColor: '#8C53E7',
     borderRadius: 25,
-    overflow: 'hidden',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
     minWidth: 120,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#FFFF4F',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    fontSize: 14,
   },
 });

@@ -1,5 +1,10 @@
 import React from 'react';
 import {View, TouchableOpacity, Image, Text, StyleSheet} from 'react-native';
+<<<<<<< HEAD
+=======
+import {Colors} from '../constants/GlobalStyles';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+>>>>>>> web
 
 /**
  * Barre de navigation complète pour l'app BeChill
@@ -18,11 +23,16 @@ const BottomBar: React.FC<BottomBarProps> = ({
 }) => {
   // Définir les onglets disponibles avec leurs icônes et leurs labels
   const tabs = [
+<<<<<<< HEAD
+=======
+    /*
+>>>>>>> web
     {
       id: 'assets',
       iconPath: require('../../assets/img/assets.png'),
       label: 'Assets',
     },
+<<<<<<< HEAD
     {
       id: 'objectives',
       iconPath: require('../../assets/img/objectives.png'),
@@ -34,19 +44,47 @@ const BottomBar: React.FC<BottomBarProps> = ({
       label: 'Chillbot',
     },
     {
+=======
+    */
+    {
+      id: 'onboarding',
+      iconName: 'sms',
+      activeIconName: 'sms',
+      label: 'Chat',
+    },
+    {
+      id: 'chillspace',
+      icon: require('../../assets/img/chillspace.png'),
+      activeIcon: null, // même icône active/inactive
+      label: 'ChillSpace',
+    },
+    {
+      id: 'settings',
+      iconName: 'settings',
+      activeIconName: 'settings',
+      label: 'Settings',
+    },
+    /*
+    {
+>>>>>>> web
       id: 'history',
       iconPath: require('../../assets/img/history.png'),
       label: 'History',
     },
+<<<<<<< HEAD
     {
       id: 'profile',
       iconPath: require('../../assets/img/profile.png'),
       label: 'Profile',
     },
+=======
+    */
+>>>>>>> web
   ];
 
   return (
     <View style={styles.container}>
+<<<<<<< HEAD
       {tabs.map(tab => (
         <TouchableOpacity
           key={tab.id}
@@ -69,6 +107,43 @@ const BottomBar: React.FC<BottomBarProps> = ({
           </Text>
         </TouchableOpacity>
       ))}
+=======
+      {tabs.map(tab => {
+        const isActive = activeScreen === tab.id;
+
+        return (
+          <TouchableOpacity
+            key={tab.id}
+            style={styles.tabItem}
+            onPress={() => onScreenChange(tab.id)}>
+            {tab.iconName ? (
+              <MaterialIcons
+                name={isActive ? tab.activeIconName : tab.iconName}
+                size={24}
+                color={isActive ? Colors.primary : '#bbbbbb'}
+              />
+            ) : (
+              <Image
+                source={tab.icon}
+                style={[
+                  styles.tabIcon,
+                  isActive ? styles.activeIcon : styles.inactiveIcon,
+                ]}
+                resizeMode="contain"
+              />
+            )}
+
+            <Text
+              style={[
+                styles.tabText,
+                isActive ? styles.activeText : styles.inactiveText,
+              ]}>
+              {tab.label}
+            </Text>
+          </TouchableOpacity>
+        );
+      })}
+>>>>>>> web
     </View>
   );
 };
@@ -93,7 +168,11 @@ const styles = StyleSheet.create({
     marginBottom: 3,
   },
   activeIcon: {
+<<<<<<< HEAD
     tintColor: '#8A2BE2', // Couleur violette pour l'icône active
+=======
+    tintColor: Colors.primary, // Couleur violette pour l'icône active
+>>>>>>> web
   },
   inactiveIcon: {
     tintColor: '#bbbbbb', // Couleur grise pour les icônes inactives
@@ -102,7 +181,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   activeText: {
+<<<<<<< HEAD
     color: '#8A2BE2', // Couleur violette pour le texte actif
+=======
+    color: Colors.primary,
+>>>>>>> web
     fontWeight: 'bold',
   },
   inactiveText: {

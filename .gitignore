@@ -75,3 +75,8 @@ ios/Pods/
 /frontend/mobile/vendor/bundle
 **/vendor/
 
+# Ignore all chatHistory.json files
+**/chatHistory.json
+
+# Ignore all output folders
+**/output/

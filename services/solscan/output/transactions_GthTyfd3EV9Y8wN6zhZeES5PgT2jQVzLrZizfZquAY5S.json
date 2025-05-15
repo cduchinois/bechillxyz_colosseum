@@ -9681,14 +9681,14 @@
   ],
   "metadata": {
     "total": 200,
-    "batches_fetched": 4,
+    "batches_fetched": 0,
     "max_batches": 5,
     "batch_size": 40,
     "max_requested": 200,
     "pagination_method": "signature_based",
     "last_signature": "3yrfUuB3jkaoXYxe6VkiJaF3rYo8bT26LzrU5aGwk4HqMmynBYZyG62e5TdcqzJvtPwtDumXk1yiES4VmA9S791Z",
     "address": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S",
-    "collected_at": "2025-05-14T14:04:28.804Z",
+    "collected_at": "2025-05-14T19:14:44.211Z",
     "filters": {
       "startDate": null,
       "endDate": null,

@@ -242,7 +242,7 @@ function generateHtmlContent(data) {
         <div class="stats">
             <div class="stat-card">
                 <div class="stat-value">${data.summary.totalTransactions}</div>
-                <div class="stat-label">Transactions totales</div>
+                <div class="stat-label">Transactions totales sur la période</div>
             </div>
             <div class="stat-card">
                 <div class="stat-value">${data.summary.uniqueTokens}</div>

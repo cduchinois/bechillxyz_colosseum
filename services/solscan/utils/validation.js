@@ -1,7 +1,8 @@
-
 /**
  * Utilitaires de validation pour le projet
  */
+import { ErrorHandler } from './error_handler.js';
+
 export class Validation {
   /**
    * Vérifie si une chaîne est une adresse Solana valide
@@ -66,5 +67,34 @@ export class Validation {
       isValid: true, 
       message: 'L\'adresse est valide' 
     };
+  }
+
+  /**
+   * Vérifie si une adresse Solana est valide et enregistre une erreur si ce n'est pas le cas
+   * Arrête également le processus si exitOnError est à true
+   * @param {string} address - L'adresse à valider
+   * @param {string} source - La source de la validation (nom du script ou module)
+   * @param {boolean} exitOnError - Si true, arrête le processus en cas d'erreur
+   * @returns {boolean} - true si l'adresse est valide, sinon false (et enregistre une erreur)
+   */
+  static validateAndLogAddress(address, source = 'unknown', exitOnError = true) {
+    // Initialiser le gestionnaire d'erreurs
+    ErrorHandler.initialize();
+    
+    // Valider l'adresse
+    const validationResult = this.validateSolanaAddress(address);
+    
+    // Si l'adresse n'est pas valide, enregistrer l'erreur
+    if (!validationResult.isValid) {
+      ErrorHandler.logValidationError(
+        address, 
+        validationResult.message,
+        source,
+        exitOnError
+      );
+      return false;
+    }
+    
+    return true;
   }
 }

@@ -1,5 +1,6 @@
 import { SolscanApiClient, DataUtils } from './utils/api_client.js';
 import { existsSync } from 'fs';
+import { Validation } from './utils/validation.js';
 
 /**
  * Classe pour collecter les données d'analyse d'un portefeuille Solana
@@ -9,23 +10,21 @@ class SolanaDataCollector {
   /**
    * Valide une adresse Solana
    * @param {string} address - L'adresse à valider
+   * @param {boolean} logError - Si true, enregistre l'erreur dans le fichier output/errors.json
    * @returns {boolean} true si l'adresse est valide, false sinon
    * @static
+   * @deprecated Utilisez directement Validation.validateAndLogAddress à la place
    */
-  static validateSolanaAddress(address) {
-    if (!address || typeof address !== 'string') {
-      return false;
+  static validateSolanaAddress(address, logError = false) {
+    // La classe Validation est maintenant importée au niveau du module
+    
+    if (logError) {
+      // Utiliser la méthode validateAndLogAddress qui enregistre les erreurs
+      return Validation.validateAndLogAddress(address, 'data_collector.js', false);
+    } else {
+      // Utiliser la méthode existante
+      return Validation.isSolanaAddress(address);
     }
-
-    // Vérifier la longueur de l'adresse
-    if (address.length < 32 || address.length > 44) {
-      return false;
-    }
-
-    // Vérifier le format base58: caractères alphanumériques sans 0 (zéro), O (o majuscule), 
-    // I (i majuscule) et l (L minuscule)
-    const base58Regex = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
-    return base58Regex.test(address);
   }
   
   /**
@@ -49,8 +48,11 @@ class SolanaDataCollector {
    * @param {boolean} options.debug - Mode debug
    */
   constructor(walletAddress, options = {}) {
-    // Valider l'adresse du portefeuille
-    if (!SolanaDataCollector.validateSolanaAddress(walletAddress)) {
+    // Valider l'adresse du portefeuille avec notre système d'erreur
+    // La classe Validation est maintenant importée au niveau du module
+    
+    // Valider et enregistrer l'erreur mais sans arrêter le processus (throw error instead)
+    if (!Validation.validateAndLogAddress(walletAddress, 'data_collector.js', false)) {
       throw new Error(`Adresse Solana invalide: ${walletAddress}. Une adresse Solana valide est encodée en base58 et a généralement entre 32 et 44 caractères.`);
     }
     

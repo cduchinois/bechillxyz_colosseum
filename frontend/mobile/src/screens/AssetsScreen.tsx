@@ -8,10 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Header from '../components/Header';
-<<<<<<< HEAD
-=======
 import {Colors, Fonts} from '../constants/GlobalStyles';
->>>>>>> web
 
 // Composant pour simuler un mini graphique avec un emoji
 const SimpleSparkline = ({trend = 'up', style = {}}) => {
@@ -192,12 +189,8 @@ const styles = StyleSheet.create({
   },
   walletTitle: {
     fontSize: 24,
-<<<<<<< HEAD
-    color: '#8A2BE2',
-=======
     fontFamily: Fonts.DMSerif,
     color: Colors.primary,
->>>>>>> web
     fontWeight: '600',
   },
   addButton: {
@@ -230,21 +223,13 @@ const styles = StyleSheet.create({
   },
   netWorthLabel: {
     fontSize: 16,
-<<<<<<< HEAD
-    color: '#333',
-=======
     color: Colors.primary,
->>>>>>> web
     marginBottom: 5,
   },
   netWorthValue: {
     fontSize: 30,
     fontWeight: 'bold',
-<<<<<<< HEAD
-    color: '#8A2BE2',
-=======
     color: Colors.primary,
->>>>>>> web
   },
   tokenDistribution: {
     flexDirection: 'row',
@@ -276,12 +261,8 @@ const styles = StyleSheet.create({
   },
   assetListTitle: {
     fontSize: 24,
-<<<<<<< HEAD
-    color: '#8A2BE2',
-=======
     color: Colors.primary,
     fontFamily: Fonts.DMSerif,
->>>>>>> web
     fontWeight: '600',
     marginBottom: 15,
   },

@@ -41,17 +41,6 @@ export default function AccountInfo({
   balance,
 }: AccountInfoProps) {
   return (
-<<<<<<< HEAD
-    <View style={styles.container}>
-      <View style={styles.textContainer}>
-        <Text style={styles.walletHeader}>Wallet Account Info</Text>
-        <Text style={styles.walletBalance}>
-          {selectedAccount.label
-            ? `${selectedAccount.label}: ${
-                balance ? convertLamportsToSOL(balance) : '0'
-              } SOL`
-            : 'Wallet name not found'}
-=======
     <View style={styles.card}>
       <View style={styles.leftColumn}>
         <Text style={styles.title}>Connected Wallet</Text>
@@ -61,7 +50,6 @@ export default function AccountInfo({
         <Text style={styles.balance}>
           Total balance:{' '}
           {balance !== null ? convertLamportsToSOL(balance) : '$0.00'}
->>>>>>> web
         </Text>
       </View>
 

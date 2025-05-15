@@ -37,7 +37,7 @@ Follow the guide to make sure you:
 ```
 npx react-native init MySolanaDapp --template https://github.com/solana-mobile/solana-mobile-dapp-scaffold.git
 ```
-2. Install dependencies
+2. Install dependencies (use legacy peer deep to resolve err)
 - `yarn install` or `npm install`
 3. Launch the app on your Android device/emulator
 - `npx react-native run-android`

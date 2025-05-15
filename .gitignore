@@ -69,3 +69,9 @@ ios/Pods/
 
 # Build artifacts
 *.pack
+
+#ruby bundle
+/frontend/mobile/vendor/
+/frontend/mobile/vendor/bundle
+**/vendor/
+

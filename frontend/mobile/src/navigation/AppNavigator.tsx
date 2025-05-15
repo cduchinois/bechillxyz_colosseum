@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {View, Text, StyleSheet, AsyncStorage} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import MainScreen from '../screens/MainScreen';
 import OnboardingScreen from '../screens/OnboardingScreen';
 import WalletStoryScreen from '../screens/WalletStoryScreen';
@@ -57,7 +57,7 @@ function AppNavigator() {
       }}>
       {isConnected ? (
         // L'utilisateur est connecté, montrer l'écran info
-        <Stack.Screen name="Info" component={InfoScreen} />
+        <Stack.Screen name="assets" component={InfoScreen} />
       ) : // L'utilisateur n'est pas connecté
       isFirstTime ? (
         // C'est sa première fois, montrer l'onboarding

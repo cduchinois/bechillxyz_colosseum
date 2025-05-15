@@ -3,5 +3,11 @@
         "comments": "#2e613f",
         "textMateRules": []
     },
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#213035",
+        "titleBar.activeBackground": "#2E434A",
+        "titleBar.activeForeground": "#F9FBFB"
+    },
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

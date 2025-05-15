@@ -66,7 +66,7 @@ const CloudComponent = ({
     return () => {
       xPosition.stopAnimation();
     };
-  }, [cloud.direction, cloud.speed, cloudWidth, screenWidth]);
+  }, [cloud.direction, cloud.speed, cloudWidth, screenWidth, xPosition]);
 
   return (
     <Animated.View
@@ -96,9 +96,11 @@ const CloudComponent = ({
 };
 
 const AnimatedClouds = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [screenWidth, setScreenWidth] = useState(
     Dimensions.get('window').width,
   );
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [screenHeight, setScreenHeight] = useState(
     Dimensions.get('window').height,
   );

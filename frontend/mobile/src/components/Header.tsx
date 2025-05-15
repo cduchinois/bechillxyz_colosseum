@@ -1,62 +1,52 @@
 import React from 'react';
-import {
-  ImageBackground,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {Colors} from '../constants/GlobalStyles';
 
-export function Header() {
-  const isDarkMode = useColorScheme() === 'dark';
+const Header = () => {
   return (
-    <ImageBackground
-      accessibilityRole="image"
-      testID="new-app-screen-header"
-      source={require('../../assets/img/background.png')}
-      style={[
-        styles.background,
-        {
-          backgroundColor: isDarkMode
-            ? Colors.textPrimary
-            : Colors.textSecondary,
-        },
-      ]}
-      imageStyle={styles.logo}>
-      <View>
-        <Text style={styles.title}>BeChill</Text>
-        <Text style={styles.subtitle}>
-          Build by degens,{'\n'}for degens{'\n'} just Chill
-        </Text>
+    <View style={styles.header}>
+      <View style={styles.logoContainer}>
+        <Image
+          source={require('../../assets/img/bechill-head2.png')}
+          style={styles.logo}
+        />
+        <Text style={styles.logoText}>ChillSpace</Text>
       </View>
-    </ImageBackground>
+      {/* Ligne blanche */}
+      <View style={styles.underline} />
+    </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  background: {
-    paddingBottom: 40,
-    paddingTop: 60,
-    paddingHorizontal: 32,
+  header: {
+    padding: 15,
+  },
+  logoContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
   },
   logo: {
-    overflow: 'visible',
-    resizeMode: 'cover',
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    marginLeft: 10,
   },
-  subtitle: {
-    color: '#333',
-    fontSize: 24,
-    textAlign: 'center',
-    fontFamily: 'PP Monument Extended',
+  logoText: {
+    fontSize: 28,
     fontWeight: 'bold',
-    fontStyle: 'italic',
+    color: Colors.primary,
+    marginLeft: 10,
   },
-  title: {
-    color: '#fff',
-    fontSize: 50,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    fontFamily: 'PP Monument Extended',
+  underline: {
+    marginTop: 10,
+    height: 1,
+    backgroundColor: 'white',
+    width: '90%',
+    alignSelf: 'center',
+    borderRadius: 1,
   },
 });
+
+export default Header;

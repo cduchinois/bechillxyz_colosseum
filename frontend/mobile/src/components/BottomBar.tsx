@@ -1,5 +1,7 @@
 import React from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, Image, Text, StyleSheet} from 'react-native';
+import {Colors} from '../constants/GlobalStyles';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 /**
  * Barre de navigation complète pour l'app BeChill
@@ -7,33 +9,88 @@ import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
  * @param {string} props.activeScreen - L'écran actif
  * @param {Function} props.onScreenChange - Fonction appelée lors d'un changement d'écran
  */
-const BottomBar = ({activeScreen, onScreenChange}) => {
-  // Définir les onglets disponibles
+interface BottomBarProps {
+  activeScreen: string;
+  onScreenChange: (screen: string) => void;
+}
+
+const BottomBar: React.FC<BottomBarProps> = ({
+  activeScreen,
+  onScreenChange,
+}) => {
+  // Définir les onglets disponibles avec leurs icônes et leurs labels
   const tabs = [
-    {id: 'wallet', label: 'Wallet', icon: '💰'},
-    {id: 'profile', label: 'Profil', icon: '👤'},
-    {id: 'strategy', label: 'Stratégie', icon: '📈'},
-    {id: 'actions', label: 'Actions', icon: '🚀'},
-    {id: 'learn', label: 'Apprendre', icon: '📚'},
+    /*
+    {
+      id: 'assets',
+      iconPath: require('../../assets/img/assets.png'),
+      label: 'Assets',
+    },
+    */
+    {
+      id: 'onboarding',
+      iconName: 'sms',
+      activeIconName: 'sms',
+      label: 'Chat',
+    },
+    {
+      id: 'chillspace',
+      icon: require('../../assets/img/chillspace.png'),
+      activeIcon: null, // même icône active/inactive
+      label: 'ChillSpace',
+    },
+    {
+      id: 'settings',
+      iconName: 'settings',
+      activeIconName: 'settings',
+      label: 'Settings',
+    },
+    /*
+    {
+      id: 'history',
+      iconPath: require('../../assets/img/history.png'),
+      label: 'History',
+    },
+    */
   ];
 
   return (
     <View style={styles.container}>
-      {tabs.map(tab => (
-        <TouchableOpacity
-          key={tab.id}
-          style={[styles.tabItem, activeScreen === tab.id && styles.activeTab]}
-          onPress={() => onScreenChange(tab.id)}>
-          <Text style={styles.tabIcon}>{tab.icon}</Text>
-          <Text
-            style={[
-              styles.tabText,
-              activeScreen === tab.id && styles.activeText,
-            ]}>
-            {tab.label}
-          </Text>
-        </TouchableOpacity>
-      ))}
+      {tabs.map(tab => {
+        const isActive = activeScreen === tab.id;
+
+        return (
+          <TouchableOpacity
+            key={tab.id}
+            style={styles.tabItem}
+            onPress={() => onScreenChange(tab.id)}>
+            {tab.iconName ? (
+              <MaterialIcons
+                name={isActive ? tab.activeIconName : tab.iconName}
+                size={24}
+                color={isActive ? Colors.primary : '#bbbbbb'}
+              />
+            ) : (
+              <Image
+                source={tab.icon}
+                style={[
+                  styles.tabIcon,
+                  isActive ? styles.activeIcon : styles.inactiveIcon,
+                ]}
+                resizeMode="contain"
+              />
+            )}
+
+            <Text
+              style={[
+                styles.tabText,
+                isActive ? styles.activeText : styles.inactiveText,
+              ]}>
+              {tab.label}
+            </Text>
+          </TouchableOpacity>
+        );
+      })}
     </View>
   );
 };
@@ -41,32 +98,37 @@ const BottomBar = ({activeScreen, onScreenChange}) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    height: 70,
-    backgroundColor: '#f5f5f5',
+    height: 60,
+    backgroundColor: '#fff',
     borderTopWidth: 1,
-    borderTopColor: '#ddd',
-    elevation: 8,
+    borderTopColor: '#eee',
   },
   tabItem: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 8,
-  },
-  activeTab: {
-    backgroundColor: 'rgba(138, 43, 226, 0.1)',
+    paddingVertical: 5,
   },
   tabIcon: {
-    fontSize: 20,
-    marginBottom: 2,
+    width: 24,
+    height: 24,
+    marginBottom: 3,
+  },
+  activeIcon: {
+    tintColor: Colors.primary, // Couleur violette pour l'icône active
+  },
+  inactiveIcon: {
+    tintColor: '#bbbbbb', // Couleur grise pour les icônes inactives
   },
   tabText: {
     fontSize: 12,
-    color: '#666',
   },
   activeText: {
-    color: '#8A2BE2',
+    color: Colors.primary,
     fontWeight: 'bold',
+  },
+  inactiveText: {
+    color: '#bbbbbb', // Couleur grise pour le texte inactif
   },
 });
 

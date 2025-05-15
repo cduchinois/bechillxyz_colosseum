@@ -112,9 +112,27 @@ This will:
 npm run dev
 ```
 
-4. **Access the application**
+4. Install solscan api
+```bash
+cd ../services/solscan
+```
+
+```bash
+npm install
+```
+
+```bash
+npm run start
+```
+
+5. **Access the application**
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+6. Now all was installed ans setup, next time, only go on frontend/web and run to start all servers:
+```bash
+npm run startAll
+```
 
 ## 🏗️ Project Structure
 

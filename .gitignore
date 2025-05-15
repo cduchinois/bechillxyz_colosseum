@@ -85,3 +85,4 @@ ios/Pods/
 *.log
 .cache/
 turbo/
+.vscode/settings.json

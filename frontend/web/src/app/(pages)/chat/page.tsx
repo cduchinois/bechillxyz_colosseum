@@ -196,6 +196,7 @@ export default function ChatPage() {
   const [currentStep, setCurrentStep] = useState<string>("start");
   const [userData, setUserData] = useState<Record<string, any>>({});
   const [walletConnectInput, setWalletConnectInput] = useState("");
+  const [sessionId, setSessionId] = useState("");
 
   // Refs
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -204,7 +205,16 @@ export default function ChatPage() {
   // Convex API
   const sendMessage = useMutation(api.messages.sendMessage);
   const upsertProfile = useMutation(api.profile.upsertProfile);
-  const messagesFromConvex = useQuery(api.messages.getMessages, { profile });
+
+  // Use the new getSessionMessages query instead of getMessages
+  const messagesFromConvex = useQuery(api.messages.getSessionMessages, {
+    profile,
+    sessionId,
+  });
+
+  useEffect(() => {
+    setSessionId(Math.random().toString(36).substring(2, 15));
+  }, []);
 
   // Fonction unique d'analyse de wallet qui évite les appels redondants
   const analyzeWallet = async (address: string) => {
@@ -247,7 +257,8 @@ export default function ChatPage() {
     const userMessage = { role: "user", text: input, time: now } as ChatMessage;
 
     setMessages((prev) => [...prev, userMessage]);
-    await sendMessage({ ...userMessage, profile });
+    // Include sessionId when sending message to Convex
+    await sendMessage({ ...userMessage, profile, sessionId });
     setInput("");
     setIsTyping(true);
 
@@ -271,7 +282,8 @@ export default function ChatPage() {
       } as ChatMessage;
 
       setMessages((prev) => [...prev, replyMessage]);
-      await sendMessage({ ...replyMessage, profile });
+      // Include sessionId when sending assistant message to Convex
+      await sendMessage({ ...replyMessage, profile, sessionId });
     } catch (error) {
       console.error("Chat API error:", error);
       const fallbackTime = dayjs().format("HH:mm");
@@ -282,7 +294,8 @@ export default function ChatPage() {
       } as ChatMessage;
 
       setMessages((prev) => [...prev, fallback]);
-      await sendMessage({ ...fallback, profile });
+      // Include sessionId when sending fallback message to Convex
+      await sendMessage({ ...fallback, profile, sessionId });
     } finally {
       setIsTyping(false);
     }
@@ -464,7 +477,6 @@ export default function ChatPage() {
 
   // Initialiser en fonction du profil
   useEffect(() => {
-    setMessages([]);
     processingStepRef.current = false;
 
     const selectedProfile = profiles.find((p) => p.value === profile);
@@ -503,6 +515,14 @@ export default function ChatPage() {
       }, 500);
     }
   }, [profile, messagesFromConvex]);
+
+  // Gérer la mise à jour du sessionId séparément
+  useEffect(() => {
+    // Générer un nouveau sessionId seulement au premier rendu
+    if (!sessionId) {
+      setSessionId(Math.random().toString(36).substring(2, 15));
+    }
+  }, []);
 
   // Défilement automatique vers le bas pour les nouveaux messages
   useEffect(() => {
@@ -674,13 +694,6 @@ export default function ChatPage() {
 
             {/* Chat area */}
             <div className="flex-1 overflow-y-auto px-4 space-y-4 pb-4 scrollbar-hide">
-              {messages.length === 0 && !isOnboarding && (
-                <div className="h-full flex flex-col items-center justify-center text-gray-400">
-                  <div className="text-5xl mb-2">👋</div>
-                  <p>Say hello to CHILL!</p>
-                </div>
-              )}
-
               {messages.map((m, i) => (
                 <div
                   key={i}

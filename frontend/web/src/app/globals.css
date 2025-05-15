@@ -1,19 +1,8 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'DM Serif Text';
-  src: url('/fonts/DMSerifText-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
+/* Fonts Google désormais chargées via <head> – pas besoin de @font-face */
 
-@font-face {
-  font-family: 'DM Serif Text';
-  src: url('/fonts/DMSerifText-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
-
+/* PP Monument Extended (locale) */
 @font-face {
   font-family: 'PP Monument Extended';
   src: url('/fonts/PPMonumentExtended-Bold.ttf') format('truetype');
@@ -28,26 +17,32 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'PP Monument Extended';
+  src: url('/fonts/monument-extended-2.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
+
   /* BeChill Theme Colors */
   --lavender-light: #e8e6fa;
   --lavender-medium: #d3cff6;
-  --lavender-dark: #bcb7f2;
-  --yellow-accent: #fff568;
+  --lavender-dark: #540CCC;
+  --yellow-accent: #FFFF4F;
   --purple-light: #7036cd;
   --purple-medium: #5c26b3;
-  --purple-dark: #36169e;
-}
+  --purple-dark: #540CCC;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Font family variables */
+  --font-monument: 'PP Monument Extended', sans-serif;
+  --font-serif: 'DM Serif Text', serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,26 +53,39 @@
 }
 
 body {
-  font-family: 'PP Monument Extended', sans-serif;
+  font-family: var(--font-monument);
   margin: 0;
   padding: 0;
   min-height: 100vh;
   color: var(--purple-dark);
-  
-  /* Gradient de BeChill - bleu ciel vers jaune */
-  background: linear-gradient(to bottom, #a5c5f9 0%, #9fabf9 30%, #b5a0f0 50%, #e0c79c 100%);
-  
-  /* Pour assurer que le gradient couvre toute la page */
+  background: linear-gradient(to bottom, #A0C5E8 0%, #FAEAB0 100%);
   background-attachment: fixed;
   background-size: cover;
 }
 
-/* Réinitialisation CSS pour uniformité */
+/* Font classes */
+.font-monument {
+  font-family: var(--font-monument);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+/* Réinitialisation CSS */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Style pour les nuages flottants génériques */
+/* Style pour les nuages flottants */
 .cloud {
   position: fixed;
   background: white;

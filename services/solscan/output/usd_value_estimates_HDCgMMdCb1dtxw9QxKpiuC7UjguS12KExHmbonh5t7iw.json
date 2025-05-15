@@ -1,0 +1,333 @@
+{
+  "estimatedAt": "2025-05-14T09:36:13.827Z",
+  "totalEstimatedUsd": 2963754.2574777696,
+  "tokensWithEstimates": 17,
+  "totalTokensAnalyzed": 17,
+  "tokenDetails": [
+    {
+      "address": "8wXtPeU6557ETkp9WHFY1n1EcU6NxDvbAggHGsMYiHsB",
+      "symbol": "GME",
+      "name": "GameStop",
+      "totalVolume": 210071176.17944887,
+      "transactions": 143,
+      "swapsIn": 71,
+      "swapsOut": 72,
+      "decimals": 9,
+      "transactionCount": 143,
+      "percentage": "96.0%",
+      "usdValue": 362051.3700099947,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.00172347
+    },
+    {
+      "address": "63LfDmNb3MQ8mw9MtZ2To9bEA2M71kZUUGq5tiJxcqj9",
+      "symbol": "GIGA",
+      "name": "GIGACHAD",
+      "totalVolume": 5553342.496049999,
+      "transactions": 56,
+      "swapsIn": 28,
+      "swapsOut": 28,
+      "decimals": 5,
+      "transactionCount": 56,
+      "percentage": "2.5%",
+      "usdValue": 94139.54005851511,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.01695187
+    },
+    {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "symbol": "USDC",
+      "name": "USDC",
+      "totalVolume": 1178769.63494,
+      "transactions": 291,
+      "swapsIn": 146,
+      "swapsOut": 145,
+      "decimals": 6,
+      "transactionCount": 291,
+      "percentage": "0.5%",
+      "usdValue": 1178705.9813797132,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.999946
+    },
+    {
+      "address": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
+      "symbol": "SPX",
+      "name": "SPX6900 (Wormhole)",
+      "totalVolume": 868057.6027915798,
+      "transactions": 172,
+      "swapsIn": 82,
+      "swapsOut": 90,
+      "decimals": 8,
+      "transactionCount": 172,
+      "percentage": "0.4%",
+      "usdValue": 437172.906033101,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.503622
+    },
+    {
+      "address": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "symbol": "$WIF",
+      "name": "dogwifhat",
+      "totalVolume": 537599.746155,
+      "transactions": 74,
+      "swapsIn": 40,
+      "swapsOut": 34,
+      "decimals": 6,
+      "transactionCount": 74,
+      "percentage": "0.2%",
+      "usdValue": 309737.0185477109,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.576148
+    },
+    {
+      "address": "DSup1rQWvLi8ZXj82qpz4hXeA8HuwtNFeS7qrejYpump",
+      "symbol": "DREAM",
+      "name": "$17 and a dream",
+      "totalVolume": 202616.80442,
+      "transactions": 2,
+      "swapsIn": 1,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "0.1%",
+      "usdValue": 170.12371482221698,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.0008396328
+    },
+    {
+      "address": "5z3EqYQo9HiCEs3R84RCDMu2n7anpDMxRhdK8PSWmrRC",
+      "symbol": "PONKE",
+      "name": "PONKE",
+      "totalVolume": 177382.256478709,
+      "transactions": 15,
+      "swapsIn": 7,
+      "swapsOut": 8,
+      "decimals": 9,
+      "transactionCount": 15,
+      "percentage": "0.1%",
+      "usdValue": 20848.800897481542,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.117536
+    },
+    {
+      "address": "HMRh9ksQTe2SXWLxaNTd2u8PTX9mcodUgzedDMaLbonk",
+      "symbol": "Pingu",
+      "name": "Pingu",
+      "totalVolume": 84507.49189199999,
+      "transactions": 4,
+      "swapsIn": 2,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "0.0%",
+      "usdValue": 39.11888982977112,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.0004629044
+    },
+    {
+      "address": "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA",
+      "symbol": "USDSwr9A...",
+      "name": "Unknown Token",
+      "totalVolume": 22089.851446,
+      "transactions": 4,
+      "swapsIn": 2,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "0.0%",
+      "usdValue": 22089.0341214965,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.999963
+    },
+    {
+      "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "symbol": "USDT",
+      "name": "USDT",
+      "totalVolume": 11240.755508,
+      "transactions": 16,
+      "swapsIn": 8,
+      "swapsOut": 8,
+      "decimals": 6,
+      "transactionCount": 16,
+      "percentage": "0.0%",
+      "usdValue": 11240.755508,
+      "hasUsdEstimate": true,
+      "priceUsdt": 1
+    },
+    {
+      "address": "DBW4topT6adDEvSkHAyTKurDbj9GNoPqch8XW7hBK1b4",
+      "symbol": "DBW4topT...",
+      "name": "Unknown Token",
+      "totalVolume": 9900,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%",
+      "usdValue": 1.853081802,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.00018717998
+    },
+    {
+      "address": "HzwqbKZw8HxMN6bF2yFZNrht3c2iXXzpKcFu7uBEDKtr",
+      "symbol": "HzwqbKZw...",
+      "name": "Unknown Token",
+      "totalVolume": 9398.341762,
+      "transactions": 8,
+      "swapsIn": 4,
+      "swapsOut": 4,
+      "decimals": 6,
+      "transactionCount": 8,
+      "percentage": "0.0%",
+      "usdValue": 10620.126191059999,
+      "hasUsdEstimate": true,
+      "priceUsdt": 1.13
+    },
+    {
+      "address": "So11111111111111111111111111111111111111112",
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "totalVolume": 3463.011003442999,
+      "transactions": 201,
+      "swapsIn": 102,
+      "swapsOut": 99,
+      "decimals": 9,
+      "transactionCount": 201,
+      "percentage": "0.0%",
+      "usdValue": 509685.95948674064,
+      "hasUsdEstimate": true,
+      "priceUsdt": 147.18
+    },
+    {
+      "address": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+      "symbol": "27G8MtK7...",
+      "name": "Unknown Token",
+      "totalVolume": 613.612311,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "0.0%",
+      "usdValue": 2521.94659821,
+      "hasUsdEstimate": true,
+      "priceUsdt": 4.11
+    },
+    {
+      "address": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+      "symbol": "7GCihgDB...",
+      "name": "Unknown Token",
+      "totalVolume": 300.01897013900003,
+      "transactions": 2,
+      "swapsIn": 0,
+      "swapsOut": 2,
+      "decimals": 9,
+      "transactionCount": 2,
+      "percentage": "0.0%",
+      "usdValue": 136.89805603648543,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.456298
+    },
+    {
+      "address": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+      "symbol": "JitoSOL",
+      "name": "Jito Staked SOL",
+      "totalVolume": 0.9401795740000001,
+      "transactions": 4,
+      "swapsIn": 2,
+      "swapsOut": 2,
+      "decimals": 9,
+      "transactionCount": 4,
+      "percentage": "0.0%",
+      "usdValue": 166.06391815562,
+      "hasUsdEstimate": true,
+      "priceUsdt": 176.63
+    },
+    {
+      "address": "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
+      "symbol": "3NZ9JMVB...",
+      "name": "Unknown Token",
+      "totalVolume": 0.04565083,
+      "transactions": 2,
+      "swapsIn": 1,
+      "swapsOut": 1,
+      "decimals": 8,
+      "transactionCount": 2,
+      "percentage": "0.0%",
+      "usdValue": 4426.760985100001,
+      "hasUsdEstimate": true,
+      "priceUsdt": 96970
+    }
+  ],
+  "tokenPricesUsdt": {
+    "8wXtPeU6557ETkp9WHFY1n1EcU6NxDvbAggHGsMYiHsB": {
+      "priceUsdt": 0.00172347,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "63LfDmNb3MQ8mw9MtZ2To9bEA2M71kZUUGq5tiJxcqj9": {
+      "priceUsdt": 0.01695187,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "priceUsdt": 0.999946,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr": {
+      "priceUsdt": 0.503622,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm": {
+      "priceUsdt": 0.576148,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "DSup1rQWvLi8ZXj82qpz4hXeA8HuwtNFeS7qrejYpump": {
+      "priceUsdt": 0.0008396328,
+      "timestamp": "1970-01-01T05:37:30.508Z"
+    },
+    "5z3EqYQo9HiCEs3R84RCDMu2n7anpDMxRhdK8PSWmrRC": {
+      "priceUsdt": 0.117536,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "HMRh9ksQTe2SXWLxaNTd2u8PTX9mcodUgzedDMaLbonk": {
+      "priceUsdt": 0.0004629044,
+      "timestamp": "1970-01-01T05:37:30.508Z"
+    },
+    "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA": {
+      "priceUsdt": 0.999963,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+      "priceUsdt": 1,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "DBW4topT6adDEvSkHAyTKurDbj9GNoPqch8XW7hBK1b4": {
+      "priceUsdt": 0.00018717998,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "HzwqbKZw8HxMN6bF2yFZNrht3c2iXXzpKcFu7uBEDKtr": {
+      "priceUsdt": 1.13,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "So11111111111111111111111111111111111111112": {
+      "priceUsdt": 147.18,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4": {
+      "priceUsdt": 4.11,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr": {
+      "priceUsdt": 0.456298,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn": {
+      "priceUsdt": 176.63,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh": {
+      "priceUsdt": 96970,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    }
+  }
+}

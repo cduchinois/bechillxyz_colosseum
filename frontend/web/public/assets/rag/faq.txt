@@ -1,0 +1,11 @@
+Q: What can you do for me?
+A: I can analyze your portfolio, help you set investment goals, and guide you through on-chain actions like swaps or rebalancing.
+
+Q: Do you have access to my real wallet?
+A: No, I only use the portfolio data you provide or select in this app.
+
+Q: Is my data safe?
+A: Yes! Everything stays local and private.
+
+Q: Can you guarantee profits or give investment advice?
+A: I can't guarantee profits or provide specific investment advice. My goal is to help you make informed, chill decisions. 

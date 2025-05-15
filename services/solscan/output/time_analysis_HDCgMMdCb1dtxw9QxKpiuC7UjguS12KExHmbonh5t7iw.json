@@ -1,0 +1,426 @@
+{
+  "activityDistribution": {
+    "byHour": [
+      3,
+      2,
+      1,
+      21,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      5,
+      2,
+      4,
+      0,
+      0
+    ],
+    "byDayOfWeek": [
+      0,
+      0,
+      12,
+      28,
+      0,
+      0,
+      0
+    ],
+    "byMonth": [
+      0,
+      0,
+      0,
+      0,
+      40,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "byYear": {
+    "2025": 40
+  },
+  "timeSeries": [
+    {
+      "timestamp": 1747148710000,
+      "date": "2025-05-13T15:05:10.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "3kwx9V55kQCXdWejARRKEVbWfESvqTWD14taF5KaxANDU2QJAJ7sJi8EcVA5srv9LvNS7MyFUksmmJeXgC1hLViP",
+      "value": 0
+    },
+    {
+      "timestamp": 1747157226000,
+      "date": "2025-05-13T17:27:06.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "4XmSx8hwGnKq6iGutAW47rc2HUnJ6okvJYq873BY1XGzyJdCCXhgpaZQ5x8DFfrkDsHhUQrA1DLV6tqoLYDXpGqG",
+      "value": 0
+    },
+    {
+      "timestamp": 1747157232000,
+      "date": "2025-05-13T17:27:12.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "4Zy1WzwP7QMBUiMj6NugSBynGL2gK848pAK4JuFV8nCQb4GUwfBnM7R1NFdEVizccu77qcXjFCER5Kbm664JXrD5",
+      "value": 0
+    },
+    {
+      "timestamp": 1747157247000,
+      "date": "2025-05-13T17:27:27.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "34g1DV1NGPxUqJrfreyWkQ5UWNDYwwppyT8fyQXAabx42WgJZfn68Vp5baBRDmiy7Tg31rj94KmSHoUdNwhrg438",
+      "value": 0
+    },
+    {
+      "timestamp": 1747157247000,
+      "date": "2025-05-13T17:27:27.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "52UPcnwVTavij4jjwoRWRARWsjZxCiFrWRJtBZzJRUHqezj126cqPcP2ZimLQqe9N8UePkkyPvU85KhkQjbQmuKR",
+      "value": 0
+    },
+    {
+      "timestamp": 1747157247000,
+      "date": "2025-05-13T17:27:27.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "5sHs8x6TrCeZsbv8sgy5qFc3B2B1cRsRjPc3o5BjaMSJPxs1AdxcStQ97pw5SYS8Wt6SMaaWubM918NtcJ17nqzs",
+      "value": 0
+    },
+    {
+      "timestamp": 1747159429000,
+      "date": "2025-05-13T18:03:49.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "3gaDtdcT96SznseJ7sZc232zt4GmBS51VDsfzemp6pGHUmhv3SRPQtiF4bDbYcgAXCJZjaEp31TR78wMwWriXyJr",
+      "value": 0
+    },
+    {
+      "timestamp": 1747159430000,
+      "date": "2025-05-13T18:03:50.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "3JD4DGPQrBRF1LPuzsJB8yaS2JvruFT7WWBYKGgUAFpVdFxXATHRWarVp165edP8FC6jUTSpGs6d4YstH8SA9MPG",
+      "value": 0
+    },
+    {
+      "timestamp": 1747164399000,
+      "date": "2025-05-13T19:26:39.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "2GwxyLa75LatUU9ccMieqnQguAPD2rv7vkbPT9Q2AdoLffMdQVyTPxWq8LFSABXHkonyoz48qGfpWtXt4TJrtguQ",
+      "value": 0
+    },
+    {
+      "timestamp": 1747164421000,
+      "date": "2025-05-13T19:27:01.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "2DHRcAG4CQvzsVW21ZvLN1FhWC31UuGmU2aM4yw2dwBeVLV7x24nXZgmT47NyggQVGYzbHoc5FY5v5PvF9fjydbV",
+      "value": 0
+    },
+    {
+      "timestamp": 1747164430000,
+      "date": "2025-05-13T19:27:10.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "iuvSzXSXQmzFkSMQoFdBtbD2hXKBUcNJgefimSDoMb2nidFQyioYKVhgphFX95TR1gs15G9C8LsW2H74JHx1WWm",
+      "value": 0
+    },
+    {
+      "timestamp": 1747164444000,
+      "date": "2025-05-13T19:27:24.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "fLSRAgCKP8bR1z9bdxzW8293h5A6qArcJm51VY77FGPJBwhJgbUjsx5VvTuqYamoGV7HFBgYTgSnrf1gSgku3Ww",
+      "value": 0
+    },
+    {
+      "timestamp": 1747176258000,
+      "date": "2025-05-13T22:44:18.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "273eYm5GAE9mNfp7GNVGi8PqJ27TSfaPEf8hZQUwjEcyubJrjYQ1KVh2V3idWafgfkEVeNZL4brcXNuSfwqdxF8Y",
+      "value": 0
+    },
+    {
+      "timestamp": 1747176274000,
+      "date": "2025-05-13T22:44:34.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "Et9zZdo8V4sXpa3ditUL4NjTE34boypTjVDp2wBsGYWpC3pUKYyDVSkwauUMax1wSYT5npJh7vNCAUuMJuz5g3b",
+      "value": 0
+    },
+    {
+      "timestamp": 1747176313000,
+      "date": "2025-05-13T22:45:13.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "2aM1Uha6G8wy6Uyb8G7Nt3FxetmpkXJRkEtDoNFkSzpjov8PaRRbLfBEa2HP8DG8wVACwRfKdJkHsHGxR6C2Vgm2",
+      "value": 0
+    },
+    {
+      "timestamp": 1747177667000,
+      "date": "2025-05-13T23:07:47.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "3S78CQXh3NeDeKcYch2PkggwCcPwHdRTq1QfYkVajDCRh2jNxpevVRrHT24CauQxavbX2MJoBEhCDSCGayyxEuk7",
+      "value": 0
+    },
+    {
+      "timestamp": 1747177706000,
+      "date": "2025-05-13T23:08:26.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "2Pc91pWDHoz9ihQ7bKNeVD4bBgBxMHeRTpp9xqpUrHwN8kyygZtngBgX8nvxJbrRuvAeMjLE7NA7kGwn5nSi2xjj",
+      "value": 0
+    },
+    {
+      "timestamp": 1747181561000,
+      "date": "2025-05-14T00:12:41.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "Cw8FgXiDsNGsfxV3ZsdgrcjnG8uJhHkRqBDPjpdWbjyYMezh51hvJEuUEYehFgoGhHWyv9trHJjQdxMc9Xz7B9H",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185381000,
+      "date": "2025-05-14T01:16:21.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "4ig4vmUaWuMPUPmJcPNb6Cn1HpLqXqzR68vL6ztM3SsXwgVm13LwFpwergKHkGadprgeCNBLw34nQ6RZvJkK7PUT",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185383000,
+      "date": "2025-05-14T01:16:23.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "5CdSmUNHMuKRRPi1KAtvvPRdDGPS3GAUULEBDHtEYPnPTtxtsMcL56BzA6yHUV5AH28hsBxyHpTgjusKm2nd7ag2",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185383000,
+      "date": "2025-05-14T01:16:23.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "5dtECw6JScqjY7GqCmSNyoy7jzFpXqqgQ1m3RoSPkCUFwCx1p2b5U2c8WpJxwQDGFZiMjho66RHcaLhHjUdbiaW4",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185398000,
+      "date": "2025-05-14T01:16:38.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "2FF6AjtQgcY4NLqwB1WLK3V6iLQGJfTsTuk1468kjwivabBbPUkMgfDuAxb69VvkuAAs2tiWhWqgbhxYrAT2NFfc",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185398000,
+      "date": "2025-05-14T01:16:38.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "sUUwMqUPQ9pggoEFWpKs25M8MjrMWMN8XWxksiA2FrMqR6TFsjHgGAM7nJUkQAwiqhPWXeY8AA79PYNqRvF5zFz",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185855000,
+      "date": "2025-05-14T01:24:15.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "4atpcamCb33XwxLhpZhQZiUncKwcryYp6mgzboUoQwKCT5mdnh3PoDXU9Vj6Xau3XiJZDKhbd7fH17F6WNwmTZUa",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185858000,
+      "date": "2025-05-14T01:24:18.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "5b7Qia1kdAqa1Zsu75dHHrDLg65WT5cQcNey4nP6BMMYPycpQ9y4AsLjMytarnkub3cN2LEU5QKv5MKksdajpuKC",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185859000,
+      "date": "2025-05-14T01:24:19.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "3Er4XXHns4nVWbC4TQdoFgoHAhiQksFJHxCdYw5QUUHu1bs2QEGKcAHUDNTmXAvi9URLYFXfSecyxmvLTU9A4q3C",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185859000,
+      "date": "2025-05-14T01:24:19.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "5wu1N85KEyDsHzask3ywST6wE3PZyDyiADxPVXdDMbEwdhZBaQpZGV4wi2x55RQKdrKgi9WTuTgSYh1AnzdTExiW",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185874000,
+      "date": "2025-05-14T01:24:34.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "CZEktqvhW3Z4XKhJad5aaLbh7ixBTZeuuAGo1d2uRYxHTsi3e2YqHEgT1sTC5BC3fVTp2zYF8y6GwtDB2gqXa1J",
+      "value": 0
+    },
+    {
+      "timestamp": 1747185886000,
+      "date": "2025-05-14T01:24:46.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "4NN4dk1Qk5u8WSGFZQpAveRvJWjSyTi7Ak3vxsKEhB3AwEUMKdhAWTecPtPsC2BLkFa2TH9VmLPqEDFWCj8fyBhE",
+      "value": 0
+    },
+    {
+      "timestamp": 1747186307000,
+      "date": "2025-05-14T01:31:47.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "yJLhCthVgNPAiotrV7BmQSTRkAsPj4p3jpewrrxfGbUey3ar5H8a7W346yYonpZa6J3iph8JqvHW7MWF7k55iJm",
+      "value": 0
+    },
+    {
+      "timestamp": 1747186315000,
+      "date": "2025-05-14T01:31:55.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "4wBp8Bde6GkPAXg19EVbxdAvq8UwzfQVRvcXFRfsfyP9p3LPCG5VcEvAigxtYQCotsLxvFRjtS4wUvTSFAKqSwEK",
+      "value": 0
+    },
+    {
+      "timestamp": 1747186315000,
+      "date": "2025-05-14T01:31:55.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "5ULkLwSjEx7q43EWk9WYbu3Gu1r1tLAgFDPs1R69ZY6Ty9SnFboSiGqm4yBRugtpjkgrQEYuBfXP2aSqe8VfW2hs",
+      "value": 0
+    },
+    {
+      "timestamp": 1747186329000,
+      "date": "2025-05-14T01:32:09.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "jFm5J5cWPCZhdkq6GMD5JKHBzR2KHPZfrq7ZAHuD1Aw63Lw7g81yRYkf6fSfA8A7Bs6EV5xnD6hiwqim8nEPW9C",
+      "value": 0
+    },
+    {
+      "timestamp": 1747186340000,
+      "date": "2025-05-14T01:32:20.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "yKteLSB5aXiAHAvvDZ8TiPxsXED3uMRvDczkKActCfSzh82zBUUJCZ9s29imVQPtFFyLxZLh3EhSDYwNG6rwzPo",
+      "value": 0
+    },
+    {
+      "timestamp": 1747187772000,
+      "date": "2025-05-14T01:56:12.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "3jtn7JLL5BY9aqm3XvUDavNAL4J179qZP5xoMLJEYXZozTDhfcfcZnyYrLZ5Y3hkfdV9w9szYbFveHRo8wVaU4NS",
+      "value": 0
+    },
+    {
+      "timestamp": 1747187803000,
+      "date": "2025-05-14T01:56:43.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "3Biy23g3eZTiSod1nRr4PknT3JbYsLsGkyYYGVxpjYpKwnzYoeV1hwEbbJUXA9uQCEGDQVbXhdsBGHAuv9PzVfGS",
+      "value": 0
+    },
+    {
+      "timestamp": 1747187823000,
+      "date": "2025-05-14T01:57:03.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "475g3HYuvWdkdV5cz3qjj9iqf2DjRPyxL6cpiM6GJsLkj3ednFhfgKjQ6QbAq8Jap3t8SocBBNGj2WrKY4nERqFt",
+      "value": 0
+    },
+    {
+      "timestamp": 1747187838000,
+      "date": "2025-05-14T01:57:18.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "2SbLw3q64JWzUJP6ccgMd2qxp8oPoD2XhsRJsdK5u156dFtFu5TdsnR8jfPDBg6QqpCEJuRDERnPPUhJ1YQ3vozW",
+      "value": 0
+    },
+    {
+      "timestamp": 1747187847000,
+      "date": "2025-05-14T01:57:27.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "4fCHvrf4feXqLF54yAQfyeR5QP2CNoYsav9sjTKRgmNSkynstBm8wZ1PnR42De89KsdfSpGeVRLyMJFfFAdbkNsh",
+      "value": 0
+    },
+    {
+      "timestamp": 1747188006000,
+      "date": "2025-05-14T02:00:06.000Z",
+      "activityType": "TRANSACTION",
+      "platform": "unknown",
+      "tx_hash": "4AZj1KP6K9RSp2fya1gJ2SDUcTdFEUA5JtK9ncPJ4LCzzqK2zfbRHLksALaJkz1GmnCeTdV6XS18VqVdM3Hzr4Sy",
+      "value": 0
+    }
+  ],
+  "activityGaps": [],
+  "busyPeriods": [
+    {
+      "startTime": "2025-05-13T15:05:10.000Z",
+      "endTime": "2025-05-14T15:05:10.000Z",
+      "activityCount": 40
+    },
+    {
+      "startTime": "2025-05-13T17:27:06.000Z",
+      "endTime": "2025-05-14T17:27:06.000Z",
+      "activityCount": 39
+    },
+    {
+      "startTime": "2025-05-13T17:27:12.000Z",
+      "endTime": "2025-05-14T17:27:12.000Z",
+      "activityCount": 38
+    },
+    {
+      "startTime": "2025-05-13T17:27:27.000Z",
+      "endTime": "2025-05-14T17:27:27.000Z",
+      "activityCount": 37
+    },
+    {
+      "startTime": "2025-05-13T17:27:27.000Z",
+      "endTime": "2025-05-14T17:27:27.000Z",
+      "activityCount": 36
+    }
+  ],
+  "weekdayVsWeekend": {
+    "weekday": 40,
+    "weekend": 0,
+    "weekdayPercentage": 100,
+    "weekendPercentage": 0
+  },
+  "firstActivity": 1747148710000,
+  "lastActivity": 1747188006000,
+  "averageGap": 0.3,
+  "medianGap": 0.004166666666666667,
+  "monthlyAnalysis": [
+    {
+      "month": "2025-05",
+      "count": 40,
+      "value": 0,
+      "activities": {
+        "TRANSACTION": 40
+      }
+    }
+  ]
+}

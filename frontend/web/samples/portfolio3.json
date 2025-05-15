@@ -1,0 +1,21 @@
+{
+  "user": {
+    "name": "Morgan",
+    "investmentGoals": "secure my wealth",
+    "riskAppetite": "low"
+  },
+  "assets": [
+    { "symbol": "USDC", "name": "USD Coin (Solana)", "amount": 10000, "usdValue": 10000 },
+    { "symbol": "USDT", "name": "Tether (Solana)", "amount": 5000, "usdValue": 5000 },
+    { "symbol": "SOL", "name": "Solana", "amount": 20, "usdValue": 360 }
+  ],
+  "defi": [
+    { "type": "staking", "protocol": "Lido", "asset": "stSOL", "amount": 5, "usdValue": 90 },
+    { "type": "lending", "protocol": "Solend", "asset": "USDC", "amount": 2000, "usdValue": 2000 },
+    { "type": "lp_token", "protocol": "Raydium", "pair": "USDC-USDT", "amount": 100, "usdValue": 150 },
+    { "type": "open_order", "protocol": "Serum", "asset": "USDC", "amount": 200, "usdValue": 200 }
+  ],
+  "nfts": [
+    { "collection": "Solana Cats", "name": "SolCat #2024", "estimatedValue": 50 }
+  ]
+} 

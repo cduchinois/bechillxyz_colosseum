@@ -1,0 +1,483 @@
+{
+  "estimatedAt": "2025-05-14T15:07:30.512Z",
+  "totalEstimatedUsd": 384.98339609569257,
+  "tokensWithEstimates": 17,
+  "totalTokensAnalyzed": 27,
+  "tokenDetails": [
+    {
+      "address": "Ak2pqubV3dvyFX9Jf9h2C1QZ9vDW2MG2AC6kWLpypump",
+      "symbol": "GMEOW",
+      "name": "GOOD MORNING",
+      "totalVolume": 3633930.7160560004,
+      "transactions": 9,
+      "swapsIn": 6,
+      "swapsOut": 3,
+      "decimals": 6,
+      "transactionCount": 9,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "BwekeLYhCMZ6syNgLEdMLx46BQu2xXH48XniAdwnpump",
+      "symbol": "CPAW ",
+      "name": "Cat Paw",
+      "totalVolume": 793007.5562149999,
+      "transactions": 5,
+      "swapsIn": 4,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 5,
+      "percentage": "NaN%",
+      "usdValue": 46.99867448138865,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.000059266364
+    },
+    {
+      "address": "3tXQ9xbXHic4b8Uu6fuxesC4v5ggFvjsjbHqaZuDpump",
+      "symbol": "AIAKR",
+      "name": "AkrokaAI",
+      "totalVolume": 694146.142136,
+      "transactions": 2,
+      "swapsIn": 1,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "E7tuVmCywD2UzrDomUQWgmpVWfA4qjFyRb9EDX5wpump",
+      "symbol": "IBRL",
+      "name": "IBRL",
+      "totalVolume": 293517.030064,
+      "transactions": 2,
+      "swapsIn": 2,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "NaN%",
+      "usdValue": 8.781305139484681,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.000029917532
+    },
+    {
+      "address": "4TUNzcgp2fPD48fcW4seRjyqyDZMrPj4ZubnXFEsKeYk",
+      "symbol": "PRNT",
+      "name": "PRNT",
+      "totalVolume": 244155.4484796,
+      "transactions": 4,
+      "swapsIn": 2,
+      "swapsOut": 2,
+      "decimals": 7,
+      "transactionCount": 4,
+      "percentage": "NaN%",
+      "usdValue": 12.61062891397134,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.00005165
+    },
+    {
+      "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "symbol": "Bonk",
+      "name": "Bonk",
+      "totalVolume": 185018.10082,
+      "transactions": 27,
+      "swapsIn": 2,
+      "swapsOut": 25,
+      "decimals": 5,
+      "transactionCount": 27,
+      "percentage": "NaN%",
+      "usdValue": 3.1342066278908,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.00001694
+    },
+    {
+      "address": "9zpoUp14qXg4ibKN7DP2SKGMmdTumPcXNkuZuy1dbonk",
+      "symbol": "BUTTFUCK",
+      "name": "SOLANA NEW MOVIE MEMECOIN",
+      "totalVolume": 141275.405019,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "NaN%",
+      "usdValue": 0.6767338284716453,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.0000047901744
+    },
+    {
+      "address": "BqpiqXC82nwvEjCvnBKc72saTHZarfEHcV1iozcYpump",
+      "symbol": "AnAn",
+      "name": "An An",
+      "totalVolume": 94239.666866,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "NaN%",
+      "usdValue": 0.34745071993358556,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.000003686884
+    },
+    {
+      "address": "AwA7D3jKpytsXSAJTZYY9NzV4HRKKLAyWJw9YoZwbonk",
+      "symbol": "CONK",
+      "name": "CONK",
+      "totalVolume": 40259.216223,
+      "transactions": 1,
+      "swapsIn": 1,
+      "swapsOut": 0,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "NaN%",
+      "usdValue": 0.6024818278854658,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.000014965066
+    },
+    {
+      "address": "v62Jv9pwMTREWV9f6TetZfMafV254vo99p7HSF25BPr",
+      "symbol": "GgsS",
+      "name": "Ggs Solana",
+      "totalVolume": 28120.014726092002,
+      "transactions": 12,
+      "swapsIn": 4,
+      "swapsOut": 8,
+      "decimals": 9,
+      "transactionCount": 12,
+      "percentage": "NaN%",
+      "usdValue": 0.4624149986008195,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.000016444337
+    },
+    {
+      "address": "DMhygbWS3MNRu5rfXWWKLoUqGMeUJW8txyKPs8KdMcsp",
+      "symbol": "MOON",
+      "name": "Moon",
+      "totalVolume": 11302.950363398,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 9,
+      "transactionCount": 1,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP",
+      "symbol": "EPCT",
+      "name": "Epics Token",
+      "totalVolume": 6622.88,
+      "transactions": 2,
+      "swapsIn": 0,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "NaN%",
+      "usdValue": 104.0880299184,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.01571643
+    },
+    {
+      "address": "8cNmp9T2CMQRNZhNRoeSvr57LDf1kbZ42SvgsSWfpump",
+      "symbol": "JAIL",
+      "name": "JailbreakMe",
+      "totalVolume": 2646.306142,
+      "transactions": 2,
+      "swapsIn": 1,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "NaN%",
+      "usdValue": 0.9432228981930599,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.00035643
+    },
+    {
+      "address": "8tSeXYSXzFvaDX1nbWrEFFaFuPHuWqpzksKYxQPvpump",
+      "symbol": "VIBE",
+      "name": "Vibe Cat",
+      "totalVolume": 1836.935688,
+      "transactions": 4,
+      "swapsIn": 2,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "NaN%",
+      "usdValue": 2.27478767859168,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.00123836
+    },
+    {
+      "address": "wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o",
+      "symbol": "eliza",
+      "name": "ai16zeliza",
+      "totalVolume": 1823.132144,
+      "transactions": 4,
+      "swapsIn": 2,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "NaN%",
+      "usdValue": 0.913389204144,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.000501
+    },
+    {
+      "address": "BDbhJUMgQBQ1bJTKhSS9NsxZdfaiBG6Hgp8qNKpc3YSX",
+      "symbol": "TUCKER",
+      "name": "Pnut's Dog",
+      "totalVolume": 1775.126924782,
+      "transactions": 3,
+      "swapsIn": 2,
+      "swapsOut": 1,
+      "decimals": 9,
+      "transactionCount": 3,
+      "percentage": "NaN%",
+      "usdValue": 0.08266766088709775,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.00004657
+    },
+    {
+      "address": "DQc6FTgu2HiB1PMUkHj8SATCtxsCeeMz5hiaqwk1pump",
+      "symbol": "DQc6FTgu...",
+      "name": "Unknown Token",
+      "totalVolume": 769.304164,
+      "transactions": 4,
+      "swapsIn": 2,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "NaN%",
+      "usdValue": 0.02744107952988,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.00003567
+    },
+    {
+      "address": "BeGY8KqKxboEwRbJd1q9H2K829jS4Rc5dEyNMYXCbV5p",
+      "symbol": "NPC",
+      "name": "Non-Playable Coin (Wormhole)",
+      "totalVolume": 619.28670612,
+      "transactions": 2,
+      "swapsIn": 1,
+      "swapsOut": 1,
+      "decimals": 8,
+      "transactionCount": 2,
+      "percentage": "NaN%",
+      "usdValue": 8.505110221574366,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.01373372
+    },
+    {
+      "address": "FLqmVrv6cp7icjobpRMQJMEyjF3kF84QmC4HXpySpump",
+      "symbol": "BUCK",
+      "name": "GME MASCOT",
+      "totalVolume": 424.10836800000004,
+      "transactions": 4,
+      "swapsIn": 2,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "NaN%",
+      "usdValue": 0.5295937463815537,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.0012487227
+    },
+    {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "symbol": "USDC",
+      "name": "USDC",
+      "totalVolume": 194.01573399999998,
+      "transactions": 34,
+      "swapsIn": 24,
+      "swapsOut": 10,
+      "decimals": 6,
+      "transactionCount": 34,
+      "percentage": "NaN%",
+      "usdValue": 194.00525715036397,
+      "hasUsdEstimate": true,
+      "priceUsdt": 0.999946
+    },
+    {
+      "address": "9PR7nCP9DpcUotnDPVLUBUZKu5WAYkwrCUx9wDnSpump",
+      "symbol": "Ban",
+      "name": "Comedian",
+      "totalVolume": 81.999538,
+      "transactions": 4,
+      "swapsIn": 2,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+      "symbol": "PYTH",
+      "name": "Pyth Network",
+      "totalVolume": 24.92732,
+      "transactions": 2,
+      "swapsIn": 0,
+      "swapsOut": 2,
+      "decimals": 6,
+      "transactionCount": 2,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "HRzN8zrPp6HT8nmHoRrDpGbhVnFbbya5cMzaVGWVpump",
+      "symbol": "BEBE",
+      "name": "Baby Bitcoin",
+      "totalVolume": 10,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 6,
+      "transactionCount": 1,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "9Djwrd8BcDUqAHEvcrx9zkjg9ZsW83EhnipTLYmuDixv",
+      "symbol": "MFM",
+      "name": "My First Million",
+      "totalVolume": 10,
+      "transactions": 1,
+      "swapsIn": 0,
+      "swapsOut": 1,
+      "decimals": 8,
+      "transactionCount": 1,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "So11111111111111111111111111111111111111111",
+      "symbol": "SOL",
+      "name": "SOL",
+      "totalVolume": 2.4055702020000003,
+      "transactions": 13,
+      "swapsIn": 3,
+      "swapsOut": 10,
+      "decimals": 9,
+      "transactionCount": 13,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "So11111111111111111111111111111111111111112",
+      "symbol": "WSOL",
+      "name": "Wrapped SOL",
+      "totalVolume": 1.3992644720000003,
+      "transactions": 45,
+      "swapsIn": 6,
+      "swapsOut": 39,
+      "decimals": 9,
+      "transactionCount": 45,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    },
+    {
+      "address": "EQKUVMidDY3YhFPRaa4GX5Lv6Gpvgpqmyr6FWrSHpump",
+      "symbol": "GMEOW",
+      "name": "GOOD MORNING",
+      "totalVolume": null,
+      "transactions": 4,
+      "swapsIn": 1,
+      "swapsOut": 3,
+      "decimals": 6,
+      "transactionCount": 4,
+      "percentage": "NaN%",
+      "usdValue": null,
+      "hasUsdEstimate": false,
+      "priceUsdt": null
+    }
+  ],
+  "tokenPricesUsdt": {
+    "BwekeLYhCMZ6syNgLEdMLx46BQu2xXH48XniAdwnpump": {
+      "priceUsdt": 0.000059266364,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "E7tuVmCywD2UzrDomUQWgmpVWfA4qjFyRb9EDX5wpump": {
+      "priceUsdt": 0.000029917532,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "4TUNzcgp2fPD48fcW4seRjyqyDZMrPj4ZubnXFEsKeYk": {
+      "priceUsdt": 0.00005165,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "priceUsdt": 0.00001694,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "9zpoUp14qXg4ibKN7DP2SKGMmdTumPcXNkuZuy1dbonk": {
+      "priceUsdt": 0.0000047901744,
+      "timestamp": "1970-01-01T05:37:30.511Z"
+    },
+    "BqpiqXC82nwvEjCvnBKc72saTHZarfEHcV1iozcYpump": {
+      "priceUsdt": 0.000003686884,
+      "timestamp": "1970-01-01T05:37:30.514Z"
+    },
+    "AwA7D3jKpytsXSAJTZYY9NzV4HRKKLAyWJw9YoZwbonk": {
+      "priceUsdt": 0.000014965066,
+      "timestamp": "1970-01-01T05:37:30.511Z"
+    },
+    "v62Jv9pwMTREWV9f6TetZfMafV254vo99p7HSF25BPr": {
+      "priceUsdt": 0.000016444337,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "CvB1ztJvpYQPvdPBePtRzjL4aQidjydtUz61NWgcgQtP": {
+      "priceUsdt": 0.01571643,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "8cNmp9T2CMQRNZhNRoeSvr57LDf1kbZ42SvgsSWfpump": {
+      "priceUsdt": 0.00035643,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "8tSeXYSXzFvaDX1nbWrEFFaFuPHuWqpzksKYxQPvpump": {
+      "priceUsdt": 0.00123836,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "wUtwjNmjCP9TTTtoc5Xn5h5sZ2cYJm5w2w44b79yr2o": {
+      "priceUsdt": 0.000501,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "BDbhJUMgQBQ1bJTKhSS9NsxZdfaiBG6Hgp8qNKpc3YSX": {
+      "priceUsdt": 0.00004657,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "DQc6FTgu2HiB1PMUkHj8SATCtxsCeeMz5hiaqwk1pump": {
+      "priceUsdt": 0.00003567,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "BeGY8KqKxboEwRbJd1q9H2K829jS4Rc5dEyNMYXCbV5p": {
+      "priceUsdt": 0.01373372,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "FLqmVrv6cp7icjobpRMQJMEyjF3kF84QmC4HXpySpump": {
+      "priceUsdt": 0.0012487227,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+      "priceUsdt": 0.999946,
+      "timestamp": "1970-01-01T05:37:30.507Z"
+    }
+  }
+}

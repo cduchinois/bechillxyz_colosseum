@@ -2,5 +2,6 @@
     "editor.tokenColorCustomizations": {
         "comments": "#2e613f",
         "textMateRules": []
-    }
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
 }

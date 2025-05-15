@@ -1,0 +1,102 @@
+# CHILL Onboarding Conversation Flow
+
+---
+
+**Start**
+chill helps you get control over your crypto — and stay calm doing it.
+[ get started ]
+
+---
+
+**Q1 — Greet + Name**
+chill:
+hey. i'm chill — your crypto peace coach.
+what should i call you?
+
+*User types name → Store as `user.name`*
+
+---
+
+**Q2 — Pick a Goal**
+chill:
+nice to meet you, [name].
+what's your main goal with crypto?
+
+Buttons:
+[ secure my wealth ] [ grow it steadily ] [ take big risks ]
+
+*Store answer as `user.goal`*
+
+---
+
+**Q3 — Get Wallet**
+chill:
+got it. to help you stay on track, i need to look at your portfolio.
+i don't track or store anything — just analyze and give insights.
+this is all local, all yours.
+
+Buttons:
+[ connect wallet ] [ paste address ] [ skip ]
+
+*Store answer as `user.walletSource`*
+
+---
+
+**If Skipped:**
+chill:
+ok, no stress. i'll show you an example with a public wallet.
+this one belongs to a trader who wanted to grow steadily...
+
+(delay 1 sec)
+
+...but they've got 88% in altcoins. high volatility, no backup.
+not really what you'd call "steady growth", right?
+
+*Use sample portfolio for demo*
+
+---
+
+**Q4 — Analyze + Insight**
+- If real wallet: Run analytics on user portfolio (call `runAnalytics.ts`).
+- Delay chat for 5–7 sec to simulate scan.
+- Retrieve relevant compliance/FAQ/behavioral rules if needed (RAG).
+- LLM output for analysis:
+
+chill:
+scanning your assets...
+checking for concentration, risk, and behavior...
+
+(then)
+
+chill:
+(give analysis: e.g., "You have 60% in ETH, 30% in stablecoins, 10% in altcoins. Your portfolio is moderately diversified, but could be more balanced for your goal.")
+
+---
+
+**If Yes (User wants advice/action):**
+chill:
+(give advice: e.g., "Suggestion: move 10% of [token] to a stablecoin — same potential, lower chaos. Want me to remind you later too?")
+[ do it / save suggestion ]
+
+- If "do it": Call on-chain stub (`runOnChain.ts`).
+- If "save suggestion": Store suggestion in session.
+
+---
+
+**Q5 — Chill Score**
+chill:
+based on what I saw, your current chill score is xx
+a bit chaotic — but now you know. / or it's already quite chill
+let's work on raising it together.
+
+→ [ enter chill club ]
+
+- Calculate and display "chill score" (from analytics).
+- End onboarding, enter main chat.
+
+---
+
+**RAG + LLM Output Usage**
+- System prompt always included for persona and forbidden topics.
+- Retrieve RAG docs for compliance, FAQ, or behavioral questions.
+- LLM output for personalized analysis and advice after analytics. 

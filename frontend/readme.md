@@ -47,7 +47,9 @@ Follow these steps to install and run the BeChill application on your local mach
 
 ```bash
 git clone https://github.com/your-username/BeChill-web.git
-cd BeChill-web
+cd BeChill-web/frontend/web    
+or     
+cd BeChill-web/frontend/mobile   
 ```
 
 2. **Install dependencies**

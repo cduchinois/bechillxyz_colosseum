@@ -7,6 +7,8 @@ import { CardCarouselSection } from "./sections/CardCarouselSection";
 import { Footer } from "./Footer";
 import AnimatedClouds from "../common/AnimatedClouds";
 import MobileAppPromo from "./sections/MobileAppPromo";
+import ContactForm from "../common/ContactForm";
+import FollowUsOnTwitter from "../common/TwitterSection";
 
 interface PrivyUser {
   wallet?: {
@@ -58,6 +60,8 @@ export default function LandingPage() {
           />
           <CardCarouselSection />
           <MobileAppPromo />
+          <ContactForm />
+          <FollowUsOnTwitter />
         </div>
       </main>
       <Footer />

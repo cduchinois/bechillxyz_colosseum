@@ -79,3 +79,4 @@ export const deleteMessage = mutation({
     await ctx.db.delete(args.id);
   },
 });
+

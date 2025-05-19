@@ -1,0 +1,307 @@
+import { useState, useEffect, useMemo } from 'react';
+import TransactionDetail from './TransactionDetail';
+import TransactionFiltersComponent, { TransactionFilters } from './TransactionFilters';
+
+// Define the transaction type locally
+interface SolanaTransaction {
+  signature: string;
+  slot: number;
+  err: any | null;
+  memo: string | null;
+  blockTime: number;
+  confirmationStatus: string;
+  [key: string]: any;
+}
+
+// Helper function to format time in a human-readable format
+function formatTimeAgo(timestamp: number): string {
+  const now = new Date().getTime();
+  const diff = now - timestamp;
+  
+  // Convert time difference to appropriate units
+  const seconds = Math.floor(diff / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  const months = Math.floor(days / 30);
+  const years = Math.floor(days / 365);
+  
+  if (years > 0) {
+    return `${years} ${years === 1 ? 'year' : 'years'} ago`;
+  } else if (months > 0) {
+    return `${months} ${months === 1 ? 'month' : 'months'} ago`;
+  } else if (days > 0) {
+    return `${days} ${days === 1 ? 'day' : 'days'} ago`;
+  } else if (hours > 0) {
+    return `${hours} ${hours === 1 ? 'hour' : 'hours'} ago`;
+  } else if (minutes > 0) {
+    return `${minutes} ${minutes === 1 ? 'minute' : 'minutes'} ago`;
+  } else {
+    return `${seconds} ${seconds === 1 ? 'second' : 'seconds'} ago`;
+  }
+}
+
+interface TransactionsListProps {
+  address: string;
+  currentPage: number;
+  onPageChange: (page: number) => void;
+  totalPages: number;
+}
+
+export default function TransactionsList({
+  address,
+  currentPage,
+  onPageChange,
+  totalPages
+}: TransactionsListProps) {
+  const [transactions, setTransactions] = useState<SolanaTransaction[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [selectedTransaction, setSelectedTransaction] = useState<string | null>(null);
+  const [filters, setFilters] = useState<TransactionFilters>({
+    status: 'all',
+    timeRange: 'all',
+    hasMemo: null
+  });
+
+  useEffect(() => {
+    const fetchTransactions = async () => {
+      if (!address) return;
+      
+      setLoading(true);
+      setError('');
+      
+      try {
+        const res = await fetch(`/api/transactions/page?address=${address}&page=${currentPage}`);
+        
+        if (!res.ok) {
+          const errorData = await res.json();
+          throw new Error(errorData.error || 'Failed to fetch transactions');
+        }
+        
+        const data = await res.json();
+        setTransactions(data);
+      } catch (err: any) {
+        setError(err.message || 'Error fetching transactions');
+        console.error('Error fetching transactions:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchTransactions();
+  }, [address, currentPage]);
+
+  // Apply filters to transactions
+  const filteredTransactions = useMemo(() => {
+    if (!transactions.length) return [];
+    
+    return transactions.filter(tx => {
+      // Status filter
+      if (filters.status === 'success' && tx.err) {
+        return false;
+      }
+      if (filters.status === 'failed' && !tx.err) {
+        return false;
+      }
+      
+      // Memo filter
+      if (filters.hasMemo === true && !tx.memo) {
+        return false;
+      }
+      if (filters.hasMemo === false && tx.memo) {
+        return false;
+      }
+      
+      // Time range filter
+      if (filters.timeRange !== 'all' && tx.blockTime) {
+        const txDate = new Date(tx.blockTime * 1000);
+        const now = new Date();
+        
+        if (filters.timeRange === 'today') {
+          if (txDate.getDate() !== now.getDate() ||
+              txDate.getMonth() !== now.getMonth() ||
+              txDate.getFullYear() !== now.getFullYear()) {
+            return false;
+          }
+        } else if (filters.timeRange === 'week') {
+          const weekAgo = new Date();
+          weekAgo.setDate(now.getDate() - 7);
+          if (txDate < weekAgo) {
+            return false;
+          }
+        } else if (filters.timeRange === 'month') {
+          const monthAgo = new Date();
+          monthAgo.setMonth(now.getMonth() - 1);
+          if (txDate < monthAgo) {
+            return false;
+          }
+        } else if (filters.timeRange === 'year') {
+          const yearAgo = new Date();
+          yearAgo.setFullYear(now.getFullYear() - 1);
+          if (txDate < yearAgo) {
+            return false;
+          }
+        }
+      }
+      
+      return true;
+    });
+  }, [transactions, filters]);
+
+  if (loading) {
+    return <div className="text-center py-8">Loading transactions...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center py-8 text-red-500">{error}</div>;
+  }
+
+  if (!transactions.length) {
+    return <div className="text-center py-8">No transactions found for this page.</div>;
+  }
+
+  return (
+    <>
+      <div className="w-full max-w-3xl mx-auto my-6">
+        <h2 className="text-xl font-semibold mb-4">Transactions (Page {currentPage})</h2>
+        
+        <TransactionFiltersComponent 
+          filters={filters}
+          onFilterChange={setFilters}
+        />
+        
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="px-4 py-2 text-left">Signature</th>
+                <th className="px-4 py-2 text-left">Timestamp</th>
+                <th className="px-4 py-2 text-left">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredTransactions.length === 0 ? (
+                <tr>
+                  <td colSpan={3} className="text-center py-6 text-gray-500">
+                    No transactions match the selected filters
+                  </td>
+                </tr>
+              ) : (
+                filteredTransactions.map((tx) => (
+                  <tr 
+                    key={tx.signature} 
+                    className="border-b border-gray-200 hover:bg-gray-50 cursor-pointer" 
+                    onClick={() => setSelectedTransaction(tx.signature)}
+                  >
+                    <td className="px-4 py-3">
+                      <div className="flex items-center">
+                        <span 
+                          className="text-blue-600 hover:underline truncate block max-w-[150px] mr-2"
+                          title={tx.signature}
+                        >
+                          {tx.signature.substring(0, 8)}...{tx.signature.substring(tx.signature.length - 8)}
+                        </span>
+                        <a 
+                          href={`https://explorer.solana.com/tx/${tx.signature}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 hover:text-gray-600"
+                          title="View in Solana Explorer"
+                          onClick={(e) => e.stopPropagation()} // Prevent row click when clicking the external link
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <span title={tx.blockTime ? new Date(tx.blockTime * 1000).toLocaleString() : 'N/A'}>
+                        {tx.blockTime ? formatTimeAgo(tx.blockTime * 1000) : 'N/A'}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3">
+                      <span className={`px-2 py-1 rounded text-xs ${
+                        tx.err ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'
+                      }`}>
+                        {tx.err ? 'Failed' : 'Success'}
+                      </span>
+                      {tx.memo && (
+                        <span className="ml-2 text-xs text-gray-500" title={tx.memo}>
+                          Memo: {tx.memo.length > 20 ? `${tx.memo.substring(0, 20)}...` : tx.memo}
+                        </span>
+                      )}
+                      {tx.slot && (
+                        <span className="block text-xs text-gray-500">
+                          Slot: {tx.slot.toLocaleString()}
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+        
+        {totalPages > 1 && (
+          <div className="flex justify-center mt-6">
+            <nav className="flex items-center gap-1">
+              <button
+                onClick={() => onPageChange(Math.max(1, currentPage - 1))}
+                disabled={currentPage === 1}
+                className="px-3 py-1 border rounded disabled:opacity-50"
+              >
+                &lt;
+              </button>
+              
+              {[...Array(totalPages)].map((_, i) => {
+                const pageNum = i + 1;
+                // Show first, last, current and nearby pages
+                if (
+                  pageNum === 1 || 
+                  pageNum === totalPages || 
+                  Math.abs(pageNum - currentPage) <= 2
+                ) {
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => onPageChange(pageNum)}
+                      className={`px-3 py-1 border rounded ${
+                        currentPage === pageNum ? 'bg-blue-600 text-white' : ''
+                      }`}
+                    >
+                      {pageNum}
+                    </button>
+                  );
+                } else if (
+                  (pageNum === 2 && currentPage > 4) || 
+                  (pageNum === totalPages - 1 && currentPage < totalPages - 3)
+                ) {
+                  return <span key={pageNum}>...</span>;
+                }
+                return null;
+              })}
+              
+              <button
+                onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
+                disabled={currentPage === totalPages}
+                className="px-3 py-1 border rounded disabled:opacity-50"
+              >
+                &gt;
+              </button>
+            </nav>
+          </div>
+        )}
+      </div>
+      
+      {selectedTransaction && (
+        <TransactionDetail 
+          signature={selectedTransaction}
+          onClose={() => setSelectedTransaction(null)}
+        />
+      )}
+    </>
+  );
+}

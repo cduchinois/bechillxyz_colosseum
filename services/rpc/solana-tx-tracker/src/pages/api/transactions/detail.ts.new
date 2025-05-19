@@ -1,0 +1,82 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+import axios from 'axios';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Only allow GET requests
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { signature } = req.query;
+  const heliusApiKey = process.env.HELIUS_API_KEY;
+
+  if (!signature || typeof signature !== 'string') {
+    return res.status(400).json({ error: 'Transaction signature is required' });
+  }
+
+  if (!heliusApiKey) {
+    return res.status(500).json({ error: 'Helius API key is not configured' });
+  }
+
+  try {
+    // Direct implementation without using the library
+    const rpcUrl = `https://mainnet.helius-rpc.com/?api-key=${heliusApiKey}`;
+    
+    const response = await axios.post(rpcUrl, {
+      jsonrpc: '2.0',
+      id: 'tx-detail-request',
+      method: 'getTransaction',
+      params: [
+        signature,
+        { encoding: 'json', maxSupportedTransactionVersion: 0 }
+      ]
+    });
+    
+    if (response.data.error) {
+      throw new Error(`RPC Error: ${JSON.stringify(response.data.error)}`);
+    }
+
+    if (!response.data.result) {
+      throw new Error('Transaction not found');
+    }
+
+    const txData = response.data.result;
+    
+    // Extract memo if exists
+    let memo = null;
+    try {
+      const instructions = txData.transaction.message.instructions;
+      for (const instruction of instructions) {
+        if (instruction.programId === 'MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr') {
+          // This is a memo instruction
+          if (instruction.data) {
+            memo = Buffer.from(instruction.data, 'base64').toString('utf8');
+            break;
+          }
+        }
+      }
+    } catch (memoError) {
+      // Ignore errors in memo extraction
+    }
+
+    // Format response
+    const transactionDetail = {
+      signature,
+      blockTime: txData.blockTime,
+      slot: txData.slot,
+      fee: txData.meta?.fee || 0,
+      err: txData.meta?.err,
+      memo: memo,
+      status: txData.meta?.err ? 'failed' : (txData.confirmationStatus || 'confirmed'),
+      raw: txData
+    };
+
+    return res.status(200).json(transactionDetail);
+  } catch (error) {
+    console.error('Error fetching transaction details:', error);
+    return res.status(500).json({ 
+      error: 'Failed to fetch transaction details',
+      details: error instanceof Error ? error.message : String(error)
+    });
+  }
+}

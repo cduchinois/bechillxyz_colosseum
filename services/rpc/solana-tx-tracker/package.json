@@ -1,0 +1,37 @@
+{
+  "name": "solana-tx-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build-lib": "cd lib/solana-tx-fetcher && npm run build",
+    "prepare-lib": "cd lib/solana-tx-fetcher && npm install",
+    "setup": "npm install && npm run prepare-lib && npm run build-lib",
+    "test-lib": "cd lib/solana-tx-fetcher && npm test",
+    "prepare-publish": "./prepare-library.sh",
+    "publish-lib": "./publish-library.sh"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.2",
+    "axios": "^1.9.0",
+    "fs-extra": "^11.3.0",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

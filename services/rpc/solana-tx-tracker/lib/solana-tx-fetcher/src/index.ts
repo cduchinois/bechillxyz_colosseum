@@ -20,7 +20,7 @@ import {
 export function isValidSolanaAddress(address: string): boolean {
   try {
     if (!address || typeof address !== 'string') {
-      return false;
+      return false; 
     }
     new PublicKey(address);
     return true;

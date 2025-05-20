@@ -258,10 +258,108 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // First check if we already have a summary for this address
     let summary = await getTransactionSummary(publicDir, address);
     
-    // If we don't have a summary or refresh is requested, fetch transactions
-    if (!summary || req.query.refresh === 'true') {
-      const maxPages = req.query.maxPages ? parseInt(req.query.maxPages as string) : 5;
+    const maxPages = req.query.maxPages ? parseInt(req.query.maxPages as string) : 5;
+    
+    // If we don't have a summary, fetch transactions
+    if (!summary) {
       summary = await fetchAllTransactions(rpcUrl, address, publicDir, maxPages);
+    } 
+    // If refresh is requested 
+    else if (req.query.refresh === 'true') {
+      if (summary.earliestTransaction && summary.earliestTransaction.signature) {
+        // Start with existing pages and current max page number
+        let currentPage = summary.totalPages > 0 ? summary.totalPages : 0;
+        let lastSignature = summary.earliestTransaction.signature;
+        let additionalPages = 0;
+        let hasMore = true;
+        
+        // Continue fetching from the earliest known transaction
+        while (hasMore && additionalPages < maxPages) {
+          currentPage++;
+          additionalPages++;
+          
+          const transactions = await fetchTransactions(rpcUrl, address, 100, lastSignature);
+          
+          if (transactions.length === 0) {
+            hasMore = false;
+            break;
+          }
+
+          // Save transactions to file
+          const dirPath = path.join(publicDir, 'transactions');
+          const filePath = path.join(dirPath, `${address}-transactions-page-${currentPage}.json`);
+          await fs.writeJson(filePath, transactions, { spaces: 2 });
+          
+          // Format date for summary
+          const formatDate = (timestamp: number): string => {
+            const date = new Date(timestamp * 1000);
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+          };
+          
+          if (transactions.length > 0) {
+            const lastTx = transactions[transactions.length - 1];
+            const now = new Date();
+            const timestamp = now.getTime();
+            
+            // Update summary
+            summary.lastUpdated = now.toISOString();
+            summary.lastFetched = now.toISOString();
+            summary.totalTransactions += transactions.length;
+            
+            // Add new page info
+            const pageInfo: TransactionPageInfo = {
+              pageNumber: currentPage,
+              filename: `${address}-transactions-page-${currentPage}.json`,
+              transactionCount: transactions.length,
+              lastSignature: lastTx.signature,
+              lastBlockTime: lastTx.blockTime,
+              lastBlockTimeFormatted: formatDate(lastTx.blockTime),
+              timestamp: timestamp
+            };
+            
+            summary.pages.push(pageInfo);
+            
+            // Update totalPages
+            summary.totalPages = summary.pages.length;
+            
+            // Check if this is the oldest transaction we've seen
+            if (lastTx.blockTime < summary.earliestTransaction.blockTime) {
+              summary.earliestTransaction = {
+                blockTime: lastTx.blockTime,
+                confirmationStatus: lastTx.confirmationStatus || 'finalized',
+                err: lastTx.err,
+                memo: lastTx.memo,
+                signature: lastTx.signature,
+                slot: lastTx.slot
+              };
+              
+              summary.walletCreationDate = formatDate(lastTx.blockTime);
+            }
+            
+            // Update last signature for next iteration
+            lastSignature = lastTx.signature;
+            
+            if (transactions.length < 100) {
+              hasMore = false;
+            }
+          } else {
+            hasMore = false;
+          }
+        }
+        
+        // Save updated summary file
+        const summaryPath = path.join(publicDir, 'transactions', `${address}-summary.json`);
+        await fs.writeJson(summaryPath, summary, { spaces: 2 });
+      } else {
+        // No earliest transaction found, fetch from beginning
+        summary = await fetchAllTransactions(rpcUrl, address, publicDir, maxPages);
+      }
     }
     
     return res.status(200).json(summary);

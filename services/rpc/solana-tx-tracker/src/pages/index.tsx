@@ -44,7 +44,7 @@ export default function Home() {
   const [isFetchingMore, setIsFetchingMore] = useState(false);
   const [isClearing, setIsClearing] = useState(false);
 
-  const handleAddressSubmit = async (address: string) => {
+  const handleAddressSubmit = async (address: string, maxPages: number) => {
     setAddress(address);
     setLoading(true);
     setError('');
@@ -52,7 +52,7 @@ export default function Home() {
     setCurrentPage(1);
 
     try {
-      const res = await fetch(`/api/transactions?address=${address}`);
+      const res = await fetch(`/api/transactions?address=${address}&maxPages=${maxPages}&refresh=true`);
 
       if (!res.ok) {
         const errorData = await res.json();
@@ -160,13 +160,13 @@ export default function Home() {
               <p className="mb-2">Need an address to test? Try one of these Solana addresses:</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 <button 
-                  onClick={() => handleAddressSubmit("vines1vzrYbzLMRdu58ou5XTby4qAqVRLmqo36NKPTg")}
+                  onClick={() => handleAddressSubmit("vines1vzrYbzLMRdu58ou5XTby4qAqVRLmqo36NKPTg", 15)}
                   className="text-blue-600 hover:text-blue-800 text-sm text-left hover:underline truncate"
                 >
                   Solana: vines1vzrYbzLMRdu58ou5XTby4qAqVRLmqo36NKPTg
                 </button>
                 <button 
-                  onClick={() => handleAddressSubmit("4Zc4kQZhRQeGztihvcGSWezJE1k44kKEgPCAkgmyxwrw")}
+                  onClick={() => handleAddressSubmit("4Zc4kQZhRQeGztihvcGSWezJE1k44kKEgPCAkgmyxwrw", 15)}
                   className="text-blue-600 hover:text-blue-800 text-sm text-left hover:underline truncate"
                 >
                   Genopets: 4Zc4kQZhRQeGztihvcGSWezJE1k44kKEgPCAkgmyxwrw

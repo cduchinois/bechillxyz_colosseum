@@ -4,6 +4,37 @@ import fs from 'fs-extra';
 import { PublicKey } from '@solana/web3.js';
 import axios from 'axios';
 
+// Define the transaction interfaces
+interface EarliestTransaction {
+  blockTime: number;
+  confirmationStatus: string;
+  err: any | null;
+  memo: string | null;
+  signature: string;
+  slot: number;
+}
+
+interface TransactionPageInfo {
+  pageNumber: number;
+  filename: string;
+  transactionCount: number;
+  lastSignature: string;
+  lastBlockTime: number;
+  lastBlockTimeFormatted: string;
+  timestamp: number;
+}
+
+interface TransactionSummary {
+  address: string;
+  lastUpdated: string;
+  lastFetched: string;
+  totalPages: number;
+  totalTransactions: number;
+  walletCreationDate: string;
+  earliestTransaction: EarliestTransaction;
+  pages: TransactionPageInfo[];
+}
+
 // Include necessary functions from our library directly
 const isValidSolanaAddress = (address: string): boolean => {
   try {
@@ -50,10 +81,25 @@ async function fetchAllTransactions(rpcUrl: string, address: string, basePath: s
   let currentPage = 1;
   let lastSignature: string | undefined = undefined;
   let hasMore = true;
-  let summary = {
+  // Get current timestamp
+  const now = new Date();
+  const isoNow = now.toISOString();
+  
+  let summary: TransactionSummary = {
     address,
-    firstTransactionDate: '',
-    nb_all_transactions: 0,
+    lastUpdated: isoNow,
+    lastFetched: isoNow,
+    totalPages: 0,
+    totalTransactions: 0,
+    walletCreationDate: '',
+    earliestTransaction: {
+      blockTime: 0,
+      confirmationStatus: 'finalized',
+      err: null,
+      memo: null, 
+      signature: '',
+      slot: 0
+    },
     pages: []
   };
 
@@ -72,28 +118,50 @@ async function fetchAllTransactions(rpcUrl: string, address: string, basePath: s
       const filePath = path.join(dirPath, `${address}-transactions-page-${currentPage}.json`);
       await fs.writeJson(filePath, transactions, { spaces: 2 });
 
+      // Format a date as DD/MM/YYYY HH:MM:SS
+      const formatDate = (timestamp: number): string => {
+        const date = new Date(timestamp * 1000);
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+        return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+      };
+
       // Update summary
       if (transactions.length > 0) {
+        // First transaction in array is the newest (most recent)
+        const firstTx = transactions[0];
+        // Last transaction in array is the oldest
         const lastTx = transactions[transactions.length - 1];
         
-        // Set first transaction date if not set or we're on page 1
-        if (!summary.firstTransactionDate || currentPage === 1) {
-          summary.firstTransactionDate = new Date(lastTx.blockTime * 1000).toISOString();
-        }
+        // Get current timestamp
+        const now = new Date();
+        const isoNow = now.toISOString();
+        const timestamp = now.getTime();
+        
+        // Update the summary with the latest fetch info
+        summary.lastUpdated = isoNow;
+        summary.lastFetched = isoNow;
         
         // Update total transaction count
-        summary.nb_all_transactions += transactions.length;
+        summary.totalTransactions += transactions.length;
         
         // Add page info
-        const pageInfo = {
-          page: currentPage,
-          blocktime: lastTx.blockTime,
+        const pageInfo: TransactionPageInfo = {
+          pageNumber: currentPage,
+          filename: `${address}-transactions-page-${currentPage}.json`,
+          transactionCount: transactions.length,
           lastSignature: lastTx.signature,
-          nb_transaction: transactions.length
+          lastBlockTime: lastTx.blockTime,
+          lastBlockTimeFormatted: formatDate(lastTx.blockTime),
+          timestamp: timestamp
         };
         
         // Update or add page info
-        const existingPageIndex = summary.pages.findIndex((p: any) => p.page === currentPage);
+        const existingPageIndex = summary.pages.findIndex(p => p.pageNumber === currentPage);
         if (existingPageIndex !== -1) {
           summary.pages[existingPageIndex] = pageInfo;
         } else {
@@ -101,7 +169,27 @@ async function fetchAllTransactions(rpcUrl: string, address: string, basePath: s
         }
         
         // Sort pages by page number
-        summary.pages.sort((a: any, b: any) => a.page - b.page);
+        summary.pages.sort((a, b) => a.pageNumber - b.pageNumber);
+        
+        // Update totalPages
+        summary.totalPages = summary.pages.length;
+        
+        // Check if this is the oldest transaction we've seen
+        // Update earliestTransaction and walletCreationDate if needed
+        if (!summary.earliestTransaction || 
+            lastTx.blockTime < (summary.earliestTransaction?.blockTime || Infinity)) {
+          
+          summary.earliestTransaction = {
+            blockTime: lastTx.blockTime,
+            confirmationStatus: lastTx.confirmationStatus || 'finalized',
+            err: lastTx.err,
+            memo: lastTx.memo,
+            signature: lastTx.signature,
+            slot: lastTx.slot
+          };
+          
+          summary.walletCreationDate = formatDate(lastTx.blockTime);
+        }
       }
 
       lastSignature = transactions[transactions.length - 1]?.signature;

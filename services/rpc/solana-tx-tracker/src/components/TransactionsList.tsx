@@ -41,11 +41,22 @@ function formatTimeAgo(timestamp: number): string {
   }
 }
 
+interface TransactionPageInfo {
+  pageNumber: number;
+  filename: string;
+  transactionCount: number;
+  lastSignature: string;
+  lastBlockTime: number;
+  lastBlockTimeFormatted: string;
+  timestamp: number;
+}
+
 interface TransactionsListProps {
   address: string;
   currentPage: number;
   onPageChange: (page: number) => void;
   totalPages: number;
+  pages?: TransactionPageInfo[];
 }
 
 export default function TransactionsList({
@@ -232,7 +243,7 @@ export default function TransactionsList({
                           Memo: {tx.memo.length > 20 ? `${tx.memo.substring(0, 20)}...` : tx.memo}
                         </span>
                       )}
-                      {tx.slot && (
+                      {tx.slot !== undefined && tx.slot !== null && (
                         <span className="block text-xs text-gray-700 font-medium">
                           Slot: {tx.slot.toLocaleString()}
                         </span>

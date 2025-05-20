@@ -96,8 +96,8 @@ export default function TransactionDetail({ signature, onClose }: TransactionDet
 
   if (!transaction) return null;
 
-  const formatDate = (timestamp: number) => {
-    return new Date(timestamp * 1000).toLocaleString();
+  const formatDate = (timestamp: number | undefined) => {
+    return timestamp ? new Date(timestamp * 1000).toLocaleString() : 'N/A';
   };
 
   return (
@@ -141,7 +141,7 @@ export default function TransactionDetail({ signature, onClose }: TransactionDet
               </div>
               <div className="border rounded-lg p-3">
                 <h3 className="font-semibold text-sm text-gray-600">Slot</h3>
-                <p className="text-gray-900 font-medium">{transaction.slot.toLocaleString()}</p>
+                <p className="text-gray-900 font-medium">{transaction.slot !== undefined && transaction.slot !== null ? transaction.slot.toLocaleString() : 'N/A'}</p>
               </div>
               <div className="border rounded-lg p-3">
                 <h3 className="font-semibold text-sm text-gray-600">Status</h3>
@@ -151,7 +151,7 @@ export default function TransactionDetail({ signature, onClose }: TransactionDet
               </div>
               <div className="border rounded-lg p-3">
                 <h3 className="font-semibold text-sm text-gray-600">Fee</h3>
-                <p className="text-gray-900 font-medium">{transaction.fee ? `${(transaction.fee / 1e9).toFixed(6)} SOL` : 'Unknown'}</p>
+                <p className="text-gray-900 font-medium">{transaction.fee !== undefined ? `${(transaction.fee / 1e9).toFixed(6)} SOL` : 'Unknown'}</p>
               </div>
             </div>
 

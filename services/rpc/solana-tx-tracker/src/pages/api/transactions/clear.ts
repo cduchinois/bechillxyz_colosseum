@@ -25,7 +25,7 @@ async function clearTransactionData(basePath: string, address: string): Promise<
       
       // Delete all page files
       for (const pageInfo of summary.pages) {
-        const pagePath = path.join(transactionsDir, `${address}-transactions-page-${pageInfo.page}.json`);
+        const pagePath = path.join(transactionsDir, `${address}-transactions-page-${pageInfo.pageNumber || pageInfo.page}.json`);
         if (await fs.pathExists(pagePath)) {
           await fs.remove(pagePath);
         }

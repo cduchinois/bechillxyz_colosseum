@@ -4,18 +4,34 @@ import AddressInput from '../components/AddressInput';
 import TransactionSummaryComponent from '../components/TransactionSummary';
 import TransactionsList from '../components/TransactionsList';
 
-// Define the types locally
+// Define the types locally to match library format
+interface EarliestTransaction {
+  blockTime: number;
+  confirmationStatus: string;
+  err: any | null;
+  memo: string | null;
+  signature: string;
+  slot: number;
+}
+
 interface TransactionPageInfo {
-  page: number;
-  blocktime: number;
+  pageNumber: number;
+  filename: string;
+  transactionCount: number;
   lastSignature: string;
-  nb_transaction: number;
+  lastBlockTime: number;
+  lastBlockTimeFormatted: string;
+  timestamp: number;
 }
 
 interface TransactionSummary {
   address: string;
-  firstTransactionDate: string;
-  nb_all_transactions: number;
+  lastUpdated: string;
+  lastFetched: string;
+  totalPages: number;
+  totalTransactions: number;
+  walletCreationDate: string;
+  earliestTransaction: EarliestTransaction;
   pages: TransactionPageInfo[];
 }
 
@@ -189,7 +205,8 @@ export default function Home() {
                 address={address}
                 currentPage={currentPage}
                 onPageChange={handlePageChange}
-                totalPages={summary.pages.length}
+                totalPages={summary.totalPages}
+                pages={summary.pages}
               />
               
               {!loading && !isFetchingMore && (

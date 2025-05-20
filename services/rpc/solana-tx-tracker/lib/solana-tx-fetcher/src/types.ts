@@ -10,17 +10,33 @@ export interface SolanaTransaction {
   [key: string]: any;
 }
 
+export interface EarliestTransaction {
+  blockTime: number;
+  confirmationStatus: string;
+  err: any | null;
+  memo: string | null;
+  signature: string;
+  slot: number;
+}
+
 export interface TransactionPageInfo {
-  page: number;
-  blocktime: number;
+  pageNumber: number;
+  filename: string;
+  transactionCount: number;
   lastSignature: string;
-  nb_transaction: number;
+  lastBlockTime: number;
+  lastBlockTimeFormatted: string;
+  timestamp: number;
 }
 
 export interface TransactionSummary {
   address: string;
-  firstTransactionDate: string;
-  nb_all_transactions: number;
+  lastUpdated: string;
+  lastFetched: string;
+  totalPages: number;
+  totalTransactions: number;
+  walletCreationDate: string;
+  earliestTransaction: EarliestTransaction;
   pages: TransactionPageInfo[];
 }
 

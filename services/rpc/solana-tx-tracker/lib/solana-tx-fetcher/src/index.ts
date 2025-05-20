@@ -239,39 +239,68 @@ export async function saveTransactions({
     const dirPath = path.join(basePath, 'transactions');
     await fs.ensureDir(dirPath);
 
-    const filePath = path.join(dirPath, `${address}-transactions-page-${pageNumber}.json`);
+    const filename = `${address}_TRANSACTIONS_page-${pageNumber}.json`;
+    const filePath = path.join(dirPath, filename);
     await fs.writeJson(filePath, transactions, { spaces: 2 });
+
+    // Get current timestamp
+    const now = new Date();
+    const timestamp = now.getTime();
+    const isoNow = now.toISOString();
+    
+    // Format a date as DD/MM/YYYY HH:MM:SS
+    const formatDate = (timestamp: number): string => {
+      const date = new Date(timestamp * 1000);
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      const hours = String(date.getHours()).padStart(2, '0');
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      const seconds = String(date.getSeconds()).padStart(2, '0');
+      return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    };
     
     // Create or update summary
     let updatedSummary = summary || {
       address,
-      firstTransactionDate: '',
-      nb_all_transactions: 0,
-      pages: []
+      lastUpdated: isoNow,
+      lastFetched: isoNow,
+      totalPages: 0,
+      totalTransactions: 0,
+      walletCreationDate: '',
+      earliestTransaction: {
+        blockTime: 0,
+        confirmationStatus: 'finalized',
+        err: null,
+        memo: null,
+        signature: '',
+        slot: 0
+      },
+      pages: [] as TransactionPageInfo[]
     };
 
-    // If we have transactions and this is the first page or no date set yet
+    // If we have transactions
     if (transactions.length > 0) {
+      // Last transaction in array is the oldest for this page
       const lastTx = transactions[transactions.length - 1];
-      
-      // Set first transaction date if not set or we're on page 1
-      if (!updatedSummary.firstTransactionDate || pageNumber === 1) {
-        updatedSummary.firstTransactionDate = new Date(lastTx.blockTime * 1000).toISOString();
-      }
-      
-      // Update total transaction count
-      updatedSummary.nb_all_transactions += transactions.length;
+
+      // Update the summary with the latest fetch info
+      updatedSummary.lastUpdated = isoNow;
+      updatedSummary.lastFetched = isoNow;
       
       // Add page info
       const pageInfo: TransactionPageInfo = {
-        page: pageNumber,
-        blocktime: lastTx.blockTime,
+        pageNumber: pageNumber,
+        filename: filename,
+        transactionCount: transactions.length,
         lastSignature: lastTx.signature,
-        nb_transaction: transactions.length
+        lastBlockTime: lastTx.blockTime,
+        lastBlockTimeFormatted: formatDate(lastTx.blockTime),
+        timestamp: timestamp
       };
       
       // Update or add page info
-      const existingPageIndex = updatedSummary.pages.findIndex(p => p.page === pageNumber);
+      const existingPageIndex = updatedSummary.pages.findIndex(p => p.pageNumber === pageNumber);
       if (existingPageIndex !== -1) {
         updatedSummary.pages[existingPageIndex] = pageInfo;
       } else {
@@ -279,7 +308,32 @@ export async function saveTransactions({
       }
       
       // Sort pages by page number
-      updatedSummary.pages.sort((a, b) => a.page - b.page);
+      updatedSummary.pages.sort((a, b) => a.pageNumber - b.pageNumber);
+      
+      // Update totalPages
+      updatedSummary.totalPages = updatedSummary.pages.length;
+      
+      // Update totalTransactions by counting all transactions
+      updatedSummary.totalTransactions = updatedSummary.pages.reduce(
+        (sum, page) => sum + page.transactionCount, 0
+      );
+      
+      // Check if this is the oldest transaction we've seen
+      // Update earliestTransaction and walletCreationDate if needed
+      if (!updatedSummary.earliestTransaction || 
+          lastTx.blockTime < (updatedSummary.earliestTransaction?.blockTime || Infinity)) {
+        
+        updatedSummary.earliestTransaction = {
+          blockTime: lastTx.blockTime,
+          confirmationStatus: lastTx.confirmationStatus || 'finalized',
+          err: lastTx.err,
+          memo: lastTx.memo,
+          signature: lastTx.signature,
+          slot: lastTx.slot
+        };
+        
+        updatedSummary.walletCreationDate = formatDate(lastTx.blockTime);
+      }
     }
     
     // Save summary file
@@ -309,11 +363,27 @@ export async function fetchAllTransactions(
   let currentPage = 1;
   let lastSignature: string | undefined = undefined;
   let hasMore = true;
+  
+  // Get current timestamp
+  const now = new Date();
+  const isoNow = now.toISOString();
+  
   let summary: TransactionSummary = {
     address,
-    firstTransactionDate: '',
-    nb_all_transactions: 0,
-    pages: []
+    lastUpdated: isoNow,
+    lastFetched: isoNow,
+    totalPages: 0,
+    totalTransactions: 0,
+    walletCreationDate: '',
+    earliestTransaction: {
+      blockTime: 0,
+      confirmationStatus: 'finalized',
+      err: null,
+      memo: null, 
+      signature: '',
+      slot: 0
+    },
+    pages: [] as TransactionPageInfo[]
   };
 
   try {
@@ -415,7 +485,7 @@ export async function clearTransactionData(
       
       // Delete all page files
       for (const pageInfo of summary.pages) {
-        const pagePath = path.join(transactionsDir, `${address}-transactions-page-${pageInfo.page}.json`);
+        const pagePath = path.join(transactionsDir, `${address}-transactions-page-${pageInfo.pageNumber}.json`);
         if (await fs.pathExists(pagePath)) {
           await fs.remove(pagePath);
         }

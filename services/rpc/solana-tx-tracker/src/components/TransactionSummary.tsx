@@ -1,15 +1,31 @@
 // Define the types locally to avoid dependency on library
+interface EarliestTransaction {
+  blockTime: number;
+  confirmationStatus: string;
+  err: any | null;
+  memo: string | null;
+  signature: string;
+  slot: number;
+}
+
 interface TransactionPageInfo {
-  page: number;
-  blocktime: number;
+  pageNumber: number;
+  filename: string;
+  transactionCount: number;
   lastSignature: string;
-  nb_transaction: number;
+  lastBlockTime: number;
+  lastBlockTimeFormatted: string;
+  timestamp: number;
 }
 
 interface TransactionSummary {
   address: string;
-  firstTransactionDate: string;
-  nb_all_transactions: number;
+  lastUpdated: string;
+  lastFetched: string;
+  totalPages: number;
+  totalTransactions: number;
+  walletCreationDate: string;
+  earliestTransaction: EarliestTransaction;
   pages: TransactionPageInfo[];
 }
 
@@ -18,12 +34,17 @@ interface TransactionSummaryProps {
 }
 
 export default function TransactionSummaryComponent({ summary }: TransactionSummaryProps) {
-  const mostRecentDate = summary.pages[0]?.blocktime 
-    ? new Date(summary.pages[0].blocktime * 1000).toLocaleString() 
+  const mostRecentDate = summary.pages[0] 
+    ? summary.pages[0].lastBlockTimeFormatted
     : 'N/A';
     
-  const timeRange = (summary.firstTransactionDate && summary.pages[0]?.blocktime) 
-    ? calculateTimeRange(new Date(summary.firstTransactionDate), new Date(summary.pages[0].blocktime * 1000))
+  const oldestDate = summary.walletCreationDate || 'N/A';
+    
+  const timeRange = (summary.pages[0] && summary.earliestTransaction) 
+    ? calculateTimeRange(
+        new Date(summary.earliestTransaction.blockTime * 1000), 
+        new Date(summary.pages[0].lastBlockTime * 1000)
+      )
     : 'N/A';
 
   return (
@@ -42,17 +63,12 @@ export default function TransactionSummaryComponent({ summary }: TransactionSumm
           </a>
         </div>
         <div>
-          <p className="text-gray-800 font-medium">First Transaction</p>
-          <p className="font-medium text-gray-900">
-            {summary.firstTransactionDate 
-              ? new Date(summary.firstTransactionDate).toLocaleString() 
-              : 'N/A'
-            }
-          </p>
-        </div>
-        <div>
           <p className="text-gray-800 font-medium">Most Recent Transaction</p>
           <p className="font-medium text-gray-900">{mostRecentDate}</p>
+        </div>
+        <div>
+          <p className="text-gray-800 font-medium">Oldest Transaction (Wallet Creation)</p>
+          <p className="font-medium text-gray-900">{oldestDate}</p>
         </div>
         <div>
           <p className="text-gray-800 font-medium">Activity Timespan</p>
@@ -60,11 +76,11 @@ export default function TransactionSummaryComponent({ summary }: TransactionSumm
         </div>
         <div>
           <p className="text-gray-800 font-medium">Total Transactions</p>
-          <p className="font-medium text-gray-900">{summary.nb_all_transactions.toLocaleString()}</p>
+          <p className="font-medium text-gray-900">{summary.totalTransactions ? summary.totalTransactions.toLocaleString() : '0'}</p>
         </div>
         <div>
           <p className="text-gray-800 font-medium">Pages Fetched</p>
-          <p className="font-medium text-gray-900">{summary.pages.length}</p>
+          <p className="font-medium text-gray-900">{summary.totalPages}</p>
         </div>
       </div>
     </div>

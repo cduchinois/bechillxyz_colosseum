@@ -38,12 +38,25 @@ SUMMARY=$(curl -s -X GET "${BASE_URL}/api/transactions?address=${TEST_ADDRESS}")
 TOTAL_PAGES=$(echo $SUMMARY | grep -o '"totalPages":[0-9]*' | cut -d':' -f2)
 TOTAL_TRANSACTIONS=$(echo $SUMMARY | grep -o '"totalTransactions":[0-9]*' | cut -d':' -f2)
 
+# Check if allFetched flag is set
+ALL_FETCHED=$(echo $SUMMARY | grep -o '"allFetched":\s*\w*' | cut -d':' -f2 | tr -d ' ' | tr -d ',')
+
 echo -e "${GREEN}Summary data:${NC}"
 echo -e "  Total Pages: ${TOTAL_PAGES}"
 echo -e "  Total Transactions: ${TOTAL_TRANSACTIONS}"
+echo -e "  All Transactions Fetched: ${ALL_FETCHED:-false}"
+
+# Display the raw allFetched value for debugging
+echo -e "${BLUE}Raw allFetched value from JSON:${NC}"
+echo $(echo $SUMMARY | grep -o '"allFetched":[^,}]*')
 
 echo -e "${BLUE}=== Test Completed ===${NC}"
 echo -e "${BLUE}To verify functionality manually, check that:${NC}"
 echo -e "1. The transaction pages continue from the earliest known transaction"
 echo -e "2. The total pages and transactions have increased after the second fetch"
 echo -e "3. Files are created with sequential page numbers in public/transactions/"
+echo -e "4. If all transactions are fetched (allFetched: true), a toast notification appears"
+echo -e "5. The 'Load More Transactions' button is disabled and shows 'All Transactions Loaded'"
+echo -e "\n${BLUE}Visit http://localhost:3000 and test with address:${NC}"
+echo -e "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S (has less than 100 transactions on last page)"
+echo -e "You should see a toast notification when all transactions are fetched."

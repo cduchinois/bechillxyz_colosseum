@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import AddressInput from '../components/AddressInput';
 import TransactionSummaryComponent from '../components/TransactionSummary';
 import TransactionsList from '../components/TransactionsList';
+import toast, { Toaster } from 'react-hot-toast';
 
 // Define the types locally to match library format
 interface EarliestTransaction {
@@ -33,6 +34,7 @@ interface TransactionSummary {
   walletCreationDate: string;
   earliestTransaction: EarliestTransaction;
   pages: TransactionPageInfo[];
+  allFetched?: boolean;
 }
 
 export default function Home() {
@@ -137,6 +139,24 @@ export default function Home() {
     }
   };
 
+  // Create a ref to track if we've already shown the toast for this session
+  const allFetchedToastShownRef = useRef(false);
+  
+  // Show toast notification when all transactions are fetched
+  useEffect(() => {
+    console.log('Summary allFetched status:', summary?.allFetched);
+    console.log('Toast already shown:', allFetchedToastShownRef.current);
+    
+    if (summary?.allFetched && !allFetchedToastShownRef.current) {
+      console.log('Showing toast: All transactions fetched');
+      toast.success('All transactions fetched');
+      allFetchedToastShownRef.current = true;
+    } else if (!summary?.allFetched) {
+      console.log('Resetting toast shown ref because allFetched is false');
+      allFetchedToastShownRef.current = false;
+    }
+  }, [summary?.allFetched]);
+
   return (
     <>
       <Head>
@@ -144,6 +164,7 @@ export default function Home() {
         <meta name="description" content="Track Solana transactions for any address" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
 
       <div className="min-h-screen bg-gray-50">
         <header className="bg-white shadow-sm">
@@ -170,6 +191,12 @@ export default function Home() {
                   className="text-blue-600 hover:text-blue-800 text-sm text-left hover:underline truncate"
                 >
                   Genopets: 4Zc4kQZhRQeGztihvcGSWezJE1k44kKEgPCAkgmyxwrw
+                </button>
+                <button 
+                  onClick={() => handleAddressSubmit("GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S", 5)}
+                  className="text-blue-600 hover:text-blue-800 text-sm text-left hover:underline truncate"
+                >
+                  Test Address (fewer txns): GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S
                 </button>
               </div>
             </div>
@@ -213,9 +240,10 @@ export default function Home() {
                 <div className="w-full max-w-3xl mx-auto my-8 flex justify-center">
                   <button
                     onClick={handleFetchMore}
-                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                    disabled={summary.allFetched}
+                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed"
                   >
-                    Load More Transactions
+                    {summary.allFetched ? 'All Transactions Loaded' : 'Load More Transactions'}
                   </button>
                 </div>
               )}

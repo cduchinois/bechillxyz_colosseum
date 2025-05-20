@@ -33,6 +33,7 @@ interface TransactionSummary {
   walletCreationDate: string;
   earliestTransaction: EarliestTransaction;
   pages: TransactionPageInfo[];
+  allFetched?: boolean;
 }
 
 // Include necessary functions from our library directly
@@ -49,7 +50,25 @@ async function getTransactionSummary(basePath: string, address: string) {
   try {
     const summaryPath = path.join(basePath, 'transactions', `${address}-summary.json`);
     if (await fs.pathExists(summaryPath)) {
-      return await fs.readJson(summaryPath);
+      const summary = await fs.readJson(summaryPath);
+      
+      // Make sure allFetched is defined
+      if (summary.allFetched === undefined) {
+        summary.allFetched = false;
+        
+        // Check if we should mark it as allFetched based on last page transaction count
+        if (summary.pages && summary.pages.length > 0) {
+          const lastPage = summary.pages[summary.pages.length - 1];
+          if (lastPage.transactionCount < 100) {
+            summary.allFetched = true;
+            // Write back the updated summary
+            await fs.writeJson(summaryPath, summary, { spaces: 2 });
+            console.log(`Updated existing summary for ${address} with allFetched=true`);
+          }
+        }
+      }
+      
+      return summary;
     }
     return null;
   } catch (error) {
@@ -113,7 +132,8 @@ async function fetchAllTransactions(rpcUrl: string, address: string, basePath: s
       signature: '',
       slot: 0
     },
-    pages: []
+    pages: [],
+    allFetched: false
   };
 
   try {
@@ -210,6 +230,8 @@ async function fetchAllTransactions(rpcUrl: string, address: string, basePath: s
 
       if (transactions.length < 100) {
         hasMore = false;
+        // If we got less than 100 transactions, we've reached the end
+        summary.allFetched = true;
       }
     }
 
@@ -262,7 +284,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!summary) {
       // No existing data, fetch from beginning
       summary = await fetchAllTransactions(rpcUrl, address, publicDir, pages);
-    } else if (summary.earliestTransaction && summary.earliestTransaction.signature) {
+    } else {
+      // Initialize allFetched to false if it's not already defined
+      if (summary.allFetched === undefined) {
+        summary.allFetched = false;
+      }
+      
+      if (summary.earliestTransaction && summary.earliestTransaction.signature) {
       // Start with existing pages and current max page number
       let currentPage = summary.totalPages > 0 ? summary.totalPages : 0;
       let lastSignature = summary.earliestTransaction.signature;
@@ -343,13 +371,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           
           if (transactions.length < 100) {
             hasMore = false;
+            // If we got less than 100 transactions, we've reached the end
+            summary.allFetched = true;
+            console.log(`All transactions fetched for ${address}, setting allFetched=true`);
           }
         } else {
           hasMore = false;
         }
       }
       
-      // Save updated summary file
+      // Save updated summary file with explicit allFetched flag
+      if (summary.allFetched === undefined) {
+        summary.allFetched = false;
+      }
+      
       const summaryPath = path.join(publicDir, 'transactions', `${address}-summary.json`);
       await fs.writeJson(summaryPath, summary, { spaces: 2 });
     } else {

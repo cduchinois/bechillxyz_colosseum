@@ -8,6 +8,8 @@ A Next.js application to fetch, store, and display Solana transactions for any a
 - Store transactions as JSON files
 - Track transaction history with pagination
 - Display transaction summary and details
+- Toast notifications for user feedback when all transactions are fetched
+- Automatically detect and indicate when all transactions have been fetched
 - Built on top of the reusable `solana-tx-fetcher` library
 
 ## Setup
@@ -35,6 +37,18 @@ npm run dev
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## New in This Release
+
+This version includes several enhancements to improve user experience:
+
+1. **Toast Notifications**: The application now shows a toast notification when all transactions for an address have been fetched.
+
+2. **"All Fetched" Status**: The transaction summary JSON now includes an `allFetched` field to indicate when all transactions have been retrieved.
+
+3. **UI Updates**: 
+   - The "Load More Transactions" button is disabled when all transactions have been fetched
+   - The button text changes to "All Transactions Loaded" to indicate completion
 
 ## API Endpoints
 
@@ -114,6 +128,26 @@ const summary = await saveTransactions({
   pageNumber: 1,
   transactions
 });
+```
+
+## Testing
+
+You can test the application using the built-in test script:
+
+```bash
+./test-tx-fetch.sh
+```
+
+To test with a specific address:
+
+```bash
+./test-tx-fetch.sh YOUR_SOLANA_ADDRESS
+```
+
+For testing the toast notification feature, use this address which has fewer transactions:
+
+```bash
+./test-tx-fetch.sh GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S
 ```
 
 ## Technologies Used

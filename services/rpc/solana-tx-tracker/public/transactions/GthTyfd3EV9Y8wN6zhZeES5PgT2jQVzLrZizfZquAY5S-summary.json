@@ -1,9 +1,9 @@
 {
   "address": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S",
-  "lastUpdated": "2025-05-20T11:22:08.790Z",
-  "lastFetched": "2025-05-20T11:22:08.790Z",
+  "lastUpdated": "2025-05-20T16:54:32.210Z",
+  "lastFetched": "2025-05-20T16:54:32.210Z",
   "totalPages": 4,
-  "totalTransactions": 338,
+  "totalTransactions": 342,
   "walletCreationDate": "31/12/2021 04:18:18",
   "earliestTransaction": {
     "blockTime": 1640920698,
@@ -18,37 +18,38 @@
       "pageNumber": 1,
       "filename": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S-transactions-page-1.json",
       "transactionCount": 100,
-      "lastSignature": "2sUpmvEHxE8P5gLhS3F1EDYbKNpeMAbewBBz89csUxwvGMQsTrfew5uHyhFoan2xBuSZRecsRGU1uvBcv9mQga4t",
-      "lastBlockTime": 1738701693,
-      "lastBlockTimeFormatted": "04/02/2025 21:41:33",
-      "timestamp": 1747740128135
+      "lastSignature": "2NCoA3oJoASFs1Yx2iTPT8o2YNVfMJAiEzWB2yJfFY7FttGoAk8PZD3UYFM71EjJpqrDjdqudWnzYz3kfiRZTWfG",
+      "lastBlockTime": 1738750717,
+      "lastBlockTimeFormatted": "05/02/2025 11:18:37",
+      "timestamp": 1747760071403
     },
     {
       "pageNumber": 2,
       "filename": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S-transactions-page-2.json",
       "transactionCount": 100,
-      "lastSignature": "3yrfUuB3jkaoXYxe6VkiJaF3rYo8bT26LzrU5aGwk4HqMmynBYZyG62e5TdcqzJvtPwtDumXk1yiES4VmA9S791Z",
-      "lastBlockTime": 1731343496,
-      "lastBlockTimeFormatted": "11/11/2024 17:44:56",
-      "timestamp": 1747740128360
+      "lastSignature": "538V85UFAGzW8YE3afDNGBEum1c8mfwgYQYXcnRC6Tzr3vU34bBVUqWMBVWE3ZwJM1kgGp4em9shrxq7SmKhiDta",
+      "lastBlockTime": 1731361721,
+      "lastBlockTimeFormatted": "11/11/2024 22:48:41",
+      "timestamp": 1747760071620
     },
     {
       "pageNumber": 3,
       "filename": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S-transactions-page-3.json",
       "transactionCount": 100,
-      "lastSignature": "4wkFx264tonL9bmzZQo4XTA2TTFHwnvGdzdV2RjzDzzbQ9jkkiWjBKhf45dMScrvRDwrvbujXPtRejhKkEKZ66RU",
-      "lastBlockTime": 1726546918,
-      "lastBlockTimeFormatted": "17/09/2024 06:21:58",
-      "timestamp": 1747740128606
+      "lastSignature": "3aftByP8svNYZ37ozTU3a6L4n9GAEKmdedUqUvyPEb6ftkePJQEAbUnndNFQ1ZXzAnSjMyWZLku9sJkenYx5DMsa",
+      "lastBlockTime": 1726581627,
+      "lastBlockTimeFormatted": "17/09/2024 16:00:27",
+      "timestamp": 1747760071855
     },
     {
       "pageNumber": 4,
       "filename": "GthTyfd3EV9Y8wN6zhZeES5PgT2jQVzLrZizfZquAY5S-transactions-page-4.json",
-      "transactionCount": 38,
+      "transactionCount": 42,
       "lastSignature": "sNHYCARZ7LzAo2AmyMK7bBkfncYgo9GuXGndJFZ5UozqTAtgF2FcQ1tCL77HqwwtCH9V7vCi17dWRVeVSxCKahu",
       "lastBlockTime": 1640920698,
       "lastBlockTimeFormatted": "31/12/2021 04:18:18",
-      "timestamp": 1747740128790
+      "timestamp": 1747760072210
     }
-  ]
+  ],
+  "allFetched": true
 }
